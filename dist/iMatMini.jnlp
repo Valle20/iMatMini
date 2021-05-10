@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="iMatMini.jnlp">
+  <information>
+    <title>iMatMini</title>
+    <vendor>oloft</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="iMatMini.jar" size="11364" download="eager" />
+    <jar href="lib/projectbackend.jar" size="57452" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="iMatMini" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="imatmini.IMatMini"  name="iMatMini" />
+  <update check="always"/>
+</jnlp>
