@@ -22,9 +22,9 @@ public class IMatMini extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("iMatMini.fxml"));
         
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
-        stage.show();
+        stage.show(); //goidrg
     }
 
     /**
@@ -40,5 +40,5 @@ public class IMatMini extends Application {
         }
         }));
     }
-    
+
 }
