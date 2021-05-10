@@ -15,11 +15,11 @@ import javafx.stage.Stage;
  *
  * @author oloft
  */
-public class IMatMini extends Application {
+public class IMat extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("iMatMini.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"));
         
         Scene scene = new Scene(root);
 

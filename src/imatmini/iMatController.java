@@ -27,7 +27,7 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
  *
  * @author oloft
  */
-public class iMatMiniController implements Initializable, ShoppingCartListener {
+public class iMatController implements Initializable, ShoppingCartListener {
     
     // Shopping Pane
    /* @FXML
@@ -59,27 +59,40 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private Label purchasesLabel;*/
     @FXML private FlowPane varukorgFlowPane;
-
+    @FXML private FlowPane cardsFlowPane;
     // Other variables
 
-    ShoppingCartPanel shoppingCartPanel = new ShoppingCartPanel();
 
     private final Model model = Model.getInstance();
 
-    private void updateVarukorg(){
-        varukorgFlowPane.getChildren().clear();
-        List<Product> productList = model.getProducts();
-        for(Product  product : productList){
 
-            RecipeListItem RLI = recipeListItemMap.get(product.getName());
-            varukorgFlowPane.getChildren().add(RLI);
+    private void updateVarukorg(List<Product> productList) {
+        varukorgFlowPane.getChildren().clear();
+        int i = 0;
+        for (Product product : productList) {
+            i++;
+            if (i == 3) break;
+            varukorgFlowPane.getChildren().add(new VarukorgsItem(product));
+        }
+    }
+
+    private void updateCards(List<Product> productList) {
+        cardsFlowPane.getChildren().clear();
+        for (Product product : productList) {
+            cardsFlowPane.getChildren().add(new Card(product));
         }
     }
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        updateVarukorg();
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+       // model.getShoppingCart().addShoppingCartListener(this);
+
+        updateVarukorg(model.getProducts());
+        updateCards(model.getProducts());
+       // updateBottomPanel();
+
+        //setupAccountPane();
 
     }
 
@@ -88,8 +101,11 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     }
 
+
+    /*
+
     // Shop pane actions
-   /* @FXML
+    @FXML
     private void handleShowAccountAction(ActionEvent event) {
         openAccountView();
     }
@@ -98,7 +114,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleSearchAction(ActionEvent event) {
         
         List<Product> matches = model.findProducts(searchField.getText());
-        updateProductList(matches);
+        updateVarukorg(matches);
         System.out.println("# matching products: " + matches.size());
 
     }
@@ -121,19 +137,10 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
       
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        model.getShoppingCart().addShoppingCartListener(this);
 
-        updateProductList(model.getProducts());
-        updateBottomPanel();
-        
-        setupAccountPane();
-        
-    }    
     
     // Navigation
-   /* public void openAccountView() {
+    public void openAccountView() {
         updateAccountPanel();
         accountPane.toFront();
     }
@@ -150,16 +157,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }
    
     
-    private void updateProductList(List<Product> products) {
 
-        productsFlowPane.getChildren().clear();
-
-        for (Product product : products) {
-
-            productsFlowPane.getChildren().add(new ProductPanel(product));
-        }
-
-    }
     
     private void updateBottomPanel() {
         

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
+    <children>
+      <AnchorPane prefHeight="719.0" prefWidth="1282.0">
+         <children>
+            <ToolBar prefHeight="65.0" prefWidth="1282.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+            <AnchorPane layoutX="822.0" layoutY="-9.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Label layoutX="17.0" layoutY="26.0" prefHeight="28.0" prefWidth="97.0" text="Varukorg">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="212.0" layoutY="14.0" mnemonicParsing="false" text="Töm varukorgen" />
+                  <ScrollPane prefHeight="469.0" prefWidth="337.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                     <content>
+                        <FlowPane fx:id="varukorgFlowPane" prefHeight="468.0" prefWidth="318.0" vgap="2.0" />
+                     </content>
+                  </ScrollPane>
+                  <Line endX="168.0" startX="-168.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <ScrollPane prefHeight="544.0" prefWidth="962.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                     <content>
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="901.0" style="-fx-background-color: transperent;" vgap="12.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Line endX="960.0" endY="65.0" scaleX="2.0" startX="960.0" startY="720.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.rightAnchor="337.0" />
+    </children>
+</AnchorPane>

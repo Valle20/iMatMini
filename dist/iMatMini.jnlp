@@ -14,6 +14,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="iMatMini" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="imatmini.IMatMini"  name="iMatMini" />
+  <jfx:javafx-desc width="800" height="600" main-class="imatmini.IMat" name="iMatMini" />
   <update check="always"/>
 </jnlp>
