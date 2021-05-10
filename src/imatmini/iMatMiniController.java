@@ -30,7 +30,7 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
 public class iMatMiniController implements Initializable, ShoppingCartListener {
     
     // Shopping Pane
-    @FXML
+   /* @FXML
     private AnchorPane shopPane;
     @FXML
     private TextField searchField;
@@ -57,13 +57,39 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     @FXML
     private TextField cvcField;
     @FXML
-    private Label purchasesLabel;
-    
+    private Label purchasesLabel;*/
+    @FXML private FlowPane varukorgFlowPane;
+
     // Other variables
+
+    ShoppingCartPanel shoppingCartPanel = new ShoppingCartPanel();
+
     private final Model model = Model.getInstance();
 
+    private void updateVarukorg(){
+        varukorgFlowPane.getChildren().clear();
+        List<Product> productList = model.getProducts();
+        for(Product  product : productList){
+
+            RecipeListItem RLI = recipeListItemMap.get(product.getName());
+            varukorgFlowPane.getChildren().add(RLI);
+        }
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateVarukorg();
+
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent cartEvent) {
+
+    }
+
     // Shop pane actions
-    @FXML
+   /* @FXML
     private void handleShowAccountAction(ActionEvent event) {
         openAccountView();
     }
@@ -107,7 +133,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     }    
     
     // Navigation
-    public void openAccountView() {
+   /* public void openAccountView() {
         updateAccountPanel();
         accountPane.toFront();
     }
@@ -189,5 +215,5 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
         yearCombo.getItems().addAll(model.getYears());
         
-    }
+    }*/
 }

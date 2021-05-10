@@ -23,7 +23,7 @@ public class ProductPanel extends AnchorPane {
     @FXML ImageView imageView;
     @FXML Label nameLabel;
     @FXML Label prizeLabel;
-    @FXML Label ecoLabel;
+    //@FXML Label ecoLabel;
     
     private Model model = Model.getInstance();
 
@@ -32,7 +32,7 @@ public class ProductPanel extends AnchorPane {
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public ProductPanel(Product product) {
+    /*public ProductPanel(Product product) {
         
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductPanel.fxml"));
         fxmlLoader.setRoot(this);
@@ -57,5 +57,5 @@ public class ProductPanel extends AnchorPane {
     private void handleAddAction(ActionEvent event) {
         System.out.println("Add " + product.getName());
         model.addToShoppingCart(product);
-    }
+    }*/
 }
