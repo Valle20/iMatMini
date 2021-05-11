@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -55,4 +56,20 @@ public class Card extends AnchorPane {
     @FXML private void merInfo(){
         System.out.println(" test mer info knappen ");
     }
+
+    @FXML private void gillaVara(){
+        if (model.isGillad(product)){
+            model.oGillaVara(product);
+            favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "imatmini/bilder/FavoritesButton.png")));
+            System.out.println(" Ogilla vara " + product.getName());
+        } else {
+            model.gillaVara(product);
+            favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "imatmini/bilder/filled_heart_button.png")));
+            System.out.println(" gilla vara " + product.getName());
+        }
+    }
+
+
 }

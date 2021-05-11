@@ -41,6 +41,7 @@ public class Model {
         // Exists only to defeat instantiation.
     }
 
+
     /**
      * Returns the single instance of the Model class.
      */
@@ -50,6 +51,18 @@ public class Model {
             instance.init();
         }
         return instance;
+    }
+
+    public void gillaVara(Product product){
+        iMatDataHandler.addFavorite(product);
+    }
+
+    public void oGillaVara(Product product){
+        iMatDataHandler.removeFavorite(product);
+    }
+
+    public boolean isGillad(Product product){
+        return iMatDataHandler.isFavorite(product);
     }
 
     private void init() {
