@@ -62,7 +62,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
     // Other variables
 
-    ShoppingCartPanel shoppingCartPanel = new ShoppingCartPanel();
+    //ShoppingCartPanel shoppingCartPanel = new ShoppingCartPanel();
 
     private final Model model = Model.getInstance();
 
@@ -71,8 +71,8 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         List<Product> productList = model.getProducts();
         for(Product  product : productList){
 
-            RecipeListItem RLI = recipeListItemMap.get(product.getName());
-            varukorgFlowPane.getChildren().add(RLI);
+
+            varukorgFlowPane.getChildren().add(new ProductPanel(product));
         }
     }
 
