@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="320.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="44.0" fitWidth="62.0" layoutX="6.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="11.0">
+         <image>
+            <Image url="@../../../../.dat215/imat/images/product_1.jpg" />
+         </image></ImageView>
+      <Label fx:id="nameLabel" layoutX="72.0" layoutY="9.0" prefHeight="20.0" prefWidth="127.0" text="Mellanmjök fin produkt för allt möjligt" AnchorPane.leftAnchor="72.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="22.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ImageView fx:id="minusImage" fitHeight="18.0" fitWidth="18.0" layoutX="71.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Bilder%20till%20iMat/minus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plusImage" fitHeight="20.0" fitWidth="19.0" layoutX="134.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Bilder%20till%20iMat/minus.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="amountTextField" layoutX="95.0" layoutY="35.0" prefHeight="26.0" prefWidth="32.0" />
+   </children>
+</fx:root>
