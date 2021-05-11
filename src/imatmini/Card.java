@@ -26,6 +26,9 @@ public class Card extends AnchorPane {
 
     private Model model = Model.getInstance();
 
+    //endast för att få detailjvyn att fungera som styrs i iMatController. Vet att detta inte är rätt. :/
+    private iMatController imatcontroller = new iMatController();
+
     private Product product;
 
     public ImageView getFavourite() {
@@ -51,13 +54,14 @@ public class Card extends AnchorPane {
     }
 
     @FXML
-    private void läggTill() {
+    private void läggTill(){
         System.out.println("Lägg till " + product.getName());
         model.addToShoppingCart(product);
     }
 
-    @FXML private void merInfo(){
-        System.out.println(" test mer info knappen ");
+    @FXML
+    private void merInfo(){
+        imatcontroller.openDetailView();
     }
 
     @FXML private void gillaVara(){

@@ -4,14 +4,75 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
     <children>
-      <AnchorPane prefHeight="719.0" prefWidth="1282.0">
+      <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" prefHeight="721.0" prefWidth="1282.0">
+         <children>
+            <AnchorPane prefHeight="516.0" prefWidth="804.0" style="-fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="229.0" AnchorPane.topAnchor="114.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="21.0" text="Blåbär">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0">
+                     <image>
+                        <Image url="@../../../../../.dat215/imat/images/product_16.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="270.0" layoutY="71.0" prefHeight="150.0" prefWidth="505.0" style="-fx-background-color: EDF2F4;" AnchorPane.rightAnchor="48.80000000000007">
+                     <children>
+                        <Label layoutX="21.0" layoutY="14.0" prefHeight="27.0" prefWidth="182.0" text="Produktinformation">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="92.0" prefHeight="27.0" prefWidth="54.0" text="Pris">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="352.0" layoutY="14.0" prefHeight="27.0" prefWidth="98.0" text="Förvaring">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="352.0" layoutY="92.0" prefHeight="27.0" prefWidth="98.0" text="Märkning">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="48.0" layoutY="247.0" prefHeight="200.0" prefWidth="729.0" style="-fx-background-color: EDF2F4;" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
+                     <children>
+                        <TextFlow layoutX="373.0" layoutY="8.0" prefHeight="150.0" prefWidth="215.0" />
+                        <Label layoutX="32.0" layoutY="14.0" prefHeight="27.0" prefWidth="182.0" text="Innehållsförteckning">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="785.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Vector%201.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1282.0">
          <children>
             <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" AnchorPane.leftAnchor="0.0">
                <children>
@@ -77,8 +138,8 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
+            <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.rightAnchor="337.0" />
          </children>
       </AnchorPane>
-      <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.rightAnchor="337.0" />
     </children>
 </AnchorPane>
