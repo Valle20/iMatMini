@@ -15,12 +15,12 @@
          <children>
             <AnchorPane prefHeight="65.0" prefWidth="1282.0" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
+                  <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
                   <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0" />
                   <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="Button" />
                   <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
-                  <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.81" text="Tidigare köp" />
-                  <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.81" text="Hjälp" />
+                  <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" text="Tidigare köp" />
+                  <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" text="Hjälp" />
                   <TextField layoutX="323.0" layoutY="20.0" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" AnchorPane.leftAnchor="146.5" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" AnchorPane.leftAnchor="793.0" />
@@ -43,12 +43,12 @@
                   <Button layoutX="134.0" layoutY="605.0" mnemonicParsing="false" onAction="#switchToKassa1" text="Till kassan" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="helpPane" prefHeight="642.0" prefWidth="934.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane fx:id="helpPane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
                   <Label layoutX="428.0" layoutY="247.0" text="Help" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
                   <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
@@ -68,18 +68,17 @@
                   <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" vgap="12.0" />
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" style="-fx-background-color: #EDF2F4;" vgap="12.0" />
                      </content>
                   </ScrollPane>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Line endX="960.0" endY="65.0" layoutX="-15.5" scaleX="2.0" startX="960.0" startY="720.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.rightAnchor="337.0" />
+      <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.rightAnchor="337.0" />
     </children>
 </AnchorPane>

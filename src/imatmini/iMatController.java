@@ -5,12 +5,14 @@
  */
 package imatmini;
 
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -70,6 +72,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private FlowPane cardsFlowPane;
     @FXML private AnchorPane helpPane;
     @FXML private AnchorPane tidigarePane;
+    @FXML private AnchorPane handlaPane;
     // Other variables
 
 
@@ -94,16 +97,22 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     //flytta på Anchorpanes i start
 
+    @FXML
     private void openTidigare(){
+        System.out.println("tidigare vyn");
         tidigarePane.toFront();
     }
 
+    @FXML
     private void openHelp(){
+        System.out.println("help vyn");
         helpPane.toFront();
     }
 
+    @FXML
     private void openHandla(){
-
+        System.out.println("handla vyn");
+        handlaPane.toFront();
     }
 
 
