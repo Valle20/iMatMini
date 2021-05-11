@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
@@ -67,6 +68,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML private FlowPane varukorgFlowPane;
     @FXML private FlowPane cardsFlowPane;
+    @FXML private AnchorPane helpPane;
+    @FXML private AnchorPane tidigarePane;
     // Other variables
 
 
@@ -87,6 +90,20 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
             cardsFlowPane.getChildren().add(new Card(product));
         }
+    }
+
+    //flytta på Anchorpanes i start
+
+    private void openTidigare(){
+        tidigarePane.toFront();
+    }
+
+    private void openHelp(){
+        helpPane.toFront();
+    }
+
+    private void openHandla(){
+
     }
 
 
