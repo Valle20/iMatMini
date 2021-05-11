@@ -15,8 +15,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Kassa_1_Controller {
     /** på varje sida **/
@@ -41,6 +40,11 @@ public class Kassa_1_Controller {
     @FXML private TextField postCodeTextField;
     @FXML private TextField cityTextField;
 
+    /** Leverans-sidan **/
+    @FXML private AnchorPane leveransAnchorPane;
+
+
+
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
 
 
@@ -49,20 +53,54 @@ public class Kassa_1_Controller {
     SceneController sceneController = new SceneController();
 
 
+
     @FXML
     private void switchAffaren(ActionEvent event) throws IOException {
         sceneController.switchToAffaren(event);
     }
+
+    /** NAVIGERING **/
     @FXML
-    public void nextStepMouseEntered(){
+    private void varukorgToFront(){
+        System.out.println("Varukorgsvy");
+        varukorgAnchorPane.toFront();
+    }
+    @FXML
+    private void personligaUppgifterToFront(){
+        System.out.println("personliga uppgifter vyn");
+        personligaUppgifterAnchorPane.toFront();
+    }
+    @FXML
+    private void leveransToFront(){
+        System.out.println("Leveransvyn");
+        leveransAnchorPane.toFront();
+    }
+
+
+
+    /** HOVER **/
+
+    @FXML
+    private void previousStepMouseEntered(){
+        previousStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/föregåendeHover.png")));
+    }
+    @FXML
+    private void previousStepMouseExited(){
+        previousStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Föregående steg.png" )));
+    }
+    @FXML
+    private void nextStepMouseEntered(){
         nextStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
                 "iMatMini/bilder/nästastegHover.png")));
     }
     @FXML
-    public void nextStepMouseExited(){
+    private void nextStepMouseExited(){
         nextStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
                 "iMatMini/bilder/Nästaknapp.png" )));
     }
+
 
     /*@FXML
     public void closeButtonMousePressed(){

@@ -16,17 +16,17 @@
    <children>
       <AnchorPane fx:id="personligaUppgifterAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a1a1a1;">
          <children>
-            <ImageView fitHeight="70.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="630.0">
+            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#leveransToFront" onMouseEntered="#nextStepMouseEntered" onMouseExited="#nextStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
                <image>
                   <Image url="@bilder/Nästaknapp.png" />
                </image>
             </ImageView>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
+                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="4. Betalning" />
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
@@ -81,11 +81,34 @@
                   <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
                </children>
             </Pane>
-            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" onMouseClicked="#varukorgToFront" onMouseEntered="#previousStepMouseEntered" onMouseExited="#previousStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
                <image>
                   <Image url="@bilder/Föregående%20steg.png" />
                </image>
             </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #7e1139;">
+         <children>
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
+                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="4. Betalning" />
+               </buttons>
+            </ButtonBar>
+            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="1026.0" layoutY="609.0" onMouseClicked="#leveransToFront" onMouseEntered="#nextStepMouseEntered" onMouseExited="#nextStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Nästaknapp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#varukorgToFront" onMouseEntered="#previousStepMouseEntered" onMouseExited="#previousStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Föregående%20steg.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #abcdef;">
@@ -112,10 +135,10 @@
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
+                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="4.Betalning" />
                </buttons>
             </ButtonBar>
             <Label layoutX="927.0" layoutY="178.0" prefHeight="178.0" prefWidth="229.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
@@ -128,7 +151,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" onMouseEntered="#nextStepMouseEntered" onMouseExited="#nextStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
+            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#personligaUppgifterToFront" onMouseEntered="#nextStepMouseEntered" onMouseExited="#nextStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
                <image>
                   <Image url="@bilder/Nästaknapp.png" />
                </image>
