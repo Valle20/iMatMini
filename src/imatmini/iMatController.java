@@ -113,6 +113,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
+    @FXML public void gåTillFavoriter(){
+        updateCards(model.getGilladeVaror());
+    }
+
     //flytta på Anchorpanes i start
 
     @FXML

@@ -60,6 +60,10 @@ public class Model {
                     "imatmini/bilder/filled_heart_button.png")));
         }
     }
+
+    public List<Product> getGilladeVaror(){
+        return iMatDataHandler.favorites();
+    }
     /**
      * Returns the single instance of the Model class.
      */

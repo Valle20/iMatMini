@@ -18,7 +18,7 @@
                   <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
                   <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="141.0" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0" />
                   <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="Button" />
-                  <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
+                  <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
                   <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" text="Tidigare köp" />
                   <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" text="Hjälp" />
                   <TextField layoutX="323.0" layoutY="20.0" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0" />
