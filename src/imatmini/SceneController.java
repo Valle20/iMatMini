@@ -21,7 +21,7 @@ public class SceneController {
     }
 
 
-    @FXML
+
     public void switchToKassa1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Kassa_1_varukorg.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -30,7 +30,7 @@ public class SceneController {
         stage.show();
     }
 
-    @FXML public void switchToAffaren(ActionEvent event) throws IOException {
+    public void switchToAffaren(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

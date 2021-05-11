@@ -84,6 +84,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void updateCards(List<Product> productList) {
         cardsFlowPane.getChildren().clear();
         for (Product product : productList) {
+
             cardsFlowPane.getChildren().add(new Card(product));
         }
     }

@@ -3,9 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.SceneController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <Button layoutX="73.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchToAffaren" text="Fortsätt handla" />
+      <Button layoutX="73.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchAffaren" text="Fortsätt handla" />
    </children>
 </AnchorPane>
