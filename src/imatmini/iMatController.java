@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -75,14 +76,36 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane helpPane;
     @FXML private AnchorPane tidigarePane;
     @FXML private AnchorPane handlaPane;
+    @FXML private AnchorPane mainPane;
+    @FXML private AnchorPane detailPane;
     // Other variables
 
     private final Model model = Model.getInstance();
 
+    public void initCardMap(){
+        for (Product product : Model.getInstance().getProducts()){
+            Card card = new Card(new ShoppingItem(product), this);
+            model.getCardMap().put(product.getName(), card);
+            initFavourites(product);
+            //initPlusMinus(model.getCardMap().get(product.getName()), s);
+        }
+    }
 
+    public void initPlusMinus(Card card, ShoppingItem s){
+        if (Model.getInstance().getShoppingCart().getItems().contains(s)){
+            card.plusMinusPane.toFront();
+        }
+    }
+
+    public void initFavourites(Product product){
+        if (model.isGillad(product)){
+            model.getCardMap().get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "imatmini/bilder/filled_heart_button.png")));
+        }
+    }
     public void initialize(URL url, ResourceBundle rb) {
 
-        model.initCardMap();
+        initCardMap();
 
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -151,6 +174,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
         model.clearShoppingCart();
     }
 
+
+    @FXML
+    public void openDetailView() {
+        detailPane.toFront();
+    }
+
+    @FXML
+    public void closeDetailView() {
+        mainPane.toFront();
+    }
     /*
 
     // Shop pane actions

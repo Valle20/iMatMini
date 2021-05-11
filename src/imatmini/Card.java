@@ -36,14 +36,24 @@ public class Card extends AnchorPane {
         return favourite;
     }
 
+    public ShoppingItem getShoppingItem() {
+        return shoppingItem;
+    }
+
     public TextField getAmountTextField() {
         return amountTextField;
     }
 
-    public Card(ShoppingItem shoppingItem) {
+    private iMatController iMatController;
+
+    public Card(ShoppingItem shoppingItem, iMatController iMatController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+
+        if (model.getShoppingCart().getItems().contains(shoppingItem)){
+            plusMinusPane.toFront();
+        }
 
         try {
             fxmlLoader.load();
@@ -51,6 +61,7 @@ public class Card extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.iMatController = iMatController;
         this.shoppingItem = shoppingItem;
 
         this.product = shoppingItem.getProduct();
@@ -64,7 +75,7 @@ public class Card extends AnchorPane {
     }
 
     @FXML
-    private void läggTill() {
+    private void läggTill(){
         System.out.println("Lägg till " + product.getName());
 
         model.getShoppingCart().addItem(shoppingItem);
@@ -80,8 +91,9 @@ public class Card extends AnchorPane {
         System.out.println("plus" );
     }
 
-    @FXML private void merInfo(){
-        System.out.println(" test mer info knappen ");
+    @FXML
+    private void merInfo(){
+        iMatController.openDetailView();
     }
 
     @FXML private void gillaVara(){

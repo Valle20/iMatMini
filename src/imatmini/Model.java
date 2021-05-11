@@ -48,21 +48,7 @@ public class Model {
 
 
 
-    public void initCardMap(){
-        for (Product product : this.getProducts()){
-            Card card = new Card(new ShoppingItem(product));
-            cardMap.put(product.getName(), card);
-            initFavourites(product);
-        }
-    }
 
-
-    public void initFavourites(Product product){
-        if (iMatDataHandler.isFavorite(product)){
-            cardMap.get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/filled_heart_button.png")));
-        }
-    }
 
     public List<Product> getGilladeVaror(){
         return iMatDataHandler.favorites();

@@ -32,6 +32,6 @@
             <Image url="@bilder/plus.png" />
          </image>
       </ImageView>
-      <TextField fx:id="amountTextField" layoutX="102.0" layoutY="34.0" prefHeight="27.0" prefWidth="57.0" />
+      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="102.0" layoutY="34.0" prefHeight="27.0" prefWidth="57.0" />
    </children>
 </fx:root>
