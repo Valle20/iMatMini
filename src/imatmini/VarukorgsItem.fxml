@@ -13,12 +13,12 @@
          <image>
             <Image url="@../../../../.dat215/imat/images/product_1.jpg" />
          </image></ImageView>
-      <Label fx:id="nameLabel" layoutX="72.0" layoutY="9.0" prefHeight="19.0" prefWidth="82.0" text="Mellanmjök fin produkt för allt möjligt" AnchorPane.leftAnchor="72.0">
+      <Label fx:id="nameLabel" layoutX="72.0" layoutY="9.0" prefHeight="20.0" prefWidth="127.0" text="Mellanmjök fin produkt för allt möjligt" AnchorPane.leftAnchor="72.0">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="192.0" layoutY="22.0" prefHeight="20.0" prefWidth="116.0" text="3kr/förp" textAlignment="RIGHT">
+      <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="22.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
