@@ -46,13 +46,16 @@ public class Model {
         return cardMap;
     }
 
+
+
     public void initCardMap(){
         for (Product product : this.getProducts()){
-            Card card = new Card(product);
+            Card card = new Card(new ShoppingItem(product));
             cardMap.put(product.getName(), card);
             initFavourites(product);
         }
     }
+
 
     public void initFavourites(Product product){
         if (iMatDataHandler.isFavorite(product)){
