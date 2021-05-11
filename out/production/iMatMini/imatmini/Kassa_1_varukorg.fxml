@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
@@ -13,72 +14,13 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0">
-         <children>
-            <Label layoutX="908.0" layoutY="496.0" text="Antal varor" AnchorPane.leftAnchor="909.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <AnchorPane prefHeight="592.0" prefWidth="901.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0">
-               <children>
-                  <Label text="Din Varukorg" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="1.0">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <ScrollPane prefHeight="200.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
-                     <content>
-                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="556.0" prefWidth="794.0" />
-                     </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-            <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
-            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
-               <buttons>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-               </buttons>
-            </ButtonBar>
-            <Label layoutX="927.0" layoutY="178.0" prefHeight="178.0" prefWidth="229.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Label>
-            <Label text="Varav moms" AnchorPane.leftAnchor="909.0" AnchorPane.topAnchor="446.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="633.0" />
-            <Label layoutX="923.0" layoutY="545.0" text="Totalt pris" AnchorPane.leftAnchor="909.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" text="Label" AnchorPane.leftAnchor="1109.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" text="Label" AnchorPane.leftAnchor="1111.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" text="Label" AnchorPane.leftAnchor="1106.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="personligaUppgifterAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a1a1a1;">
          <children>
-            <ImageView fitHeight="65.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="633.0" />
+            <ImageView fitHeight="70.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="630.0">
+               <image>
+                  <Image url="@bilder/Nästaknapp.png" />
+               </image>
+            </ImageView>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
@@ -139,7 +81,78 @@
                   <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
                </children>
             </Pane>
-            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Föregående%20steg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #abcdef;">
+         <children>
+            <Label layoutX="908.0" layoutY="496.0" text="Antal varor" AnchorPane.leftAnchor="909.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="592.0" prefWidth="901.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0">
+               <children>
+                  <Label text="Din Varukorg" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane prefHeight="200.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
+                     <content>
+                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="556.0" prefWidth="794.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+               </buttons>
+            </ButtonBar>
+            <Label layoutX="927.0" layoutY="178.0" prefHeight="178.0" prefWidth="229.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label text="Varav moms" AnchorPane.leftAnchor="909.0" AnchorPane.topAnchor="446.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="nextStepImageView" fitHeight="65.0" fitWidth="200.0" onMouseEntered="#nextStepMouseEntered" onMouseExited="#nextStepMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Nästaknapp.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="923.0" layoutY="545.0" text="Totalt pris" AnchorPane.leftAnchor="909.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" text="Label" AnchorPane.leftAnchor="1109.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" text="Label" AnchorPane.leftAnchor="1111.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" text="Label" AnchorPane.leftAnchor="1106.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
