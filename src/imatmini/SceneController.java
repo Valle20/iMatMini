@@ -16,7 +16,10 @@ public class SceneController {
     private Scene scene;
     private Parent root;
 
-    private Model model = Model.getInstance();
+
+    public SceneController() {
+    }
+
 
     @FXML
     public void switchToKassa1(ActionEvent event) throws IOException {
@@ -35,6 +38,5 @@ public class SceneController {
         stage.show();
     }
 
-    public SceneController() {
-    }
+
 }

@@ -34,10 +34,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         sceneController.switchToKassa1(event);
     }
 
-    @FXML
-    private void switchToAffaren(ActionEvent event) throws IOException {
-        sceneController.switchToAffaren(event);
-    }
 
     // Shopping Pane
    /* @FXML
