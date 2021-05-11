@@ -19,6 +19,8 @@ public class Card extends AnchorPane {
     @FXML ImageView plusImage;
     @FXML ImageView minusImage;
     @FXML TextField amountTextField;
+    @FXML ImageView merInfo;
+    @FXML ImageView favourite;
 
     private Model model = Model.getInstance();
 
@@ -48,5 +50,9 @@ public class Card extends AnchorPane {
     private void läggTill(ActionEvent event) {
         System.out.println("Lägg till " + product.getName());
         model.addToShoppingCart(product);
+    }
+
+    @FXML private void merInfo(){
+        System.out.println(" test mer info knappen ");
     }
 }
