@@ -13,7 +13,7 @@
       <ImageView fx:id="imageView" fitHeight="102.0" fitWidth="147.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
       <Label fx:id="prizeLabel" layoutX="1.0" layoutY="135.0" text="Pris" AnchorPane.leftAnchor="7.0" />
       <Button layoutX="28.0" layoutY="202.0" mnemonicParsing="false" onAction="#läggTill" prefHeight="27.0" prefWidth="107.0" text="Lägg till" />
-      <ImageView fx:id="favourite" fitHeight="23.0" fitWidth="46.0" layoutX="6.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="favourite" fitHeight="23.0" fitWidth="46.0" layoutX="6.0" layoutY="161.0" onMouseClicked="#gillaVara" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bilder/FavoritesButton.png" />
          </image>

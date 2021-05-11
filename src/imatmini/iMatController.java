@@ -5,12 +5,16 @@
  */
 package imatmini;
 
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -70,10 +74,27 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private FlowPane cardsFlowPane;
     @FXML private AnchorPane helpPane;
     @FXML private AnchorPane tidigarePane;
+    @FXML private AnchorPane handlaPane;
     // Other variables
 
-
     private final Model model = Model.getInstance();
+
+
+
+    public void initialize(URL url, ResourceBundle rb) {
+
+        model.initCardMap();
+
+        model.getShoppingCart().addShoppingCartListener(this);
+
+        updateVarukorg(model.getShoppingCart().getItems());
+        updateCards(model.getProducts());
+        // updateBottomPanel();
+
+        //setupAccountPane();
+
+
+    }
 
     private void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
@@ -88,36 +109,38 @@ public class iMatController implements Initializable, ShoppingCartListener {
         cardsFlowPane.getChildren().clear();
         for (Product product : productList) {
 
-            cardsFlowPane.getChildren().add(new Card(product));
+            cardsFlowPane.getChildren().add(model.getCardMap().get(product.getName()));
         }
+    }
+
+    @FXML public void gåTillFavoriter(){
+        updateCards(model.getGilladeVaror());
     }
 
     //flytta på Anchorpanes i start
 
+    @FXML
     private void openTidigare(){
+        System.out.println("tidigare vyn");
         tidigarePane.toFront();
     }
 
+    @FXML
     private void openHelp(){
+        System.out.println("help vyn");
         helpPane.toFront();
     }
 
+    @FXML
     private void openHandla(){
+        System.out.println("handla vyn");
+        handlaPane.toFront();
 
+        updateCards(model.getProducts()); // lägger alla kort i här så länge
     }
 
 
-    public void initialize(URL url, ResourceBundle rb) {
 
-        model.getShoppingCart().addShoppingCartListener(this);
-
-        updateVarukorg(model.getShoppingCart().getItems());
-        updateCards(model.getProducts());
-       // updateBottomPanel();
-
-        //setupAccountPane();
-
-    }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {

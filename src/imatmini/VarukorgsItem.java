@@ -32,7 +32,7 @@ public class VarukorgsItem extends AnchorPane {
     
     private Model model = Model.getInstance();
 
-    private Product product;
+    private ShoppingItem shoppingItem;
     
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
@@ -49,10 +49,10 @@ public class VarukorgsItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.product = shoppingItem.getProduct();
-        nameLabel.setText(product.getName());
-        prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
-        imageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+        this.shoppingItem = shoppingItem;
+        nameLabel.setText(shoppingItem.getProduct().getName());
+        prizeLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
+        imageView.setImage(model.getImage(shoppingItem.getProduct(), kImageWidth, kImageWidth*kImageRatio));
     }
     
 
