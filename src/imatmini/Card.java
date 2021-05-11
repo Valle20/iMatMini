@@ -23,6 +23,7 @@ public class Card extends AnchorPane {
     @FXML TextField amountTextField;
     @FXML ImageView merInfo;
     @FXML ImageView favourite;
+    @FXML AnchorPane plusMinusPane;
 
     private Model model = Model.getInstance();
 
@@ -31,11 +32,18 @@ public class Card extends AnchorPane {
 
     private Product product;
 
+    private StringBuilder unit = new StringBuilder();
+    private ShoppingItem shoppingItem;
+
     public ImageView getFavourite() {
         return favourite;
     }
 
-    public Card(Product product) {
+    public TextField getAmountTextField() {
+        return amountTextField;
+    }
+
+    public Card(ShoppingItem shoppingItem) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -46,17 +54,33 @@ public class Card extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.product = product;
+        this.shoppingItem = shoppingItem;
+
+        this.product = shoppingItem.getProduct();
+
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         imageView.setImage(model.getImage(product, 147, 102));
 
+        unit.append(product.getUnit());
+        unit.delete(0,3);
     }
 
     @FXML
     private void läggTill(){
         System.out.println("Lägg till " + product.getName());
-        model.addToShoppingCart(product);
+
+        model.getShoppingCart().addItem(shoppingItem);
+
+        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
+        plusMinusPane.toFront();
+    }
+
+    @FXML private void plus(){
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
+        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        System.out.println("plus" );
     }
 
     @FXML

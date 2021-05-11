@@ -82,7 +82,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private final Model model = Model.getInstance();
 
 
-
     public void initialize(URL url, ResourceBundle rb) {
 
         model.initCardMap();
@@ -98,7 +97,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     }
 
-    private void updateVarukorg(List<ShoppingItem> productList) {
+    public void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
 
         for (ShoppingItem product : productList) {
@@ -107,7 +106,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
-    private void updateCards(List<Product> productList) {
+    public void updateCards(List<Product> productList) {
         cardsFlowPane.getChildren().clear();
         for (Product product : productList) {
 

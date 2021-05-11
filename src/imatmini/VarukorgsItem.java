@@ -33,7 +33,7 @@ public class VarukorgsItem extends AnchorPane {
     private Model model = Model.getInstance();
 
     private ShoppingItem shoppingItem;
-    
+    private StringBuilder unit = new StringBuilder();
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
@@ -49,11 +49,21 @@ public class VarukorgsItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        unit.append(shoppingItem.getProduct().getUnit());
+        unit.delete(0,3);
+
         this.shoppingItem = shoppingItem;
         nameLabel.setText(shoppingItem.getProduct().getName());
         prizeLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
         imageView.setImage(model.getImage(shoppingItem.getProduct(), kImageWidth, kImageWidth*kImageRatio));
+        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
     }
-    
 
+    @FXML private void plus(){
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
+        model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
+
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        System.out.println("plus" );
+    }
 }

@@ -22,16 +22,16 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
-      <ImageView fx:id="minusImage" fitHeight="18.0" fitWidth="18.0" layoutX="71.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="minusImage" fitHeight="22.0" fitWidth="22.0" layoutX="72.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Bilder%20till%20iMat/minus.png" />
+            <Image url="@bilder/minus.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="plusImage" fitHeight="20.0" fitWidth="19.0" layoutX="134.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="plusImage" fitHeight="22.0" fitWidth="22.0" layoutX="167.0" layoutY="37.0" onMouseClicked="#plus" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Bilder%20till%20iMat/minus.png" />
+            <Image url="@bilder/plus.png" />
          </image>
       </ImageView>
-      <TextField fx:id="amountTextField" layoutX="95.0" layoutY="35.0" prefHeight="26.0" prefWidth="32.0" />
+      <TextField fx:id="amountTextField" layoutX="102.0" layoutY="34.0" prefHeight="27.0" prefWidth="57.0" />
    </children>
 </fx:root>
