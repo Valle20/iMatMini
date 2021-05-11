@@ -18,40 +18,77 @@ import java.net.URL;
 import java.util.*;
 
 public class Kassa_1_Controller {
-    /** på varje sida **/
-    @FXML private Button backToStoreButton;
-    @FXML private ImageView nextStepImageView;
-    @FXML private ImageView previousStepImageView;
+    /**
+     * på varje sida
+     **/
+    @FXML
+    private Button backToStoreButton;
 
-    /** varukorg sidan **/
-    @FXML private Label momsLabel;
-    @FXML private Label antalVarorLabel;
-    @FXML private Label totalPrizeLabel;
-    @FXML private FlowPane checkoutVarukorgFlowPane;
-    @FXML private AnchorPane varukorgAnchorPane;
 
-    /** personliga uppgifter sidan **/
-    @FXML private AnchorPane personligaUppgifterAnchorPane;
-    @FXML private TextField firstNameTextField;
-    @FXML private TextField lastNameTextField;
-    @FXML private TextField phoneTextField;
-    @FXML private TextField mailTextField;
-    @FXML private TextField adressTextField;
-    @FXML private TextField postCodeTextField;
-    @FXML private TextField cityTextField;
+    /**
+     * varukorg sidan
+     **/
+    @FXML
+    private Label momsLabel;
+    @FXML
+    private Label antalVarorLabel;
+    @FXML
+    private Label totalPrizeLabel;
+    @FXML
+    private FlowPane checkoutVarukorgFlowPane;
+    @FXML
+    private AnchorPane varukorgAnchorPane;
+    @FXML
+    private ImageView nextVarukorgImageView;
 
-    /** Leverans-sidan **/
-    @FXML private AnchorPane leveransAnchorPane;
+    /**
+     * personliga uppgifter sidan
+     **/
+    @FXML
+    private AnchorPane personligaUppgifterAnchorPane;
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private TextField lastNameTextField;
+    @FXML
+    private TextField phoneTextField;
+    @FXML
+    private TextField mailTextField;
+    @FXML
+    private TextField adressTextField;
+    @FXML
+    private TextField postCodeTextField;
+    @FXML
+    private TextField cityTextField;
+    @FXML
+    private ImageView nextPersonalImageView;
+    @FXML
+    private ImageView previousPersonalImageView;
 
+    /**
+     * Leverans-sidan
+     **/
+    @FXML
+    private AnchorPane leveransAnchorPane;
+    @FXML
+    private ImageView nextLeveransImageView;
+    @FXML
+    private ImageView previousLeveransImageView;
+
+    /**
+     * Betalning
+     **/
+    @FXML
+    private AnchorPane betalningAnchorPane;
+    @FXML
+    private ImageView previousBetalningImageView;
 
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
 
 
-
     // For switching scenes
     SceneController sceneController = new SceneController();
-
 
 
     @FXML
@@ -59,46 +96,105 @@ public class Kassa_1_Controller {
         sceneController.switchToAffaren(event);
     }
 
-    /** NAVIGERING **/
+    /**
+     * NAVIGERING
+     **/
     @FXML
-    private void varukorgToFront(){
+    private void varukorgToFront() {
         System.out.println("Varukorgsvy");
         varukorgAnchorPane.toFront();
     }
+
     @FXML
-    private void personligaUppgifterToFront(){
+    private void personligaUppgifterToFront() {
         System.out.println("personliga uppgifter vyn");
         personligaUppgifterAnchorPane.toFront();
     }
+
     @FXML
-    private void leveransToFront(){
+    private void leveransToFront() {
         System.out.println("Leveransvyn");
         leveransAnchorPane.toFront();
     }
 
+    @FXML
+    private void betalningToFront() {
+        System.out.println("betalningsvy");
+        betalningAnchorPane.toFront();
+    }
 
 
     /** HOVER **/
 
     @FXML
-    private void previousStepMouseEntered(){
-        previousStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                "iMatMini/bilder/föregåendeHover.png")));
-    }
-    @FXML
-    private void previousStepMouseExited(){
-        previousStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                "iMatMini/bilder/Föregående steg.png" )));
-    }
-    @FXML
-    private void nextStepMouseEntered(){
-        nextStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+    private void nextVarukorgMouseEntered() {
+        nextVarukorgImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
                 "iMatMini/bilder/nästastegHover.png")));
     }
+
     @FXML
-    private void nextStepMouseExited(){
-        nextStepImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                "iMatMini/bilder/Nästaknapp.png" )));
+    private void nextVarukorgMouseExited() {
+        nextVarukorgImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Nästaknapp.png")));
+    }
+
+    @FXML
+    private void nextPersonalMouseEntered() {
+        nextPersonalImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/nästastegHover.png")));
+    }
+
+    @FXML
+    private void nextPersonalMouseExited() {
+        nextPersonalImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Nästaknapp.png")));
+    }
+
+    @FXML
+    private void previousPersonalMouseEntered() {
+        previousPersonalImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/föregåendeHover.png")));
+    }
+
+    @FXML
+    private void previousPersonalMouseExited() {
+        previousPersonalImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Föregående steg.png")));
+    }
+
+    @FXML
+    private void nextLeveransMouseEntered() {
+        nextLeveransImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/nästastegHover.png")));
+    }
+
+    @FXML
+    private void nextLeveransMouseExited() {
+        nextLeveransImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Nästaknapp.png")));
+    }
+
+    @FXML
+    private void previousLeveransMouseEntered() {
+        previousLeveransImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/föregåendeHover.png")));
+    }
+
+    @FXML
+    private void previousLeveransMouseExited() {
+        previousLeveransImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Föregående steg.png")));
+    }
+    @FXML
+    private void previousBetalningMouseEntered() {
+        previousBetalningImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/föregåendeHover.png")));
+    }
+
+    @FXML
+    private void previousBetalningMouseExited() {
+        previousBetalningImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "iMatMini/bilder/Föregående steg.png")));
     }
 
 
@@ -111,5 +207,4 @@ public class Kassa_1_Controller {
    */
 
 
-
-}
+    }
