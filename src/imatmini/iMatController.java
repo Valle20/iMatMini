@@ -135,6 +135,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void openHandla(){
         System.out.println("handla vyn");
         handlaPane.toFront();
+
+        updateCards(model.getProducts()); // lägger alla kort i här så länge
     }
 
 
