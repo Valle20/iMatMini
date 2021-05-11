@@ -11,7 +11,6 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: 123456;" />
       <AnchorPane prefHeight="720.0" prefWidth="1280.0">
          <children>
             <Label layoutX="908.0" layoutY="496.0" text="Antal varor" AnchorPane.leftAnchor="909.0">
@@ -28,7 +27,7 @@
                   </Label>
                   <ScrollPane prefHeight="200.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
                      <content>
-                        <FlowPane prefHeight="556.0" prefWidth="794.0" />
+                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="556.0" prefWidth="794.0" />
                      </content>
                   </ScrollPane>
                </children>
@@ -73,6 +72,20 @@
                   <Font size="24.0" />
                </font>
             </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a1a1a1;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="633.0" />
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+               </buttons>
+            </ButtonBar>
+            <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
          </children>
       </AnchorPane>
    </children>
