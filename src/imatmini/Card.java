@@ -27,7 +27,9 @@ public class Card extends AnchorPane {
 
     private Product product;
 
-
+    public ImageView getFavourite() {
+        return favourite;
+    }
 
     public Card(Product product) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Card.fxml"));

@@ -9,9 +9,8 @@ package imatmini;
  *
  * @author oloft
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Customer;
@@ -41,7 +40,26 @@ public class Model {
         // Exists only to defeat instantiation.
     }
 
+    private Map<String, Card> cardMap = new HashMap();
 
+    public Map<String, Card> getCardMap() {
+        return cardMap;
+    }
+
+    public void initCardMap(){
+        for (Product product : this.getProducts()){
+            Card card = new Card(product);
+            cardMap.put(product.getName(), card);
+            initFavourites(product);
+        }
+    }
+
+    public void initFavourites(Product product){
+        if (iMatDataHandler.isFavorite(product)){
+            cardMap.get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                    "imatmini/bilder/filled_heart_button.png")));
+        }
+    }
     /**
      * Returns the single instance of the Model class.
      */

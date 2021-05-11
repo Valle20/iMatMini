@@ -72,7 +72,7 @@
                <children>
                   <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" vgap="12.0" />
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" style="-fx-background-color: #EDF2F4;" vgap="12.0" />
                      </content>
                   </ScrollPane>
                </children>

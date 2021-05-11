@@ -8,7 +8,9 @@ package imatmini;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -75,8 +77,24 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane handlaPane;
     // Other variables
 
-
     private final Model model = Model.getInstance();
+
+
+
+    public void initialize(URL url, ResourceBundle rb) {
+
+        model.initCardMap();
+
+        model.getShoppingCart().addShoppingCartListener(this);
+
+        updateVarukorg(model.getShoppingCart().getItems());
+        updateCards(model.getProducts());
+        // updateBottomPanel();
+
+        //setupAccountPane();
+
+
+    }
 
     private void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
@@ -91,7 +109,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         cardsFlowPane.getChildren().clear();
         for (Product product : productList) {
 
-            cardsFlowPane.getChildren().add(new Card(product));
+            cardsFlowPane.getChildren().add(model.getCardMap().get(product.getName()));
         }
     }
 
@@ -116,17 +134,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
-    public void initialize(URL url, ResourceBundle rb) {
 
-        model.getShoppingCart().addShoppingCartListener(this);
-
-        updateVarukorg(model.getShoppingCart().getItems());
-        updateCards(model.getProducts());
-       // updateBottomPanel();
-
-        //setupAccountPane();
-
-    }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
