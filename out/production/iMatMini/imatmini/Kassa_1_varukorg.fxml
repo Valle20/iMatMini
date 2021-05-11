@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0">
          <children>
             <Label layoutX="908.0" layoutY="496.0" text="Antal varor" AnchorPane.leftAnchor="909.0">
                <font>
@@ -76,7 +76,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a1a1a1;">
+      <AnchorPane fx:id="personligaUppgifterAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a1a1a1;">
          <children>
             <ImageView fitHeight="65.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="633.0" />
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
@@ -125,21 +125,21 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="534.0" layoutY="212.0" text="Leveranadress">
+                  <Label layoutX="534.0" layoutY="212.0" text="Leveransadress">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
                </children>
             </Pane>
-            <ImageView fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <ImageView fx:id="previousStepImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
          </children>
       </AnchorPane>
    </children>
