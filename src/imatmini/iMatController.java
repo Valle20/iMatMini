@@ -17,6 +17,7 @@ import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
 /**
@@ -26,7 +27,6 @@ import se.chalmers.cse.dat216.project.ShoppingCartListener;
 public class iMatController implements Initializable, ShoppingCartListener {
 
     // For switching scenes
-
     SceneController sceneController = new SceneController();
 
     @FXML
@@ -68,6 +68,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private TextField cvcField;
     @FXML
     private Label purchasesLabel;*/
+
     @FXML private FlowPane varukorgFlowPane;
     @FXML private FlowPane cardsFlowPane;
     // Other variables
@@ -75,13 +76,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     private final Model model = Model.getInstance();
 
-
-    private void updateVarukorg(List<Product> productList) {
+    private void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
-        int i = 0;
-        for (Product product : productList) {
-            i++;
-            if (i == 3) break;
+
+        for (ShoppingItem product : productList) {
+
             varukorgFlowPane.getChildren().add(new VarukorgsItem(product));
         }
     }
@@ -95,10 +94,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
 
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-       // model.getShoppingCart().addShoppingCartListener(this);
 
-        updateVarukorg(model.getProducts());
+        model.getShoppingCart().addShoppingCartListener(this);
+
+        updateVarukorg(model.getShoppingCart().getItems());
         updateCards(model.getProducts());
        // updateBottomPanel();
 
@@ -108,9 +107,13 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
-
+        updateVarukorg(model.getShoppingCart().getItems());
     }
 
+    @FXML
+    private void tömVarukorgen(ActionEvent event) {
+        model.clearShoppingCart();
+    }
 
     /*
 
@@ -146,7 +149,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         closeAccountView();
     }
       
-    @Override
+
 
     
     // Navigation
@@ -165,8 +168,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
      public void shoppingCartChanged(CartEvent evt) {
         updateBottomPanel();
     }
-   
-    
 
     
     private void updateBottomPanel() {

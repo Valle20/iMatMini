@@ -28,8 +28,8 @@
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Button layoutX="212.0" layoutY="14.0" mnemonicParsing="false" text="Töm varukorgen" />
-                  <ScrollPane prefHeight="469.0" prefWidth="337.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                  <Button layoutX="212.0" layoutY="14.0" mnemonicParsing="false" onAction="#tömVarukorgen" text="Töm varukorgen" />
+                  <ScrollPane prefHeight="469.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
                         <FlowPane fx:id="varukorgFlowPane" prefHeight="468.0" prefWidth="318.0" vgap="2.0" />
                      </content>
@@ -40,9 +40,9 @@
             </AnchorPane>
             <AnchorPane layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <ScrollPane prefHeight="544.0" prefWidth="962.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                  <ScrollPane prefHeight="544.0" prefWidth="962.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="901.0" style="-fx-background-color: transperent;" vgap="12.0" />
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="901.0" vgap="12.0" />
                      </content>
                   </ScrollPane>
                </children>

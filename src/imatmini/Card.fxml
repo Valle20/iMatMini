@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
 <fx:root prefHeight="240.0" prefWidth="165.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="65.0" layoutY="112.0" text="Blåbär" />
+      <Label fx:id="nameLabel" layoutX="19.0" layoutY="111.0" text="Blåbär" AnchorPane.leftAnchor="7.0" />
+      <ImageView fx:id="imageView" fitHeight="102.0" fitWidth="147.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
+      <Label fx:id="prizeLabel" layoutX="1.0" layoutY="135.0" text="Pris" AnchorPane.leftAnchor="7.0" />
+      <Button layoutX="28.0" layoutY="202.0" mnemonicParsing="false" onAction="#läggTill" prefHeight="27.0" prefWidth="107.0" text="Lägg till" />
    </children>
 </fx:root>

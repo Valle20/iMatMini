@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 /**
  *
@@ -36,7 +37,7 @@ public class VarukorgsItem extends AnchorPane {
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public VarukorgsItem(Product product) {
+    public VarukorgsItem(ShoppingItem shoppingItem) {
         
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VarukorgsItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -48,16 +49,11 @@ public class VarukorgsItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.product = product;
+        this.product = shoppingItem.getProduct();
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         imageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
-
     }
     
-    @FXML
-    private void handleAddAction(ActionEvent event) {
-        System.out.println("Add " + product.getName());
-        model.addToShoppingCart(product);
-    }
+
 }

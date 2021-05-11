@@ -16,6 +16,8 @@ public class SceneController {
     private Scene scene;
     private Parent root;
 
+    private Model model = Model.getInstance();
+
     @FXML
     public void switchToKassa1(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Kassa_1_varukorg.fxml"));
