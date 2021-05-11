@@ -27,9 +27,6 @@ public class Card extends AnchorPane {
 
     private Model model = Model.getInstance();
 
-    //endast för att få detailjvyn att fungera som styrs i iMatController. Vet att detta inte är rätt. :/
-    private iMatController imatcontroller = new iMatController();
-
     private Product product;
 
     private StringBuilder unit = new StringBuilder();
@@ -39,14 +36,24 @@ public class Card extends AnchorPane {
         return favourite;
     }
 
+    public ShoppingItem getShoppingItem() {
+        return shoppingItem;
+    }
+
     public TextField getAmountTextField() {
         return amountTextField;
     }
 
-    public Card(ShoppingItem shoppingItem) {
+    private iMatController iMatController;
+
+    public Card(ShoppingItem shoppingItem, iMatController iMatController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+
+        if (model.getShoppingCart().getItems().contains(shoppingItem)){
+            plusMinusPane.toFront();
+        }
 
         try {
             fxmlLoader.load();
@@ -54,6 +61,7 @@ public class Card extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.iMatController = iMatController;
         this.shoppingItem = shoppingItem;
 
         this.product = shoppingItem.getProduct();
@@ -85,7 +93,7 @@ public class Card extends AnchorPane {
 
     @FXML
     private void merInfo(){
-        imatcontroller.openDetailView();
+        iMatController.openDetailView();
     }
 
     @FXML private void gillaVara(){
