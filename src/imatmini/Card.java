@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -50,7 +51,7 @@ public class Card extends AnchorPane {
     }
 
     @FXML
-    private void läggTill(ActionEvent event) {
+    private void läggTill() {
         System.out.println("Lägg till " + product.getName());
         model.addToShoppingCart(product);
     }
