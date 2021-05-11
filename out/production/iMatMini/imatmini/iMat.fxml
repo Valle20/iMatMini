@@ -38,6 +38,16 @@
                   <Button layoutX="134.0" layoutY="605.0" mnemonicParsing="false" onAction="#switchToKassa1" text="Till kassan" />
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="helpPane" prefHeight="642.0" prefWidth="934.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Label layoutX="428.0" layoutY="247.0" text="Help" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Label layoutX="428.0" layoutY="247.0" text="Tidigare" />
+               </children>
+            </AnchorPane>
             <AnchorPane layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
                   <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
