@@ -45,11 +45,27 @@
             </AnchorPane>
             <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <Label layoutX="428.0" layoutY="247.0" text="Tidigare" />
+                  <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <ScrollPane prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <FlowPane prefHeight="552.0" prefWidth="231.0" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <FlowPane prefHeight="513.0" prefWidth="646.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="650.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
                         <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" vgap="12.0" />
