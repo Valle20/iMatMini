@@ -30,12 +30,20 @@
       </ImageView>
       <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="24.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" />
       <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="98.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+<<<<<<< HEAD
       <ImageView fitHeight="27.0" fitWidth="88.0" layoutX="90.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="108.0">
+=======
+      <ImageView fitHeight="27.0" fitWidth="88.0" layoutX="90.0" layoutY="35.0" onMouseClicked="#merInfo" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="108.0">
+>>>>>>> origin/Emelie
          <image>
             <Image url="@bilder/mer%20info.png" />
          </image>
       </ImageView>
+<<<<<<< HEAD
       <ImageView fitHeight="27.0" fitWidth="88.0" layoutX="683.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="690.0">
+=======
+      <ImageView fitHeight="27.0" fitWidth="88.0" layoutX="683.0" layoutY="21.0" onMouseClicked="#tabort" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="690.0">
+>>>>>>> origin/Emelie
          <image>
             <Image url="@bilder/tabort.png" />
          </image>

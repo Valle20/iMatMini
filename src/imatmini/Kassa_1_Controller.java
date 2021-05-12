@@ -51,10 +51,20 @@ public class Kassa_1_Controller implements Initializable {
 
         for (ShoppingItem product : productList) {
 
-            checkoutVarukorgFlowPane.getChildren().add(new KassaVarukorgsItem(product));
+            checkoutVarukorgFlowPane.getChildren().add(new KassaVarukorgsItem(product, this));
         }
     }
 
+    @FXML private AnchorPane detailPane;
+    @FXML
+    public void openDetailView() {
+        detailPane.toFront();
+    }
+
+    @FXML
+    public void closeDetailView() {
+        detailPane.toBack();
+    }
     @FXML
     private AnchorPane varukorgAnchorPane;
     @FXML
