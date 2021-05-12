@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -111,7 +112,7 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private AnchorPane betalningAnchorPane;
     @FXML
-    private AnchorPane betalamedkortAnchorPane;
+    private Pane betalamedkortPane;
     @FXML
     private AnchorPane slutförtköpAnchorPane;
     @FXML
@@ -133,7 +134,10 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private Button slutförköpButton;
     @FXML
+    private Button köpklartButton;
+    @FXML
     private ImageView previousBetalningImageView;
+
 
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
@@ -173,6 +177,16 @@ public class Kassa_1_Controller implements Initializable {
     private void betalningToFront() {
         System.out.println("betalningsvy");
         betalningAnchorPane.toFront();
+    }
+    @FXML
+    private void betalamedkortToFront() {
+        System.out.println("Betala med kort vy");
+        betalamedkortPane.setVisible(true);
+    }
+    @FXML
+    private void slutförtköpToFront() {
+        System.out.println("slutfört köp");
+        slutförtköpAnchorPane.toFront();
     }
 
 
