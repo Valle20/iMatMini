@@ -15,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
@@ -142,8 +143,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
-
-
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         updateVarukorg(model.getShoppingCart().getItems());
@@ -164,6 +163,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void closeDetailView() {
         mainPane.toFront();
     }
+
+    @FXML private TextField sökruta;
+
+    @FXML
+    private void sök(ActionEvent event) {
+
+        List<Product> matches = model.findProducts(sökruta.getText());
+        updateCards(matches);
+        System.out.println("# matching products: " + matches.size());
+    }
     /*
 
     // Shop pane actions
@@ -178,7 +187,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         List<Product> matches = model.findProducts(searchField.getText());
         updateVarukorg(matches);
         System.out.println("# matching products: " + matches.size());
-
     }
     
     @FXML
@@ -197,10 +205,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void handleDoneAction(ActionEvent event) {
         closeAccountView();
     }
-      
 
-
-    
     // Navigation
     public void openAccountView() {
         updateAccountPanel();

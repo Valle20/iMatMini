@@ -58,12 +58,22 @@ public class VarukorgsItem extends AnchorPane {
         imageView.setImage(model.getImage(shoppingItem.getProduct(), kImageWidth, kImageWidth*kImageRatio));
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
 
+        /*
         amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             newValue = newValue.replaceAll("[^0-9]","");
             if (!newValue.equals("")){
                 updateAmount(Integer.parseInt(newValue));
             }
         });
+         */
+    }
+
+    @FXML private void typeAmount(){
+        String newValue = amountTextField.getText();
+        newValue = newValue.replaceAll("[^0-9]","");
+        if (!newValue.equals("")){
+            updateAmount(Integer.parseInt(newValue));
+        }
     }
 
     private void updateAmount(int amount){

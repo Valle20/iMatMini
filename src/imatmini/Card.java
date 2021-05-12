@@ -78,7 +78,7 @@ public class Card extends AnchorPane {
         unit.append(product.getUnit());
         unit.delete(0,3);
 
-
+/*
         amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             newValue = newValue.replaceAll("[^0-9]","");
             if (!newValue.equals("")){
@@ -86,6 +86,16 @@ public class Card extends AnchorPane {
             }
         });
 
+ */
+
+    }
+
+    @FXML private void typeAmount(){
+        String newValue = amountTextField.getText();
+        newValue = newValue.replaceAll("[^0-9]","");
+        if (!newValue.equals("")){
+            updateAmount(Integer.parseInt(newValue));
+        }
     }
 
     @FXML
