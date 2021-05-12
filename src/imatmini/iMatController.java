@@ -5,20 +5,19 @@
  */
 package imatmini;
 
-import java.awt.event.ActionListener;
+//import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
@@ -38,12 +37,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private void switchToKassa1(ActionEvent event) throws IOException {
         sceneController.switchToKassa1(event);
-    }
-
-    public void cotainS(ShoppingItem shoppingItem){
-        if (model.getShoppingCart().getItems().contains(shoppingItem)){
-            System.out.println("contains !!");
-        }
     }
 
     @FXML private FlowPane varukorgFlowPane;
@@ -77,11 +70,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
-    public void initPlusMinus(Card card, ShoppingItem s){
-        if (Model.getInstance().getShoppingCart().getItems().contains(s)){
-            card.plusMinusPane.toFront();
-        }
-    }
 
     public void initFavourites(Product product){
         if (model.isGillad(product)){
@@ -113,8 +101,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
+    @FXML private AnchorPane titelPane;
+    @FXML private Label titelLabel;
+
     public void updateCards(List<Product> productList) {
         cardsFlowPane.getChildren().clear();
+        cardsFlowPane.getChildren().add(titelPane);
         for (Product product : productList) {
 
             cardsFlowPane.getChildren().add(model.getCardMap().get(product.getName()));
@@ -122,6 +114,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     @FXML public void gåTillFavoriter(){
+        titelLabel.setText("Favoriter");
         updateCards(model.getGilladeVaror());
     }
 
@@ -145,6 +138,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         handlaPane.toFront();
 
         updateCards(model.getProducts()); // lägger alla kort i här så länge
+        titelLabel.setText("Startsida eller veckans varor");
     }
 
 

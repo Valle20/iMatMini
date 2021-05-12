@@ -65,7 +65,7 @@
                   </Pane>
                   <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="785.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Vector%201.png" />
+                        <Image url="@bilder/Vector%201.png" />
                      </image>
                   </ImageView>
                </children>
@@ -89,7 +89,7 @@
             </AnchorPane>
             <AnchorPane layoutX="822.0" layoutY="-9.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <Label layoutX="17.0" layoutY="26.0" prefHeight="28.0" prefWidth="97.0" text="Varukorg">
+                  <Label layoutX="17.0" layoutY="26.0" prefHeight="28.0" prefWidth="97.0" text="Varukorg" AnchorPane.topAnchor="25.0">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
@@ -131,9 +131,20 @@
             </AnchorPane>
             <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                  <ScrollPane prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="592.0" prefWidth="888.0" style="-fx-background-color: #EDF2F4;" vgap="12.0" />
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="651.0" prefWidth="888.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
+                           <children>
+                              <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
+                                 <children>
+                                    <Label fx:id="titelLabel" text="Label" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children></FlowPane>
                      </content>
                   </ScrollPane>
                </children>
