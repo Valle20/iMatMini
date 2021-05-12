@@ -12,6 +12,7 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class Card extends AnchorPane {
 
@@ -32,6 +33,10 @@ public class Card extends AnchorPane {
     private StringBuilder unit = new StringBuilder();
     private ShoppingItem shoppingItem;
 
+    public void setShoppingItem(ShoppingItem shoppingItem) {
+        this.shoppingItem = shoppingItem;
+    }
+
     public ImageView getFavourite() {
         return favourite;
     }
@@ -51,9 +56,7 @@ public class Card extends AnchorPane {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
-        if (model.getShoppingCart().getItems().contains(shoppingItem)){
-            plusMinusPane.toFront();
-        }
+
 
         try {
             fxmlLoader.load();
@@ -63,6 +66,8 @@ public class Card extends AnchorPane {
 
         this.iMatController = iMatController;
         this.shoppingItem = shoppingItem;
+
+
 
         this.product = shoppingItem.getProduct();
 
@@ -82,11 +87,14 @@ public class Card extends AnchorPane {
 
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
         plusMinusPane.toFront();
+
+        iMatController.cotainS(shoppingItem);
     }
 
     @FXML private void plus(){
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
+
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         System.out.println("plus" );
     }

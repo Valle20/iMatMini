@@ -40,36 +40,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
         sceneController.switchToKassa1(event);
     }
 
-
-    // Shopping Pane
-   /* @FXML
-    private AnchorPane shopPane;
-    @FXML
-    private TextField searchField;
-    @FXML
-    private Label itemsLabel;
-    @FXML
-    private Label costLabel;
-    @FXML
-    private FlowPane productsFlowPane;
-    
-    // Account Pane
-    @FXML
-    private AnchorPane accountPane;
-    @FXML 
-    ComboBox cardTypeCombo;
-    @FXML
-    private TextField numberTextField;
-    @FXML
-    private TextField nameTextField;
-    @FXML 
-    private ComboBox monthCombo;
-    @FXML
-    private ComboBox yearCombo;
-    @FXML
-    private TextField cvcField;
-    @FXML
-    private Label purchasesLabel;*/
+    public void cotainS(ShoppingItem shoppingItem){
+        if (model.getShoppingCart().getItems().contains(shoppingItem)){
+            System.out.println("contains !!");
+        }
+    }
 
     @FXML private FlowPane varukorgFlowPane;
     @FXML private FlowPane cardsFlowPane;
@@ -88,6 +63,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
             model.getCardMap().put(product.getName(), card);
             initFavourites(product);
             //initPlusMinus(model.getCardMap().get(product.getName()), s);
+        }
+
+        List<ShoppingItem> varukorgItems =  model.getShoppingCart().getItems();
+        for (ShoppingItem item : varukorgItems){
+            model.getCardMap().get(item.getProduct().getName()).plusMinusPane.toFront();
+            model.getCardMap().get(item.getProduct().getName()).setShoppingItem(item);
+
+            StringBuilder unit = new StringBuilder();
+            unit.append(item.getProduct().getUnit());
+            unit.delete(0,3);
+            model.getCardMap().get(item.getProduct().getName()).amountTextField.setText( (int)item.getAmount() + " " + unit);
         }
     }
 
