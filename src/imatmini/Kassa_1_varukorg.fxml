@@ -2,7 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -12,26 +14,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <AnchorPane fx:id="betalningAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a74ab5;">
-         <children>
-            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
-               <buttons>
-                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranssätt" />
-                  <Button mnemonicParsing="false" text="4.Betalning" />
-               </buttons>
-            </ButtonBar>
-            <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
-            <ImageView fx:id="previousBetalningImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#leveransToFront" onMouseEntered="#previousBetalningMouseEntered" onMouseExited="#previousBetalningMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
-               <image>
-                  <Image url="@bilder/Föregående%20steg.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #7e1139;">
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
@@ -194,6 +178,87 @@
                   <Font size="24.0" />
                </font>
             </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="betalningAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a74ab5;">
+         <children>
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
+                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="4.Betalning" />
+               </buttons>
+            </ButtonBar>
+            <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
+            <ImageView fx:id="previousBetalningImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#leveransToFront" onMouseEntered="#previousBetalningMouseEntered" onMouseExited="#previousBetalningMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Föregående%20steg.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="504.0" layoutY="152.0" prefHeight="124.0" prefWidth="592.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="153.0" AnchorPane.topAnchor="112.0">
+               <children>
+                  <Label layoutX="19.0" layoutY="17.0" text="Välj betalningsmetod">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" text="Betala med kort">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" text="Betala med kontanter vid leverans">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="betalamedkortAnchorPane" prefHeight="720.0" prefWidth="1280.0">
+               <children>
+                  <Pane layoutX="317.0" layoutY="338.0" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="153.0">
+                     <children>
+                        <Label layoutX="31.0" layoutY="20.0" text="Korttyp">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="110.0" text="Kortinnehavarens för- och efternamn">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="550.0" layoutY="20.0" text="Kortnummer">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="840.0" layoutY="110.0" text="CVC/CVV-kod">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="550.0" layoutY="110.0" text="År">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="660.0" layoutY="110.0" text="Månad">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0" />
+                        <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
+                        <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" />
+                        <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
+                        <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
+                        <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

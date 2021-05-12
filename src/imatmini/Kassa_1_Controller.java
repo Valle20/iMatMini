@@ -3,9 +3,7 @@ package imatmini;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -81,7 +79,31 @@ public class Kassa_1_Controller {
     @FXML
     private AnchorPane betalningAnchorPane;
     @FXML
+    private AnchorPane betalamedkortAnchorPane;
+    @FXML
+    private AnchorPane slutförtköpAnchorPane;
+    @FXML
+    private ComboBox korttypComboBox;
+    @FXML
+    private ComboBox yearComboBox;
+    @FXML
+    private ComboBox monthComboBox;
+    @FXML
+    private TextField kundnamnTextField;
+    @FXML
+    private TextField kortnummerTextField;
+    @FXML
+    private TextField cvckodTextField;
+    @FXML
+    private RadioButton kortRadioButton;
+    @FXML
+    private RadioButton kontantRadioButton;
+    @FXML
+    private Button slutförköpButton;
+    @FXML
     private ImageView previousBetalningImageView;
+
+
 
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
