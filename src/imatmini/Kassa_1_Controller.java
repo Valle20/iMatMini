@@ -3,6 +3,10 @@ package imatmini;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -15,14 +19,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class Kassa_1_Controller {
+public class Kassa_1_Controller implements Initializable {
+
+    Model model = Model.getInstance();
+
     /**
      * på varje sida
      **/
     @FXML
     private Button backToStoreButton;
 
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateKassaVarukorg(model.getShoppingCart().getItems());
+    }
     /**
      * varukorg sidan
      **/
@@ -34,6 +44,18 @@ public class Kassa_1_Controller {
     private Label totalPrizeLabel;
     @FXML
     private FlowPane checkoutVarukorgFlowPane;
+
+
+
+    public void updateKassaVarukorg(List<ShoppingItem> productList) {
+        checkoutVarukorgFlowPane.getChildren().clear();
+
+        for (ShoppingItem product : productList) {
+
+            checkoutVarukorgFlowPane.getChildren().add(new KassaVarukorgsItem(product));
+        }
+    }
+
     @FXML
     private AnchorPane varukorgAnchorPane;
     @FXML
@@ -102,8 +124,6 @@ public class Kassa_1_Controller {
     private Button slutförköpButton;
     @FXML
     private ImageView previousBetalningImageView;
-
-
 
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));

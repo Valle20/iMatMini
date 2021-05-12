@@ -12,17 +12,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
-      <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #7e1139;">
+      <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EDF2F4;">
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
                   <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="3. Leveranstid" />
                   <Button mnemonicParsing="false" text="4. Betalning" />
                </buttons>
             </ButtonBar>
@@ -32,6 +33,109 @@
                </image>
             </ImageView>
             <ImageView fx:id="previousLeveransImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#personligaUppgifterToFront" onMouseEntered="#previousLeveransMouseEntered" onMouseExited="#previousLeveransMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <image>
+                  <Image url="@bilder/Föregående%20steg.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
+            <Label layoutX="132.0" layoutY="104.0" prefHeight="35.0" prefWidth="368.0" text="Välj datum och tid för leverans" AnchorPane.leftAnchor="132.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="132.0" layoutY="155.0" prefHeight="410.0" prefWidth="1016.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="155.0">
+               <children>
+                  <Button layoutX="27.0" layoutY="90.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
+                  <Button layoutX="27.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
+                  <Button layoutX="27.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="27.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+                  <Button layoutX="230.0" layoutY="90.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
+                  <Button layoutX="230.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
+                  <Button layoutX="230.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="230.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+                  <Button layoutX="434.0" layoutY="90.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
+                  <Button layoutX="434.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
+                  <Button layoutX="434.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="434.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+                  <Button layoutX="636.0" layoutY="90.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
+                  <Button layoutX="636.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
+                  <Button layoutX="636.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="636.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+                  <Button layoutX="840.0" layoutY="90.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
+                  <Button layoutX="840.0" layoutY="141.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
+                  <Button layoutX="840.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Line endX="-2.4000244140625" endY="145.99996948242188" layoutX="203.2" layoutY="133.0" startX="-2.4000244140625" startY="-42.800018310546875" />
+                  <Line endX="-2.4000244140625" endY="145.99996948242188" layoutX="406.4" layoutY="133.0" startX="-2.4000244140625" startY="-42.800018310546875" />
+                  <Line endX="-2.4000244140625" endY="145.99996948242188" layoutX="609.6" layoutY="133.0" startX="-2.4000244140625" startY="-42.800018310546875" />
+                  <Line endX="-2.4000244140625" endY="145.99996948242188" layoutX="812.8" layoutY="133.0" startX="-2.4000244140625" startY="-42.800018310546875" />
+                  <Label fx:id="firstDay" layoutX="52.0" layoutY="12.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="secondDay" layoutX="255.0" layoutY="12.0" prefHeight="65.0" prefWidth="98.0" text="Imorgon 13/5" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="thirdDay" layoutX="459.0" layoutY="12.0" prefHeight="65.0" prefWidth="98.0" text="Fredag 12/5" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fourthDay" layoutX="661.0" layoutY="12.0" prefHeight="65.0" prefWidth="98.0" text="Lördag 12/5" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fifthDay" layoutX="865.0" layoutY="12.0" prefHeight="65.0" prefWidth="98.0" text="Söndag 12/5" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="840.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+                  <Button layoutX="840.0" layoutY="245.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: FFFFFF;" text="20:00-22:00" />
+               </children>
+            </Pane>
+            <Label layoutX="337.0" layoutY="580.0" prefHeight="26.0" prefWidth="127.0" text="Du har valt">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="534.0" layoutY="580.0" prefHeight="26.0" prefWidth="82.0" text="Datum:">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="743.0" layoutY="580.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="chosenDate" layoutX="628.0" layoutY="577.0" text="Label">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="chosenTime" layoutX="799.0" layoutY="577.0" text="Label">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="betalningAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #a74ab5;">
+         <children>
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
+                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="4.Betalning" />
+               </buttons>
+            </ButtonBar>
+            <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
+            <ImageView fx:id="previousBetalningImageView" fitHeight="65.0" fitWidth="200.0" onMouseClicked="#leveransToFront" onMouseEntered="#previousBetalningMouseEntered" onMouseExited="#previousBetalningMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
                <image>
                   <Image url="@bilder/Föregående%20steg.png" />
                </image>

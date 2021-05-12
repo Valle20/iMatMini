@@ -8,6 +8,7 @@ package imatmini;
 //import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -20,10 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 
 /**
@@ -113,16 +111,149 @@ public class iMatController implements Initializable, ShoppingCartListener {
         int i = 0;
         for (Product product : productList) {
             i++;
-            if (i == 10){   // begränsade till 10 nu bara för att det inte skulle va så segt
-                break;
-            }
+
             cardsFlowPane.getChildren().add(model.getCardMap().get(product.getName()));
         }
+    }
+
+    @FXML public void allaVaror(){
+        titelLabel.setText("Alla varor");
+        updateCards(model.getProducts());
+    }
+
+    public List<Product> getMejeri(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            if (product.getCategory() == ProductCategory.DAIRIES){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void mejeri(){
+        titelLabel.setText("Mejeri");
+        updateCards(getMejeri());
+    }
+
+    public List<Product> getSötsaker(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            if (product.getCategory() == ProductCategory.SWEET){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void sötsaker(){
+        titelLabel.setText("Sötsaker");
+        updateCards(getSötsaker());
+    }
+
+    public List<Product> getKött(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            ProductCategory p = product.getCategory();
+            if ((
+                    p == ProductCategory.FISH
+                    || p == ProductCategory.MEAT
+            )){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void Kött(){
+        titelLabel.setText("Kött & Fisk");
+        updateCards(getKött());
+    }
+    public List<Product> getDryck(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            ProductCategory p = product.getCategory();
+            if ((
+                    p == ProductCategory.HOT_DRINKS
+                    || p == ProductCategory.COLD_DRINKS
+            )){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void Dryck(){
+        titelLabel.setText("Dryck");
+        updateCards(getDryck());
+    }
+
+    public List<Product> getBröd(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            if (product.getCategory() == ProductCategory.BREAD){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void bröd(){
+        titelLabel.setText("Bröd");
+        updateCards(getBröd());
+    }
+
+    public List<Product> getSkafferi(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            ProductCategory p = product.getCategory();
+            if ((
+                    p == ProductCategory.FLOUR_SUGAR_SALT
+                    || p == ProductCategory.PASTA
+                    || p == ProductCategory.POTATO_RICE
+                    || p == ProductCategory.HERB
+                    || p == ProductCategory.NUTS_AND_SEEDS
+            )){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void Skafferi(){
+        titelLabel.setText("Skafferi");
+        updateCards(getSkafferi());
+    }
+
+    public List<Product> getFruktGrönt(){
+        List<Product> list = new ArrayList<>();
+        for (Product product : model.getProducts()){
+            ProductCategory p = product.getCategory();
+            if ((
+                    p == ProductCategory.CITRUS_FRUIT
+                    || p == ProductCategory.EXOTIC_FRUIT
+                    || p == ProductCategory.MELONS
+                    || p == ProductCategory.CABBAGE
+                    || p == ProductCategory.BERRY
+                    || p == ProductCategory.FRUIT
+                    || p == ProductCategory.ROOT_VEGETABLE
+                    || p == ProductCategory.VEGETABLE_FRUIT
+            )){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
+    @FXML public void FruktGrönt(){
+        titelLabel.setText("Frukt & Grönt");
+        updateCards(getFruktGrönt());
     }
 
     @FXML public void gåTillFavoriter(){
         titelLabel.setText("Favoriter");
         updateCards(model.getGilladeVaror());
+        handlaPane.toFront();
     }
 
     //flytta på Anchorpanes i start

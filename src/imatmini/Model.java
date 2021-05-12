@@ -47,9 +47,6 @@ public class Model {
     }
 
 
-
-
-
     public List<Product> getGilladeVaror(){
         return iMatDataHandler.favorites();
     }
