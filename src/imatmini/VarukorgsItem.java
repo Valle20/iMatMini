@@ -59,11 +59,23 @@ public class VarukorgsItem extends AnchorPane {
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
     }
 
-    @FXML private void plus(){
-        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
-        model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
+    private void updateAmount(int amount){
+        shoppingItem.setAmount(amount);
 
+        if (amount == 0){
+            model.getCardMap().get(shoppingItem.getProduct().getName()).plusMinusPane.toBack();
+            model.getShoppingCart().removeItem(shoppingItem);
+        }
+
+        model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        System.out.println("plus" );
     }
+    @FXML private void plus(){
+        updateAmount((int)(shoppingItem.getAmount() + 1));
+    }
+
+    @FXML private void minus(){
+        updateAmount((int)(shoppingItem.getAmount() - 1));
+    }
+
 }

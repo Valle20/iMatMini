@@ -11,7 +11,7 @@
    <children>
       <AnchorPane fx:id="plusMinusPane" layoutY="191.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="193.0">
          <children>
-            <ImageView fx:id="minusImage" fitHeight="22.0" fitWidth="22.0" layoutX="9.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+            <ImageView fx:id="minusImage" fitHeight="22.0" fitWidth="22.0" layoutX="9.0" layoutY="11.0" onMouseClicked="#minus" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
                <image>
                   <Image url="@bilder/minus.png" />
                </image>

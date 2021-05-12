@@ -83,20 +83,30 @@ public class Card extends AnchorPane {
     private void läggTill(){
         System.out.println("Lägg till " + product.getName());
 
+        shoppingItem.setAmount(1);
         model.getShoppingCart().addItem(shoppingItem);
 
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
         plusMinusPane.toFront();
-
-        iMatController.cotainS(shoppingItem);
     }
 
-    @FXML private void plus(){
-        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
-        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
+    private void updateAmount(int amount){
+        shoppingItem.setAmount(amount);
 
+        if (amount == 0){
+            plusMinusPane.toBack();
+            model.getShoppingCart().removeItem(shoppingItem);
+        }
+
+        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        System.out.println("plus" );
+    }
+    @FXML private void plus(){
+        updateAmount((int)(shoppingItem.getAmount() + 1));
+    }
+
+    @FXML private void minus(){
+        updateAmount((int)(shoppingItem.getAmount() - 1));
     }
 
     @FXML

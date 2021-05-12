@@ -22,7 +22,7 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
-      <ImageView fx:id="minusImage" fitHeight="22.0" fitWidth="22.0" layoutX="72.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="minusImage" fitHeight="22.0" fitWidth="22.0" layoutX="72.0" layoutY="37.0" onMouseClicked="#minus" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bilder/minus.png" />
          </image>
