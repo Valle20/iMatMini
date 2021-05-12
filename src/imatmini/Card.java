@@ -77,6 +77,15 @@ public class Card extends AnchorPane {
 
         unit.append(product.getUnit());
         unit.delete(0,3);
+
+
+        amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            newValue = newValue.replaceAll("[^0-9]","");
+            if (!newValue.equals("")){
+                updateAmount(Integer.parseInt(newValue));
+            }
+        });
+
     }
 
     @FXML
@@ -127,6 +136,7 @@ public class Card extends AnchorPane {
             System.out.println(" gilla vara " + product.getName());
         }
     }
+
 
 
 }
