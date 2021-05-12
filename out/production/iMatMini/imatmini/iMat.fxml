@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
 <AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
@@ -86,17 +87,24 @@
       </AnchorPane>
       <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1282.0" style="-fx-background-color: -fx-standard-color;">
          <children>
-            <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" AnchorPane.leftAnchor="0.0">
+            <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
-                  <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: FFFFFF;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0" />
-                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: FFFFFF;" text="Sök" />
-                  <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
-                  <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Tidigare köp" />
-                  <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Hjälp" />
-                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0" />
-                  <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
-                  <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
+                  <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <ScrollPane prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <FlowPane prefHeight="552.0" prefWidth="231.0" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <FlowPane prefHeight="513.0" prefWidth="646.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="650.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="822.0" layoutY="-9.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
@@ -116,29 +124,130 @@
                   <Button layoutX="134.0" layoutY="605.0" mnemonicParsing="false" onAction="#switchToKassa1" text="Till kassan" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="helpPane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Label layoutX="428.0" layoutY="247.0" text="Help" />
+                  <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
+                  <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: FFFFFF;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0" />
+                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: FFFFFF;" text="Sök" />
+                  <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
+                  <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Tidigare köp" />
+                  <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Hjälp" />
+                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0" />
+                  <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
+                  <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="tidigarePane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane fx:id="helpPane" prefHeight="642.0" prefWidth="934.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
-                     <children>
-                        <ScrollPane prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
-                           <content>
-                              <FlowPane prefHeight="552.0" prefWidth="231.0" />
-                           </content>
-                        </ScrollPane>
-                        <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <content>
-                              <FlowPane prefHeight="513.0" prefWidth="646.0" />
-                           </content>
-                        </ScrollPane>
-                        <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="650.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
-                     </children>
-                  </AnchorPane>
-                  <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
+                  <Label layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="328.0" text="Hur handlar man på iMat?" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <Label layoutX="31.0" layoutY="80.0" prefHeight="30.0" prefWidth="194.0" text="Steg 1 - Hitta varor" textFill="#b00320" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="31.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta varor genom att söka på en produkt i sökfältet eller välj en kategori genom att trycka på knappen kategorier. Skrolla sedan igenom sökresultaten eller vald kategori för att hitta önskad produkt." wrappingWidth="692.5367813110352" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="28.0" layoutY="197.0" text="Steg 2 - Lägg till vara i varukorgen" textFill="#b00320" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="28.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på knappen" wrappingWidth="134.13678741455078" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="240.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="för att lägga till varan i din varukorg." wrappingWidth="273.0000000000002">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="31.0" layoutY="386.0" text="Steg 3 - Betala" textFill="#b00320" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="31.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varan kommer sedan upp till höger." wrappingWidth="471.7367630004883" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="31.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan justera hur många av varan du vill ha med." AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="29.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För mer information om varan tryck på" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="helpViewAddPicture" fitHeight="25.0" fitWidth="70.0" layoutX="160.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Lägg%20till%20knapp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="helpViewInfoPicture" fitHeight="25.0" fitWidth="70.0" layoutX="314.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bilder/mer%20info.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="31.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="När du har handlat klart trycker du på" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="helpViewCheckout" fitHeight="30.0" fitWidth="89.0" layoutX="305.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Group%2033.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="406.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="som tar dig till utcheckningen.">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="31.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Där kommer du att bli guidad steg för steg kring hur du avslutar köpet." AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="31.0" layoutY="486.0" text="Steg 4 - Övrigt" textFill="#b00320" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="31.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan gilla en vara genom att trycka på  " wrappingWidth="858.0734252929688">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="31.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att se tidigare köp trycker du på &quot;Tidigare köp&quot; uppe till höger. Där finns datum och vy för alla tidigare köpta kundvagnar." wrappingWidth="858.0734252929688" AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="359.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text=". Ifyllt hjärta betyder att varan är favoritmarkerad.  " wrappingWidth="538.1366882324219">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="33.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan se alla dina favoritmarkerade produkter genom att klicka på &quot;Favoritvaror&quot; uppe till höger." AnchorPane.leftAnchor="31.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="helpViewHeart" fitHeight="30.0" fitWidth="42.0" layoutX="321.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../FavoritesButton%20(1).png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="65.0">

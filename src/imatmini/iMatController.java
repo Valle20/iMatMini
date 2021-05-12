@@ -18,6 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.FlowPane;
@@ -47,6 +48,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane detailPane;
     @FXML private AnchorPane kategorierPane;
     @FXML private FlowPane dateFlowPane;
+    //Bilder för helpvyn
+    @FXML private ImageView helpViewAddPicture;
+    @FXML private ImageView helpViewInfoPicture;
+    @FXML private ImageView helpViewCheckout;
+    @FXML private ImageView helpViewHeart;
+
     // Other variables
 
     private final Model model = Model.getInstance();
@@ -90,7 +97,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         //setupAccountPane();
 
-
+        helpViewAddPicture.setImage(new Image("imatmini/bilder/addButton.png"));
+        helpViewInfoPicture.setImage(new Image("imatmini/bilder/moreInfo.png"));
+        helpViewCheckout.setImage(new Image("imatmini/bilder/Checkout.png"));
+        helpViewHeart.setImage(new Image("imatmini/bilder/empty_heart.png"));
     }
 
     public void updateVarukorg(List<ShoppingItem> productList) {
