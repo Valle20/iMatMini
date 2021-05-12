@@ -30,7 +30,7 @@
       </AnchorPane>
       <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
          <children>
-            <AnchorPane layoutX="90.0" layoutY="76.0" prefHeight="491.0" prefWidth="781.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="68.0">
+            <AnchorPane layoutX="90.0" layoutY="76.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0">
                <children>
                   <Label layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
@@ -76,7 +76,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="785.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="785.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
                      <image>
                         <Image url="@bilder/Vector%201.png" />
                      </image>
@@ -259,6 +259,15 @@
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>
                                     <Label fx:id="titelLabel" text="Några varor" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="titelPane1" prefHeight="33.0" prefWidth="887.0">
+                                 <children>
+                                    <Label fx:id="titelLabel1" text="Några varor" AnchorPane.topAnchor="20.0">
                                        <font>
                                           <Font size="23.0" />
                                        </font>

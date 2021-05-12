@@ -63,7 +63,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
             Card card = new Card(new ShoppingItem(product), this);
             model.getCardMap().put(product.getName(), card);
             initFavourites(product);
-            //initPlusMinus(model.getCardMap().get(product.getName()), s);
         }
 
         List<ShoppingItem> varukorgItems =  model.getShoppingCart().getItems();
@@ -92,7 +91,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateVarukorg(model.getShoppingCart().getItems());
-        updateCards(model.getProducts());
+
+       startsida();
+        //updateCards(model.getProducts());
         // updateBottomPanel();
 
         //setupAccountPane();
@@ -312,6 +313,26 @@ public class iMatController implements Initializable, ShoppingCartListener {
         titelLabel.setText("Startsida eller veckans varor");
     }
 
+    @FXML private AnchorPane titelPane1;
+    @FXML private Label titelLabel1;
+
+    public void startsida() {
+        kategorierPane.toBack();
+        cardsFlowPane.getChildren().clear();
+        titelLabel.setText("Veckans varor");
+        titelLabel1.setText("Säsongsvaror");
+
+        cardsFlowPane.getChildren().add(titelPane);
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Citron"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Choklad"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Broccoli"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Mozzarella"));
+
+        cardsFlowPane.getChildren().add(titelPane1);
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Fruktsoppa"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Brie"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Vattenmelon"));
+    }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
