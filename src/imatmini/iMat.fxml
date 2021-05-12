@@ -137,7 +137,7 @@
                            <children>
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>
-                                    <Label fx:id="titelLabel" text="Label" AnchorPane.topAnchor="20.0">
+                                    <Label fx:id="titelLabel" text="Några varor" AnchorPane.topAnchor="20.0">
                                        <font>
                                           <Font size="23.0" />
                                        </font>

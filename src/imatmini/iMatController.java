@@ -108,8 +108,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void updateCards(List<Product> productList) {
         cardsFlowPane.getChildren().clear();
         cardsFlowPane.getChildren().add(titelPane);
+        int i = 0;
         for (Product product : productList) {
-
+            i++;
+            if (i == 10){   // begränsade till 10 nu bara för att det inte skulle va så segt
+                break;
+            }
             cardsFlowPane.getChildren().add(model.getCardMap().get(product.getName()));
         }
     }
