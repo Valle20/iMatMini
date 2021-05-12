@@ -47,6 +47,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane handlaPane;
     @FXML private AnchorPane mainPane;
     @FXML private AnchorPane detailPane;
+    @FXML private AnchorPane kategorierPane;
     // Other variables
 
     private final Model model = Model.getInstance();
@@ -106,6 +107,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private Label titelLabel;
 
     public void updateCards(List<Product> productList) {
+        kategorierPane.toBack();
         cardsFlowPane.getChildren().clear();
         cardsFlowPane.getChildren().add(titelPane);
         int i = 0;
@@ -125,6 +127,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     //flytta på Anchorpanes i start
 
+    @FXML
+    private void openKategoriere(){
+        System.out.println("kategorier");
+        kategorierPane.toFront();
+    }
     @FXML
     private void openTidigare(){
         System.out.println("tidigare vyn");
