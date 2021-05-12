@@ -127,7 +127,7 @@
                      <children>
                         <ScrollPane prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <FlowPane prefHeight="552.0" prefWidth="231.0" />
+                              <FlowPane fx:id="dateFlowPane" prefHeight="552.0" prefWidth="231.0" />
                            </content>
                         </ScrollPane>
                         <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

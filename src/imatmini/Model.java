@@ -12,12 +12,7 @@ package imatmini;
 import java.util.*;
 
 import javafx.scene.image.Image;
-import se.chalmers.cse.dat216.project.CreditCard;
-import se.chalmers.cse.dat216.project.Customer;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 
 /**
@@ -138,17 +133,11 @@ public class Model {
 
     }
 
-    public void placeOrder() {
-
-        iMatDataHandler.placeOrder();
-
-    }
-
+    public Order placeOrder() { return iMatDataHandler.placeOrder(); }
+    public java.util.List<Order> getOrders() { return iMatDataHandler.getOrders(); }
     
     public int getNumberOfOrders() {
-
         return iMatDataHandler.getOrders().size();
-
     }
 
     public void shutDown() {

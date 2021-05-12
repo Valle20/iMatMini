@@ -95,16 +95,18 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     public void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
-
         for (ShoppingItem product : productList) {
 
             varukorgFlowPane.getChildren().add(new VarukorgsItem(product));
         }
     }
 
-    public void updateOrders(List<Order> orderList) {
+
+    public void updateOrders() {
         dateFlowPane.getChildren().clear();
-        for (Order order : orderList) {
+        dateFlowPane.setVgap(2);
+
+        for (Order order : model.getOrders()) {
             dateFlowPane.getChildren().add(new TidigareDate(order));
         }
 
@@ -284,6 +286,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private void openTidigare(){
         System.out.println("tidigare vyn");
+        updateOrders();
         tidigarePane.toFront();
     }
 

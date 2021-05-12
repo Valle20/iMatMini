@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -187,8 +188,16 @@ public class Kassa_1_Controller implements Initializable {
     private void slutförtköpToFront() {
         System.out.println("slutfört köp");
         slutförtköpAnchorPane.toFront();
+        commitPurchase();
+
     }
 
+    private void commitPurchase(){
+        model.placeOrder();
+        for(int i=0; i < model.getOrders().size(); i++){
+            System.out.println( model.getOrders().get(i) );
+        }
+    }
 
     /** HOVER **/
 
