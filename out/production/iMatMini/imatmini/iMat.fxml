@@ -17,14 +17,14 @@
     <children>
       <AnchorPane fx:id="kategorierPane" prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
          <children>
-            <Button layoutX="404.0" layoutY="77.0" mnemonicParsing="false" text="Mejeri" />
-            <Button layoutX="400.0" layoutY="23.0" mnemonicParsing="false" text="Kött &amp; Fisk" />
-            <Button layoutX="258.0" layoutY="77.0" mnemonicParsing="false" text="Bröd" />
-            <Button layoutX="258.0" layoutY="22.0" mnemonicParsing="false" text="Skafferi" />
-            <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" text="Frukt &amp; grönt" />
-            <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" text="Alla varor" />
-            <Button layoutX="566.0" layoutY="23.0" mnemonicParsing="false" text="Sötsaker" />
-            <Button layoutX="566.0" layoutY="77.0" mnemonicParsing="false" text="Dryck" />
+            <Button layoutX="404.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" text="Mejeri" />
+            <Button layoutX="400.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" text="Kött &amp; Fisk" />
+            <Button layoutX="258.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" text="Bröd" />
+            <Button layoutX="258.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" text="Skafferi" />
+            <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" text="Frukt &amp; grönt" />
+            <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" text="Alla varor" />
+            <Button layoutX="566.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" text="Sötsaker" />
+            <Button layoutX="566.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" text="Dryck" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
