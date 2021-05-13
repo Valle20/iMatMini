@@ -33,6 +33,8 @@ public class Kassa_1_Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateKassaVarukorg(model.getShoppingCart().getItems());
+
+        updateTotalpris();
     }
     /**
      * varukorg sidan
@@ -46,6 +48,19 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private FlowPane checkoutVarukorgFlowPane;
 
+    public void updateTotalpris(){
+        totalPrizeLabel.setText(model.getShoppingCart().getTotal() + " SEK");
+        momsLabel.setText(model.getShoppingCart().getTotal() * 0.12 + " SEK");
+        antalVarorLabel.setText(getAntalVaror() + " st");
+    }
+
+    private int getAntalVaror(){
+        int antal = 0;
+        for (ShoppingItem s : model.getShoppingCart().getItems()){
+            antal += s.getAmount();
+        }
+        return antal;
+    }
 
 
     public void updateKassaVarukorg(List<ShoppingItem> productList) {

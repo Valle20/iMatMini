@@ -408,17 +408,17 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" text="Label" AnchorPane.leftAnchor="1109.0">
+            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" prefHeight="26.0" prefWidth="112.0" text="Label">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" text="Label" AnchorPane.leftAnchor="1111.0">
+            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" prefHeight="26.0" prefWidth="123.0" text="Label">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" text="Label" AnchorPane.leftAnchor="1106.0">
+            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" prefHeight="29.0" prefWidth="118.0" text="Label">
                <font>
                   <Font size="24.0" />
                </font>
