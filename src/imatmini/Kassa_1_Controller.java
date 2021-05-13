@@ -1,5 +1,7 @@
 package imatmini;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,6 +40,7 @@ public class Kassa_1_Controller implements Initializable {
         updateTotalpris();
         updatePersonuppgifter();
         initPersonUppgifterLyssnare();
+        initComboboxes();
     }
     /**
      * varukorg sidan
@@ -206,7 +209,37 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ImageView previousBetalningImageView;
 
+    private void initComboboxes(){
+        monthComboBox.getItems().addAll(model.getMonths());
+        yearComboBox.getItems().addAll(model.getYears());
+        korttypComboBox.getItems().addAll(model.getCardTypes());
 
+        monthComboBox.getSelectionModel().select(model.getCreditCard().getValidMonth());
+        yearComboBox.getSelectionModel().select(model.getCreditCard().getValidYear());
+        korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
+
+        monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setValidMonth(Integer.parseInt(newValue));
+            }
+        });
+        yearComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setValidYear(Integer.parseInt(newValue));
+            }
+        });
+        korttypComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setCardType((newValue));
+            }
+        });
+    }
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
 
