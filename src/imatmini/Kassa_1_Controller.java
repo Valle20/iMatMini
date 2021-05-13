@@ -125,9 +125,21 @@ public class Kassa_1_Controller implements Initializable {
         adressTextField.setText(customer.getAddress());
         postCodeTextField.setText(customer.getPostCode());
         cityTextField.setText(customer.getPostAddress());
+        cvckodTextField.setText(model.getCreditCard().getVerificationCode() + "");
+        kortnummerTextField.setText(model.getCreditCard().getCardNumber());
+        kundnamnTextField.setText(model.getCreditCard().getHoldersName());
     }
 
     private void initPersonUppgifterLyssnare(){
+        kortnummerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setCardNumber((newValue));
+        });
+        kundnamnTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setHoldersName((newValue));
+        });
+        cvckodTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+        });
         firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setFirstName(newValue);
         });
@@ -149,6 +161,7 @@ public class Kassa_1_Controller implements Initializable {
         cityTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setPostAddress(newValue);
         });
+
     }
 
     /**
@@ -177,11 +190,11 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ComboBox monthComboBox;
     @FXML
-    private TextField kundnamnTextField;
+    private TextField kundnamnTextField; // ovan sparade
     @FXML
-    private TextField kortnummerTextField;
+    private TextField kortnummerTextField; // ovan sparade
     @FXML
-    private TextField cvckodTextField;
+    private TextField cvckodTextField; // ovan sparade
     @FXML
     private RadioButton kortRadioButton;
     @FXML
@@ -237,6 +250,10 @@ public class Kassa_1_Controller implements Initializable {
     private void betalamedkortToFront() {
         System.out.println("Betala med kort vy");
         betalamedkortPane.setVisible(true);
+    }
+    @FXML private void betalamedkortToBack() {
+        System.out.println("Betala med kort vy, bort");
+        betalamedkortPane.setVisible(false);
     }
     @FXML
     private void slutförtköpToFront() {

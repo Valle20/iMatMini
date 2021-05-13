@@ -7,6 +7,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -112,12 +113,15 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#betalamedkortToFront" text="Betala med kort">
+                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToFront" text="Betala med kort">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" text="Betala med kontanter vid leverans">
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$group">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -161,9 +165,18 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" />
+                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
                   <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
                   <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
                   <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
@@ -229,13 +242,34 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <ImageView fx:id="previousPersonalImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" onMouseClicked="#varukorgToFront" onMouseEntered="#previousPersonalMouseEntered" onMouseExited="#previousPersonalMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
