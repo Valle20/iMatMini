@@ -126,13 +126,34 @@
             </AnchorPane>
             <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
-                  <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: FFFFFF;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0" />
-                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: FFFFFF;" text="Sök" />
-                  <Button layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0" />
-                  <Button layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Tidigare köp" />
-                  <Button layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Hjälp" />
-                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0" />
+                  <Button fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#openHandla" prefHeight="43.0" prefWidth="111.0" style="-fx-background-color: FFFFFF;" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: FFFFFF;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: FFFFFF;" text="Sök">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Tidigare köp">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" style="-fx-background-color: FFFFFF;" text="Hjälp">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="377.0" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
                </children>

@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -22,6 +23,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import se.chalmers.cse.dat216.project.*;
 
 
@@ -92,8 +95,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         updateVarukorg(model.getShoppingCart().getItems());
 
-       startsida();
-        //updateCards(model.getProducts());
+        startsida();
+
         // updateBottomPanel();
 
         //setupAccountPane();
@@ -148,6 +151,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void allaVaror(){
         titelLabel.setText("Alla varor");
         updateCards(model.getProducts());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getMejeri(){
@@ -163,6 +170,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void mejeri(){
         titelLabel.setText("Mejeri");
         updateCards(getMejeri());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getSötsaker(){
@@ -178,6 +189,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void sötsaker(){
         titelLabel.setText("Sötsaker");
         updateCards(getSötsaker());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getKött(){
@@ -197,6 +212,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Kött(){
         titelLabel.setText("Kött & Fisk");
         updateCards(getKött());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
     public List<Product> getDryck(){
         List<Product> list = new ArrayList<>();
@@ -215,6 +234,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Dryck(){
         titelLabel.setText("Dryck");
         updateCards(getDryck());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getBröd(){
@@ -230,6 +253,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void bröd(){
         titelLabel.setText("Bröd");
         updateCards(getBröd());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getSkafferi(){
@@ -252,6 +279,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Skafferi(){
         titelLabel.setText("Skafferi");
         updateCards(getSkafferi());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     public List<Product> getFruktGrönt(){
@@ -277,12 +308,26 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void FruktGrönt(){
         titelLabel.setText("Frukt & Grönt");
         updateCards(getFruktGrönt());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
+
+    @FXML private Button startsida;
+    @FXML private Button favpriter;
+    @FXML private Button tidigare;
+    @FXML private Button hjälp;
+
 
     @FXML public void gåTillFavoriter(){
         titelLabel.setText("Favoriter");
         updateCards(model.getGilladeVaror());
         handlaPane.toFront();
+        favpriter.setStyle("-fx-background-color: #8D99AE; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     //flytta på Anchorpanes i start
@@ -296,12 +341,20 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void openTidigare(){
         System.out.println("tidigare vyn");
         tidigarePane.toFront();
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #8D99AE; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     @FXML
     private void openHelp(){
         System.out.println("help vyn");
         helpPane.toFront();
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #8D99AE; ");
     }
 
     @FXML
@@ -332,6 +385,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
         cardsFlowPane.getChildren().add(model.getCardMap().get("Fruktsoppa"));
         cardsFlowPane.getChildren().add(model.getCardMap().get("Brie"));
         cardsFlowPane.getChildren().add(model.getCardMap().get("Vattenmelon"));
+
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #8D99AE; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
 
     @Override
@@ -359,10 +417,14 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void sök(ActionEvent event) {
-
+        titelLabel.setText("Sökord: " + sökruta.getText());
         List<Product> matches = model.findProducts(sökruta.getText());
         updateCards(matches);
         System.out.println("# matching products: " + matches.size());
+        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
+        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
     }
     /*
 
