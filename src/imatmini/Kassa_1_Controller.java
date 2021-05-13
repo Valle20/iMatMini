@@ -214,8 +214,8 @@ public class Kassa_1_Controller implements Initializable {
         yearComboBox.getItems().addAll(model.getYears());
         korttypComboBox.getItems().addAll(model.getCardTypes());
 
-        monthComboBox.getSelectionModel().select(model.getCreditCard().getValidMonth());
-        yearComboBox.getSelectionModel().select(model.getCreditCard().getValidYear());
+        monthComboBox.getSelectionModel().select(""+model.getCreditCard().getValidMonth());
+        yearComboBox.getSelectionModel().select(""+model.getCreditCard().getValidYear());
         korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
 
         monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
