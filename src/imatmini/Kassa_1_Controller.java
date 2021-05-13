@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -35,6 +36,8 @@ public class Kassa_1_Controller implements Initializable {
         updateKassaVarukorg(model.getShoppingCart().getItems());
 
         updateTotalpris();
+        updatePersonuppgifter();
+        initPersonUppgifterLyssnare();
     }
     /**
      * varukorg sidan
@@ -90,6 +93,9 @@ public class Kassa_1_Controller implements Initializable {
     /**
      * personliga uppgifter sidan
      **/
+
+    private Customer customer = model.getCustomer();
+
     @FXML
     private AnchorPane personligaUppgifterAnchorPane;
     @FXML
@@ -110,6 +116,40 @@ public class Kassa_1_Controller implements Initializable {
     private ImageView nextPersonalImageView;
     @FXML
     private ImageView previousPersonalImageView;
+
+    private void updatePersonuppgifter(){
+        firstNameTextField.setText(customer.getFirstName());
+        lastNameTextField.setText(customer.getLastName());
+        phoneTextField.setText(customer.getPhoneNumber());
+        mailTextField.setText(customer.getEmail());
+        adressTextField.setText(customer.getAddress());
+        postCodeTextField.setText(customer.getPostCode());
+        cityTextField.setText(customer.getPostAddress());
+    }
+
+    private void initPersonUppgifterLyssnare(){
+        firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setFirstName(newValue);
+        });
+        lastNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setLastName(newValue);
+        });
+        phoneTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPhoneNumber(newValue);
+        });
+        mailTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setEmail(newValue);
+        });
+        adressTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setAddress(newValue);
+        });
+        postCodeTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPostCode(newValue);
+        });
+        cityTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPostAddress(newValue);
+        });
+    }
 
     /**
      * Leverans-sidan
