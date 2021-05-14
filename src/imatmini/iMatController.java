@@ -62,6 +62,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     private final Model model = Model.getInstance();
 
+    @FXML private Label dNamn;
+    @FXML private ImageView dBild;
+    @FXML private Label dPris;
+
+    public void populateDetalvy(Product product){
+        dNamn.setText(product.getName());
+        dBild.setImage(model.getImage(product, 147, 102));
+        dPris.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
+    }
+
     public void initCardMap(){
         for (Product product : Model.getInstance().getProducts()){
             Card card = new Card(new ShoppingItem(product), this);

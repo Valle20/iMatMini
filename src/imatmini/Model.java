@@ -41,6 +41,9 @@ public class Model {
         return cardMap;
     }
 
+    public boolean isFirstRun(){
+       return iMatDataHandler.isFirstRun();
+    }
 
     public List<Product> getGilladeVaror(){
         return iMatDataHandler.favorites();
