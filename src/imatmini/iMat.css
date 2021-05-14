@@ -12,6 +12,28 @@
 {
 -fx-font-size:
 }
+/* ALLA SIDOR */
+.anchor-pane
+{
+-fx-background-color: #EDF2F4;
+}
+/* checkout */
+.navigation-button
+{
+-fx-background-color: #2B2D42;
+-fx-text-fill: white;
+-fx-font-family: "Roboto";
+-fx-font-size: 25px;
+-fx-padding: 1px;
+-fx-text-align: justify;
+-fx-background-radius: 10px;
+-fx-pref-height: 65px;
+-fx-pref-width: 200px;
+}
+.navigation-button:hover
+{
+-fx-background-color: #4B4D63;
+}
 
 .btn-checkout
 {
