@@ -476,7 +476,7 @@
                   <Button mnemonicParsing="false" text="4.Betalning" />
                </buttons>
             </ButtonBar>
-            <Label layoutX="927.0" layoutY="178.0" prefHeight="178.0" prefWidth="229.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
+            <Label layoutX="927.0" layoutY="232.0" prefHeight="77.0" prefWidth="293.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="30.0" />
                </font>
@@ -487,7 +487,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="904.0" layoutY="422.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
+            <AnchorPane layoutX="904.0" layoutY="434.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
                <children>
                   <Label layoutX="10.0" layoutY="9.0" text="Antal varor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
                      <font>
