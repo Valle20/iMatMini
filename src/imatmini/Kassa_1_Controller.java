@@ -395,11 +395,16 @@ public class Kassa_1_Controller implements Initializable {
         varukorgAnchorPane.toFront();
     }
 
+    @FXML private Label e1;
 
     @FXML
     private void personligaUppgifterToFront() {
-        System.out.println("personliga uppgifter vyn");
-        personligaUppgifterAnchorPane.toFront();
+        if (!model.getShoppingCart().getItems().isEmpty()){
+            System.out.println("personliga uppgifter vyn");
+            personligaUppgifterAnchorPane.toFront();
+            e1.setVisible(false);
+        }
+        e1.setVisible(true);
     }
 
     private boolean is2ok(){
