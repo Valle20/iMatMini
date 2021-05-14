@@ -309,7 +309,7 @@ public class Kassa_1_Controller implements Initializable {
     }
 
     /** HOVER **/
-
+/*
     @FXML
     private void nextVarukorgMouseEntered() {
         nextVarukorgImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
