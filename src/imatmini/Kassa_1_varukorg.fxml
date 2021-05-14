@@ -30,12 +30,12 @@
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
-            <Label layoutX="232.0" layoutY="148.0" text="Fyll i dina personuppgifter" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="116.0">
+            <Label layoutX="232.0" layoutY="148.0" text="Fyll i dina personuppgifter" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="483.0" layoutY="260.0" prefHeight="419.0" prefWidth="1016.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="159.0">
+            <Pane layoutX="483.0" layoutY="260.0" prefHeight="419.0" prefWidth="1016.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Label layoutX="22.0" layoutY="30.0" text="Förnamn">
                      <font>
@@ -122,14 +122,9 @@
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
-            <Pane layoutX="504.0" layoutY="152.0" prefHeight="124.0" prefWidth="592.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="153.0" AnchorPane.topAnchor="112.0">
+            <Pane layoutX="150.0" layoutY="170.0" prefHeight="59.0" prefWidth="592.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Label layoutX="19.0" layoutY="17.0" text="Välj betalningsmetod">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToFront" text="Betala med kort">
+                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToFront" text="Betala med kort">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -137,7 +132,7 @@
                         <ToggleGroup fx:id="g" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$g">
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$g">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -149,7 +144,7 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Button>
-            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" visible="false" AnchorPane.leftAnchor="153.0" AnchorPane.topAnchor="320.0">
+            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
                <children>
                   <Label layoutX="31.0" layoutY="20.0" text="Korttyp">
                      <font>
@@ -193,9 +188,14 @@
                      <font>
                         <Font size="16.0" />
                      </font></TextField>
-                  <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
-                  <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
-                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
+                  <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" style="-fx-font-size: 16px;" visibleRowCount="12" />
+                  <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" style="-fx-font-size: 16px;" />
+                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px;" />
+                  <Label layoutY="-39.0" text="Fyll i kortuppgifter">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Button layoutX="299.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
@@ -211,6 +211,11 @@
             <Label fx:id="e42" layoutX="766.0" layoutY="640.0" prefHeight="49.0" prefWidth="281.0" text="Du måste fylla i dina kortuppgifter innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
                <font>
                   <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="153.0" layoutY="135.0" text="Välj betalningsmetod" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font size="24.0" />
                </font>
             </Label>
          </children>
@@ -302,12 +307,12 @@
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="34.0" />
-            <Label layoutX="132.0" layoutY="104.0" prefHeight="35.0" prefWidth="368.0" text="Välj datum och tid för leverans" AnchorPane.leftAnchor="132.0">
+            <Label layoutX="132.0" layoutY="104.0" prefWidth="368.0" text="Välj datum och tid för leverans" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="1063.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="163.0">
+            <Pane layoutX="1063.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
                   <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
@@ -319,7 +324,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="776.0" layoutY="179.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="762.0" AnchorPane.topAnchor="163.0">
+            <Pane layoutX="776.0" layoutY="179.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="762.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
                   <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
@@ -331,7 +336,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="559.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="552.0" AnchorPane.topAnchor="163.0">
+            <Pane layoutX="559.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="552.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
                   <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
@@ -343,7 +348,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="353.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="163.0">
+            <Pane layoutX="353.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
                   <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
@@ -355,7 +360,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="125.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="163.0">
+            <Pane layoutX="125.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
                   <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />

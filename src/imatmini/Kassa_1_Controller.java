@@ -45,6 +45,8 @@ public class Kassa_1_Controller implements Initializable {
         initPersonUppgifterLyssnare();
         initComboboxes();
 
+        setTextLimit(cvckodTextField, 3);
+
         chosenDate.setText("");
         if (customer.getMobilePhoneNumber().equals("kort")){
             kortRadioButton.fire();
@@ -68,6 +70,17 @@ public class Kassa_1_Controller implements Initializable {
         day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
         weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
         day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+    }
+
+    private void setTextLimit(TextField textField, int length) {
+        textField.setOnKeyTyped(event -> {
+            String string = textField.getText();
+
+            if (string.length() > length) {
+                textField.setText(string.substring(0, length));
+                textField.positionCaret(string.length());
+            }
+        });
     }
 
     /**
