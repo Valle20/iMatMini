@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
@@ -402,11 +403,6 @@
       </AnchorPane>
       <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane">
          <children>
-            <Label layoutX="908.0" layoutY="496.0" text="Antal varor" AnchorPane.leftAnchor="909.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
             <AnchorPane prefHeight="592.0" prefWidth="901.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0">
                <children>
                   <Label text="Din Varukorg" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="1.0">
@@ -435,37 +431,48 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label text="Varav moms" AnchorPane.leftAnchor="909.0" AnchorPane.topAnchor="446.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="923.0" layoutY="545.0" text="Totalt pris" AnchorPane.leftAnchor="909.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" prefHeight="26.0" prefWidth="112.0" text="Label">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" prefHeight="26.0" prefWidth="123.0" text="Label">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" prefHeight="29.0" prefWidth="118.0" text="Label">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
             <Button layoutX="1021.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e1" layoutX="597.0" layoutY="640.0" prefHeight="49.0" prefWidth="450.0" text="Din varukorg är tom. Innan du kan gå till nästa steg behöver du lägga till varor. Tryck därför på &quot;fortsätt handla&quot;" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
+            <AnchorPane layoutX="904.0" layoutY="422.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="10.0" layoutY="9.0" text="Antal varor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="56.0" text="Moms" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="56.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="105.0" text="Totalt pris" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="antalVarorLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="9.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="momsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="218.0" layoutY="56.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="56.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="105.0" prefHeight="29.0" prefWidth="138.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="239.5" layoutX="110.5" layoutY="45.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="45.0" />
+                  <Line endX="239.5" layoutX="110.5" layoutY="89.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
