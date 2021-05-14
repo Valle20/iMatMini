@@ -210,6 +210,10 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ImageView previousBetalningImageView;
 
+    /** fylla i saker **/
+
+
+
     private void initComboboxes(){
         monthComboBox.getItems().addAll(model.getMonths());
         yearComboBox.getItems().addAll(model.getYears());
@@ -376,6 +380,8 @@ public class Kassa_1_Controller implements Initializable {
         previousBetalningImageView.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
                 "iMatMini/bilder/Föregående steg.png")));
     }
+
+
 
 
     /*@FXML
