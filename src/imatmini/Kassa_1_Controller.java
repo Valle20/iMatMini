@@ -310,7 +310,6 @@ public class Kassa_1_Controller implements Initializable {
         korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
 
         monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 model.getCreditCard().setValidMonth(Integer.parseInt(newValue));

@@ -25,7 +25,7 @@
                <buttons>
                   <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
                   <Button mnemonicParsing="false" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="3. Leveranstid" />
                   <Button mnemonicParsing="false" text="4. Betalning" />
                </buttons>
             </ButtonBar>
@@ -117,7 +117,7 @@
                <buttons>
                   <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
                   <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranstid" />
                   <Button mnemonicParsing="false" text="4.Betalning" />
                </buttons>
             </ButtonBar>
@@ -314,9 +314,18 @@
             </Label>
             <Pane layoutX="1063.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Label fx:id="day5" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="20.0" />
@@ -326,9 +335,18 @@
             </Pane>
             <Pane layoutX="776.0" layoutY="179.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="762.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Label fx:id="day4" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="20.0" />
@@ -338,9 +356,18 @@
             </Pane>
             <Pane layoutX="559.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="552.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Label fx:id="day3" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="20.0" />
@@ -350,9 +377,18 @@
             </Pane>
             <Pane layoutX="353.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Label fx:id="day2" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="20.0" />
@@ -362,9 +398,18 @@
             </Pane>
             <Pane layoutX="125.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="8:00-12:00" />
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="12:00-16:00" />
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: FFFFFF;" text="16:00-20:00" />
+                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                   <Label fx:id="day1" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="20.0" />
@@ -387,12 +432,12 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="chosenDate" layoutX="628.0" layoutY="556.0">
+            <Label fx:id="chosenDate" layoutX="626.0" layoutY="553.0" prefHeight="32.0" prefWidth="150.0">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="chosenTime" layoutX="859.0" layoutY="556.0">
+            <Label fx:id="chosenTime" layoutX="857.0" layoutY="553.0" prefHeight="32.0" prefWidth="141.0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -427,7 +472,7 @@
                <buttons>
                   <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
                   <Button mnemonicParsing="false" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranssätt" />
+                  <Button mnemonicParsing="false" text="3. Leveranstid" />
                   <Button mnemonicParsing="false" text="4.Betalning" />
                </buttons>
             </ButtonBar>

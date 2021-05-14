@@ -69,8 +69,18 @@
 
 }
 
-.btn-checkout
-{
--fx-border-radius: 1px;
+.btn-checkout {
+-fx-background-color: white;
+-fx-border-with: 2px;
+-fx-border-color: black;
+-fx-border-radius: 3px;
 }
+
+.btn-checkout:hover{
+-fx-background-color: #8D99AE;
+-fx-color: black;
+-fx-font-weight: bold;
+}
+
+
 
