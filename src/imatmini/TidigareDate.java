@@ -9,10 +9,12 @@ package imatmini;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
+import java.awt.*;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -25,14 +27,15 @@ public class TidigareDate extends AnchorPane {
 
     @FXML private Label dateLabel;
     @FXML private Label priceLabel;
+    @FXML private AnchorPane datePane;
+    @FXML private ScrollPane dateScrollPane;
 
 
     private Model model = Model.getInstance();
-
+    private iMatController parentController;
     private Order order;
-    private StringBuilder unit = new StringBuilder();
 
-    public TidigareDate(Order order) {
+    public TidigareDate(Order order, iMatController iMatController) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareDate.fxml"));
         fxmlLoader.setRoot(this);
@@ -45,10 +48,14 @@ public class TidigareDate extends AnchorPane {
         }
 
         this.order = order;
+        this.parentController = iMatController;
 
 
         dateLabel.setText(getNiceDate());
         priceLabel.setText(getTotalOrderPrice() + " Kr");
+
+
+        openOrder();
 
 
     }
@@ -72,5 +79,9 @@ public class TidigareDate extends AnchorPane {
         return String.valueOf(total);
     }
 
+    @FXML
+    protected void openOrder(){
+        parentController.updateOrdersItems(order);
+    }
 
 }

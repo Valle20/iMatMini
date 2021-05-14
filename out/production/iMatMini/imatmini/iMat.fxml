@@ -125,14 +125,14 @@
                <children>
                   <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
-                        <ScrollPane prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane fx:id="dateScrollPane" prefHeight="554.0" prefWidth="240.0" style="-fx-background-color: #8D99AE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <FlowPane fx:id="dateFlowPane" prefHeight="552.0" prefWidth="231.0" />
+                              <FlowPane fx:id="dateFlowPane" prefHeight="554.0" prefWidth="231.0" style="-fx-background-color: #8D99AE;" />
                            </content>
                         </ScrollPane>
-                        <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <FlowPane prefHeight="513.0" prefWidth="646.0" />
+                              <FlowPane fx:id="orderItemFlowPane" prefHeight="515.0" prefWidth="646.0" style="-fx-background-color: #FFFFFF;" />
                            </content>
                         </ScrollPane>
                         <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="650.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />

@@ -135,7 +135,7 @@ public class Model {
 
     public Order placeOrder() { return iMatDataHandler.placeOrder(); }
     public java.util.List<Order> getOrders() { return iMatDataHandler.getOrders(); }
-    
+
     public int getNumberOfOrders() {
         return iMatDataHandler.getOrders().size();
     }

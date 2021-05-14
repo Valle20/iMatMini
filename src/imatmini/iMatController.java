@@ -47,6 +47,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane detailPane;
     @FXML private AnchorPane kategorierPane;
     @FXML private FlowPane dateFlowPane;
+    @FXML private FlowPane orderItemFlowPane;
     // Other variables
 
     private final Model model = Model.getInstance();
@@ -102,12 +103,20 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
+    public void updateOrdersItems(Order order) {
+        orderItemFlowPane.getChildren().clear();
+
+        for (ShoppingItem shoppingItem : order.getItems()) {
+            orderItemFlowPane.getChildren().add(new OrderItems(shoppingItem, this));
+        }
+
+    }
+
     public void updateOrders() {
         dateFlowPane.getChildren().clear();
-        dateFlowPane.setVgap(2);
 
         for (Order order : model.getOrders()) {
-            dateFlowPane.getChildren().add(new TidigareDate(order));
+            dateFlowPane.getChildren().add(new TidigareDate(order,this));
         }
 
     }
