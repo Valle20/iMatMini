@@ -351,6 +351,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void openTidigare(){
+        updateOrders();
         System.out.println("tidigare vyn");
         tidigarePane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
