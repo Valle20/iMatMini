@@ -20,12 +20,12 @@
          <children>
             <AnchorPane layoutX="192.0" layoutY="98.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="110.0">
                <children>
-                  <Label layoutX="48.0" layoutY="21.0" text="Blåbär">
+                  <Label fx:id="dNamn" layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0">
+                  <ImageView fx:id="dBild" fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0">
                      <image>
                         <Image url="@../../../../../.dat215/imat/images/product_16.jpg" />
                      </image>
@@ -37,7 +37,7 @@
                               <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="21.0" layoutY="92.0" prefHeight="27.0" prefWidth="54.0" text="Pris">
+                        <Label fx:id="dPris" layoutX="21.0" layoutY="92.0" prefHeight="27.0" prefWidth="125.0" text="Pris">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
                            </font>

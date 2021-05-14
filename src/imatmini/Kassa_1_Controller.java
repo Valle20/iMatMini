@@ -79,6 +79,14 @@ public class Kassa_1_Controller implements Initializable {
         }
     }
 
+    @FXML private Label dNamn;
+    @FXML private ImageView dBild;
+    @FXML private Label dPris;
+    public void populateDetalvy(Product product){
+        dNamn.setText(product.getName());
+        dBild.setImage(model.getImage(product, 147, 102));
+        dPris.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
+    }
     @FXML private AnchorPane detailPane;
     @FXML
     public void openDetailView() {
