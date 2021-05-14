@@ -73,7 +73,10 @@ public class KassaVarukorgsItem extends AnchorPane {
     @FXML
     private void merInfo(){
         kassa_1_controller.openDetailView();
+        kassa_1_controller.populateDetalvy(shoppingItem.getProduct());
     }
+
+
 
     @FXML private void typeAmount(){
         String newValue = amountTextField.getText();

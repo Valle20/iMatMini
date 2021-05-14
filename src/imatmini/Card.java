@@ -130,6 +130,7 @@ public class Card extends AnchorPane {
 
     @FXML
     private void merInfo(){
+        iMatController.populateDetalvy(product);
         iMatController.openDetailView();
     }
 
