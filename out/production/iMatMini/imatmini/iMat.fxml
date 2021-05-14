@@ -16,21 +16,9 @@
 
 <AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
     <children>
-      <AnchorPane fx:id="kategorierPane" prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
+      <AnchorPane fx:id="detailPane" layoutY="11.0" onMouseClicked="#closeDetailView" prefHeight="710.0" prefWidth="1269.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="404.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" text="Mejeri" />
-            <Button layoutX="400.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" text="Kött &amp; Fisk" />
-            <Button layoutX="258.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" text="Bröd" />
-            <Button layoutX="258.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" text="Skafferi" />
-            <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" text="Frukt &amp; grönt" />
-            <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" text="Alla varor" />
-            <Button layoutX="566.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" text="Sötsaker" />
-            <Button layoutX="566.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" text="Dryck" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
-         <children>
-            <AnchorPane layoutX="90.0" layoutY="76.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0">
+            <AnchorPane layoutX="192.0" layoutY="98.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="110.0">
                <children>
                   <Label layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
@@ -85,7 +73,19 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1282.0" style="-fx-background-color: -fx-standard-color;">
+      <AnchorPane fx:id="kategorierPane" prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Button layoutX="404.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" text="Mejeri" />
+            <Button layoutX="400.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" text="Kött &amp; Fisk" />
+            <Button layoutX="258.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" text="Bröd" />
+            <Button layoutX="258.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" text="Skafferi" />
+            <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" text="Frukt &amp; grönt" />
+            <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" text="Alla varor" />
+            <Button layoutX="566.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" text="Sötsaker" />
+            <Button layoutX="566.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" text="Dryck" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1282.0" style="-fx-background-color: #ffffff;">
          <children>
             <AnchorPane layoutX="822.0" layoutY="-9.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
                <children>
