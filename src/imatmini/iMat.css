@@ -30,6 +30,24 @@
 -fx-pref-height: 65px;
 -fx-pref-width: 200px;
 }
+.navigation-button:hover
+{
+-fx-background-color: #4B4D63;
+}
+
+.kassa
+{
+-fx-background-color: #2B2D42;
+-fx-text-fill: white;
+-fx-font-family: "Roboto";
+-fx-padding: 1px;
+-fx-font-size: 48px;
+}
+.kassa:hover
+{
+-fx-background-color: #4B4D63;
+-fx-font-size: 48px;
+}
 
 .back-button
 {
@@ -47,10 +65,7 @@
 -fx-background-color: #EF233C;
 }
 
-.navigation-button:hover
-{
--fx-background-color: #4B4D63;
-}
+
 #purchase-button
 {
 -fx-font-family: "Orienta";
@@ -74,6 +89,12 @@
 -fx-border-radius: 3px;
 -fx-font-size: 16px
 }
+.btn-checkout:hover{
+-fx-background-color: #8D99AE;
+-fx-color: black;
+-fx-font-weight: bold;
+-fx-font-size: 16px
+}
 
 .dropshadow /* jag lyckas inte få till nån bra skugga jag ger upp !!! Feel free to redo it completely */
 {
@@ -82,22 +103,32 @@
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.12), 4, 0, 0.0, 2.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0.0, 1.0);
 */
-
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0.0, 1.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 3, 0.1, 0.0, 0.0);
 }
 
 .lagg-till{
-
 -fx-background-color: #B00320;
 -fx-background-radius: 36px;
 }
-
-.btn-checkout:hover{
--fx-background-color: #8D99AE;
--fx-color: black;
--fx-font-weight: bold;
--fx-font-size: 16px
+.lagg-till:hover
+{
+-fx-background-color: #EF233C;
 }
 
+.graknapp{
+-fx-background-color: #E5E5E5;
+-fx-background-radius: 4px;
+}
+.graknapp:hover
+{
+-fx-background-color: #C4C4C4;
+-fx-background-radius: 4px;
+}
+
+.tidigare{
+-fx-background-color: #20B2AA;
+-fx-background-radius: 0px;
+}
 
 

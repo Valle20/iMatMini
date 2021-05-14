@@ -105,7 +105,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateVarukorg(model.getShoppingCart().getItems());
-
+        updateTotalpris();
         startsida();
 
         // updateBottomPanel();
@@ -428,6 +428,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         updateVarukorg(model.getShoppingCart().getItems());
+        updateTotalpris();
     }
 
     @FXML
@@ -458,6 +459,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
         hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+    }
+
+    @FXML Label totaltPris;
+    @FXML
+    public void updateTotalpris() {
+        totaltPris.setText((model.getShoppingCart().getTotal()) + " SEK");
     }
     /*
 
