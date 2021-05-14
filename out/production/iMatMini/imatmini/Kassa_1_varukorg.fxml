@@ -103,6 +103,11 @@
             </Pane>
             <Button layoutX="879.0" layoutY="601.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Button layoutX="441.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#varukorgToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <Label fx:id="e2" layoutX="735.0" layoutY="637.0" prefHeight="49.0" prefWidth="288.0" text="Du måste skriva in alla dina uppgifter innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="betalningAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" styleClass="anchor-pane">
@@ -128,10 +133,10 @@
                         <Font size="16.0" />
                      </font>
                      <toggleGroup>
-                        <ToggleGroup fx:id="group" />
+                        <ToggleGroup fx:id="g" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$group">
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$g">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -197,6 +202,16 @@
                   <Font size="24.0" />
                </font>
             </Button>
+            <Label fx:id="e41" layoutX="749.0" layoutY="640.0" prefHeight="49.0" prefWidth="288.0" text="Du måste välja en betalningsmetod innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="e42" layoutX="766.0" layoutY="640.0" prefHeight="49.0" prefWidth="281.0" text="Du måste fylla i dina kortuppgifter innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="slutförtköpAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.75);">
@@ -366,18 +381,23 @@
                   <Font name="Arial Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="chosenDate" layoutX="628.0" layoutY="553.0">
+            <Label fx:id="chosenDate" layoutX="628.0" layoutY="556.0">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label fx:id="chosenTime" layoutX="859.0" layoutY="553.0">
+            <Label fx:id="chosenTime" layoutX="859.0" layoutY="556.0">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
             <Button layoutX="814.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <Label fx:id="e3" layoutX="759.0" layoutY="640.0" prefHeight="49.0" prefWidth="288.0" text="Du måste välva en leveranstid inna du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane">
@@ -394,9 +414,9 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <ScrollPane prefHeight="200.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="794.0" style="-fx-background-color: #edf2f4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
                      <content>
-                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="549.0" prefWidth="774.0" />
+                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="554.0" prefWidth="794.0" style="-fx-background-color: edf2f4;" vgap="5.0" />
                      </content>
                   </ScrollPane>
                </children>
