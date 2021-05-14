@@ -70,7 +70,7 @@ public class Card extends AnchorPane {
 
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
-        imageView.setImage(model.getImage(product, 147, 102));
+        imageView.setImage(model.getImage(product, 151  , 102));
 
         unit.append(product.getUnit());
         unit.delete(0,3);
@@ -93,6 +93,15 @@ public class Card extends AnchorPane {
         if (!newValue.equals("")){
             updateAmount(Integer.parseInt(newValue));
         }
+    }
+
+    @FXML private AnchorPane hjärtknapp;
+
+    @FXML void hHover(){
+        hjärtknapp.setStyle("-fx-background-color: #C4C4C4; ");
+    }
+    @FXML void hHoverN(){
+        hjärtknapp.setStyle("-fx-background-color: #E5E5E5; ");
     }
 
     @FXML

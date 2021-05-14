@@ -10,5 +10,6 @@
     <orderEntry type="library" name="projectbackend" level="project" />
     <orderEntry type="library" name="lib (2)" level="project" />
     <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -30,39 +30,50 @@
       </AnchorPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px;" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="nameLabel" layoutX="8.0" layoutY="112.0" text="Blåbär" AnchorPane.leftAnchor="8.0">
+            <Label fx:id="nameLabel" layoutX="8.0" layoutY="113.0" text="Blåbär" AnchorPane.leftAnchor="8.0">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <ImageView fx:id="imageView" fitHeight="102.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
-            <Label fx:id="prizeLabel" layoutX="8.0" layoutY="134.0" text="Pris" AnchorPane.leftAnchor="8.0">
+            <ImageView fx:id="imageView" fitHeight="102.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
+            <Label fx:id="prizeLabel" layoutX="8.0" layoutY="136.0" text="Pris" AnchorPane.leftAnchor="8.0">
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <Button layoutX="25.0" layoutY="200.0" mnemonicParsing="false" onAction="#läggTill" prefHeight="27.0" prefWidth="107.0" styleClass="lagg-till" stylesheets="@iMat.css" text="Lägg till" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@bilder/baseline_shopping_cart_white_48pt_3x.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <AnchorPane layoutX="41.0" layoutY="161.0" onMouseClicked="#merInfo" prefHeight="23.0" prefWidth="75.0" style="-fx-background-color: #E5E5E5; -fx-background-radius: 4px;">
+            <AnchorPane layoutX="41.0" layoutY="164.0" onMouseClicked="#merInfo" prefHeight="23.0" prefWidth="75.0" style="-fx-background-radius: 4px;" styleClass="graknapp" AnchorPane.bottomAnchor="51.0">
                <children>
-                  <Label layoutX="10.0" layoutY="1.0" prefHeight="21.0" prefWidth="67.0" text="Mer info" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="1.0">
+                  <Label layoutX="8.0" layoutY="2.0" prefHeight="21.0" prefWidth="67.0" text="Mer info" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="8.0" layoutY="161.0" onMouseClicked="#merInfo" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: #E5E5E5; -fx-background-radius: 4px;" />
-            <ImageView fx:id="favourite" fitHeight="21.0" fitWidth="23.0" layoutX="11.0" layoutY="162.0" onMouseClicked="#gillaVara" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="162.0">
+            <AnchorPane fx:id="hjärtknapp" layoutX="8.0" layoutY="161.0" prefHeight="24.0" prefWidth="27.0" style="-fx-background-radius: 4px;" styleClass="graknapp" AnchorPane.bottomAnchor="51.0" />
+            <ImageView fx:id="favourite" fitHeight="21.0" fitWidth="23.0" layoutX="11.0" layoutY="167.0" onMouseClicked="#gillaVara" onMouseEntered="#hHover" onMouseExited="#hHoverN" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="167.0">
                <image>
                   <Image url="@bilder/outline_favorite_border_black_48dp.png" />
                </image>
             </ImageView>
+            <AnchorPane layoutX="32.0" layoutY="202.0" onMouseClicked="#läggTill" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bilder/baseline_shopping_cart_white_48pt_3x.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="11.0" layoutY="4.0" text="Lägg till" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

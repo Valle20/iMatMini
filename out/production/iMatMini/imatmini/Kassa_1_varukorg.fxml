@@ -471,7 +471,7 @@
             <ButtonBar prefHeight="36.0" prefWidth="811.0" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
+                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
                   <Button mnemonicParsing="false" text="3. Leveranstid" />
                   <Button mnemonicParsing="false" text="4.Betalning" />
                </buttons>
