@@ -86,6 +86,11 @@
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 3, 0.1, 0.0, 0.0);
 }
 
+.lagg-till{
+
+-fx-background-color: #B00320;
+-fx-background-radius: 36px;
+}
 
 .btn-checkout:hover{
 -fx-background-color: #8D99AE;

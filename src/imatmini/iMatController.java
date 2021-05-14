@@ -95,7 +95,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void initFavourites(Product product){
         if (model.isGillad(product)){
             model.getCardMap().get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/filled_heart_button.png")));
+                    "imatmini/bilder/outline_favorite_black_48dp.png")));
         }
     }
     public void initialize(URL url, ResourceBundle rb) {

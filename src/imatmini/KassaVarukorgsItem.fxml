@@ -28,8 +28,11 @@
             <Image url="@bilder/plus.png" />
          </image>
       </ImageView>
-      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="24.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" />
-      <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="98.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="22.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="89.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
       <ImageView fitHeight="23.0" fitWidth="75.0" layoutX="108.0" layoutY="37.0" onMouseClicked="#merInfo" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="108.0">
          <image>
             <Image url="@bilder/mer_info.png" />

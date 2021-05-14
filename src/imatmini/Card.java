@@ -22,7 +22,6 @@ public class Card extends AnchorPane {
     @FXML ImageView plusImage;
     @FXML ImageView minusImage;
     @FXML TextField amountTextField;
-    @FXML ImageView merInfo;
     @FXML ImageView favourite;
     @FXML AnchorPane plusMinusPane;
 
@@ -140,12 +139,12 @@ public class Card extends AnchorPane {
         if (model.isGillad(product)){
             model.oGillaVara(product);
             favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/FavoritesButton.png")));
+                    "imatmini/bilder/outline_favorite_border_black_48dp.png")));
             System.out.println(" Ogilla vara " + product.getName());
         } else {
             model.gillaVara(product);
             favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/filled_heart_button.png")));
+                    "imatmini/bilder/outline_favorite_black_48dp.png")));
             System.out.println(" gilla vara " + product.getName());
         }
     }
