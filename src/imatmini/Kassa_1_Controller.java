@@ -1,5 +1,7 @@
 package imatmini;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -34,6 +37,11 @@ public class Kassa_1_Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         updateKassaVarukorg(model.getShoppingCart().getItems());
+
+        updateTotalpris();
+        updatePersonuppgifter();
+        initPersonUppgifterLyssnare();
+        initComboboxes();
     }
     /**
      * varukorg sidan
@@ -47,6 +55,19 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private FlowPane checkoutVarukorgFlowPane;
 
+    public void updateTotalpris(){
+        totalPrizeLabel.setText(model.getShoppingCart().getTotal() + " SEK");
+        momsLabel.setText(model.getShoppingCart().getTotal() * 0.12 + " SEK");
+        antalVarorLabel.setText(getAntalVaror() + " st");
+    }
+
+    private int getAntalVaror(){
+        int antal = 0;
+        for (ShoppingItem s : model.getShoppingCart().getItems()){
+            antal += s.getAmount();
+        }
+        return antal;
+    }
 
 
     public void updateKassaVarukorg(List<ShoppingItem> productList) {
@@ -76,6 +97,9 @@ public class Kassa_1_Controller implements Initializable {
     /**
      * personliga uppgifter sidan
      **/
+
+    private Customer customer = model.getCustomer();
+
     @FXML
     private AnchorPane personligaUppgifterAnchorPane;
     @FXML
@@ -96,6 +120,53 @@ public class Kassa_1_Controller implements Initializable {
     private ImageView nextPersonalImageView;
     @FXML
     private ImageView previousPersonalImageView;
+
+    private void updatePersonuppgifter(){
+        firstNameTextField.setText(customer.getFirstName());
+        lastNameTextField.setText(customer.getLastName());
+        phoneTextField.setText(customer.getPhoneNumber());
+        mailTextField.setText(customer.getEmail());
+        adressTextField.setText(customer.getAddress());
+        postCodeTextField.setText(customer.getPostCode());
+        cityTextField.setText(customer.getPostAddress());
+        cvckodTextField.setText(model.getCreditCard().getVerificationCode() + "");
+        kortnummerTextField.setText(model.getCreditCard().getCardNumber());
+        kundnamnTextField.setText(model.getCreditCard().getHoldersName());
+    }
+
+    private void initPersonUppgifterLyssnare(){
+        kortnummerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setCardNumber((newValue));
+        });
+        kundnamnTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setHoldersName((newValue));
+        });
+        cvckodTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+        });
+        firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setFirstName(newValue);
+        });
+        lastNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setLastName(newValue);
+        });
+        phoneTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPhoneNumber(newValue);
+        });
+        mailTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setEmail(newValue);
+        });
+        adressTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setAddress(newValue);
+        });
+        postCodeTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPostCode(newValue);
+        });
+        cityTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPostAddress(newValue);
+        });
+
+    }
 
     /**
      * Leverans-sidan
@@ -123,11 +194,11 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ComboBox monthComboBox;
     @FXML
-    private TextField kundnamnTextField;
+    private TextField kundnamnTextField; // ovan sparade
     @FXML
-    private TextField kortnummerTextField;
+    private TextField kortnummerTextField; // ovan sparade
     @FXML
-    private TextField cvckodTextField;
+    private TextField cvckodTextField; // ovan sparade
     @FXML
     private RadioButton kortRadioButton;
     @FXML
@@ -139,7 +210,37 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ImageView previousBetalningImageView;
 
+    private void initComboboxes(){
+        monthComboBox.getItems().addAll(model.getMonths());
+        yearComboBox.getItems().addAll(model.getYears());
+        korttypComboBox.getItems().addAll(model.getCardTypes());
 
+        monthComboBox.getSelectionModel().select(""+model.getCreditCard().getValidMonth());
+        yearComboBox.getSelectionModel().select(""+model.getCreditCard().getValidYear());
+        korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
+
+        monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setValidMonth(Integer.parseInt(newValue));
+            }
+        });
+        yearComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setValidYear(Integer.parseInt(newValue));
+            }
+        });
+        korttypComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                model.getCreditCard().setCardType((newValue));
+            }
+        });
+    }
 
     Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
 
@@ -183,6 +284,10 @@ public class Kassa_1_Controller implements Initializable {
     private void betalamedkortToFront() {
         System.out.println("Betala med kort vy");
         betalamedkortPane.setVisible(true);
+    }
+    @FXML private void betalamedkortToBack() {
+        System.out.println("Betala med kort vy, bort");
+        betalamedkortPane.setVisible(false);
     }
     @FXML
     private void slutförtköpToFront() {

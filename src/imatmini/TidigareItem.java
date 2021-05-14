@@ -4,13 +4,13 @@ package imatmini;/*
  * and open the template in the editor.
  */
 
-import imatmini.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
@@ -19,7 +19,7 @@ import java.io.IOException;
  *
  * @author oloft
  */
-public class KassaVarukorgsItem extends AnchorPane {
+public class TidigareItem extends AnchorPane {
 
     @FXML ImageView imageView;
     @FXML Label nameLabel;
@@ -29,18 +29,16 @@ public class KassaVarukorgsItem extends AnchorPane {
     @FXML TextField amountTextField;
     @FXML Label summaLabel;
 
-
     private Model model = Model.getInstance();
-    Kassa_1_Controller kassa_1_controller;
 
     private ShoppingItem shoppingItem;
     private StringBuilder unit = new StringBuilder();
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public KassaVarukorgsItem(ShoppingItem shoppingItem, Kassa_1_Controller kassa_1_controller) {
-        this.kassa_1_controller = kassa_1_controller;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KassaVarukorgsItem.fxml"));
+    public TidigareItem(ShoppingItem shoppingItem) {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TidigareItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -54,27 +52,28 @@ public class KassaVarukorgsItem extends AnchorPane {
         unit.delete(0,3);
 
         this.shoppingItem = shoppingItem;
+
         nameLabel.setText(shoppingItem.getProduct().getName());
-        prizeLabel.setText(String.format("%.2f", shoppingItem.getProduct().getPrice()) + " " + shoppingItem.getProduct().getUnit());
+        prizeLabel.setText( (int)shoppingItem.getAmount() + " x " + shoppingItem.getProduct().getPrice() + " kr");
         summaLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
         imageView.setImage(model.getImage(shoppingItem.getProduct(), kImageWidth, kImageWidth*kImageRatio));
-        amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
-
-        /*
-        amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            newValue = newValue.replaceAll("[^0-9]","");
-            if (!newValue.equals("")){
-                updateAmount(Integer.parseInt(newValue));
-            }
-        });
-         */
     }
 
     @FXML
-    private void merInfo(){
-        kassa_1_controller.openDetailView();
+    private void läggTill(){
+        if (model.getShoppingCart().getItems().contains(shoppingItem)){
+            return;
+        }
+        System.out.println("Lägg till " + shoppingItem.getProduct().getName());
+
+        shoppingItem.setAmount(1);
+        model.getShoppingCart().addItem(shoppingItem);
+
+        //amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
+        //plusMinusPane.toFront();
     }
 
+    /*** En del överflödiga metoder, men de får ligga kvar här ***/
     @FXML private void typeAmount(){
         String newValue = amountTextField.getText();
         newValue = newValue.replaceAll("[^0-9]","");
@@ -82,15 +81,6 @@ public class KassaVarukorgsItem extends AnchorPane {
             updateAmount(Integer.parseInt(newValue));
         }
     }
-
-    @FXML private void tabort(){
-        model.getCardMap().get(shoppingItem.getProduct().getName()).plusMinusPane.toBack();
-        model.getShoppingCart().removeItem(shoppingItem);
-        shoppingItem.setAmount(0);
-        kassa_1_controller.updateKassaVarukorg(model.getShoppingCart().getItems());
-        kassa_1_controller.updateTotalpris();
-    }
-
 
     private void updateAmount(int amount){
         shoppingItem.setAmount(amount);
@@ -103,7 +93,6 @@ public class KassaVarukorgsItem extends AnchorPane {
         summaLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
         model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        kassa_1_controller.updateTotalpris();
     }
     @FXML private void plus(){
         updateAmount((int)(shoppingItem.getAmount() + 1));

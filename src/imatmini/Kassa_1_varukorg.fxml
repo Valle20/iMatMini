@@ -7,15 +7,70 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
+      <AnchorPane fx:id="detailPane" layoutX="100.0" layoutY="86.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0">
+         <children>
+            <Label layoutX="48.0" layoutY="21.0" text="Blåbär">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0">
+               <image>
+                  <Image url="@../../../../../.dat215/imat/images/product_16.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="270.0" layoutY="71.0" prefHeight="150.0" prefWidth="505.0" style="-fx-background-color: EDF2F4;" AnchorPane.rightAnchor="48.80000000000007">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="27.0" prefWidth="182.0" text="Produktinformation">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="92.0" prefHeight="27.0" prefWidth="54.0" text="Pris">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="352.0" layoutY="14.0" prefHeight="27.0" prefWidth="98.0" text="Förvaring">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="352.0" layoutY="92.0" prefHeight="27.0" prefWidth="98.0" text="Märkning">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="48.0" layoutY="247.0" prefHeight="200.0" prefWidth="729.0" style="-fx-background-color: EDF2F4;" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
+               <children>
+                  <TextFlow layoutX="373.0" layoutY="8.0" prefHeight="150.0" prefWidth="215.0" />
+                  <Label layoutX="32.0" layoutY="14.0" prefHeight="27.0" prefWidth="182.0" text="Innehållsförteckning">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="776.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+               <image>
+                  <Image url="@bilder/Vector%201.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="slutförtköpAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.75);">
          <children>
             <Pane layoutX="540.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
@@ -58,12 +113,15 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#betalamedkortToFront" text="Betala med kort">
+                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToFront" text="Betala med kort">
                      <font>
                         <Font size="16.0" />
                      </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" text="Betala med kontanter vid leverans">
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="63.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$group">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -107,9 +165,18 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" />
+                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
                   <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
                   <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" />
                   <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" />
@@ -175,13 +242,34 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" />
-                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" />
+                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <ImageView fx:id="previousPersonalImageView" fitHeight="65.0" fitWidth="200.0" layoutX="76.0" layoutY="619.0" onMouseClicked="#varukorgToFront" onMouseEntered="#previousPersonalMouseEntered" onMouseExited="#previousPersonalMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
@@ -354,17 +442,17 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" text="Label" AnchorPane.leftAnchor="1109.0">
+            <Label fx:id="momsLabel" layoutX="1109.0" layoutY="443.0" prefHeight="26.0" prefWidth="112.0" text="Label">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" text="Label" AnchorPane.leftAnchor="1111.0">
+            <Label fx:id="antalVarorLabel" layoutX="1111.0" layoutY="496.0" prefHeight="26.0" prefWidth="123.0" text="Label">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" text="Label" AnchorPane.leftAnchor="1106.0">
+            <Label fx:id="totalPrizeLabel" layoutX="1106.0" layoutY="547.0" prefHeight="29.0" prefWidth="118.0" text="Label">
                <font>
                   <Font size="24.0" />
                </font>

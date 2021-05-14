@@ -35,9 +35,9 @@
                   <Image url="@bilder/FavoritesButton.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="merInfo" fitHeight="23.0" fitWidth="75.0" layoutX="48.0" layoutY="161.0" onMouseClicked="#merInfo" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="merInfo" fitHeight="23.0" fitWidth="75.0" layoutX="49.0" layoutY="161.0" onMouseClicked="#merInfo" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@bilder/mer%20info.png" />
+                  <Image url="@bilder/mer_info.png" />
                </image>
             </ImageView>
          </children>
