@@ -13,6 +13,15 @@
       <Label fx:id="orderItemAmount" layoutX="85.0" layoutY="39.0" text="Label" />
       <Label fx:id="orderItemTotalPrice" layoutX="410.0" layoutY="31.0" text="Label" />
       <Line endX="23.0" endY="46.99998474121094" layoutX="455.0" layoutY="31.0" startX="23.0" startY="-31.0" />
-      <Button fx:id="orderItemAdd" layoutX="533.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#addOrderItemVarukorg" text="Lägg Till" />
+      <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="79.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="11.0" layoutY="21.0" prefHeight="37.0" prefWidth="146.0" text="Finns redan i din varukorg" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notAddedPane" prefHeight="79.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="53.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#addOrderItemVarukorg" text="Lägg Till" />
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

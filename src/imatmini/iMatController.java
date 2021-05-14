@@ -114,6 +114,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         for (ShoppingItem product : productList) {
 
             varukorgFlowPane.getChildren().add(new VarukorgsItem(product));
+
         }
     }
 
@@ -122,7 +123,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         orderItemFlowPane.getChildren().clear();
 
         for (ShoppingItem shoppingItem : order.getItems()) {
-            orderItemFlowPane.getChildren().add(new OrderItems(shoppingItem, this));
+            orderItemFlowPane.getChildren().add(new OrderItems(shoppingItem));
         }
 
     }

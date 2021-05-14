@@ -8,14 +8,17 @@ package imatmini;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,14 +33,15 @@ public class OrderItems extends AnchorPane {
     @FXML private Label orderItemAmount;
     @FXML private Label orderItemTotalPrice;
     @FXML private ImageView orderItemImage;
+    @FXML private AnchorPane alreadyAddedPane;
+    @FXML private AnchorPane notAddedPane;
 
 
     private Model model = Model.getInstance();
     private Product product;
     private ShoppingItem shoppingItem;
-    private iMatController parentController;
 
-    public OrderItems(ShoppingItem shoppingItem, iMatController iMatController) {
+    public OrderItems(ShoppingItem shoppingItem) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OrderItems.fxml"));
         fxmlLoader.setRoot(this);
@@ -50,52 +54,30 @@ public class OrderItems extends AnchorPane {
         }
         product = shoppingItem.getProduct();
         this.shoppingItem = shoppingItem;
-        this.parentController = iMatController;
 
         orderItemName.setText(shoppingItem.getProduct().getName());
         orderItemAmount.setText(Math.round(shoppingItem.getAmount())+" x "+shoppingItem.getProduct().getPrice()+"kr");
         orderItemTotalPrice.setText(String.valueOf(shoppingItem.getTotal()));
         orderItemImage.setImage(model.getImage(shoppingItem.getProduct()));
 
+        removeAddButton();
+
     }
 
     @FXML
     private void addOrderItemVarukorg(){
+        model.getCardMap().get(shoppingItem.getProduct().getName()).addItemVarukorg();
+        alreadyAddedPane.toFront();
+    }
 
-        boolean add = true;
+    private void removeAddButton(){
+        ArrayList<Product> productList = new ArrayList<>();
         for (ShoppingItem si : model.getShoppingCart().getItems()){
-            System.out.println("finns redan" + si.getProduct().getName());
-            System.out.println("läggs till" + shoppingItem.getProduct().getName());
-            if (si.getProduct().getName() == shoppingItem.getProduct().getName()){
-                add = false;
-            }
+            productList.add(si.getProduct());
         }
-        System.out.println("t");
-        if (add){
-            model.getShoppingCart().addItem(shoppingItem);
-            parentController.updateVarukorg(model.getShoppingCart().getItems());
+        if (productList.contains(shoppingItem.getProduct())){
+            alreadyAddedPane.toFront();
         }
-      
-
-//        ArrayList<String> productList = new ArrayList<>();
-//        for (ShoppingItem si : model.getShoppingCart().getItems()){
-//            productList.add(si.getProduct().getName());
-//            System.out.println(si.getProduct().getName());
-//        }
-//        boolean check = Arrays.asList(productList).contains(shoppingItem.getProduct().getName());
-//
-//        if (!check){
-//            System.out.println("t");
-//            model.getShoppingCart().addItem(shoppingItem);
-//            parentController.updateVarukorg(model.getShoppingCart().getItems());
-//        }
-
-//        for (ShoppingItem sp : model.getShoppingCart().getItems()){
-//            if (sp.getProduct() == shoppingItem.getProduct()){
-//                model.getShoppingCart().addItem(shoppingItem);
-//                parentController.updateVarukorg(model.getShoppingCart().getItems());
-//            }
-//        }
     }
 
 

@@ -100,6 +100,10 @@ public class Card extends AnchorPane {
 
     @FXML
     private void läggTill(){
+        addItemVarukorg();
+    }
+
+    public void addItemVarukorg(){
         System.out.println("Lägg till " + product.getName());
 
         shoppingItem.setAmount(1);
