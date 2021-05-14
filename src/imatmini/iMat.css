@@ -30,9 +30,43 @@
 -fx-pref-height: 65px;
 -fx-pref-width: 200px;
 }
+
+.back-button
+{
+-fx-background-color: #B00320;
+-fx-text-fill: white;
+-fx-font-family: "Roboto";
+-fx-font-size: 20px;
+-fx-padding: 1px;
+-fx-pref-height: 36px;
+-fx-pref-width: 181px;
+-fx-background-radius: 3px;
+}
+.back-button:hover
+{
+-fx-background-color: #EF233C;
+}
+
 .navigation-button:hover
 {
 -fx-background-color: #4B4D63;
+}
+#purchase-button
+{
+-fx-font-family: "Orienta";
+-fx-font-size: 35px;
+-fx-underline: true;
+}
+
+
+/* VITA RUTOR I HELA APPEN */
+
+.pane-with-content
+{
+-fx-background-radius: 8px;
+-fx-background-color: white;
+
+
 }
 
 .btn-checkout
