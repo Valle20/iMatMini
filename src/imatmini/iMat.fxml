@@ -95,9 +95,9 @@
                      </font>
                   </Label>
                   <Button layoutX="212.0" layoutY="14.0" mnemonicParsing="false" onAction="#tömVarukorgen" text="Töm varukorgen" />
-                  <ScrollPane prefHeight="469.0" prefWidth="337.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="469.0" prefWidth="337.0" style="-fx-background-color: transperent;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <content>
-                        <FlowPane fx:id="varukorgFlowPane" prefHeight="468.0" prefWidth="318.0" vgap="2.0" />
+                        <FlowPane fx:id="varukorgFlowPane" prefHeight="468.0" prefWidth="336.0" vgap="2.0" />
                      </content>
                   </ScrollPane>
                   <Line endX="168.0" startX="-168.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />

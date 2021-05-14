@@ -56,8 +56,6 @@ public class Card extends AnchorPane {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
-
-
         try {
             fxmlLoader.load();
         } catch (IOException exception) {

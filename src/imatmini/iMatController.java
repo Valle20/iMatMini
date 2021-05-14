@@ -174,6 +174,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void allaVaror(){
         titelLabel.setText("Alla varor");
         updateCards(model.getProducts());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -193,6 +194,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void mejeri(){
         titelLabel.setText("Mejeri");
         updateCards(getMejeri());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -212,6 +214,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void sötsaker(){
         titelLabel.setText("Sötsaker");
         updateCards(getSötsaker());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -235,6 +238,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Kött(){
         titelLabel.setText("Kött & Fisk");
         updateCards(getKött());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -257,6 +261,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Dryck(){
         titelLabel.setText("Dryck");
         updateCards(getDryck());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -276,6 +281,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void bröd(){
         titelLabel.setText("Bröd");
         updateCards(getBröd());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -302,6 +308,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Skafferi(){
         titelLabel.setText("Skafferi");
         updateCards(getSkafferi());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -331,6 +338,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void FruktGrönt(){
         titelLabel.setText("Frukt & Grönt");
         updateCards(getFruktGrönt());
+        handlaPane.toFront();
         favpriter.setStyle("-fx-background-color: #FFFFFF; ");
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
@@ -394,6 +402,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private Label titelLabel1;
 
     public void startsida() {
+        handlaPane.toFront();
         kategorierPane.toBack();
         cardsFlowPane.getChildren().clear();
         titelLabel.setText("Veckans varor");
