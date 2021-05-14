@@ -13,3 +13,7 @@
 -fx-font-size:
 }
 
+.btn-checkout
+{
+-fx-border-radius: 1px;
+}

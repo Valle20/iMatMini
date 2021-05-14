@@ -15,6 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Product;
@@ -42,7 +44,50 @@ public class Kassa_1_Controller implements Initializable {
         updatePersonuppgifter();
         initPersonUppgifterLyssnare();
         initComboboxes();
+
+        //för att få korrekt datum till leveranstidvyn
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+
+        String weekday;
+
+        day1.setText("Idag " + dtf.format(now));
+        day2.setText("Imorgon " + dtf.format(now.plusDays(1)));
+        weekday = translateWeekday(now.plusDays(2).getDayOfWeek().getValue());
+        day3.setText(weekday + " " + dtf.format(now.plusDays(2)));
+        weekday = translateWeekday(now.plusDays(3).getDayOfWeek().getValue());
+        day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
+        weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
+        day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+
     }
+
+    /**
+     * Metod för att få dagarna på svenska
+     */
+
+    private String translateWeekday(int weekday){
+        switch (weekday){
+            case 1:
+                return "Måndag";
+            case 2:
+                return "Tisdag";
+            case 3:
+                return "Onsdag";
+            case 4:
+                return "Torsdag";
+            case 5:
+                return "Fredag";
+            case 6:
+                return "Lördag";
+            case 7:
+                return "Söndag";
+            default:
+                return "Måndag";
+        }
+    }
+
     /**
      * varukorg sidan
      **/
@@ -256,6 +301,61 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private void switchAffaren(ActionEvent event) throws IOException {
         sceneController.switchToAffaren(event);
+    }
+
+    /**
+     * VAL AV DAG
+     */
+    @FXML
+    private Label chosenDate;
+    @FXML
+    private Label chosenTime;
+    @FXML
+    private Label day1;
+    @FXML
+    private Label day2;
+    @FXML
+    private Label day3;
+    @FXML
+    private Label day4;
+    @FXML
+    private Label day5;
+
+    @FXML
+    private void firstDay(){
+        chosenDate.setText(day1.getText());
+    }
+    @FXML
+    private void secondDay(){
+        chosenDate.setText(day2.getText());
+    }
+    @FXML
+    private void thirdDay(){
+        chosenDate.setText(day3.getText());
+    }
+    @FXML
+    private void fourthDay(){
+        chosenDate.setText(day4.getText());
+    }
+    @FXML
+    private void fifthDay(){
+        chosenDate.setText(day5.getText());
+    }
+
+    /**
+     * VAL AV TID
+     */
+    @FXML
+    public void firstTime(ActionEvent event) throws IOException {
+        chosenTime.setText("8:00 - 12:00");
+    }
+    @FXML
+    public void secondTime(ActionEvent event) throws IOException {
+        chosenTime.setText("12:00 - 16:00");
+    }
+    @FXML
+    public void thirdTime(ActionEvent event) throws IOException {
+        chosenTime.setText("16:00 - 20:00");
     }
 
     /**
