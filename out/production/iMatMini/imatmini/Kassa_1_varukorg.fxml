@@ -239,9 +239,9 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="detailPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="237.0" layoutY="101.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="110.0">
+            <AnchorPane layoutX="237.0" layoutY="101.0" onMouseClicked="#mouseTrap" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="110.0">
                <children>
                   <Label fx:id="dNamn" layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
@@ -287,7 +287,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="776.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="776.0" layoutY="14.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <image>
                         <Image url="@bilder/Vector%201.png" />
                      </image>

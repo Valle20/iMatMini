@@ -125,10 +125,68 @@
 -fx-background-color: #C4C4C4;
 -fx-background-radius: 4px;
 }
+.graknapp:pressed
+{
+-fx-background-color: #B4B4B4;
+-fx-background-radius: 4px;
+}
+
+.toolbar-btn
+{
+-fx-background-color: #FFFFFF;
+}
+.toolbar-btn:hover
+{
+-fx-background-color: #F0F0F0;
+}
+.toolbar-btn:pressed
+{
+-fx-background-color: #E0E0E0;
+}
 
 .tidigare{
--fx-background-color: #20B2AA;
 -fx-background-radius: 0px;
+}
+.hjalp{
+-fx-background-radius: 0 5 5 0;
+}
+.favpriter{
+-fx-background-radius: 5 0 0 5;
+}
+.startsida{
+-fx-background-radius: 5;
+}
+
+.toolbar-btn-tryckt
+{
+-fx-background-color: #8D99AE;
+}
+
+
+
+.btn-kategori
+{
+-fx-background-color: #FFFFFF;
+-fx-font-size: 18px;
+-fx-padding: 1px;
+-fx-pref-height: 41px;
+-fx-pref-width: 178px;
+}
+.btn-kategori:hover
+{
+-fx-background-color: #F0F0F0;
+-fx-font-size: 18px;
+-fx-padding: 1px;
+-fx-pref-height: 41px;
+-fx-pref-width: 178px;
+}
+.btn-kategori:pressed
+{
+-fx-background-color: #E0E0E0;
+-fx-font-size: 18px;
+-fx-padding: 1px;
+-fx-pref-height: 41px;
+-fx-pref-width: 178px;
 }
 
 

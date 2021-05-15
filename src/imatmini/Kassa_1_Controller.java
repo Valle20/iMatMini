@@ -3,6 +3,7 @@ package imatmini;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -169,6 +170,11 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     public void closeDetailView() {
         detailPane.toBack();
+    }
+
+    @FXML
+    public void mouseTrap(Event event){
+        event.consume();
     }
 
     @FXML
