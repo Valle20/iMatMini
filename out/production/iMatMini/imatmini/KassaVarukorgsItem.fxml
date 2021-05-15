@@ -12,21 +12,21 @@
    <children>
       <Label fx:id="nameLabel" layoutX="108.0" layoutY="10.0" prefHeight="20.0" prefWidth="127.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
          <font>
-            <Font size="17.0" />
+            <Font name="Arial" size="19.0" />
          </font>
       </Label>
       <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="210.0" layoutY="27.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.leftAnchor="289.0">
          <font>
-            <Font name="System Bold" size="17.0" />
+            <Font name="Arial" size="17.0" />
          </font></Label>
-      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="22.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0">
+      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="25.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;">
          <font>
-            <Font size="16.0" />
+            <Font name="Arial Bold" size="16.0" />
          </font></TextField>
       <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="89.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
       <Label fx:id="summaLabel" layoutX="565.0" layoutY="27.0" text="Label" AnchorPane.leftAnchor="585.0">
          <font>
-            <Font size="17.0" />
+            <Font name="Arial" size="17.0" />
          </font>
       </Label>
       <Button layoutX="411.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#minus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus">
@@ -49,14 +49,14 @@
       </Button>
       <Button layoutX="187.0" layoutY="37.0" mnemonicParsing="false" onAction="#merInfo" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info" AnchorPane.leftAnchor="108.0">
          <font>
-            <Font size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font>
       </Button>
       <AnchorPane layoutX="677.0" layoutY="21.0" onMouseClicked="#tabort" prefHeight="27.0" prefWidth="90.0" styleClass="graknapp" AnchorPane.bottomAnchor="21.5" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="21.5">
          <children>
             <Label layoutX="7.0" layoutY="3.0" text="Ta bort">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Label>
             <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="62.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">

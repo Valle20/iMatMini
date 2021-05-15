@@ -13,9 +13,9 @@
    <children>
       <AnchorPane fx:id="plusMinusPane" layoutY="191.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="193.0">
          <children>
-            <TextField fx:id="amountTextField" alignment="CENTER" layoutX="56.0" layoutY="7.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0">
+            <TextField fx:id="amountTextField" alignment="CENTER" layoutX="56.0" layoutY="9.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Arial Bold" size="16.0" />
                </font></TextField>
             <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#plus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.rightAnchor="14.0">
                <graphic>
@@ -41,16 +41,16 @@
          <children>
             <Label fx:id="nameLabel" layoutX="8.0" layoutY="113.0" text="Blåbär" AnchorPane.leftAnchor="8.0">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font></Label>
             <ImageView fx:id="imageView" fitHeight="102.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
             <Label fx:id="prizeLabel" layoutX="8.0" layoutY="136.0" text="Pris" AnchorPane.leftAnchor="8.0">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font></Label>
             <Button layoutX="39.0" layoutY="165.0" mnemonicParsing="false" onAction="#merInfo" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Arial Hebrew" size="16.0" />
                </font>
             </Button>
             <AnchorPane layoutX="32.0" layoutY="202.0" onMouseClicked="#läggTill" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
@@ -62,7 +62,7 @@
                   </ImageView>
                   <Label layoutX="11.0" layoutY="4.0" text="Lägg till" textFill="WHITE">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />

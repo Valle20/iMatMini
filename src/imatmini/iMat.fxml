@@ -24,7 +24,7 @@
                <children>
                   <Label fx:id="dNamn" layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                   <ImageView fx:id="dBild" fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0">
@@ -142,7 +142,7 @@
                <children>
                   <Button id="startsida" fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#startsida" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -150,7 +150,7 @@
                      </styleClass></Button>
                   <Button layoutX="168.0" layoutY="15.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-radius: 50px;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -158,7 +158,7 @@
                      </styleClass></Button>
                   <Button id="favpriter" fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
@@ -173,7 +173,7 @@
                      </styleClass></Button>
                   <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -185,7 +185,7 @@
                      </font></TextField>
                   <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="35.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -196,7 +196,7 @@
                   <Line endX="19.81781005859375" endY="17.899999618530273" layoutX="683.0" layoutY="33.1" scaleX="1.5" startX="19.81781005859375" startY="-18.0" AnchorPane.bottomAnchor="16.499998474121092" AnchorPane.topAnchor="14.600000000000001" />
                   <Button id="hjalp" fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -209,12 +209,12 @@
                <children>
                   <Label layoutX="17.0" layoutY="23.0" prefHeight="28.0" prefWidth="97.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
-                        <Font name="System Bold" size="22.0" />
+                        <Font name="Arial Bold" size="22.0" />
                      </font>
                   </Label>
                   <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp" stylesheets="@iMat.css" text="Töm varukorgen">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font></Button>
                   <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
@@ -227,16 +227,16 @@
                   <Line endX="168.0" startX="-169.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
                   <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa1" prefHeight="79.0" prefWidth="338.0" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
-                        <Font size="46.0" />
+                        <Font name="Arial" size="46.0" />
                      </font></Button>
-                  <Label layoutX="7.0" layoutY="538.0" text="Totalt pris:">
+                  <Label layoutX="7.0" layoutY="536.0" text="Totalt pris:">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="totaltPris" alignment="CENTER_RIGHT" layoutX="147.0" layoutY="538.0" prefHeight="29.0" prefWidth="175.0" text="label">
+                  <Label fx:id="totaltPris" alignment="CENTER_RIGHT" layoutX="147.0" layoutY="536.0" prefHeight="29.0" prefWidth="175.0" text="label">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                </children>
@@ -245,51 +245,51 @@
                <children>
                   <Label layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="328.0" text="Hur handlar man på iMat?" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font></Label>
                   <Label layoutX="31.0" layoutY="80.0" prefHeight="30.0" prefWidth="194.0" text="Steg 1 - Hitta varor" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta varor genom att söka på en produkt i sökfältet eller välj en kategori genom att trycka på knappen kategorier. Skrolla sedan igenom sökresultaten eller vald kategori för att hitta önskad produkt." wrappingWidth="692.5367813110352" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="28.0" layoutY="197.0" text="Steg 2 - Lägg till vara i varukorgen" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="28.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på knappen" wrappingWidth="134.13678741455078" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="240.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="för att lägga till varan i din varukorg." wrappingWidth="273.0000000000002">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="31.0" layoutY="386.0" text="Steg 3 - Betala" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varan kommer sedan upp till höger." wrappingWidth="471.7367630004883" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan justera hur många av varan du vill ha med." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="29.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För mer information om varan tryck på" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <ImageView fx:id="helpViewAddPicture" fitHeight="25.0" fitWidth="70.0" layoutX="160.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
@@ -304,7 +304,7 @@
                   </ImageView>
                   <Text layoutX="31.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="När du har handlat klart trycker du på" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <ImageView fx:id="helpViewCheckout" fitHeight="30.0" fitWidth="89.0" layoutX="305.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
@@ -314,37 +314,37 @@
                   </ImageView>
                   <Text layoutX="406.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="som tar dig till utcheckningen.">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Där kommer du att bli guidad steg för steg kring hur du avslutar köpet." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="31.0" layoutY="486.0" text="Steg 4 - Övrigt" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan gilla en vara genom att trycka på  " wrappingWidth="858.0734252929688">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att se tidigare köp trycker du på &quot;Tidigare köp&quot; uppe till höger. Där finns datum och vy för alla tidigare köpta kundvagnar." wrappingWidth="858.0734252929688" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="359.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text=". Ifyllt hjärta betyder att varan är favoritmarkerad.  " wrappingWidth="538.1366882324219">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="33.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan se alla dina favoritmarkerade produkter genom att klicka på &quot;Favoritvaror&quot; uppe till höger." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <ImageView fx:id="helpViewHeart" fitHeight="30.0" fitWidth="42.0" layoutX="321.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
@@ -378,13 +378,13 @@
                <children>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="679.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="647.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
                            <children>
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>
                                     <Label fx:id="titelLabel" text="Label" AnchorPane.topAnchor="20.0">
                                        <font>
-                                          <Font size="23.0" />
+                                          <Font name="Arial Bold" size="23.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -393,7 +393,7 @@
                                  <children>
                                     <Label fx:id="titelLabel1" text="Label" AnchorPane.topAnchor="20.0">
                                        <font>
-                                          <Font size="23.0" />
+                                          <Font name="Arial Bold" size="23.0" />
                                        </font>
                                     </Label>
                                  </children>
