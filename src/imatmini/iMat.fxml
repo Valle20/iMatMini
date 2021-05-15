@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
+<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
     <children>
       <AnchorPane fx:id="detailPane" layoutY="11.0" onMouseClicked="#closeDetailView" prefHeight="710.0" prefWidth="1269.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -140,13 +140,12 @@
          <children>
             <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Button fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#startsida" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
+                  <Button id="startsida" fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#startsida" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
-                        <String fx:value="startsida" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
                   <Button layoutX="168.0" layoutY="15.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-radius: 50px;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0">
@@ -157,7 +156,7 @@
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
-                  <Button fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
+                  <Button id="favpriter" fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -170,16 +169,14 @@
                      </graphic>
                      <styleClass>
                         <String fx:value="dropshadow" />
-                        <String fx:value="favpriter" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
-                  <Button fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
+                  <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
-                        <String fx:value="tidigare" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
                   <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="398.0" style="-fx-background-radius: 50px;" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
@@ -197,13 +194,12 @@
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
                   <Line endX="19.81781005859375" endY="17.899999618530273" layoutX="683.0" layoutY="33.1" scaleX="1.5" startX="19.81781005859375" startY="-18.0" AnchorPane.bottomAnchor="16.499998474121092" AnchorPane.topAnchor="14.600000000000001" />
-                  <Button fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
+                  <Button id="hjalp" fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
-                        <String fx:value="hjalp" />
                         <String fx:value="toolbar-btn" />
                      </styleClass>
                   </Button>
@@ -220,7 +216,7 @@
                      <font>
                         <Font size="16.0" />
                      </font></Button>
-                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
                         <FlowPane fx:id="varukorgFlowPane" prefHeight="473.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="2.0">
                            <padding>
@@ -362,12 +358,12 @@
                <children>
                   <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="240.0" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <FlowPane fx:id="dateFlowPane" prefHeight="550.0" prefWidth="231.0" />
                            </content>
                         </ScrollPane>
-                        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <FlowPane fx:id="orderItemFlowPane" prefHeight="512.0" prefWidth="646.0" />
                            </content>
@@ -380,9 +376,9 @@
             </AnchorPane>
             <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="67.0" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="641.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="679.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
                            <children>
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>

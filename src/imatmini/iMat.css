@@ -78,6 +78,7 @@
 }
 
 
+
 /* VITA RUTOR I HELA APPEN */
 
 .pane-with-content
@@ -102,6 +103,7 @@
 
 .dropshadow /* jag lyckas inte få till nån bra skugga jag ger upp !!! Feel free to redo it completely */
 {
+-fx-boxshadow:
 /*
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.16), 2, 0, 0.0, 1.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.12), 4, 0, 0.0, 2.0);
@@ -114,15 +116,13 @@
 .lagg-till{
 -fx-background-color: #B00320;
 -fx-background-radius: 36px;
+
 }
 .lagg-till:hover
 {
 -fx-background-color: #EF233C;
 }
-.lagg-till:pressed
-{
--fx-background-color: #EA7381;
-}
+
 
 .plusminus
 {
@@ -133,14 +133,12 @@
 .plusminus:hover
 {
 -fx-background-color: #EF233C;
--fx-background-radius: 50px;
--fx-padding: 0px;
+
 }
 .plusminus:pressed
 {
 -fx-background-color: #EA7381;
--fx-background-radius: 50px;
--fx-padding: 0px;
+
 }
 
 
@@ -153,19 +151,18 @@
 .graknapp:hover
 {
 -fx-background-color: #D5D5D5;
--fx-background-radius: 4px;
--fx-padding: 0px;
+
 }
 .graknapp:pressed
 {
 -fx-background-color: #B4B4B4;
--fx-background-radius: 4px;
--fx-padding: 0px;
+
 }
 
 .toolbar-btn
 {
 -fx-background-color: #FFFFFF;
+-fx-padding: 1px;
 }
 .toolbar-btn:hover
 {
@@ -176,17 +173,21 @@
 -fx-background-color: #E0E0E0;
 }
 
-.tidigare{
+#tidigare{
 -fx-background-radius: 0px;
+
 }
-.hjalp{
+#hjalp{
 -fx-background-radius: 0 5 5 0;
+
 }
-.favpriter{
+#favpriter{
 -fx-background-radius: 5 0 0 5;
+
 }
-.startsida{
+#startsida{
 -fx-background-radius: 5;
+
 }
 
 .toolbar-btn-tryckt
@@ -207,18 +208,159 @@
 .btn-kategori:hover
 {
 -fx-background-color: #F0F0F0;
--fx-font-size: 18px;
--fx-padding: 1px;
--fx-pref-height: 41px;
--fx-pref-width: 178px;
+
 }
 .btn-kategori:pressed
 {
 -fx-background-color: #E0E0E0;
--fx-font-size: 18px;
+
+}
+/* såg att någon hade ändrat dessa medans jag höll på så skickar med som en kommentar ist*/
+/*.toolbar-navigation-button
+{
+-fx-background-color: #FFFFFF;
+-fx-text-fill: black;
+-fx-font-family: "Roboto";
+-fx-font-size: 20px;
+-fx-pref-width: 203px;
+-fx-pref-height: 36px;
 -fx-padding: 1px;
--fx-pref-height: 41px;
--fx-pref-width: 178px;
+-fx-border-width: 1px;
+-fx-border-color: #787878;
+
+}
+.toolbar-navigation-button:hover
+{
+-fx-background-color: #DEDEDE;
+}
+.toolbar-navigation-button:pressed
+{
+-fx-background-color: #8D99AE;
+}
+.toolbar-navigation-button:active
+{
+-fx-background-color: #8D99AE;
+}
+
+#varukorg-navigation-button
+{
+-fx-background-radius: 3 0 0 3;
+-fx-border-radius: 3 0 0 3;
+
+}
+#betalning-navigation-button
+{
+-fx-background-radius: 0 3 3 0;
+-fx-border-radius: 0 3 3 0;
+}
+#leverans-navigation-button
+{
+-fx-background-radius: 0 0 0 0;
+}
+#person-navigation-button
+{
+-fx-background-radius: 0 0 0 0;
+}
+#varukorg-active
+{
+-fx-background-color: #8D99AE;
+-fx-background-radius: 3 0 0 3;
+-fx-border-radius: 3 0 0 3;
+}
+#betalning-active
+{
+-fx-background-color: #8D99AE;
+-fx-background-radius: 0 3 3 0;
+-fx-border-radius: 0 3 3 0;
+}
+#leverans-active
+{
+-fx-background-color: #8D99AE;
+-fx-background-radius: 0 0 0 0;
+-fx-border-radius: 0 0 0 0;
+}
+#person-active
+{
+-fx-background-color: #8D99AE;
+-fx-background-radius: 0 0 0 0;
+-fx-border-radius: 0 0 0 0;
+} */
+
+
+
+.scroll-vit .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.scroll-vit .scroll-bar:vertical .thumb {
+    -fx-background-color: #E5E5E5;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+
+}
+.scroll-vit .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #D5D5D5;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+
 }
 
 
+
+.scroll-bla .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.scroll-bla .scroll-bar:vertical .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0.0, 0.0, 1.0);
+}
+.scroll-bla .scroll-bar:vertical .thumb:hover {
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 8, 0.0, 0.0, 1.0);
+}
+
+
+/*
+.scroll-bar:vertical .track{
+    -fx-background-color: #ffffff;
+    -fx-border-color: transperent;
+
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #E5E5E5;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #D5D5D5;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color : pink;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button {
+    -fx-background-color : pink;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
