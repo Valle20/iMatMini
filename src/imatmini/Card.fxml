@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="240.0" prefWidth="165.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px; -fx-background-color: transperent;" styleClass="dropshadow" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="240.0" prefWidth="165.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px; -fx-background-color: rgba(0,0,0,0);" styleClass="dropshadow" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="plusMinusPane" layoutY="191.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="193.0">
          <children>
@@ -48,24 +48,11 @@
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <AnchorPane layoutX="41.0" layoutY="164.0" onMouseClicked="#merInfo" prefHeight="23.0" prefWidth="75.0" style="-fx-background-radius: 4px;" styleClass="graknapp" AnchorPane.bottomAnchor="51.0">
-               <children>
-                  <Label layoutX="8.0" layoutY="2.0" prefHeight="21.0" prefWidth="67.0" text="Mer info" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="hjärtknapp" layoutX="8.0" layoutY="161.0" prefHeight="24.0" prefWidth="27.0" style="-fx-background-radius: 4px;" styleClass="graknapp" AnchorPane.bottomAnchor="51.0" />
-            <ImageView fx:id="favourite" fitHeight="21.0" fitWidth="23.0" layoutX="11.0" layoutY="167.0" onMouseClicked="#gillaVara" onMouseEntered="#hHover" onMouseExited="#hHoverN" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="167.0">
-               <image>
-                  <Image url="@bilder/outline_favorite_border_black_48dp.png" />
-               </image>
-            </ImageView>
+            <Button layoutX="39.0" layoutY="165.0" mnemonicParsing="false" onAction="#merInfo" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
             <AnchorPane layoutX="32.0" layoutY="202.0" onMouseClicked="#läggTill" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
                <children>
                   <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -83,6 +70,15 @@
                   </Label>
                </children>
             </AnchorPane>
+            <Button layoutX="8.0" layoutY="165.0" mnemonicParsing="false" onAction="#gillaVara" prefHeight="23.0" prefWidth="27.0" styleClass="graknapp" AnchorPane.leftAnchor="8.0">
+               <graphic>
+                  <ImageView fx:id="favourite" fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bilder/outline_favorite_border_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

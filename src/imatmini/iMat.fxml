@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
+<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
     <children>
       <AnchorPane fx:id="detailPane" layoutY="11.0" onMouseClicked="#closeDetailView" prefHeight="710.0" prefWidth="1269.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -209,14 +209,14 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="943.0" AnchorPane.rightAnchor="0.0">
+            <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Label layoutX="17.0" layoutY="23.0" prefHeight="28.0" prefWidth="97.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" styleClass="graknapp" stylesheets="@iMat.css" text="Töm varukorgen">
+                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp" stylesheets="@iMat.css" text="Töm varukorgen">
                      <font>
                         <Font size="16.0" />
                      </font></Button>
@@ -245,7 +245,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="helpPane" prefHeight="652.0" prefWidth="934.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0">
+            <AnchorPane fx:id="helpPane" prefHeight="652.0" prefWidth="934.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0">
                <children>
                   <Label layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="328.0" text="Hur handlar man på iMat?" AnchorPane.leftAnchor="31.0">
                      <font>
@@ -378,9 +378,9 @@
                   <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="67.0" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0">
+            <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="67.0" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="594.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
                      <content>
                         <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="641.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
                            <children>
@@ -412,6 +412,6 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Line endX="960.0" endY="68.9" layoutX="-17.0" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="0.0" />
+      <Line endX="960.0" endY="68.9" layoutX="-17.0" layoutY="-1.8000259399414062" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="-1.5" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="68.0" />
     </children>
 </AnchorPane>

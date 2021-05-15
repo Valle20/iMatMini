@@ -106,7 +106,7 @@
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.12), 4, 0, 0.0, 2.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0.0, 1.0);
 */
--fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0.0, 0.0, 1.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 3, 0.1, 0.0, 0.0);
 }
 
@@ -147,16 +147,19 @@
 .graknapp{
 -fx-background-color: #E5E5E5;
 -fx-background-radius: 4px;
+-fx-padding: 0px;
 }
 .graknapp:hover
 {
 -fx-background-color: #C4C4C4;
 -fx-background-radius: 4px;
+-fx-padding: 0px;
 }
 .graknapp:pressed
 {
 -fx-background-color: #B4B4B4;
 -fx-background-radius: 4px;
+-fx-padding: 0px;
 }
 
 .toolbar-btn
