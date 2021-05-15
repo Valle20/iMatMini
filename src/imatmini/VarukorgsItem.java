@@ -84,7 +84,9 @@ public class VarukorgsItem extends AnchorPane {
         if (amount == 0){
             model.getCardMap().get(shoppingItem.getProduct().getName()).plusMinusPane.toBack();
             model.getShoppingCart().removeItem(shoppingItem);
-            parentController.updateOrdersItems(parentController.currentOrder);
+            if (parentController.currentOrder != null){
+                parentController.updateOrdersItems(parentController.currentOrder);
+            }
         }
 
         model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);

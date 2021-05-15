@@ -177,6 +177,23 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
+    @FXML private void läggTillAllaVaror(){
+        updateOrdersItems(currentOrder);
+        ArrayList<Product> productListVarukorgen = new ArrayList<>();
+        for (ShoppingItem sIV : model.getShoppingCart().getItems()){
+            productListVarukorgen.add(sIV.getProduct());
+        }
+        for (ShoppingItem sIO : currentOrder.getItems()){
+            if (productListVarukorgen.contains(sIO.getProduct())){
+                ;
+            }else{
+                model.getCardMap().get(sIO.getProduct().getName()).addItemVarukorg();
+            }
+
+        }
+        updateOrdersItems(currentOrder);
+    }
+
     @FXML public void allaVaror(){
         titelLabel.setText("Alla varor");
         updateCards(model.getProducts());
@@ -518,6 +535,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
         model.clearShoppingCart();
         for (ShoppingItem item : savekart){
             model.getCardMap().get(item.getProduct().getName()).updateAmount(0);
+        }
+        if (currentOrder != null){
+            updateOrdersItems(currentOrder);
         }
     }
 

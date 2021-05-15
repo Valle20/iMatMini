@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
+<AnchorPane id="AnchorPane" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #edf2f4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatController">
     <children>
       <AnchorPane fx:id="detailPane" layoutY="11.0" onMouseClicked="#closeDetailView" prefHeight="710.0" prefWidth="1269.0" style="-fx-background-color: rgba(0,0,0,0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -368,13 +368,13 @@
                               <FlowPane fx:id="orderItemFlowPane" prefHeight="512.0" prefWidth="646.0" />
                            </content>
                         </ScrollPane>
-                        <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="650.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
+                        <Button layoutX="233.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#läggTillAllaVaror" prefHeight="38.0" prefWidth="650.0" text="Lägg till allt i varukorgen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <Label layoutX="68.0" layoutY="22.0" text="Tidigare Köp" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="67.0" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
+            <AnchorPane fx:id="handlaPane" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
                <children>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
                      <content>
@@ -401,7 +401,8 @@
                            </children>
                            <padding>
                               <Insets left="3.0" />
-                           </padding></FlowPane>
+                           </padding>
+                        </FlowPane>
                      </content>
                   </ScrollPane>
                </children>
