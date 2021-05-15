@@ -57,8 +57,6 @@ public class TidigareDate extends AnchorPane {
         double pris = getTotalOrderPrice();
         pris = Math.round(pris * 100.0) / 100.0;
         priceLabel.setText(pris + " Kr");
-
-        openOrder();
     }
 
 

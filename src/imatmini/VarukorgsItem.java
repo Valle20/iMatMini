@@ -34,10 +34,11 @@ public class VarukorgsItem extends AnchorPane {
 
     private ShoppingItem shoppingItem;
     private StringBuilder unit = new StringBuilder();
+    private iMatController parentController;
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public VarukorgsItem(ShoppingItem shoppingItem) {
+    public VarukorgsItem(ShoppingItem shoppingItem, iMatController iMatController) {
         
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VarukorgsItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -53,6 +54,7 @@ public class VarukorgsItem extends AnchorPane {
         unit.delete(0,3);
 
         this.shoppingItem = shoppingItem;
+        this.parentController = iMatController;
         nameLabel.setText(shoppingItem.getProduct().getName());
         prizeLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
         imageView.setImage(model.getImage(shoppingItem.getProduct(), 58, 54));
@@ -82,6 +84,7 @@ public class VarukorgsItem extends AnchorPane {
         if (amount == 0){
             model.getCardMap().get(shoppingItem.getProduct().getName()).plusMinusPane.toBack();
             model.getShoppingCart().removeItem(shoppingItem);
+            parentController.updateOrdersItems(parentController.currentOrder);
         }
 
         model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);

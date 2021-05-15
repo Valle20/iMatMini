@@ -8,9 +8,7 @@ package imatmini;
 //import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -37,6 +35,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     // For switching scenes
     SceneController sceneController = new SceneController();
+    Order currentOrder;
 
     @FXML
     private void switchToKassa1(ActionEvent event) throws IOException {
@@ -107,6 +106,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         updateVarukorg(model.getShoppingCart().getItems());
         updateTotalpris();
+        updateOrders();
         startsida();
 
         // updateBottomPanel();
@@ -124,13 +124,14 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         for (ShoppingItem product : productList) {
 
-            varukorgFlowPane.getChildren().add(new VarukorgsItem(product));
+            varukorgFlowPane.getChildren().add(new VarukorgsItem(product, this));
 
         }
     }
 
 
     public void updateOrdersItems(Order order) {
+        currentOrder = order;
         orderItemFlowPane.getChildren().clear();
 
         for (ShoppingItem shoppingItem : order.getItems()) {
@@ -141,9 +142,13 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     public void updateOrders() {
         dateFlowPane.getChildren().clear();
-
-        for (Order order : model.getOrders()) {
-            dateFlowPane.getChildren().add(new TidigareDate(order,this));
+        ArrayList<Order> orderList = new ArrayList<>();
+        for (Order order : model.getOrders()){
+            orderList.add(order);
+        }
+        Collections.reverse(orderList);
+        for (Order sortedOrder : orderList) {
+            dateFlowPane.getChildren().add(new TidigareDate(sortedOrder,this));
         }
 
     }
