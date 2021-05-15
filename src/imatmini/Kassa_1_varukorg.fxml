@@ -18,16 +18,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@iMat.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.Kassa_1_Controller">
    <children>
       <AnchorPane fx:id="personligaUppgifterAnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EDF2F4;" styleClass="anchor-pane">
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranstid" />
-                  <Button mnemonicParsing="false" text="4. Betalning" />
+                  <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
+                  <Button id="person-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
+                  <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4. Betalning" />
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
@@ -167,10 +167,10 @@
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" onMouseClicked="#leveransToFront" text="3. Leveranstid" />
-                  <Button mnemonicParsing="false" text="4.Betalning" />
+                  <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="leverans-navigation-button" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
+                  <Button id="betalning-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
@@ -403,10 +403,10 @@
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranstid" />
-                  <Button mnemonicParsing="false" text="4. Betalning" />
+                  <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="leverans-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
+                  <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4. Betalning" />
                </buttons>
             </ButtonBar>
             <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
@@ -619,10 +619,10 @@
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" text="1. Varukorg" />
-                  <Button mnemonicParsing="false" text="2. Kunduppgifter" />
-                  <Button mnemonicParsing="false" text="3. Leveranstid" />
-                  <Button mnemonicParsing="false" text="4.Betalning" />
+                  <Button id="varukorg-active" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
+                  <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
                </buttons>
             </ButtonBar>
             <Label layoutX="927.0" layoutY="232.0" prefHeight="77.0" prefWidth="293.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
