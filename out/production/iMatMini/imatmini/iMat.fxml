@@ -220,7 +220,7 @@
                      <font>
                         <Font size="16.0" />
                      </font></Button>
-                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
                         <FlowPane fx:id="varukorgFlowPane" prefHeight="473.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="2.0">
                            <padding>
@@ -362,12 +362,12 @@
                <children>
                   <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="240.0" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <FlowPane fx:id="dateFlowPane" prefHeight="550.0" prefWidth="231.0" />
                            </content>
                         </ScrollPane>
-                        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="650.0" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <FlowPane fx:id="orderItemFlowPane" prefHeight="512.0" prefWidth="646.0" />
                            </content>
@@ -380,9 +380,9 @@
             </AnchorPane>
             <AnchorPane fx:id="handlaPane" layoutX="-7.0" layoutY="67.0" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
                      <content>
-                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="641.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
+                        <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="679.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
                            <children>
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>

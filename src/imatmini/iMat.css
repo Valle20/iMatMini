@@ -119,10 +119,7 @@
 {
 -fx-background-color: #EF233C;
 }
-.lagg-till:pressed
-{
--fx-background-color: #EA7381;
-}
+
 
 .plusminus
 {
@@ -222,3 +219,80 @@
 }
 
 
+
+.scroll-vit .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.scroll-vit .scroll-bar:vertical .thumb {
+    -fx-background-color: #E5E5E5;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+
+}
+.scroll-vit .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #D5D5D5;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+
+}
+
+
+
+.scroll-bla .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+.scroll-bla .scroll-bar:vertical .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0.0, 0.0, 1.0);
+}
+.scroll-bla .scroll-bar:vertical .thumb:hover {
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 8, 0.0, 0.0, 1.0);
+}
+
+
+/*
+.scroll-bar:vertical .track{
+    -fx-background-color: #ffffff;
+    -fx-border-color: transperent;
+
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #E5E5E5;
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #D5D5D5;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color : pink;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button {
+    -fx-background-color : pink;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}

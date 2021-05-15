@@ -460,7 +460,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="556.0" prefWidth="819.0" style="-fx-background-color: #edf2f4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="556.0" prefWidth="819.0" style="-fx-background-color: #edf2f4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
                      <content>
                         <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="554.0" prefWidth="817.0" style="-fx-background-color: edf2f4;" vgap="5.0" />
                      </content>
