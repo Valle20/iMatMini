@@ -19,10 +19,8 @@ public class Card extends AnchorPane {
     @FXML ImageView imageView;
     @FXML Label nameLabel;
     @FXML Label prizeLabel;
-    @FXML ImageView plusImage;
-    @FXML ImageView minusImage;
+
     @FXML TextField amountTextField;
-    @FXML ImageView merInfo;
     @FXML ImageView favourite;
     @FXML AnchorPane plusMinusPane;
 
@@ -56,8 +54,6 @@ public class Card extends AnchorPane {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
-
-
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -73,7 +69,7 @@ public class Card extends AnchorPane {
 
         nameLabel.setText(product.getName());
         prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
-        imageView.setImage(model.getImage(product, 147, 102));
+        imageView.setImage(model.getImage(product, 151  , 102));
 
         unit.append(product.getUnit());
         unit.delete(0,3);
@@ -98,6 +94,15 @@ public class Card extends AnchorPane {
         }
     }
 
+    @FXML private AnchorPane hjärtknapp;
+
+    @FXML void hHover(){
+        hjärtknapp.setStyle("-fx-background-color: #C4C4C4; ");
+    }
+    @FXML void hHoverN(){
+        hjärtknapp.setStyle("-fx-background-color: #E5E5E5; ");
+    }
+
     @FXML
     private void läggTill(){
         addItemVarukorg();
@@ -113,7 +118,7 @@ public class Card extends AnchorPane {
         plusMinusPane.toFront();
     }
 
-    private void updateAmount(int amount){
+    public void updateAmount(int amount){
         shoppingItem.setAmount(amount);
 
         if (amount == 0){
@@ -142,12 +147,12 @@ public class Card extends AnchorPane {
         if (model.isGillad(product)){
             model.oGillaVara(product);
             favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/FavoritesButton.png")));
+                    "imatmini/bilder/outline_favorite_border_black_48dp.png")));
             System.out.println(" Ogilla vara " + product.getName());
         } else {
             model.gillaVara(product);
             favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/filled_heart_button.png")));
+                    "imatmini/bilder/outline_favorite_black_48dp.png")));
             System.out.println(" gilla vara " + product.getName());
         }
     }

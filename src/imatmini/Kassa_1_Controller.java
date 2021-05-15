@@ -3,6 +3,7 @@ package imatmini;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -45,6 +46,16 @@ public class Kassa_1_Controller implements Initializable {
         initPersonUppgifterLyssnare();
         initComboboxes();
 
+        setTextLimit(cvckodTextField, 3);
+
+        chosenDate.setText("");
+        if (customer.getMobilePhoneNumber().equals("kort")){
+            kortRadioButton.fire();
+        }
+        if (customer.getMobilePhoneNumber().equals("kontanter")){
+            kontantRadioButton.fire();
+        }
+
         //för att få korrekt datum till leveranstidvyn
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM");
         LocalDateTime now = LocalDateTime.now();
@@ -60,7 +71,17 @@ public class Kassa_1_Controller implements Initializable {
         day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
         weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
         day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+    }
 
+    private void setTextLimit(TextField textField, int length) {
+        textField.setOnKeyTyped(event -> {
+            String string = textField.getText();
+
+            if (string.length() > length) {
+                textField.setText(string.substring(0, length));
+                textField.positionCaret(string.length());
+            }
+        });
     }
 
     /**
@@ -88,6 +109,7 @@ public class Kassa_1_Controller implements Initializable {
         }
     }
 
+
     /**
      * varukorg sidan
      **/
@@ -100,15 +122,21 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private FlowPane checkoutVarukorgFlowPane;
 
-    public void updateTotalpris(){
-        totalPrizeLabel.setText(model.getShoppingCart().getTotal() + " SEK");
-        momsLabel.setText(model.getShoppingCart().getTotal() * 0.12 + " SEK");
+    public void updateTotalpris() {
         antalVarorLabel.setText(getAntalVaror() + " st");
+
+        double pris = model.getShoppingCart().getTotal();
+        pris = Math.round(pris * 100.0) / 100.0;
+        totalPrizeLabel.setText(pris + " SEK");
+
+        double moms = model.getShoppingCart().getTotal() * 0.12;
+        moms = Math.round(moms * 100.0) / 100.0;
+        momsLabel.setText(moms + " SEK");
     }
 
-    private int getAntalVaror(){
+    private int getAntalVaror() {
         int antal = 0;
-        for (ShoppingItem s : model.getShoppingCart().getItems()){
+        for (ShoppingItem s : model.getShoppingCart().getItems()) {
             antal += s.getAmount();
         }
         return antal;
@@ -124,15 +152,22 @@ public class Kassa_1_Controller implements Initializable {
         }
     }
 
-    @FXML private Label dNamn;
-    @FXML private ImageView dBild;
-    @FXML private Label dPris;
-    public void populateDetalvy(Product product){
+    @FXML
+    private Label dNamn;
+    @FXML
+    private ImageView dBild;
+    @FXML
+    private Label dPris;
+
+    public void populateDetalvy(Product product) {
         dNamn.setText(product.getName());
         dBild.setImage(model.getImage(product, 147, 102));
         dPris.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
     }
-    @FXML private AnchorPane detailPane;
+
+    @FXML
+    private AnchorPane detailPane;
+
     @FXML
     public void openDetailView() {
         detailPane.toFront();
@@ -142,6 +177,12 @@ public class Kassa_1_Controller implements Initializable {
     public void closeDetailView() {
         detailPane.toBack();
     }
+
+    @FXML
+    public void mouseTrap(Event event){
+        event.consume();
+    }
+
     @FXML
     private AnchorPane varukorgAnchorPane;
     @FXML
@@ -174,7 +215,7 @@ public class Kassa_1_Controller implements Initializable {
     @FXML
     private ImageView previousPersonalImageView;
 
-    private void updatePersonuppgifter(){
+    private void updatePersonuppgifter() {
         firstNameTextField.setText(customer.getFirstName());
         lastNameTextField.setText(customer.getLastName());
         phoneTextField.setText(customer.getPhoneNumber());
@@ -187,7 +228,7 @@ public class Kassa_1_Controller implements Initializable {
         kundnamnTextField.setText(model.getCreditCard().getHoldersName());
     }
 
-    private void initPersonUppgifterLyssnare(){
+    private void initPersonUppgifterLyssnare() {
         kortnummerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             model.getCreditCard().setCardNumber((newValue));
         });
@@ -256,6 +297,10 @@ public class Kassa_1_Controller implements Initializable {
     private RadioButton kortRadioButton;
     @FXML
     private RadioButton kontantRadioButton;
+
+    private boolean radionull = true;
+
+
     @FXML
     private Button slutförköpButton;
     @FXML
@@ -277,7 +322,6 @@ public class Kassa_1_Controller implements Initializable {
         korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
 
         monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 model.getCreditCard().setValidMonth(Integer.parseInt(newValue));
@@ -375,38 +419,104 @@ public class Kassa_1_Controller implements Initializable {
         varukorgAnchorPane.toFront();
     }
 
+    @FXML private Label e1;
+
     @FXML
     private void personligaUppgifterToFront() {
-        System.out.println("personliga uppgifter vyn");
-        personligaUppgifterAnchorPane.toFront();
+        if (!model.getShoppingCart().getItems().isEmpty()){
+            System.out.println("personliga uppgifter vyn");
+            personligaUppgifterAnchorPane.toFront();
+            e1.setVisible(false);
+        }
+        e1.setVisible(true);
     }
+
+    private boolean is2ok(){
+        if (
+                customer.getAddress().equals("") ||
+                        customer.getEmail().equals("") ||
+                        customer.getFirstName().equals("") ||
+                        customer.getLastName().equals("") ||
+                        customer.getPostAddress().equals("") ||
+                        customer.getPhoneNumber().equals("") ||
+                        customer.getPostCode().equals("")
+        ){
+            return false;
+        } else return true;
+    }
+
+    @FXML private Label e2;
+
 
     @FXML
     private void leveransToFront() {
-        System.out.println("Leveransvyn");
-        leveransAnchorPane.toFront();
+        if (is2ok()){
+            System.out.println("Leveransvyn");
+            leveransAnchorPane.toFront();
+            e2.setVisible(false);
+        } else {
+            e2.setVisible(true);
+        }
     }
+
+    @FXML private Label e3;
 
     @FXML
     private void betalningToFront() {
-        System.out.println("betalningsvy");
-        betalningAnchorPane.toFront();
+        if (!chosenDate.getText().equals("")){
+            System.out.println("betalningsvy");
+            betalningAnchorPane.toFront();
+            e3.setVisible(false);
+        } else {
+            e3.setVisible(true);
+        }
     }
+
+    private boolean kortbetalning = false;
     @FXML
     private void betalamedkortToFront() {
         System.out.println("Betala med kort vy");
         betalamedkortPane.setVisible(true);
+        kortbetalning = true;
+        radionull = false;
+        e41.setVisible(false);
+        customer.setMobilePhoneNumber("kort"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
     }
     @FXML private void betalamedkortToBack() {
         System.out.println("Betala med kort vy, bort");
         betalamedkortPane.setVisible(false);
+        radionull = false;
+        e41.setVisible(false);
+        customer.setMobilePhoneNumber("kontanter"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
     }
+
+    @FXML private Label e41;
+    @FXML private Label e42;
+
+    private boolean isKortOk(){
+        if (!kortbetalning) return true;
+        if (
+                model.getCreditCard().getCardNumber().equals("") ||
+                model.getCreditCard().getCardType().equals("") ||
+                model.getCreditCard().getHoldersName().equals("") ||
+                model.getCreditCard().getValidMonth() == 0 ||
+                model.getCreditCard().getValidYear() == 0 ||
+                model.getCreditCard().getVerificationCode()  == 0
+        ){
+            return false;
+        } else return true;
+    }
+
     @FXML
     private void slutförtköpToFront() {
-        System.out.println("slutfört köp");
-        slutförtköpAnchorPane.toFront();
-        commitPurchase();
-
+        if (!radionull && isKortOk()){
+            System.out.println("slutfört köp");
+            slutförtköpAnchorPane.toFront();
+            commitPurchase();
+            e42.setVisible(false);
+        }
+        if (radionull) e41.setVisible(true);
+        if (!isKortOk()) e42.setVisible(true);
     }
 
     private void commitPurchase(){

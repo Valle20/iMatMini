@@ -57,11 +57,14 @@ public class OrderItems extends AnchorPane {
 
         orderItemName.setText(shoppingItem.getProduct().getName());
         orderItemAmount.setText(Math.round(shoppingItem.getAmount())+" x "+shoppingItem.getProduct().getPrice()+"kr");
-        orderItemTotalPrice.setText(String.valueOf(shoppingItem.getTotal()));
+        //orderItemTotalPrice.setText(String.valueOf(shoppingItem.getTotal()));
         orderItemImage.setImage(model.getImage(shoppingItem.getProduct()));
 
-        removeAddButton();
+        double pris = shoppingItem.getTotal();
+        pris = Math.round(pris * 100.0) / 100.0;
+        orderItemTotalPrice.setText(pris + " Kr");
 
+        removeAddButton();
     }
 
     @FXML

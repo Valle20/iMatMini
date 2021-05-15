@@ -55,7 +55,7 @@ public class VarukorgsItem extends AnchorPane {
         this.shoppingItem = shoppingItem;
         nameLabel.setText(shoppingItem.getProduct().getName());
         prizeLabel.setText(String.format("%.2f", (shoppingItem.getProduct().getPrice()) * shoppingItem.getAmount()) + " kr" );
-        imageView.setImage(model.getImage(shoppingItem.getProduct(), kImageWidth, kImageWidth*kImageRatio));
+        imageView.setImage(model.getImage(shoppingItem.getProduct(), 58, 54));
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
 
         /*

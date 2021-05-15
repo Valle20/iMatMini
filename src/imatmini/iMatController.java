@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -95,17 +96,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void initFavourites(Product product){
         if (model.isGillad(product)){
             model.getCardMap().get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
-                    "imatmini/bilder/filled_heart_button.png")));
+                    "imatmini/bilder/outline_favorite_black_48dp.png")));
         }
     }
     public void initialize(URL url, ResourceBundle rb) {
-
+        //model.iMatDataHandler.reset();
         initCardMap();
 
         model.getShoppingCart().addShoppingCartListener(this);
 
         updateVarukorg(model.getShoppingCart().getItems());
-
+        updateTotalpris();
         startsida();
 
         // updateBottomPanel();
@@ -174,10 +175,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void allaVaror(){
         titelLabel.setText("Alla varor");
         updateCards(model.getProducts());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getMejeri(){
@@ -193,10 +200,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void mejeri(){
         titelLabel.setText("Mejeri");
         updateCards(getMejeri());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getSötsaker(){
@@ -212,10 +225,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void sötsaker(){
         titelLabel.setText("Sötsaker");
         updateCards(getSötsaker());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getKött(){
@@ -235,10 +254,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Kött(){
         titelLabel.setText("Kött & Fisk");
         updateCards(getKött());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
     public List<Product> getDryck(){
         List<Product> list = new ArrayList<>();
@@ -257,10 +282,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Dryck(){
         titelLabel.setText("Dryck");
         updateCards(getDryck());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getBröd(){
@@ -276,10 +307,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void bröd(){
         titelLabel.setText("Bröd");
         updateCards(getBröd());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getSkafferi(){
@@ -302,10 +339,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void Skafferi(){
         titelLabel.setText("Skafferi");
         updateCards(getSkafferi());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     public List<Product> getFruktGrönt(){
@@ -331,10 +374,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML public void FruktGrönt(){
         titelLabel.setText("Frukt & Grönt");
         updateCards(getFruktGrönt());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        handlaPane.toFront();
+
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     @FXML private Button startsida;
@@ -347,10 +397,14 @@ public class iMatController implements Initializable, ShoppingCartListener {
         titelLabel.setText("Favoriter");
         updateCards(model.getGilladeVaror());
         handlaPane.toFront();
-        favpriter.setStyle("-fx-background-color: #8D99AE; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        favpriter.getStyleClass().add("toolbar-btn-tryckt");
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
+        tidigare.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     //flytta på Anchorpanes i start
@@ -360,25 +414,46 @@ public class iMatController implements Initializable, ShoppingCartListener {
         System.out.println("kategorier");
         kategorierPane.toFront();
     }
+
+    @FXML
+    private void stangKategoriere(){
+        kategorierPane.toBack();
+    }
+
+    @FXML
+    public void mouseTrap(Event event){
+        event.consume();
+    }
     @FXML
     private void openTidigare(){
         updateOrders();
         System.out.println("tidigare vyn");
         tidigarePane.toFront();
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #8D99AE; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.getStyleClass().add("toolbar-btn-tryckt");
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     @FXML
     private void openHelp(){
         System.out.println("help vyn");
         helpPane.toFront();
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #8D99AE; ");
+        hjälp.getStyleClass().add("toolbar-btn-tryckt");
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
+
+
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     @FXML
@@ -394,6 +469,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private Label titelLabel1;
 
     public void startsida() {
+        handlaPane.toFront();
         kategorierPane.toBack();
         cardsFlowPane.getChildren().clear();
         titelLabel.setText("Veckans varor");
@@ -410,20 +486,34 @@ public class iMatController implements Initializable, ShoppingCartListener {
         cardsFlowPane.getChildren().add(model.getCardMap().get("Brie"));
         cardsFlowPane.getChildren().add(model.getCardMap().get("Vattenmelon"));
 
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #8D99AE; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        startsida.getStyleClass().add("toolbar-btn-tryckt");
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
+
+        tidigare.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+
+
     }
 
     @Override
     public void shoppingCartChanged(CartEvent cartEvent) {
         updateVarukorg(model.getShoppingCart().getItems());
+        updateTotalpris();
     }
 
     @FXML
     private void tömVarukorgen(ActionEvent event) {
+        List<ShoppingItem> savekart = new ArrayList<>();
+        savekart.addAll(model.getShoppingCart().getItems());
         model.clearShoppingCart();
+        for (ShoppingItem item : savekart){
+            model.getCardMap().get(item.getProduct().getName()).updateAmount(0);
+        }
     }
 
 
@@ -449,6 +539,14 @@ public class iMatController implements Initializable, ShoppingCartListener {
         startsida.setStyle("-fx-background-color: #FFFFFF; ");
         tidigare.setStyle("-fx-background-color: #FFFFFF; ");
         hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+    }
+
+    @FXML Label totaltPris;
+    @FXML
+    public void updateTotalpris() {
+        double pris = model.getShoppingCart().getTotal();
+        pris = Math.round(pris * 100.0) / 100.0;
+        totaltPris.setText(pris + " SEK");
     }
     /*
 
