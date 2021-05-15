@@ -93,8 +93,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
-
-
     public void initFavourites(Product product){
         if (model.isGillad(product)){
             model.getCardMap().get(product.getName()).favourite.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
@@ -102,7 +100,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
     public void initialize(URL url, ResourceBundle rb) {
-       //model.iMatDataHandler.reset();
+        //model.iMatDataHandler.reset();
         initCardMap();
 
         model.getShoppingCart().addShoppingCartListener(this);
@@ -546,7 +544,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML Label totaltPris;
     @FXML
     public void updateTotalpris() {
-        totaltPris.setText((model.getShoppingCart().getTotal()) + " SEK");
+        double pris = model.getShoppingCart().getTotal();
+        pris = Math.round(pris * 100.0) / 100.0;
+        totaltPris.setText(pris + " SEK");
     }
     /*
 

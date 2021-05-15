@@ -26,7 +26,7 @@
 -fx-font-size: 25px;
 -fx-padding: 1px;
 -fx-text-align: justify;
--fx-background-radius: 10px;
+-fx-background-radius: 4px;
 -fx-pref-height: 65px;
 -fx-pref-width: 200px;
 }
@@ -42,6 +42,7 @@
 -fx-font-family: "Roboto";
 -fx-padding: 1px;
 -fx-font-size: 48px;
+-fx-background-radius: 3px;
 }
 .kassa:hover
 {
@@ -151,7 +152,7 @@
 }
 .graknapp:hover
 {
--fx-background-color: #C4C4C4;
+-fx-background-color: #D5D5D5;
 -fx-background-radius: 4px;
 -fx-padding: 0px;
 }
@@ -190,7 +191,7 @@
 
 .toolbar-btn-tryckt
 {
--fx-background-color: #8D99AE;
+-fx-background-color: #E4B5BD;
 }
 
 

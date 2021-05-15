@@ -144,7 +144,7 @@
                   <Font name="Times New Roman" size="30.0" />
                </font>
             </Button>
-            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
+            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" visible="false" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
                <children>
                   <Label layoutX="31.0" layoutY="20.0" text="Korttyp">
                      <font>

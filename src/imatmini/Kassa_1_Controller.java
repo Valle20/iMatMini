@@ -123,9 +123,15 @@ public class Kassa_1_Controller implements Initializable {
     private FlowPane checkoutVarukorgFlowPane;
 
     public void updateTotalpris() {
-        totalPrizeLabel.setText(model.getShoppingCart().getTotal() + " SEK");
-        momsLabel.setText(model.getShoppingCart().getTotal() * 0.12 + " SEK");
         antalVarorLabel.setText(getAntalVaror() + " st");
+
+        double pris = model.getShoppingCart().getTotal();
+        pris = Math.round(pris * 100.0) / 100.0;
+        totalPrizeLabel.setText(pris + " SEK");
+
+        double moms = model.getShoppingCart().getTotal() * 0.12;
+        moms = Math.round(moms * 100.0) / 100.0;
+        momsLabel.setText(moms + " SEK");
     }
 
     private int getAntalVaror() {

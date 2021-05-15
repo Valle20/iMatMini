@@ -24,16 +24,6 @@
             <Font size="16.0" />
          </font></TextField>
       <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="89.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-      <ImageView fitHeight="23.0" fitWidth="75.0" layoutX="108.0" layoutY="37.0" onMouseClicked="#merInfo" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="108.0">
-         <image>
-            <Image url="@bilder/mer_info.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="88.0" layoutX="690.0" layoutY="27.0" onMouseClicked="#tabort" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="690.0">
-         <image>
-            <Image url="@bilder/tabort.png" />
-         </image>
-      </ImageView>
       <Label fx:id="summaLabel" layoutX="565.0" layoutY="27.0" text="Label" AnchorPane.leftAnchor="585.0">
          <font>
             <Font size="17.0" />
@@ -57,5 +47,24 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button layoutX="187.0" layoutY="37.0" mnemonicParsing="false" onAction="#merInfo" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info" AnchorPane.leftAnchor="108.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="677.0" layoutY="21.0" onMouseClicked="#tabort" prefHeight="27.0" prefWidth="90.0" styleClass="graknapp" AnchorPane.bottomAnchor="21.5" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="21.5">
+         <children>
+            <Label layoutX="7.0" layoutY="3.0" text="Ta bort">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="62.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bilder/outline_delete_outline_black_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

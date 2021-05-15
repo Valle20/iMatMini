@@ -52,31 +52,32 @@ public class TidigareDate extends AnchorPane {
 
 
         dateLabel.setText(getNiceDate());
-        priceLabel.setText(getTotalOrderPrice() + " Kr");
+        //priceLabel.setText(getTotalOrderPrice() + " Kr");
 
+        double pris = getTotalOrderPrice();
+        pris = Math.round(pris * 100.0) / 100.0;
+        priceLabel.setText(pris + " Kr");
 
         openOrder();
-
-
     }
 
 
 
     private String getNiceDate(){
-        String pattern = "MM/dd/yyyy   HH:mm";
+        String pattern = "dd/MM/yyyy   HH:mm";
         DateFormat df = new SimpleDateFormat(pattern);
         String textDate = df.format(order.getDate());
 
         return textDate;
     }
 
-    private String getTotalOrderPrice(){
+    private double getTotalOrderPrice(){
         double total = 0;
         List<ShoppingItem> list = order.getItems();
         for(ShoppingItem item: list){
             total += item.getTotal();
         }
-        return String.valueOf(total);
+        return total;
     }
 
     @FXML
