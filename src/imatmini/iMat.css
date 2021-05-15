@@ -64,7 +64,10 @@
 {
 -fx-background-color: #EF233C;
 }
-
+.back-button:pressed
+{
+-fx-background-color: #EA7381;
+}
 
 #purchase-button
 {
@@ -115,6 +118,31 @@
 {
 -fx-background-color: #EF233C;
 }
+.lagg-till:pressed
+{
+-fx-background-color: #EA7381;
+}
+
+.plusminus
+{
+-fx-background-color: #B00320;
+-fx-background-radius: 50px;
+-fx-padding: 0px;
+}
+.plusminus:hover
+{
+-fx-background-color: #EF233C;
+-fx-background-radius: 50px;
+-fx-padding: 0px;
+}
+.plusminus:pressed
+{
+-fx-background-color: #EA7381;
+-fx-background-radius: 50px;
+-fx-padding: 0px;
+}
+
+
 
 .graknapp{
 -fx-background-color: #E5E5E5;

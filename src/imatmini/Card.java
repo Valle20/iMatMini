@@ -19,8 +19,7 @@ public class Card extends AnchorPane {
     @FXML ImageView imageView;
     @FXML Label nameLabel;
     @FXML Label prizeLabel;
-    @FXML ImageView plusImage;
-    @FXML ImageView minusImage;
+
     @FXML TextField amountTextField;
     @FXML ImageView favourite;
     @FXML AnchorPane plusMinusPane;
@@ -119,7 +118,7 @@ public class Card extends AnchorPane {
         plusMinusPane.toFront();
     }
 
-    private void updateAmount(int amount){
+    public void updateAmount(int amount){
         shoppingItem.setAmount(amount);
 
         if (amount == 0){

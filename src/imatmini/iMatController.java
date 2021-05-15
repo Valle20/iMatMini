@@ -510,7 +510,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void tömVarukorgen(ActionEvent event) {
+        List<ShoppingItem> savekart = new ArrayList<>();
+        savekart.addAll(model.getShoppingCart().getItems());
         model.clearShoppingCart();
+        for (ShoppingItem item : savekart){
+            model.getCardMap().get(item.getProduct().getName()).updateAmount(0);
+        }
     }
 
 
