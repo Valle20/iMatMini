@@ -560,10 +560,15 @@ public class iMatController implements Initializable, ShoppingCartListener {
         List<Product> matches = model.findProducts(sökruta.getText());
         updateCards(matches);
         System.out.println("# matching products: " + matches.size());
-        favpriter.setStyle("-fx-background-color: #FFFFFF; ");
-        startsida.setStyle("-fx-background-color: #FFFFFF; ");
-        tidigare.setStyle("-fx-background-color: #FFFFFF; ");
-        hjälp.setStyle("-fx-background-color: #FFFFFF; ");
+        tidigare.getStyleClass().add("toolbar-btn");
+        favpriter.getStyleClass().add("toolbar-btn");
+        hjälp.getStyleClass().add("toolbar-btn");
+        startsida.getStyleClass().add("toolbar-btn");
+
+        tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
+        hjälp.getStyleClass().removeIf(style -> style.equals("toolbar-btn-tryckt"));
     }
 
     @FXML Label totaltPris;
