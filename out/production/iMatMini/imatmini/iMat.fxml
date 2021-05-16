@@ -173,7 +173,7 @@
                      </styleClass></Button>
                   <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
-                        <Font name="Avenir Next" size="18.0" />
+                        <Font name="Avenir Book" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />

@@ -173,7 +173,7 @@
                      </styleClass></Button>
                   <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
-                        <Font name="Avenir Next" size="18.0" />
+                        <Font name="Avenir Book" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -207,7 +207,7 @@
             </AnchorPane>
             <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="17.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
+                  <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
                         <Font name="Avenir Next" size="22.0" />
                      </font>
