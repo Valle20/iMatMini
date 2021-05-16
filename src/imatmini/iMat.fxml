@@ -339,12 +339,12 @@
          <children>
             <Pane layoutX="540.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="150.0">
                <children>
-                  <Label layoutX="260.0" layoutY="113.0" text="Köp genomfört!">
+                  <Label alignment="CENTER" layoutY="113.0" prefWidth="883.0" text="Köp genomfört!">
                      <font>
                         <Font name="Avenir Book" size="48.0" />
                      </font>
                   </Label>
-                  <Label layoutX="262.0" layoutY="192.0" text="Ett bekräftelsemail är skickat till din email">
+                  <Label fx:id="bekräftelse" alignment="CENTER" layoutY="192.0" prefWidth="883.0" text="Ett bekräftelsemail är skickat till din E-Mail">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
                      </font>
@@ -782,7 +782,7 @@
       </AnchorPane>
       <AnchorPane fx:id="kategorierPane" onMouseClicked="#stangKategoriere" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.4);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane onMouseClicked="#mouseTrap" prefHeight="140.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
+            <AnchorPane onMouseClicked="#mouseTrap" prefHeight="140.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
                <children>
                   <Button layoutX="492.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" styleClass="btn-kategori" stylesheets="@iMat.css" text="Mejeri" AnchorPane.leftAnchor="492.0" />
                   <Button layoutX="492.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" styleClass="btn-kategori" stylesheets="@iMat.css" text="Kött &amp; Fisk" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="492.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="23.0" />
@@ -869,7 +869,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0">
+            <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
                <children>
                   <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
@@ -880,15 +880,15 @@
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font></Button>
-                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefHeight="475.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
-                        <FlowPane fx:id="varukorgFlowPane" prefHeight="473.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="2.0">
+                        <FlowPane fx:id="varukorgFlowPane" prefHeight="477.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="2.0">
                            <padding>
                               <Insets top="3.0" />
                            </padding></FlowPane>
                      </content>
                   </ScrollPane>
-                  <Line endX="168.0" startX="-169.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
+                  <Line endX="168.0" startX="-169.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
                   <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa" prefHeight="79.0" prefWidth="338.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font name="Avenir Book" size="46.0" />
@@ -905,7 +905,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="helpPane" prefHeight="652.0" prefWidth="934.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0">
+            <AnchorPane fx:id="helpPane" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
                <children>
                   <Label layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="328.0" text="Hur handlar man på iMat?" AnchorPane.leftAnchor="31.0">
                      <font>
@@ -1018,7 +1018,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="tidigarePane" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="339.0">
+            <AnchorPane fx:id="tidigarePane" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
                <children>
                   <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #BDC5C6;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
@@ -1041,9 +1041,9 @@
                      </font></Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="handlaPane" prefHeight="652.0" prefWidth="943.0" style="-fx-background-color: #EDF2F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
+            <AnchorPane fx:id="handlaPane" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="652.0" prefWidth="915.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.5">
+                  <ScrollPane hbarPolicy="NEVER" layoutY="2.0" prefHeight="654.0" prefWidth="905.0" style="-fx-background-color: EDF2F4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
                      <content>
                         <FlowPane fx:id="cardsFlowPane" hgap="12.0" prefHeight="647.0" prefWidth="905.0" style="-fx-background-color: #EDF2F4;" vgap="12.0">
                            <children>
@@ -1074,7 +1074,7 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <Line endX="960.0" endY="68.9" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="-1.5" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="68.0" />
+            <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="65.0" />
          </children>
       </AnchorPane>
     </children>

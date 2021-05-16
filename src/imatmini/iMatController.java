@@ -167,7 +167,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         for (ShoppingItem shoppingItem : order.getItems()) {
             orderItemFlowPane.getChildren().add(new OrderItems(shoppingItem));
         }
-
     }
 
     public void updateOrders() {
@@ -977,6 +976,39 @@ public class iMatController implements Initializable, ShoppingCartListener {
         button.getStyleClass().removeIf(style -> style.equals("btn-checkout"));
     }
 
+    private void clearColorTrycktButton(){
+        a.getStyleClass().add("btn-checkout");
+        a.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        b.getStyleClass().add("btn-checkout");
+        b.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        c.getStyleClass().add("btn-checkout");
+        c.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        d.getStyleClass().add("btn-checkout");
+        d.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        e.getStyleClass().add("btn-checkout");
+        e.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        f.getStyleClass().add("btn-checkout");
+        f.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        gg.getStyleClass().add("btn-checkout");
+        gg.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        h.getStyleClass().add("btn-checkout");
+        h.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        i.getStyleClass().add("btn-checkout");
+        i.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        j.getStyleClass().add("btn-checkout");
+        j.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        k.getStyleClass().add("btn-checkout");
+        k.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        l.getStyleClass().add("btn-checkout");
+        l.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        m.getStyleClass().add("btn-checkout");
+        m.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        n.getStyleClass().add("btn-checkout");
+        n.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        o.getStyleClass().add("btn-checkout");
+        o.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+    }
+
     @FXML private void a(){
         firstDay();
         firstTime();
@@ -1210,10 +1242,13 @@ public class iMatController implements Initializable, ShoppingCartListener {
         } else return true;
     }
 
+    @FXML Label bekräftelse;
+
     @FXML
     private void slutförtköpToFront() {
         if (!radionull && isKortOk()){
             System.out.println("slutfört köp");
+            bekräftelse.setText("Ett bekräftelsemail är skickat till din Email: " + customer.getEmail());
             slutförtköpAnchorPane.toFront();
             commitPurchase();
             e42.setVisible(false);
@@ -1223,7 +1258,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     private void commitPurchase(){
+        List<ShoppingItem> savekart = new ArrayList<>();
+        savekart.addAll(model.getShoppingCart().getItems());
+
         model.placeOrder();
+
+        for (ShoppingItem item : savekart){
+            model.getCardMap().get(item.getProduct().getName()).plusMinusPane.toBack();
+        }
+
+        clearColorTrycktButton();
+
         for(int i=0; i < model.getOrders().size(); i++){
             System.out.println( model.getOrders().get(i) );
         }

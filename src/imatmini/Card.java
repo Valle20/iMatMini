@@ -23,7 +23,7 @@ public class Card extends AnchorPane {
 
     @FXML TextField amountTextField;
     @FXML ImageView favourite;
-    @FXML AnchorPane plusMinusPane;
+    @FXML public AnchorPane plusMinusPane;
 
     private Model model = Model.getInstance();
 
