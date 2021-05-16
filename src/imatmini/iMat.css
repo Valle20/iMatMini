@@ -97,17 +97,27 @@
 
 .btn-checkout {
 -fx-background-color: white;
--fx-border-with: 2px;
+-fx-background-radius: 3px
+
+-fx-border-width: 1px;
 -fx-border-color: black;
 -fx-border-radius: 3px;
--fx-font-size: 16px
 }
 .btn-checkout:hover{
--fx-background-color: #8D99AE;
--fx-color: black;
--fx-font-weight: bold;
--fx-font-size: 16px
+-fx-background-color: #F0F0F0;
 }
+
+.btn-checkout-tryckt{
+-fx-background-color: #8D99AE;
+-fx-text-fill: #FFFFFF;
+
+-fx-background-radius: 3px
+
+-fx-border-width: 1px;
+-fx-border-color: black;
+-fx-border-radius: 3px;
+}
+
 
 .dropshadow-card /* jag lyckas inte få till nån bra skugga jag ger upp !!! Feel free to redo it completely */
 {
@@ -168,12 +178,29 @@
 .graknapp:hover
 {
 -fx-background-color: #D5D5D5;
-
 }
-.graknapp:pressed
+
+
+.graknapp-med-pressed{
+-fx-background-color: #E5E5E5;
+-fx-background-radius: 4px;
+-fx-padding: 0px;
+}
+.graknapp-med-pressed:hover
+{
+-fx-background-color: #D5D5D5;
+}
+.graknapp-med-pressed:pressed
 {
 -fx-background-color: #B4B4B4;
+}
 
+.text-input {
+    -fx-prompt-text-fill: #595959;
+}
+
+.text-input:focused {
+    -fx-prompt-text-fill: transparent;
 }
 
 .button
@@ -221,21 +248,25 @@
 
 .btn-kategori
 {
+-fx-background-radius: 50px;
+-fx-border-radius: 50px;
 -fx-background-color: #FFFFFF;
 -fx-font-size: 18px;
--fx-padding: 1px;
+-fx-padding: 0px;
 -fx-pref-height: 41px;
 -fx-pref-width: 178px;
+-fx-border-color: #8D99AE;
+-fx-border-width: 0.5;
 }
 .btn-kategori:hover
 {
 -fx-background-color: #F0F0F0;
-
+-fx-padding: 0px;
 }
 .btn-kategori:pressed
 {
 -fx-background-color: #E0E0E0;
-
+-fx-padding: 0px;
 }
 /* såg att någon hade ändrat dessa medans jag höll på så skickar med som en kommentar ist*/
 /*.toolbar-navigation-button

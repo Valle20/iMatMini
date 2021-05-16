@@ -399,7 +399,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane">
+      <AnchorPane fx:id="leveransAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
@@ -415,20 +415,23 @@
                   <Font name="Avenir Book" size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="1063.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="165.0">
+            <Pane layoutX="1063.0" layoutY="172.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                  <Button fx:id="m" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#m" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="n" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#n" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fifthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="o" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#o" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label fx:id="day5" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
@@ -436,20 +439,23 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="776.0" layoutY="179.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="762.0" AnchorPane.topAnchor="165.0">
+            <Pane layoutX="776.0" layoutY="179.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="762.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                  <Button fx:id="j" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#j" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="k" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#k" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#fourthDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="l" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#l" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label fx:id="day4" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
@@ -457,20 +463,23 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="559.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="552.0" AnchorPane.topAnchor="165.0">
+            <Pane layoutX="559.0" layoutY="172.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="552.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                  <Button fx:id="gg" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#gg" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="h" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#h" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#thirdDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="i" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#i" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label fx:id="day3" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
@@ -478,20 +487,23 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="353.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="165.0">
+            <Pane layoutX="353.0" layoutY="172.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="342.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                  <Button fx:id="d" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#d" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="e" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#e" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#secondDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="f" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#f" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label fx:id="day2" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
@@ -499,52 +511,30 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="125.0" layoutY="172.0" prefHeight="362.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
+            <Pane layoutX="125.0" layoutY="172.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <Button layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#firstTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00-12:00">
+                  <Button fx:id="a" layoutX="20.0" layoutY="89.0" mnemonicParsing="false" onAction="#a" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#secondTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00-16:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="b" layoutX="20.0" layoutY="158.0" mnemonicParsing="false" onAction="#b" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#thirdTime" onMouseClicked="#firstDay" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00-20:00">
+                     </font>
+                  </Button>
+                  <Button fx:id="c" layoutX="20.0" layoutY="227.0" mnemonicParsing="false" onAction="#c" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
-                     </font></Button>
-                  <Label fx:id="day1" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
+                     </font>
+                  </Button>
+                  <Label fx:id="day1" layoutX="60.0" layoutY="14.0" prefHeight="65.0" prefWidth="70.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Avenir Book" size="20.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="337.0" layoutY="556.0" prefHeight="26.0" prefWidth="127.0" text="Du har valt">
-               <font>
-                  <Font name="Avenir Next Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label layoutX="534.0" layoutY="556.0" prefHeight="26.0" prefWidth="82.0" text="Datum:">
-               <font>
-                  <Font name="Avenir Next Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label layoutX="803.0" layoutY="556.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
-               <font>
-                  <Font name="Avenir Next Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="chosenDate" layoutX="626.0" layoutY="557.0" prefHeight="32.0" prefWidth="150.0">
-               <font>
-                  <Font name="Avenir Book" size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="chosenTime" layoutX="857.0" layoutY="557.0" prefHeight="32.0" prefWidth="141.0">
-               <font>
-                  <Font name="Avenir Book" size="22.0" />
-               </font>
-            </Label>
             <Button layoutX="814.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e3" alignment="TOP_LEFT" layoutX="751.0" layoutY="635.0" prefHeight="65.0" prefWidth="296.0" text="Du måste välja en leveranstid innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
@@ -599,6 +589,35 @@
                   <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="duharvaltPane" layoutX="255.0" layoutY="509.0" prefHeight="97.0" prefWidth="745.0" visible="false">
+               <children>
+                  <Label fx:id="chosenTime" layoutX="580.0" layoutY="28.0" prefHeight="32.0" prefWidth="141.0">
+                     <font>
+                        <Font name="Avenir Book" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chosenDate" layoutX="350.0" layoutY="28.0" prefHeight="32.0" prefWidth="150.0">
+                     <font>
+                        <Font name="Avenir Book" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="526.0" layoutY="29.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
+                     <font>
+                        <Font name="Avenir Next Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="60.0" layoutY="28.0" prefHeight="26.0" prefWidth="127.0" text="Du har valt">
+                     <font>
+                        <Font name="Avenir Next Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="28.0" prefHeight="26.0" prefWidth="82.0" text="Datum:">
+                     <font>
+                        <Font name="Avenir Next Bold" size="22.0" />
                      </font>
                   </Label>
                </children>
@@ -666,7 +685,7 @@
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="104.0" prefHeight="29.0" prefWidth="138.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="104.0" prefHeight="35.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="10.0">
                      <font>
                         <Font name="Avenir Next Bold" size="24.0" />
                      </font>

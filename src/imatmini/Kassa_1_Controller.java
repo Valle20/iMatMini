@@ -127,11 +127,11 @@ public class Kassa_1_Controller implements Initializable {
 
         double pris = model.getShoppingCart().getTotal();
         pris = Math.round(pris * 100.0) / 100.0;
-        totalPrizeLabel.setText(pris + " SEK");
+        totalPrizeLabel.setText(String.format("%.2f",pris) + " SEK");
 
         double moms = model.getShoppingCart().getTotal() * 0.12;
         moms = Math.round(moms * 100.0) / 100.0;
-        momsLabel.setText(moms + " SEK");
+        momsLabel.setText(String.format("%.2f",moms) + " SEK");
     }
 
     private int getAntalVaror() {
@@ -358,6 +358,138 @@ public class Kassa_1_Controller implements Initializable {
     /**
      * VAL AV DAG
      */
+
+    @FXML private Button a;
+    @FXML private Button b;
+    @FXML private Button c;
+    @FXML private Button d;
+    @FXML private Button e;
+    @FXML private Button f;
+    @FXML private Button gg;
+    @FXML private Button h;
+    @FXML private Button i;
+    @FXML private Button j;
+    @FXML private Button k;
+    @FXML private Button l;
+    @FXML private Button m;
+    @FXML private Button n;
+    @FXML private Button o;
+
+    private void updateColorTrycktButton(Button button){
+        a.getStyleClass().add("btn-checkout");
+        a.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        b.getStyleClass().add("btn-checkout");
+        b.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        c.getStyleClass().add("btn-checkout");
+        c.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        d.getStyleClass().add("btn-checkout");
+        d.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        e.getStyleClass().add("btn-checkout");
+        e.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        f.getStyleClass().add("btn-checkout");
+        f.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        gg.getStyleClass().add("btn-checkout");
+        gg.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        h.getStyleClass().add("btn-checkout");
+        h.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        i.getStyleClass().add("btn-checkout");
+        i.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        j.getStyleClass().add("btn-checkout");
+        j.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        k.getStyleClass().add("btn-checkout");
+        k.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        l.getStyleClass().add("btn-checkout");
+        l.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        m.getStyleClass().add("btn-checkout");
+        m.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        n.getStyleClass().add("btn-checkout");
+        n.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+        o.getStyleClass().add("btn-checkout");
+        o.getStyleClass().removeIf(style -> style.equals("btn-checkout-tryckt"));
+
+        button.getStyleClass().add("btn-checkout-tryckt");
+        button.getStyleClass().removeIf(style -> style.equals("btn-checkout"));
+    }
+
+    @FXML private void a(){
+        firstDay();
+        firstTime();
+        updateColorTrycktButton(a);
+    }
+    @FXML private void b(){
+        firstDay();
+        secondTime();
+        updateColorTrycktButton(b);
+    }
+    @FXML private void c(){
+        firstDay();
+        thirdTime();
+        updateColorTrycktButton(c);
+    }
+    @FXML private void d(){
+        secondDay();
+        firstTime();
+        updateColorTrycktButton(d);
+    }
+    @FXML private void e(){
+        secondDay();
+        secondTime();
+        updateColorTrycktButton(e);
+    }
+    @FXML private void f(){
+        secondDay();
+        thirdTime();
+        updateColorTrycktButton(f);
+    }
+    @FXML private void gg(){
+        thirdDay();
+        firstTime();
+        updateColorTrycktButton(gg);
+    }
+    @FXML private void h(){
+        thirdDay();
+        secondTime();
+        updateColorTrycktButton(h);
+    }
+    @FXML private void i(){
+        thirdDay();
+        thirdTime();
+        updateColorTrycktButton(i);
+    }
+    @FXML private void j(){
+        fourthDay();
+        firstTime();
+        updateColorTrycktButton(j);
+    }
+    @FXML private void k(){
+        fourthDay();
+        secondTime();
+        updateColorTrycktButton(k);
+    }
+    @FXML private void l(){
+        fourthDay();
+        thirdTime();
+        updateColorTrycktButton(l);
+    }
+    @FXML private void m(){
+        fifthDay();
+        firstTime();
+        updateColorTrycktButton(m);
+    }
+    @FXML private void n(){
+        fifthDay();
+        secondTime();
+        updateColorTrycktButton(n);
+    }
+    @FXML private void o(){
+        fifthDay();
+        thirdTime();
+        updateColorTrycktButton(o);
+    }
+
+
+    @FXML private AnchorPane duharvaltPane;
+
     @FXML
     private Label chosenDate;
     @FXML
@@ -398,16 +530,19 @@ public class Kassa_1_Controller implements Initializable {
      * VAL AV TID
      */
     @FXML
-    public void firstTime(ActionEvent event) throws IOException {
+    public void firstTime(){
         chosenTime.setText("8:00 - 12:00");
+        duharvaltPane.setVisible(true);
     }
     @FXML
-    public void secondTime(ActionEvent event) throws IOException {
+    public void secondTime(){
         chosenTime.setText("12:00 - 16:00");
+        duharvaltPane.setVisible(true);
     }
     @FXML
-    public void thirdTime(ActionEvent event) throws IOException {
+    public void thirdTime(){
         chosenTime.setText("16:00 - 20:00");
+        duharvaltPane.setVisible(true);
     }
 
     /**

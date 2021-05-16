@@ -50,6 +50,8 @@ public class VarukorgsItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        amountTextField.setOnMouseClicked(e -> amountTextField.selectAll());
+
         unit.append(shoppingItem.getProduct().getUnit());
         unit.delete(0,3);
 

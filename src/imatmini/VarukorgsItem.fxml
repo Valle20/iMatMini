@@ -12,10 +12,10 @@
    <children>
       <Label fx:id="nameLabel" layoutX="72.0" layoutY="7.0" prefHeight="20.0" prefWidth="127.0" text="Mellanmjök" AnchorPane.leftAnchor="72.0">
          <font>
-            <Font name="Avenir Book" size="16.0" />
+            <Font name="Avenir Book" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="22.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT">
+      <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="22.0" prefHeight="20.0" prefWidth="98.0" text="pris" textAlignment="RIGHT">
          <font>
             <Font name="Avenir Next" size="16.0" />
          </font></Label>

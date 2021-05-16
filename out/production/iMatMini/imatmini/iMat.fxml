@@ -79,54 +79,14 @@
          <children>
             <AnchorPane onMouseClicked="#mouseTrap" prefHeight="140.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="68.0">
                <children>
-                  <Button layoutX="492.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" stylesheets="@iMat.css" text="Mejeri" AnchorPane.leftAnchor="492.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="492.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" stylesheets="@iMat.css" text="Kött &amp; Fisk" AnchorPane.leftAnchor="492.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="265.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" stylesheets="@iMat.css" text="Bröd" AnchorPane.leftAnchor="265.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="265.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" stylesheets="@iMat.css" text="Skafferi" AnchorPane.leftAnchor="265.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" stylesheets="@iMat.css" text="Frukt &amp; grönt" AnchorPane.leftAnchor="38.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" stylesheets="@iMat.css" text="Alla varor" AnchorPane.leftAnchor="38.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="719.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" stylesheets="@iMat.css" text="Sötsaker" AnchorPane.leftAnchor="719.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="719.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" stylesheets="@iMat.css" text="Dryck" AnchorPane.leftAnchor="719.0">
-                     <styleClass>
-                        <String fx:value="btn-kategori" />
-                        <String fx:value="dropshadow-card" />
-                     </styleClass>
-                  </Button>
+                  <Button layoutX="492.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" styleClass="btn-kategori" stylesheets="@iMat.css" text="Mejeri" AnchorPane.leftAnchor="492.0" />
+                  <Button layoutX="492.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" styleClass="btn-kategori" stylesheets="@iMat.css" text="Kött &amp; Fisk" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="492.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="23.0" />
+                  <Button layoutX="265.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" styleClass="btn-kategori" stylesheets="@iMat.css" text="Bröd" AnchorPane.leftAnchor="265.0" />
+                  <Button layoutX="265.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" styleClass="btn-kategori" stylesheets="@iMat.css" text="Skafferi" AnchorPane.leftAnchor="265.0" />
+                  <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" styleClass="btn-kategori" stylesheets="@iMat.css" text="Frukt &amp; grönt" AnchorPane.leftAnchor="38.0" />
+                  <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" prefHeight="46.0" styleClass="btn-kategori" stylesheets="@iMat.css" text="Alla varor" AnchorPane.leftAnchor="38.0" />
+                  <Button layoutX="719.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" styleClass="btn-kategori" stylesheets="@iMat.css" text="Sötsaker" AnchorPane.leftAnchor="719.0" />
+                  <Button layoutX="719.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" styleClass="btn-kategori" stylesheets="@iMat.css" text="Dryck" AnchorPane.leftAnchor="719.0" />
                   <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#closeDetailView" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@bilder/Vector%201.png" />
@@ -179,11 +139,11 @@
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
-                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="398.0" style="-fx-background-radius: 50px;" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
+                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="376.0" promptText="Sök efter varor här" style="-fx-background-radius: 50 0 0 50;" styleClass="text-input" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font size="16.0" />
+                        <Font name="Avenir Book" size="16.0" />
                      </font></TextField>
-                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="35.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök">
+                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="35.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök ">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
@@ -193,7 +153,6 @@
                      </styleClass></Button>
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
-                  <Line endX="19.81781005859375" endY="17.899999618530273" layoutX="683.0" layoutY="33.1" scaleX="1.5" startX="19.81781005859375" startY="-18.0" AnchorPane.bottomAnchor="16.499998474121092" AnchorPane.topAnchor="14.600000000000001" />
                   <Button id="hjalp" fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
@@ -207,12 +166,12 @@
             </AnchorPane>
             <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="17.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
+                  <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
                         <Font name="Avenir Next" size="22.0" />
                      </font>
                   </Label>
-                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp" stylesheets="@iMat.css" text="Töm varukorgen">
+                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font></Button>

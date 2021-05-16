@@ -109,6 +109,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
         updateOrders();
         startsida();
 
+        sökruta.setOnMouseClicked(e -> sökruta.selectAll());
+
         // updateBottomPanel();
 
         //setupAccountPane();
@@ -577,7 +579,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void updateTotalpris() {
         double pris = model.getShoppingCart().getTotal();
         pris = Math.round(pris * 100.0) / 100.0;
-        totaltPris.setText(pris + " SEK");
+        totaltPris.setText(String.format("%.2f",pris) + " SEK");
     }
     /*
 

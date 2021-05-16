@@ -16,21 +16,21 @@
             <Font name="Avenir Book" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="289.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="289.0" AnchorPane.topAnchor="23.0">
+      <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="268.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="23.0">
          <font>
             <Font name="Avenir Book" size="17.0" />
          </font></Label>
-      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="444.0" layoutY="22.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="22.0">
+      <TextField fx:id="amountTextField" alignment="CENTER" layoutX="424.0" layoutY="22.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="22.0">
          <font>
             <Font name="Avenir Next" size="16.0" />
          </font></TextField>
       <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="89.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-      <Label fx:id="summaLabel" layoutX="585.0" layoutY="23.0" text="Label" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="23.0">
+      <Label fx:id="summaLabel" layoutX="569.0" layoutY="23.0" prefHeight="24.0" prefWidth="91.0" text="Label" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="569.0" AnchorPane.topAnchor="23.0">
          <font>
             <Font name="Avenir Book" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="411.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#minus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus">
+      <Button layoutX="391.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#minus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus">
          <graphic>
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutY="1.0" onMouseClicked="#minus" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -39,7 +39,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="510.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#plus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.bottomAnchor="24.0" AnchorPane.topAnchor="24.0">
+      <Button layoutX="490.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#plus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.bottomAnchor="24.0" AnchorPane.topAnchor="24.0">
          <graphic>
             <ImageView fitHeight="14.0" fitWidth="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>

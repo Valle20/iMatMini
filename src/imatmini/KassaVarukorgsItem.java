@@ -53,6 +53,8 @@ public class KassaVarukorgsItem extends AnchorPane {
         unit.append(shoppingItem.getProduct().getUnit());
         unit.delete(0,3);
 
+        amountTextField.setOnMouseClicked(e -> amountTextField.selectAll());
+
         this.shoppingItem = shoppingItem;
         nameLabel.setText(shoppingItem.getProduct().getName());
         prizeLabel.setText(String.format("%.2f", shoppingItem.getProduct().getPrice()) + " " + shoppingItem.getProduct().getUnit());

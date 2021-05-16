@@ -64,7 +64,7 @@ public class Card extends AnchorPane {
         this.iMatController = iMatController;
         this.shoppingItem = shoppingItem;
 
-
+        amountTextField.setOnMouseClicked(e -> amountTextField.selectAll());
 
         this.product = shoppingItem.getProduct();
 
