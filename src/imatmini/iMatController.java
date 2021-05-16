@@ -151,8 +151,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     public void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
-
-        for (ShoppingItem product : productList) {
+        ArrayList<ShoppingItem> list = new ArrayList<>();
+        for (ShoppingItem item : productList){
+            list.add(item);
+        }
+        Collections.reverse(list);
+        for (ShoppingItem product : list) {
 
             varukorgFlowPane.getChildren().add(new VarukorgsItem(product, this));
 
