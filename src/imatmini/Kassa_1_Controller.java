@@ -427,8 +427,9 @@ public class Kassa_1_Controller implements Initializable {
             System.out.println("personliga uppgifter vyn");
             personligaUppgifterAnchorPane.toFront();
             e1.setVisible(false);
+        } else {
+            e1.setVisible(true);
         }
-        e1.setVisible(true);
     }
 
     private boolean is2ok(){
