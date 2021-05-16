@@ -556,6 +556,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void sök(ActionEvent event) {
+        openHandla();
         titelLabel.setText("Sökord: " + sökruta.getText());
         List<Product> matches = model.findProducts(sökruta.getText());
         updateCards(matches);
