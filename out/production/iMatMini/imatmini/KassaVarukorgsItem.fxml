@@ -11,12 +11,12 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="797.0" style="-fx-background-color: #ffffff;" styleClass="dropshadow-card" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="nameLabel" layoutX="108.0" layoutY="10.0" prefHeight="20.0" prefWidth="127.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
+      <Label fx:id="nameLabel" layoutX="108.0" layoutY="10.0" prefHeight="28.0" prefWidth="169.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
          <font>
             <Font name="Avenir Book" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="268.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="23.0">
+      <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="277.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="23.0">
          <font>
             <Font name="Avenir Book" size="17.0" />
          </font></Label>

@@ -18,6 +18,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.Product;
@@ -156,13 +158,13 @@ public class Kassa_1_Controller implements Initializable {
     private Label dNamn;
     @FXML
     private ImageView dBild;
-    @FXML
-    private Label dPris;
+
+    @FXML private Text eko;
 
     public void populateDetalvy(Product product) {
         dNamn.setText(product.getName());
         dBild.setImage(model.getImage(product, 147, 102));
-        dPris.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
+        eko.setVisible(product.isEcological());
     }
 
     @FXML
