@@ -485,6 +485,7 @@ public class Kassa_1_Controller implements Initializable {
     @FXML private void betalamedkortToBack() {
         System.out.println("Betala med kort vy, bort");
         betalamedkortPane.setVisible(false);
+        kortbetalning = false;
         radionull = false;
         e41.setVisible(false);
         customer.setMobilePhoneNumber("kontanter"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
