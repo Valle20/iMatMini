@@ -31,14 +31,14 @@ public class KassaVarukorgsItem extends AnchorPane {
 
 
     private Model model = Model.getInstance();
-    Kassa_1_Controller kassa_1_controller;
+    iMatController kassa_1_controller;
 
     private ShoppingItem shoppingItem;
     private StringBuilder unit = new StringBuilder();
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public KassaVarukorgsItem(ShoppingItem shoppingItem, Kassa_1_Controller kassa_1_controller) {
+    public KassaVarukorgsItem(ShoppingItem shoppingItem, iMatController kassa_1_controller) {
         this.kassa_1_controller = kassa_1_controller;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("KassaVarukorgsItem.fxml"));
         fxmlLoader.setRoot(this);
