@@ -2,10 +2,17 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <fx:root fx:id="datePane" onMouseClicked="#openOrder" prefHeight="48.0" prefWidth="231.0" style="-fx-background-color: #8D99AE;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="dateLabel" layoutX="11.0" layoutY="16.0" prefHeight="17.0" prefWidth="159.0" text="Date" />
-      <Label fx:id="priceLabel" layoutX="164.0" layoutY="16.0" prefHeight="17.0" prefWidth="56.0" text="Summa" />
+        <Label fx:id="dateLabel" layoutX="7.0" layoutY="14.0" prefHeight="17.0" prefWidth="159.0" text="Date">
+         <font>
+            <Font name="Avenir Book" size="13.0" />
+         </font></Label>
+      <Label fx:id="priceLabel" layoutX="166.0" layoutY="14.0" prefHeight="17.0" prefWidth="56.0" text="Summa">
+         <font>
+            <Font name="Avenir Book" size="13.0" />
+         </font></Label>
     </children>
 </fx:root>

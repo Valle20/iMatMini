@@ -24,56 +24,63 @@
 .navigation-button
 {
 -fx-background-color: #2B2D42;
+-fx-padding: 0px;
 -fx-text-fill: white;
--fx-font-size: 25px;
--fx-padding: 1px;
--fx-text-align: justify;
+-fx-font-family: "Avenir Book";
+-fx-font-size: 23px;
 -fx-background-radius: 4px;
 -fx-pref-height: 65px;
 -fx-pref-width: 200px;
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.26), 2, 0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.42), 4, 0, 0.0, 2.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 0.0, 1.0);
 }
 .navigation-button:hover
 {
 -fx-background-color: #4B4D63;
+-fx-padding: 0px;
 }
 
 .kassa
 {
 -fx-background-color: #2B2D42;
 -fx-text-fill: white;
--fx-padding: 1px;
--fx-font-size: 48px;
 -fx-background-radius: 3px;
 }
 .kassa:hover
 {
 -fx-background-color: #4B4D63;
--fx-font-size: 48px;
+-fx-background-radius: 3px;
 }
 
 .back-button
 {
+-fx-font-family: "Avenir Book";
 -fx-background-color: #B00320;
 -fx-text-fill: white;
 -fx-font-size: 20px;
--fx-font-family: "Arial"
--fx-padding: 1px;
+-fx-padding: 0px;
 -fx-pref-height: 36px;
 -fx-pref-width: 181px;
 -fx-background-radius: 3px;
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.26), 2, 0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.42), 4, 0, 0.0, 2.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 0.0, 1.0);
 }
 .back-button:hover
 {
 -fx-background-color: #EF233C;
+-fx-padding: 0px;
 }
 .back-button:pressed
 {
 -fx-background-color: #EA7381;
+-fx-padding: 0px;
 }
 
 #purchase-button
 {
--fx-font-family: "Orienta";
+
 -fx-font-size: 35px;
 -fx-underline: true;
 }
@@ -102,16 +109,25 @@
 -fx-font-size: 16px
 }
 
-.dropshadow /* jag lyckas inte få till nån bra skugga jag ger upp !!! Feel free to redo it completely */
+.dropshadow-card /* jag lyckas inte få till nån bra skugga jag ger upp !!! Feel free to redo it completely */
 {
-/*-fx-boxshadow:
+
 /*
--fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.16), 2, 0, 0.0, 1.0);
--fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.12), 4, 0, 0.0, 2.0);
--fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0.0, 1.0);
-*/
--fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0.0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.3), 8, 0.0, 0.0, 1.0);
 -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 3, 0.1, 0.0, 0.0);
+*/
+
+
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 2, 0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.42), 4, 0, 0.0, 2.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 0.0, 1.0);
+}
+
+.dropshadow
+{
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.26), 2, 0, 0.0, 1.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.22), 4, 0, 0.0, 2.0);
+-fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0.0, 1.0);
 }
 
 .lagg-till{
@@ -160,6 +176,11 @@
 
 }
 
+.button
+{
+ -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+}
+
 .toolbar-btn
 {
 -fx-background-color: #FFFFFF;
@@ -193,9 +214,9 @@
 
 .toolbar-btn-tryckt
 {
--fx-background-color: #E4B5BD;
+-fx-background-color: #8D99AE;
+-fx-padding: 1px;
 }
-
 
 
 .btn-kategori
