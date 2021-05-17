@@ -8,10 +8,12 @@ package imatmini;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
@@ -62,7 +64,7 @@ public class OrderItems extends AnchorPane {
 
         double pris = shoppingItem.getTotal();
         pris = Math.round(pris * 100.0) / 100.0;
-        orderItemTotalPrice.setText(pris + " Kr");
+        orderItemTotalPrice.setText(pris + " kr");
 
         removeAddButton();
     }

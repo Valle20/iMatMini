@@ -115,8 +115,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private ImageView helpViewInfoPicture;
     @FXML private ImageView helpViewCheckout;
     @FXML private ImageView helpViewHeart;
-
     @FXML private FlowPane orderItemFlowPane;
+    @FXML private Button addAllButton;
     // Other variables
 
     private final Model model = Model.getInstance();
@@ -166,6 +166,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     public void updateOrdersItems(Order order) {
         currentOrder = order;
+        updateOrders();
+
         orderItemFlowPane.getChildren().clear();
 
         for (ShoppingItem shoppingItem : order.getItems()) {
@@ -211,6 +213,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     @FXML private void läggTillAllaVaror(){
+        if (currentOrder == null){
+            return;
+        }
         updateOrdersItems(currentOrder);
         ArrayList<Product> productListVarukorgen = new ArrayList<>();
         for (ShoppingItem sIV : model.getShoppingCart().getItems()){
@@ -1276,9 +1281,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         clearColorTrycktButton();
 
-        for(int i=0; i < model.getOrders().size(); i++){
-            System.out.println( model.getOrders().get(i) );
-        }
     }
 
 

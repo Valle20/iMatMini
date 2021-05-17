@@ -11,6 +11,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.text.FontWeight;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -56,7 +58,8 @@ public class TidigareDate extends AnchorPane {
 
         double pris = getTotalOrderPrice();
         pris = Math.round(pris * 100.0) / 100.0;
-        priceLabel.setText(pris + " Kr");
+        priceLabel.setText(pris + " kr");
+        makeNice();
     }
 
 
@@ -82,5 +85,20 @@ public class TidigareDate extends AnchorPane {
     protected void openOrder(){
         parentController.updateOrdersItems(order);
     }
+
+    protected void makeNice(){
+        if (parentController.currentOrder == null) {
+            ;
+        }else{
+            if (order.getOrderNumber() == parentController.currentOrder.getOrderNumber()){
+                datePane.setStyle("-fx-background-color: #FFFFFF;");
+                dateLabel.setStyle("-fx-font-weight: bold;");
+                priceLabel.setStyle("-fx-font-weight: bold;");
+                }else{
+                datePane.setStyle("-fx-background: #8D99AE;");
+            }
+        }
+    }
+
 
 }

@@ -1,5 +1,36 @@
 /* text */
 
+.datePane:hover{
+    -fx-background-color: #6b7b96;
+}
+
+.scroll-date
+{
+-fx-background: #8D99AE;
+}
+
+.laggTillAlla
+{
+-fx-background-color: #B00320;
+-fx-text-fill: white;
+-fx-background-radius: 3px;
+-fx-background-radius: 0;
+-fx-font-size: 16px;
+-fx-font-weight: bold;
+}
+
+.laggTillAlla:hover{
+    -fx-background-color: #8B0219;
+    -fx-font-size: 17px;
+}
+
+
+.scroll-orderItems
+{
+-fx-background: white;
+}
+
+
 .sokbar
 {
 -fx-background-color: white;
