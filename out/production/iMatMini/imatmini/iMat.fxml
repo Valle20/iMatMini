@@ -75,37 +75,37 @@
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
@@ -237,17 +237,17 @@
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0">
+                  <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0">
+                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" styleClass="textfield">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
@@ -844,11 +844,11 @@
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
                      </styleClass></Button>
-                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="36.0" prefWidth="376.0" promptText="Sök efter varor här" style="-fx-background-radius: 50 0 0 50;" styleClass="text-input" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
+                  <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="37.0" prefWidth="376.0" promptText="Sök efter varor här" style="-fx-background-radius: 50 0 0 50;" styleClass="sokbar" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font></TextField>
-                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="35.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök ">
+                  <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök ">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
