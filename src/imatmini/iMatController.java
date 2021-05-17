@@ -93,12 +93,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void switchToKassa() {
-        varukorgAnchorPane.toFront();
-        System.out.println("switch to Kassa");
-        updateKassaVarukorg(model.getShoppingCart().getItems());
-        updateTotalprisKassa();
-        updateTotalpris();
-        e1.setVisible(false);
+        if (model.getShoppingCart().getItems().isEmpty()){
+            e1.setVisible(true);
+        } else {
+            varukorgAnchorPane.toFront();
+            System.out.println("switch to Kassa");
+            updateKassaVarukorg(model.getShoppingCart().getItems());
+            updateTotalprisKassa();
+            updateTotalpris();
+            e11.setVisible(false);
+        }
     }
 
     @FXML private FlowPane varukorgFlowPane;
@@ -1161,16 +1165,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
         varukorgAnchorPane.toFront();
     }
 
-    @FXML private Label e1;
+    @FXML public Label e1;
+    @FXML public Label e11;
 
     @FXML
     private void personligaUppgifterToFront() {
         if (!model.getShoppingCart().getItems().isEmpty()){
             System.out.println("personliga uppgifter vyn");
             personligaUppgifterAnchorPane.toFront();
-            e1.setVisible(false);
+            e11.setVisible(false);
         } else {
-            e1.setVisible(true);
+            e11.setVisible(true);
         }
     }
 
