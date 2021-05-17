@@ -888,6 +888,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
 
     private void initComboboxes(){
+        monthComboBox.setVisibleRowCount(12);
+
         monthComboBox.getItems().addAll(model.getMonths());
         yearComboBox.getItems().addAll(model.getYears());
         korttypComboBox.getItems().addAll(model.getCardTypes());

@@ -373,17 +373,17 @@
                      <children>
                         <Label layoutX="19.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Produktinformation">
                            <font>
-                              <Font name="Avenir Next" size="18.0" />
+                              <Font name="Avenir Next Bold" size="18.0" />
                            </font>
                         </Label>
                         <Label layoutX="350.0" layoutY="10.0" prefHeight="27.0" prefWidth="98.0" text="Förvaring">
                            <font>
-                              <Font name="Avenir Next" size="18.0" />
+                              <Font name="Avenir Next Bold" size="18.0" />
                            </font>
                         </Label>
                         <Label layoutX="350.0" layoutY="89.0" prefHeight="27.0" prefWidth="98.0" text="Märkning">
                            <font>
-                              <Font name="Avenir Next" size="18.0" />
+                              <Font name="Avenir Next Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="19.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In pellentesque molestie lectus quis malesuada. In elementum mauris a dolor aliquam vulputate. Aliquam ac nunc quis arcu vulputate blandit." wrappingWidth="297.233089766449">
@@ -407,7 +407,7 @@
                      <children>
                         <Label layoutX="19.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Innehållsförteckning">
                            <font>
-                              <Font name="Avenir Next" size="18.0" />
+                              <Font name="Avenir Next Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="19.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="semper quis lectus nulla at volutpat diam ut venenatis" wrappingWidth="77.1719178157374">
@@ -417,7 +417,7 @@
                         </Text>
                         <Label layoutX="390.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Näringsvärde">
                            <font>
-                              <Font name="Avenir Next" size="18.0" />
+                              <Font name="Avenir Next Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="390.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="est lorem ipsum dolor sit amet " wrappingWidth="62.779544320058335">
