@@ -227,12 +227,12 @@
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="550.0" layoutY="110.0" text="År">
+                  <Label layoutX="550.0" layoutY="110.0" text="Månad">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="660.0" layoutY="110.0" text="Månad">
+                  <Label layoutX="672.0" layoutY="110.0" text="År">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
@@ -252,12 +252,17 @@
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                   </TextField>
-                  <ComboBox fx:id="monthComboBox" layoutX="660.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" style="-fx-font-size: 16px;" visibleRowCount="12" />
-                  <ComboBox fx:id="yearComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="75.0" style="-fx-font-size: 16px;" />
-                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px;" />
+                  <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" visibleRowCount="12" />
+                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="38.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" />
+                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" />
                   <Label layoutY="-39.0" text="Fyll i kortuppgifter">
                      <font>
                         <Font name="Avenir Book" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="647.0" layoutY="143.0" text="/">
+                     <font>
+                        <Font name="Avenir Book" size="23.0" />
                      </font>
                   </Label>
                </children>

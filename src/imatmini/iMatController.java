@@ -37,6 +37,58 @@ import se.chalmers.cse.dat216.project.*;
  */
 public class iMatController implements Initializable, ShoppingCartListener {
 
+    public void initialize(URL url, ResourceBundle rb) {
+        //model.iMatDataHandler.reset();
+        initCardMap();
+
+        model.getShoppingCart().addShoppingCartListener(this);
+
+        updateVarukorg(model.getShoppingCart().getItems());
+        updateTotalpris();
+        updateOrders();
+        startsida();
+
+        sökruta.setOnMouseClicked(e -> sökruta.selectAll());
+
+        // updateBottomPanel();
+        //setupAccountPane();
+
+        helpViewAddPicture.setImage(new Image("imatmini/bilder/addButton.png"));
+        helpViewInfoPicture.setImage(new Image("imatmini/bilder/moreInfo.png"));
+        helpViewCheckout.setImage(new Image("imatmini/bilder/Checkout.png"));
+        helpViewHeart.setImage(new Image("imatmini/bilder/empty_heart.png"));
+
+        updatePersonuppgifter();
+        initPersonUppgifterLyssnare();
+        initComboboxes();
+
+        setTextLimit(cvckodTextField, 3);
+
+        chosenDate.setText("");
+        if (customer.getMobilePhoneNumber().equals("kort")){
+            kortRadioButton.fire();
+        }
+        if (customer.getMobilePhoneNumber().equals("kontanter")){
+            kontantRadioButton.fire();
+        }
+
+        //för att få korrekt datum till leveranstidvyn
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+
+        String weekday;
+
+        day1.setText("Idag " + dtf.format(now));
+        day2.setText("Imorgon " + dtf.format(now.plusDays(1)));
+        weekday = translateWeekday(now.plusDays(2).getDayOfWeek().getValue());
+        day3.setText(weekday + " " + dtf.format(now.plusDays(2)));
+        weekday = translateWeekday(now.plusDays(3).getDayOfWeek().getValue());
+        day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
+        weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
+        day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+    }
+
     Order currentOrder;
 
     @FXML
@@ -96,58 +148,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
     }
 
-    public void initialize(URL url, ResourceBundle rb) {
-        //model.iMatDataHandler.reset();
-        initCardMap();
-
-        model.getShoppingCart().addShoppingCartListener(this);
-
-        updateVarukorg(model.getShoppingCart().getItems());
-        updateTotalpris();
-        updateOrders();
-        startsida();
-
-        sökruta.setOnMouseClicked(e -> sökruta.selectAll());
-
-        // updateBottomPanel();
-
-        //setupAccountPane();
-
-        helpViewAddPicture.setImage(new Image("imatmini/bilder/addButton.png"));
-        helpViewInfoPicture.setImage(new Image("imatmini/bilder/moreInfo.png"));
-        helpViewCheckout.setImage(new Image("imatmini/bilder/Checkout.png"));
-        helpViewHeart.setImage(new Image("imatmini/bilder/empty_heart.png"));
-
-        updatePersonuppgifter();
-        initPersonUppgifterLyssnare();
-        initComboboxes();
-
-        setTextLimit(cvckodTextField, 3);
-
-        chosenDate.setText("");
-        if (customer.getMobilePhoneNumber().equals("kort")){
-            kortRadioButton.fire();
-        }
-        if (customer.getMobilePhoneNumber().equals("kontanter")){
-            kontantRadioButton.fire();
-        }
-
-        //för att få korrekt datum till leveranstidvyn
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM");
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(dtf.format(now));
-
-        String weekday;
-
-        day1.setText("Idag " + dtf.format(now));
-        day2.setText("Imorgon " + dtf.format(now.plusDays(1)));
-        weekday = translateWeekday(now.plusDays(2).getDayOfWeek().getValue());
-        day3.setText(weekday + " " + dtf.format(now.plusDays(2)));
-        weekday = translateWeekday(now.plusDays(3).getDayOfWeek().getValue());
-        day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
-        weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
-        day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
-    }
 
     public void updateVarukorg(List<ShoppingItem> productList) {
         varukorgFlowPane.getChildren().clear();
@@ -796,6 +796,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
         postCodeTextField.setText(customer.getPostCode());
         cityTextField.setText(customer.getPostAddress());
         cvckodTextField.setText(model.getCreditCard().getVerificationCode() + "");
+        if (model.getCreditCard().getVerificationCode() == 0){
+            cvckodTextField.setText("");
+        }
         kortnummerTextField.setText(model.getCreditCard().getCardNumber());
         kundnamnTextField.setText(model.getCreditCard().getHoldersName());
     }
@@ -889,8 +892,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
         yearComboBox.getItems().addAll(model.getYears());
         korttypComboBox.getItems().addAll(model.getCardTypes());
 
-        monthComboBox.getSelectionModel().select(""+model.getCreditCard().getValidMonth());
-        yearComboBox.getSelectionModel().select(""+model.getCreditCard().getValidYear());
+        monthComboBox.getSelectionModel().select(model.getCreditCard().getValidMonth() + "");
+        yearComboBox.getSelectionModel().select(model.getCreditCard().getValidYear() + "");
         korttypComboBox.getSelectionModel().select(model.getCreditCard().getCardType());
 
         monthComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
