@@ -53,11 +53,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         // updateBottomPanel();
         //setupAccountPane();
 
-        helpViewAddPicture.setImage(new Image("imatmini/bilder/addButton.png"));
-        helpViewInfoPicture.setImage(new Image("imatmini/bilder/moreInfo.png"));
-        helpViewCheckout.setImage(new Image("imatmini/bilder/Checkout.png"));
-        helpViewHeart.setImage(new Image("imatmini/bilder/empty_heart.png"));
-
         updatePersonuppgifter();
         initPersonUppgifterLyssnare();
         initComboboxes();
@@ -115,10 +110,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane kategorierPane;
     @FXML private FlowPane dateFlowPane;
     //Bilder för helpvyn
-    @FXML private ImageView helpViewAddPicture;
-    @FXML private ImageView helpViewInfoPicture;
-    @FXML private ImageView helpViewCheckout;
-    @FXML private ImageView helpViewHeart;
+
 
     @FXML private FlowPane orderItemFlowPane;
     // Other variables
