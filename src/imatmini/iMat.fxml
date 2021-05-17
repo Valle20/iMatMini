@@ -1071,7 +1071,7 @@
                         <Font name="Avenir Book" size="20.0" />
                      </font>
                   </Label>
-                  <Text layoutX="31.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iMat@gmail.com" wrappingWidth="858.0734252929688">
+                  <Text layoutX="31.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iMat.kontakt@gmail.com" wrappingWidth="858.0734252929688">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
