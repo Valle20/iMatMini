@@ -53,11 +53,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         // updateBottomPanel();
         //setupAccountPane();
 
-        helpViewAddPicture.setImage(new Image("imatmini/bilder/addButton.png"));
-        helpViewInfoPicture.setImage(new Image("imatmini/bilder/moreInfo.png"));
-        helpViewCheckout.setImage(new Image("imatmini/bilder/Checkout.png"));
-        helpViewHeart.setImage(new Image("imatmini/bilder/empty_heart.png"));
-
         updatePersonuppgifter();
         initPersonUppgifterLyssnare();
         initComboboxes();
@@ -93,12 +88,16 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void switchToKassa() {
-        varukorgAnchorPane.toFront();
-        System.out.println("switch to Kassa");
-        updateKassaVarukorg(model.getShoppingCart().getItems());
-        updateTotalprisKassa();
-        updateTotalpris();
-        e1.setVisible(false);
+        if (model.getShoppingCart().getItems().isEmpty()){
+            e1.setVisible(true);
+        } else {
+            varukorgAnchorPane.toFront();
+            System.out.println("switch to Kassa");
+            updateKassaVarukorg(model.getShoppingCart().getItems());
+            updateTotalprisKassa();
+            updateTotalpris();
+            e11.setVisible(false);
+        }
     }
 
     @FXML private FlowPane varukorgFlowPane;
@@ -111,10 +110,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane kategorierPane;
     @FXML private FlowPane dateFlowPane;
     //Bilder för helpvyn
-    @FXML private ImageView helpViewAddPicture;
-    @FXML private ImageView helpViewInfoPicture;
-    @FXML private ImageView helpViewCheckout;
-    @FXML private ImageView helpViewHeart;
+
     @FXML private FlowPane orderItemFlowPane;
     @FXML private Button addAllButton;
     // Other variables
@@ -597,8 +593,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private void sök(ActionEvent event) {
         openHandla();
-        titelLabel.setText("Sökord: " + sökruta.getText());
+        titelLabel.setText("Sökord: \"" + sökruta.getText() + "\"");
         List<Product> matches = model.findProducts(sökruta.getText());
+        if (matches.isEmpty()){
+            titelLabel.setText("Din sökning: \"" + sökruta.getText() + "\" gav inga träffar");
+        }
         updateCards(matches);
         System.out.println("# matching products: " + matches.size());
         tidigare.getStyleClass().add("toolbar-btn");
@@ -893,6 +892,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
 
     private void initComboboxes(){
+        monthComboBox.setVisibleRowCount(12);
+
         monthComboBox.getItems().addAll(model.getMonths());
         yearComboBox.getItems().addAll(model.getYears());
         korttypComboBox.getItems().addAll(model.getCardTypes());
@@ -1143,16 +1144,19 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void firstTime(){
         chosenTime.setText("8:00 - 12:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
     @FXML
     public void secondTime(){
         chosenTime.setText("12:00 - 16:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
     @FXML
     public void thirdTime(){
         chosenTime.setText("16:00 - 20:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
 
     /**
@@ -1164,16 +1168,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
         varukorgAnchorPane.toFront();
     }
 
-    @FXML private Label e1;
+    @FXML public Label e1;
+    @FXML public Label e11;
 
     @FXML
     private void personligaUppgifterToFront() {
         if (!model.getShoppingCart().getItems().isEmpty()){
             System.out.println("personliga uppgifter vyn");
             personligaUppgifterAnchorPane.toFront();
-            e1.setVisible(false);
+            e11.setVisible(false);
         } else {
-            e1.setVisible(true);
+            e11.setVisible(true);
         }
     }
 
@@ -1284,110 +1289,22 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
-    /*
+    @FXML ImageView kryss;
+    @FXML ImageView kryss1;
 
-    // Shop pane actions
     @FXML
-    private void handleShowAccountAction(ActionEvent event) {
-        openAccountView();
+    public void crossButtonMouseEntered(){
+        kryss.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss_hover.png")));
+        kryss1.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss_hover.png")));
     }
-    
+
     @FXML
-    private void handleSearchAction(ActionEvent event) {
-        
-        List<Product> matches = model.findProducts(searchField.getText());
-        updateVarukorg(matches);
-        System.out.println("# matching products: " + matches.size());
+    public void crossButtonMouseExited(){
+        kryss.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss.png")));
+        kryss1.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss.png")));
     }
-    
-    @FXML
-    private void handleClearCartAction(ActionEvent event) {
-        model.clearShoppingCart();
-    }
-    
-    @FXML
-    private void handleBuyItemsAction(ActionEvent event) {
-        model.placeOrder();
-        costLabel.setText("Köpet klart!");
-    }
-    
-    // Account pane actions
-     @FXML
-    private void handleDoneAction(ActionEvent event) {
-        closeAccountView();
-    }
-
-    // Navigation
-    public void openAccountView() {
-        updateAccountPanel();
-        accountPane.toFront();
-    }
-
-    public void closeAccountView() {
-        updateCreditCard();
-        shopPane.toFront();
-    }
-    
-    // Shope pane methods
-    @Override
-     public void shoppingCartChanged(CartEvent evt) {
-        updateBottomPanel();
-    }
-
-    
-    private void updateBottomPanel() {
-        
-        ShoppingCart shoppingCart = model.getShoppingCart();
-        
-        itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
-        costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
-        
-    }
-    
-    private void updateAccountPanel() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        numberTextField.setText(card.getCardNumber());
-        nameTextField.setText(card.getHoldersName());
-        
-        cardTypeCombo.getSelectionModel().select(card.getCardType());
-        monthCombo.getSelectionModel().select(""+card.getValidMonth());
-        yearCombo.getSelectionModel().select(""+card.getValidYear());
-
-        cvcField.setText(""+card.getVerificationCode());
-        
-        purchasesLabel.setText(model.getNumberOfOrders()+ " tidigare inköp hos iMat");
-        
-    }
-    
-    private void updateCreditCard() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        card.setCardNumber(numberTextField.getText());
-        card.setHoldersName(nameTextField.getText());
-        
-        String selectedValue = (String) cardTypeCombo.getSelectionModel().getSelectedItem();
-        card.setCardType(selectedValue);
-        
-        selectedValue = (String) monthCombo.getSelectionModel().getSelectedItem();
-        card.setValidMonth(Integer.parseInt(selectedValue));
-        
-        selectedValue = (String) yearCombo.getSelectionModel().getSelectedItem();
-        card.setValidYear(Integer.parseInt(selectedValue));
-        
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
-
-    }
-    
-    private void setupAccountPane() {
-                
-        cardTypeCombo.getItems().addAll(model.getCardTypes());
-        
-        monthCombo.getItems().addAll(model.getMonths());
-        
-        yearCombo.getItems().addAll(model.getYears());
-        
-    }*/
 }

@@ -117,6 +117,8 @@ public class Card extends AnchorPane {
 
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
         plusMinusPane.toFront();
+
+        iMatController.e1.setVisible(false);
     }
 
     public void updateAmount(int amount){
