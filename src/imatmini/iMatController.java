@@ -596,8 +596,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private void sök(ActionEvent event) {
         openHandla();
-        titelLabel.setText("Sökord: " + sökruta.getText());
+        titelLabel.setText("Sökord: \"" + sökruta.getText() + "\"");
         List<Product> matches = model.findProducts(sökruta.getText());
+        if (matches.isEmpty()){
+            titelLabel.setText("Din sökning: \"" + sökruta.getText() + "\" gav inga träffar");
+        }
         updateCards(matches);
         System.out.println("# matching products: " + matches.size());
         tidigare.getStyleClass().add("toolbar-btn");
