@@ -81,12 +81,12 @@
 {
 -fx-background-color: #2B2D42;
 -fx-text-fill: white;
--fx-background-radius: 3px;
+-fx-background-radius: 3 3 0 0;
 }
 .kassa:hover
 {
 -fx-background-color: #4B4D63;
--fx-background-radius: 3px;
+-fx-background-radius: 3 3 0 0;
 }
 
 .back-button

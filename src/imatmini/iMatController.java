@@ -1139,16 +1139,19 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void firstTime(){
         chosenTime.setText("8:00 - 12:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
     @FXML
     public void secondTime(){
         chosenTime.setText("12:00 - 16:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
     @FXML
     public void thirdTime(){
         chosenTime.setText("16:00 - 20:00");
         duharvaltPane.setVisible(true);
+        e3.setVisible(false);
     }
 
     /**

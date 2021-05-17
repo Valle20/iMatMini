@@ -809,7 +809,7 @@
       </AnchorPane>
       <AnchorPane fx:id="mainPane" prefHeight="719.0" prefWidth="1282.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0">
+            <AnchorPane prefHeight="65.0" prefWidth="1282.0" style="-fx-background-color: B00320;" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Button id="startsida" fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#startsida" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
                      <font>
@@ -875,7 +875,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="822.0" layoutY="64.0" prefHeight="652.0" prefWidth="339.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+            <AnchorPane layoutX="822.0" layoutY="64.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
                <children>
                   <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
                      <font>
@@ -895,7 +895,7 @@
                      </content>
                   </ScrollPane>
                   <Line endX="168.0" startX="-169.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
-                  <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa" prefHeight="87.0" prefWidth="338.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="-8.0" AnchorPane.rightAnchor="0.0">
+                  <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa" prefHeight="80.0" prefWidth="338.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font name="Avenir Book" size="46.0" />
                      </font></Button>
