@@ -1292,110 +1292,22 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
 
-    /*
+    @FXML ImageView kryss;
+    @FXML ImageView kryss1;
 
-    // Shop pane actions
     @FXML
-    private void handleShowAccountAction(ActionEvent event) {
-        openAccountView();
+    public void crossButtonMouseEntered(){
+        kryss.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss_hover.png")));
+        kryss1.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss_hover.png")));
     }
-    
+
     @FXML
-    private void handleSearchAction(ActionEvent event) {
-        
-        List<Product> matches = model.findProducts(searchField.getText());
-        updateVarukorg(matches);
-        System.out.println("# matching products: " + matches.size());
+    public void crossButtonMouseExited(){
+        kryss.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss.png")));
+        kryss1.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "imatmini/bilder/kryss.png")));
     }
-    
-    @FXML
-    private void handleClearCartAction(ActionEvent event) {
-        model.clearShoppingCart();
-    }
-    
-    @FXML
-    private void handleBuyItemsAction(ActionEvent event) {
-        model.placeOrder();
-        costLabel.setText("Köpet klart!");
-    }
-    
-    // Account pane actions
-     @FXML
-    private void handleDoneAction(ActionEvent event) {
-        closeAccountView();
-    }
-
-    // Navigation
-    public void openAccountView() {
-        updateAccountPanel();
-        accountPane.toFront();
-    }
-
-    public void closeAccountView() {
-        updateCreditCard();
-        shopPane.toFront();
-    }
-    
-    // Shope pane methods
-    @Override
-     public void shoppingCartChanged(CartEvent evt) {
-        updateBottomPanel();
-    }
-
-    
-    private void updateBottomPanel() {
-        
-        ShoppingCart shoppingCart = model.getShoppingCart();
-        
-        itemsLabel.setText("Antal varor: " + shoppingCart.getItems().size());
-        costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
-        
-    }
-    
-    private void updateAccountPanel() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        numberTextField.setText(card.getCardNumber());
-        nameTextField.setText(card.getHoldersName());
-        
-        cardTypeCombo.getSelectionModel().select(card.getCardType());
-        monthCombo.getSelectionModel().select(""+card.getValidMonth());
-        yearCombo.getSelectionModel().select(""+card.getValidYear());
-
-        cvcField.setText(""+card.getVerificationCode());
-        
-        purchasesLabel.setText(model.getNumberOfOrders()+ " tidigare inköp hos iMat");
-        
-    }
-    
-    private void updateCreditCard() {
-        
-        CreditCard card = model.getCreditCard();
-        
-        card.setCardNumber(numberTextField.getText());
-        card.setHoldersName(nameTextField.getText());
-        
-        String selectedValue = (String) cardTypeCombo.getSelectionModel().getSelectedItem();
-        card.setCardType(selectedValue);
-        
-        selectedValue = (String) monthCombo.getSelectionModel().getSelectedItem();
-        card.setValidMonth(Integer.parseInt(selectedValue));
-        
-        selectedValue = (String) yearCombo.getSelectionModel().getSelectedItem();
-        card.setValidYear(Integer.parseInt(selectedValue));
-        
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
-
-    }
-    
-    private void setupAccountPane() {
-                
-        cardTypeCombo.getItems().addAll(model.getCardTypes());
-        
-        monthCombo.getItems().addAll(model.getMonths());
-        
-        yearCombo.getItems().addAll(model.getYears());
-        
-    }*/
 }
