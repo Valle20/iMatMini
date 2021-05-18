@@ -533,15 +533,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
         titelLabel1.setText("Säsongsvaror");
 
         cardsFlowPane.getChildren().add(titelPane);
-        cardsFlowPane.getChildren().add(model.getCardMap().get("Citron"));
-        cardsFlowPane.getChildren().add(model.getCardMap().get("Choklad"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Glass"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Lax"));
         cardsFlowPane.getChildren().add(model.getCardMap().get("Broccoli"));
         cardsFlowPane.getChildren().add(model.getCardMap().get("Mozzarella"));
 
         cardsFlowPane.getChildren().add(titelPane1);
-        cardsFlowPane.getChildren().add(model.getCardMap().get("Fruktsoppa"));
-        cardsFlowPane.getChildren().add(model.getCardMap().get("Brie"));
-        cardsFlowPane.getChildren().add(model.getCardMap().get("Vattenmelon"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Fikon"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Citron"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Morot"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Rödbeta"));
+        cardsFlowPane.getChildren().add(model.getCardMap().get("Rädisa"));
 
         startsida.getStyleClass().add("toolbar-btn-tryckt");
         startsida.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
