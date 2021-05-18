@@ -485,6 +485,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
         updateOrders();
         System.out.println("tidigare vyn");
         tidigarePane.toFront();
+
+        updateOrdersItems(model.getOrders().get(model.getOrders().size()-1));
+
         tidigare.getStyleClass().add("toolbar-btn-tryckt");
         tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
         favpriter.getStyleClass().add("toolbar-btn");

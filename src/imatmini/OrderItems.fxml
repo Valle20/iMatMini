@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="623.0" style="-fx-background-color: #FFFFFF;" styleClass="dropshadow" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="623.0" style="-fx-background-color: #FFFFFF;" styleClass="dropshadow-card" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="orderItemName" layoutX="85.0" layoutY="7.0" prefHeight="20.0" prefWidth="143.0" text="produkt">
          <font>

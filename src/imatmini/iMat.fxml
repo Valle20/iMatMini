@@ -1086,7 +1086,7 @@
             </AnchorPane>
             <AnchorPane fx:id="tidigarePane" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: ffffff;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+                  <AnchorPane layoutX="355.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #edf2f4;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                      <children>
                         <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="260.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
@@ -1097,7 +1097,7 @@
                               <String fx:value="scroll-date" />
                            </styleClass>
                         </ScrollPane>
-                        <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="623.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="274.0" layoutY="23.0" prefHeight="519.0" prefWidth="609.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <FlowPane fx:id="orderItemFlowPane" prefHeight="517.0" prefWidth="622.0" vgap="4.0" />
                            </content>
@@ -1106,7 +1106,7 @@
                               <String fx:value="scroll-orderItems" />
                            </styleClass>
                         </ScrollPane>
-                        <Button id="addAllButton" fx:id="addAllButton" layoutX="259.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#läggTillAllaVaror" prefHeight="38.0" prefWidth="650.0" style="-fx-background-radius: 1px;" styleClass="laggTillAlla" stylesheets="@iMat.css" text="Lägg till alla varor i varukorgen" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="259.0" AnchorPane.rightAnchor="0.0" />
+                        <Button id="addAllButton" fx:id="addAllButton" layoutX="277.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#läggTillAllaVaror" prefHeight="38.0" prefWidth="606.0" style="-fx-background-radius: 1px;" styleClass="laggTillAlla" stylesheets="@iMat.css" text="Lägg till alla varor i varukorgen" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <Label layoutX="44.0" layoutY="18.0" text="Tidigare Köp" AnchorPane.leftAnchor="30.0">
