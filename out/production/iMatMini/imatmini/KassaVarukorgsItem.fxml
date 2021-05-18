@@ -13,21 +13,21 @@
    <children>
       <Label fx:id="nameLabel" layoutX="108.0" layoutY="10.0" prefHeight="28.0" prefWidth="169.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
          <font>
-            <Font name="Avenir Book" size="19.0" />
+            <Font name="Arial" size="19.0" />
          </font>
       </Label>
       <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="277.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="23.0">
          <font>
-            <Font name="Avenir Book" size="17.0" />
+            <Font name="Arial" size="17.0" />
          </font></Label>
       <TextField fx:id="amountTextField" alignment="CENTER" layoutX="424.0" layoutY="22.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" AnchorPane.bottomAnchor="20.0" AnchorPane.topAnchor="22.0">
          <font>
-            <Font name="Avenir Next" size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font></TextField>
       <ImageView fx:id="imageView" fitHeight="58.0" fitWidth="89.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
       <Label fx:id="summaLabel" layoutX="569.0" layoutY="23.0" prefHeight="24.0" prefWidth="91.0" text="Label" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="569.0" AnchorPane.topAnchor="23.0">
          <font>
-            <Font name="Avenir Book" size="17.0" />
+            <Font name="Arial" size="17.0" />
          </font>
       </Label>
       <Button layoutX="391.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#minus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus">
@@ -50,14 +50,14 @@
       </Button>
       <Button layoutX="187.0" layoutY="37.0" mnemonicParsing="false" onAction="#merInfo" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info" AnchorPane.leftAnchor="108.0">
          <font>
-            <Font name="Avenir Book" size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font>
       </Button>
       <AnchorPane layoutX="677.0" layoutY="21.5" onMouseClicked="#tabort" prefHeight="27.0" prefWidth="90.0" styleClass="graknapp" AnchorPane.bottomAnchor="21.5" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="21.5">
          <children>
             <Label layoutX="7.0" layoutY="1.0" text="Ta bort">
                <font>
-                  <Font name="Avenir Book" size="16.0" />
+                  <Font name="Arial" size="16.0" />
                </font>
             </Label>
             <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="63.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">

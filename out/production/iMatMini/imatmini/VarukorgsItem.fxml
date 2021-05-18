@@ -12,16 +12,16 @@
    <children>
       <Label fx:id="nameLabel" layoutX="72.0" layoutY="7.0" prefHeight="20.0" prefWidth="127.0" text="Mellanmjök" AnchorPane.leftAnchor="72.0">
          <font>
-            <Font name="Avenir Book" size="17.0" />
+            <Font name="Arial" size="17.0" />
          </font>
       </Label>
       <Label fx:id="prizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="210.0" layoutY="22.0" prefHeight="20.0" prefWidth="98.0" text="pris" textAlignment="RIGHT">
          <font>
-            <Font name="Avenir Next" size="16.0" />
+            <Font name="Arial Bold" size="16.0" />
          </font></Label>
       <TextField fx:id="amountTextField" alignment="CENTER" layoutX="102.0" layoutY="35.0" onAction="#typeAmount" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;">
          <font>
-            <Font name="Avenir Next" size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font></TextField>
       <ImageView fx:id="imageView" fitHeight="54.0" fitWidth="58.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="6.0" />
       <Button layoutX="166.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#plus" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus">

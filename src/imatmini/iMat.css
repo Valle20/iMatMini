@@ -58,12 +58,12 @@
 .combo-box .combo-box-popup .list-view, .combo-box .combo-box-popup .list-cell {
     -fx-background-color: white;
     -fx-text-fill: black;
-    -fx-font-family: "Avenir Book";
+    -fx-font-family: "Arial";
 }
 .combo-box .combo-box-popup .list-cell:hover {
     -fx-text-fill: white;
     -fx-background-color: #8D99AE;
-    -fx-font-family: "Avenir Book";
+    -fx-font-family: "Arial";
 }
 
 .combo-box
@@ -106,7 +106,7 @@
 -fx-background-color: #2B2D42;
 -fx-padding: 0px;
 -fx-text-fill: white;
--fx-font-family: "Avenir Book";
+-fx-font-family: "Arial";
 -fx-font-size: 23px;
 -fx-background-radius: 4px;
 -fx-pref-height: 65px;
@@ -137,7 +137,7 @@
 
 .back-button
 {
--fx-font-family: "Avenir Book";
+-fx-font-family: "Arial";
 -fx-background-color: #B00320;
 -fx-text-fill: white;
 -fx-font-size: 20px;

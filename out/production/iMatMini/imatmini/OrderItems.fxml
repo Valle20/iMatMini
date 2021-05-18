@@ -40,7 +40,7 @@
                   </ImageView>
                   <Label layoutX="13.0" layoutY="7.0" text="Lägg till" textFill="WHITE">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />

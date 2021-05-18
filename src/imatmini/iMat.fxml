@@ -36,79 +36,79 @@
             <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
             <Label layoutX="232.0" layoutY="148.0" text="Fyll i dina personuppgifter" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
                <font>
-                  <Font name="Avenir Book" size="24.0" />
+                  <Font name="Arial" size="24.0" />
                </font>
             </Label>
             <Pane layoutX="483.0" layoutY="260.0" prefHeight="419.0" prefWidth="1016.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Label layoutX="22.0" layoutY="30.0" text="Förnamn">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="22.0" layoutY="121.0" text="Telefon- eller Mobilnummer">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="22.0" layoutY="212.0" text="Postnummer">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="22.0" layoutY="303.0" text="Ort">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="534.0" layoutY="30.0" text="Efternamn">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="534.0" layoutY="121.0" text="E-Mail">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="534.0" layoutY="212.0" text="Leveransadress">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <TextField fx:id="firstNameTextField" layoutX="22.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="phoneTextField" layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="postCodeTextField" layoutX="22.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="cityTextField" layoutX="22.0" layoutY="340.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="lastNameTextField" layoutX="534.0" layoutY="62.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="mailTextField" layoutX="534.0" layoutY="160.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="adressTextField" layoutX="534.0" layoutY="250.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                </children>
@@ -117,7 +117,7 @@
             <Button layoutX="441.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#varukorgToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e2" alignment="TOP_LEFT" layoutX="711.0" layoutY="635.0" prefHeight="72.0" prefWidth="322.0" text="Du måste skriva in alla dina uppgifter innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
@@ -128,45 +128,45 @@
                   <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="17.0" layoutY="21.0" text="1">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="21.0" text="3">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="436.0" layoutY="22.0" text="4">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="16.0" />
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -188,7 +188,7 @@
                <children>
                   <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToFront" styleClass="radioButton" text="Betala med kort">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <toggleGroup>
                         <ToggleGroup fx:id="g" />
@@ -199,96 +199,96 @@
                   </RadioButton>
                   <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToBack" styleClass="radioButton" text="Betala med kontanter vid leverans" toggleGroup="$g">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </RadioButton>
                </children>
             </Pane>
             <Button fx:id="slutförköpButton" mnemonicParsing="false" onMouseClicked="#slutförtköpToFront" prefHeight="65.0" prefWidth="200.0" styleClass="navigation-button" text="Slutför köp" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
                <font>
-                  <Font name="Avenir Book" size="30.0" />
+                  <Font name="Arial" size="30.0" />
                </font>
             </Button>
             <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" visible="false" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
                <children>
                   <Label layoutX="31.0" layoutY="20.0" text="Korttyp">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="31.0" layoutY="110.0" text="Kortinnehavarens för- och efternamn">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="550.0" layoutY="20.0" text="Kortnummer">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="840.0" layoutY="110.0" text="CVC/CVV-kod">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="550.0" layoutY="110.0" text="Månad">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="672.0" layoutY="110.0" text="År">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <TextField fx:id="kundnamnTextField" layoutX="31.0" layoutY="142.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="kortnummerTextField" layoutX="550.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
                   <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" styleClass="textfield">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
-                  <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" visibleRowCount="12" />
-                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="38.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" />
-                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Avenir Book;" />
+                  <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" visibleRowCount="12" />
+                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="38.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
+                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
                   <Label layoutY="-39.0" text="Fyll i kortuppgifter">
                      <font>
-                        <Font name="Avenir Book" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                   <Label layoutX="647.0" layoutY="143.0" text="/">
                      <font>
-                        <Font name="Avenir Book" size="23.0" />
+                        <Font name="Arial" size="23.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
             <Button layoutX="299.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
                <font>
-                  <Font name="Avenir Book" size="24.0" />
+                  <Font name="Arial" size="24.0" />
                </font>
             </Button>
             <Label fx:id="e41" alignment="TOP_LEFT" layoutX="720.0" layoutY="635.0" prefHeight="65.0" prefWidth="327.0" text="Du måste välja en betalningsmetod innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
             <Label fx:id="e42" alignment="TOP_LEFT" layoutX="735.0" layoutY="635.0" prefHeight="65.0" prefWidth="312.0" text="Du måste fylla i dina kortuppgifter innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
             <Label layoutX="153.0" layoutY="135.0" text="Välj betalningsmetod" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
                <font>
-                  <Font name="Avenir Book" size="24.0" />
+                  <Font name="Arial" size="24.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
@@ -299,45 +299,45 @@
                   <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="17.0" layoutY="21.0" text="1">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="#8d99ae" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="21.0" text="3">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="436.0" layoutY="22.0" text="4">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="16.0" />
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -350,12 +350,12 @@
                <children>
                   <Label alignment="CENTER" layoutY="113.0" prefWidth="883.0" text="Köp genomfört!">
                      <font>
-                        <Font name="Avenir Book" size="48.0" />
+                        <Font name="Arial" size="48.0" />
                      </font>
                   </Label>
                   <Label fx:id="bekräftelse" alignment="CENTER" layoutY="192.0" prefWidth="883.0" text="Ett bekräftelsemail är skickat till din E-Mail">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Button fx:id="köpklartButton" layoutX="345.0" layoutY="236.0" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="42.0" prefWidth="113.0" styleClass="back-button" text="Åter till affären" />
@@ -369,7 +369,7 @@
                <children>
                   <Label fx:id="dNamn" layoutX="48.0" layoutY="21.0" text="Blåbär">
                      <font>
-                        <Font name="Avenir Book" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                   <ImageView fx:id="dBild" fitHeight="150.0" fitWidth="178.0" layoutX="48.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="48.0" />
@@ -377,32 +377,32 @@
                      <children>
                         <Label layoutX="19.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Produktinformation">
                            <font>
-                              <Font name="Avenir Next Bold" size="18.0" />
+                              <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
                         <Label layoutX="350.0" layoutY="10.0" prefHeight="27.0" prefWidth="98.0" text="Förvaring">
                            <font>
-                              <Font name="Avenir Next Bold" size="18.0" />
+                              <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
                         <Label layoutX="350.0" layoutY="89.0" prefHeight="27.0" prefWidth="98.0" text="Märkning">
                            <font>
-                              <Font name="Avenir Next Bold" size="18.0" />
+                              <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="19.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In pellentesque molestie lectus quis malesuada. In elementum mauris a dolor aliquam vulputate. Aliquam ac nunc quis arcu vulputate blandit." wrappingWidth="297.233089766449">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
                         <Text layoutX="350.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fusce dapibus">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
                         <Text fx:id="eko" layoutX="350.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekologisk" visible="false">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
                      </children>
@@ -411,22 +411,22 @@
                      <children>
                         <Label layoutX="19.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Innehållsförteckning">
                            <font>
-                              <Font name="Avenir Next Bold" size="18.0" />
+                              <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="19.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="semper quis lectus nulla at volutpat diam ut venenatis" wrappingWidth="77.1719178157374">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
                         <Label layoutX="390.0" layoutY="10.0" prefHeight="27.0" prefWidth="182.0" text="Näringsvärde">
                            <font>
-                              <Font name="Avenir Next Bold" size="18.0" />
+                              <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
                         <Text layoutX="390.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="est lorem ipsum dolor sit amet " wrappingWidth="62.779544320058335">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
                      </children>
@@ -456,29 +456,29 @@
             <Button fx:id="backToStoreButton1" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
             <Label layoutX="132.0" layoutY="104.0" prefWidth="368.0" text="Välj datum och tid för leverans" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="125.0">
                <font>
-                  <Font name="Avenir Book" size="24.0" />
+                  <Font name="Arial" size="24.0" />
                </font>
             </Label>
             <Pane layoutX="1063.0" layoutY="172.0" prefHeight="337.0" prefWidth="190.0" styleClass="pane-with-content" AnchorPane.leftAnchor="972.0" AnchorPane.topAnchor="165.0">
                <children>
                   <Button fx:id="m" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#m" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="n" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#n" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="o" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#o" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="day5" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -487,22 +487,22 @@
                <children>
                   <Button fx:id="j" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#j" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="k" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#k" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="l" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#l" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="day4" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -511,22 +511,22 @@
                <children>
                   <Button fx:id="gg" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#gg" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="h" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#h" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="i" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#i" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="day3" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -535,22 +535,22 @@
                <children>
                   <Button fx:id="d" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#d" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="e" layoutX="20.0" layoutY="159.0" mnemonicParsing="false" onAction="#e" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="f" layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#f" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="day2" layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="98.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -559,22 +559,22 @@
                <children>
                   <Button fx:id="a" layoutX="20.0" layoutY="89.0" mnemonicParsing="false" onAction="#a" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="8:00 - 12:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="b" layoutX="20.0" layoutY="158.0" mnemonicParsing="false" onAction="#b" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="12:00 - 16:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="c" layoutX="20.0" layoutY="227.0" mnemonicParsing="false" onAction="#c" prefHeight="45.0" prefWidth="150.0" styleClass="btn-checkout" text="16:00 - 20:00">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Label fx:id="day1" layoutX="60.0" layoutY="14.0" prefHeight="65.0" prefWidth="70.0" text="Idag 12/5" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                </children>
@@ -583,7 +583,7 @@
             <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e3" alignment="TOP_LEFT" layoutX="751.0" layoutY="635.0" prefHeight="65.0" prefWidth="296.0" text="Du måste välja en leveranstid innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
@@ -594,45 +594,45 @@
                   <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="17.0" layoutY="21.0" text="1">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="21.0" text="3">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="436.0" layoutY="22.0" text="4">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="16.0" />
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -641,27 +641,27 @@
                <children>
                   <Label fx:id="chosenTime" layoutX="580.0" layoutY="28.0" prefHeight="32.0" prefWidth="141.0">
                      <font>
-                        <Font name="Avenir Book" size="22.0" />
+                        <Font name="Arial" size="22.0" />
                      </font>
                   </Label>
                   <Label fx:id="chosenDate" layoutX="350.0" layoutY="28.0" prefHeight="32.0" prefWidth="150.0">
                      <font>
-                        <Font name="Avenir Book" size="22.0" />
+                        <Font name="Arial" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="526.0" layoutY="29.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
                      <font>
-                        <Font name="Avenir Next Bold" size="22.0" />
+                        <Font name="Arial Bold" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="60.0" layoutY="28.0" prefHeight="26.0" prefWidth="127.0" text="Du har valt">
                      <font>
-                        <Font name="Avenir Next Bold" size="22.0" />
+                        <Font name="Arial Bold" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="256.0" layoutY="28.0" prefHeight="26.0" prefWidth="82.0" text="Datum:">
                      <font>
-                        <Font name="Avenir Next Bold" size="22.0" />
+                        <Font name="Arial Bold" size="22.0" />
                      </font>
                   </Label>
                </children>
@@ -690,7 +690,7 @@
             </ButtonBar>
             <Label layoutX="927.0" layoutY="232.0" prefHeight="110.0" prefWidth="293.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font name="Avenir Book" size="30.0" />
+                  <Font name="Arial" size="30.0" />
                </font>
             </Label>
             <Button layoutX="1021.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" stylesheets="@iMat.css" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
@@ -700,39 +700,39 @@
             </Button>
             <Label fx:id="e11" alignment="TOP_LEFT" layoutX="546.0" layoutY="635.0" prefHeight="67.0" prefWidth="501.0" text="Din varukorg är tom. Innan du kan gå till nästa steg behöver du lägga till varor. Tryck därför på &quot;fortsätt handla&quot;" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
             <AnchorPane layoutX="904.0" layoutY="434.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
                <children>
                   <Label layoutX="10.0" layoutY="9.0" text="Antal varor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="10.0" layoutY="56.0" text="Moms" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="56.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="10.0" layoutY="104.0" text="Totalt pris" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="24.0" />
+                        <Font name="Arial Bold" size="24.0" />
                      </font>
                   </Label>
                   <Label fx:id="antalVarorLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="9.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="9.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label fx:id="momsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="218.0" layoutY="56.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="56.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
                   <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="104.0" prefHeight="35.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="10.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="24.0" />
+                        <Font name="Arial Bold" size="24.0" />
                      </font>
                   </Label>
                   <Line endX="239.5" layoutX="110.5" layoutY="45.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="45.0" />
@@ -747,45 +747,45 @@
                   <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="17.0" layoutY="21.0" text="1">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="21.0" text="3">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="436.0" layoutY="22.0" text="4">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="16.0" />
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -819,7 +819,7 @@
                <children>
                   <Button id="startsida" fx:id="startsida" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#startsida" prefHeight="43.0" prefWidth="111.0" text="Startsida" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0">
                      <font>
-                        <Font name="Avenir Next Bold" size="18.0" />
+                        <Font name="Arial Bold" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -827,7 +827,7 @@
                      </styleClass></Button>
                   <Button layoutX="168.0" layoutY="15.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-radius: 50px;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -835,7 +835,7 @@
                      </styleClass></Button>
                   <Button id="favpriter" fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
@@ -850,7 +850,7 @@
                      </styleClass></Button>
                   <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -858,11 +858,11 @@
                      </styleClass></Button>
                   <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="37.0" prefWidth="376.0" promptText="Sök efter varor här" style="-fx-background-radius: 50 0 0 50;" styleClass="sokbar" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font></TextField>
                   <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök ">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -872,7 +872,7 @@
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
                   <Button id="hjalp" fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
                      <font>
-                        <Font name="Avenir Book" size="18.0" />
+                        <Font name="Arial" size="18.0" />
                      </font>
                      <styleClass>
                         <String fx:value="dropshadow" />
@@ -883,14 +883,14 @@
             </AnchorPane>
             <AnchorPane layoutX="822.0" layoutY="64.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="944.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
                <children>
-                  <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="23.0">
+                  <Label layoutX="10.0" layoutY="23.0" prefHeight="32.0" prefWidth="116.0" text="Varukorg" AnchorPane.topAnchor="17.0">
                      <font>
-                        <Font name="Avenir Next" size="22.0" />
+                        <Font name="Arial Bold" size="23.0" />
                      </font>
                   </Label>
                   <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font></Button>
                   <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
@@ -903,16 +903,16 @@
                   <Line endX="168.0" startX="-169.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
                   <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa" prefHeight="80.0" prefWidth="338.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
-                        <Font name="Avenir Book" size="46.0" />
+                        <Font name="Arial" size="46.0" />
                      </font></Button>
                   <Label layoutX="7.0" layoutY="536.0" text="Totalt pris:">
                      <font>
-                        <Font name="Avenir Book" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                   <Label fx:id="totaltPris" alignment="CENTER_RIGHT" layoutX="147.0" layoutY="536.0" prefHeight="29.0" prefWidth="175.0" text="label">
                      <font>
-                        <Font name="Avenir Book" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                </children>
@@ -923,7 +923,7 @@
                      <children>
                         <TextField fx:id="amountTextField" alignment="CENTER" layoutX="56.0" layoutY="9.0" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" text="2 st">
                            <font>
-                              <Font name="Avenir Next" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                         </TextField>
                         <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.rightAnchor="14.0">
@@ -948,87 +948,87 @@
                   </AnchorPane>
                   <Label layoutX="31.0" layoutY="30.0" prefHeight="35.0" prefWidth="328.0" text="Hur handlar man på iMat?" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="20.0">
                      <font>
-                        <Font name="Avenir Book" size="24.0" />
+                        <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
                   <Label layoutX="31.0" layoutY="71.0" prefHeight="30.0" prefWidth="194.0" text="Steg 1 - Hitta varor" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta varor genom att söka på en produkt i sökfältet eller välj en kategori genom att trycka på knappen Kategorier. Skrolla sedan igenom sökresultaten eller vald kategori för att hitta önskad produkt." wrappingWidth="752.2162246704102" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="31.0" layoutY="181.0" text="Steg 2 - Lägg till varor i varukorgen" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck på knappen" wrappingWidth="134.13678741455078" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="273.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="för att lägga till varan i din varukorg. Varan kommer sedan upp i listan till höger." wrappingWidth="579.0616455078127">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="31.0" layoutY="297.0" text="Steg 3 - Betala" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan justera mängden/antalet av varan med plus/minus knapparna eller skriva in ett värde i rutan." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att se mer information om en vara, tryck på" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="När du har lagt till alla dina önskade varor i din varukorg trycker du på" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="660.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="som tar dig till utcheckningen.">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Där kommer du att bli guidad steg för steg kring hur du avslutar köpet." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Label layoutX="31.0" layoutY="402.0" text="Steg 4 - Övrigt" textFill="#b00320" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan gilla en vara genom att trycka på  " wrappingWidth="858.0734252929688">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="För att se tidigare köp trycker du på knappen Tidigare köp." wrappingWidth="858.0734252929688" AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="354.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".  Ifyllt hjärta betyder att varan är favoritmarkerad.  " wrappingWidth="538.1366882324219">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <Text layoutX="31.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du kan se alla dina favoritmarkerade produkter genom att klicka på knappen Favoritvaror." AnchorPane.leftAnchor="31.0">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                   <AnchorPane layoutX="165.0" layoutY="214.0" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till">
@@ -1040,7 +1040,7 @@
                         </ImageView>
                         <Label layoutX="9.0" layoutY="2.0" text="Lägg till" textFill="WHITE">
                            <font>
-                              <Font name="Avenir Book" size="16.0" />
+                              <Font name="Arial" size="16.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="DEFAULT" />
@@ -1050,12 +1050,12 @@
                   </AnchorPane>
                   <Button layoutX="371.0" layoutY="434.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button layoutX="539.0" layoutY="323.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
                   <Button layoutX="324.0" layoutY="469.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="27.0" styleClass="graknapp">
@@ -1069,17 +1069,17 @@
                   </Button>
                   <Label layoutX="449.0" layoutY="439.0" text=".">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="31.0" layoutY="574.0" text="Kontakta iMat" textFill="#b00320">
                      <font>
-                        <Font name="Avenir Book" size="20.0" />
+                        <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Text layoutX="31.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iMat.kontakt@gmail.com" wrappingWidth="858.0734252929688">
                      <font>
-                        <Font name="Avenir Book" size="16.0" />
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
                </children>
@@ -1123,18 +1123,18 @@
                            <children>
                               <AnchorPane fx:id="titelPane" prefHeight="33.0" prefWidth="887.0">
                                  <children>
-                                    <Label fx:id="titelLabel" text="Label" AnchorPane.topAnchor="20.0">
+                                    <Label fx:id="titelLabel" text="Label" AnchorPane.topAnchor="15.0">
                                        <font>
-                                          <Font name="Avenir Next" size="23.0" />
+                                          <Font name="Arial Bold" size="23.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </AnchorPane>
                               <AnchorPane fx:id="titelPane1" prefHeight="33.0" prefWidth="887.0">
                                  <children>
-                                    <Label fx:id="titelLabel1" text="Label" AnchorPane.topAnchor="20.0">
+                                    <Label fx:id="titelLabel1" text="Label" AnchorPane.topAnchor="15.0">
                                        <font>
-                                          <Font name="Avenir Next" size="23.0" />
+                                          <Font name="Arial Bold" size="23.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -1151,7 +1151,7 @@
             <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="65.0" />
             <Label fx:id="e1" alignment="TOP_LEFT" layoutX="900.0" layoutY="301.0" prefHeight="69.0" prefWidth="319.0" text="Din varukorg är tom. Innan du kan gå till kassan behöver du lägga till varor." textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.bottomAnchor="186.0" AnchorPane.rightAnchor="10.0">
                <font>
-                  <Font name="Avenir Book" size="18.0" />
+                  <Font name="Arial" size="18.0" />
                </font>
             </Label>
          </children>
