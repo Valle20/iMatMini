@@ -894,7 +894,7 @@
                      </font></Button>
                   <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
-                        <FlowPane fx:id="varukorgFlowPane" prefHeight="477.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="2.0">
+                        <FlowPane fx:id="varukorgFlowPane" prefHeight="477.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="4.0">
                            <padding>
                               <Insets top="3.0" />
                            </padding></FlowPane>
@@ -1093,13 +1093,13 @@
                               <FlowPane id="dateFlowPane" fx:id="dateFlowPane" prefHeight="555.0" prefWidth="259.0" style="-fx-border-color: 8D99AE;" styleClass="scroll-date" stylesheets="@iMat.css" />
                            </content>
                            <styleClass>
-                              <String fx:value="scroll-bla" />
+                              <String fx:value="scroll-morkbla" />
                               <String fx:value="scroll-date" />
                            </styleClass>
                         </ScrollPane>
                         <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="23.0" prefHeight="516.0" prefWidth="623.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <FlowPane fx:id="orderItemFlowPane" prefHeight="517.0" prefWidth="622.0" />
+                              <FlowPane fx:id="orderItemFlowPane" prefHeight="517.0" prefWidth="622.0" vgap="4.0" />
                            </content>
                            <styleClass>
                               <String fx:value="scroll-vit" />

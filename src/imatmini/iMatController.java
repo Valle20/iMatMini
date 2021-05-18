@@ -1271,6 +1271,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
             slutförtköpAnchorPane.toFront();
             commitPurchase();
             e42.setVisible(false);
+            duharvaltPane.setVisible(false);
+            chosenDate.setText("");
+            chosenTime.setText("");
         }
         if (radionull) e41.setVisible(true);
         if (!isKortOk()) e42.setVisible(true);

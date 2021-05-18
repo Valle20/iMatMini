@@ -11,6 +11,7 @@
 .datePane:hover{
     -fx-background-color: #6b7b96;
     -fx-cursor: hand;
+    -fx-font-size: 16px;
 }
 
 .scroll-date
@@ -380,76 +381,6 @@
 -fx-background-color: #E0E0E0;
 -fx-padding: 0px;
 }
-/* såg att någon hade ändrat dessa medans jag höll på så skickar med som en kommentar ist*/
-/*.toolbar-navigation-button
-{
--fx-background-color: #FFFFFF;
--fx-text-fill: black;
--fx-font-family: "Roboto";
--fx-font-size: 20px;
--fx-pref-width: 203px;
--fx-pref-height: 36px;
--fx-padding: 1px;
--fx-border-width: 1px;
--fx-border-color: #787878;
-
-}
-.toolbar-navigation-button:hover
-{
--fx-background-color: #DEDEDE;
-}
-.toolbar-navigation-button:pressed
-{
--fx-background-color: #8D99AE;
-}
-.toolbar-navigation-button:active
-{
--fx-background-color: #8D99AE;
-}
-
-#varukorg-navigation-button
-{
--fx-background-radius: 3 0 0 3;
--fx-border-radius: 3 0 0 3;
-
-}
-#betalning-navigation-button
-{
--fx-background-radius: 0 3 3 0;
--fx-border-radius: 0 3 3 0;
-}
-#leverans-navigation-button
-{
--fx-background-radius: 0 0 0 0;
-}
-#person-navigation-button
-{
--fx-background-radius: 0 0 0 0;
-}
-#varukorg-active
-{
--fx-background-color: #8D99AE;
--fx-background-radius: 3 0 0 3;
--fx-border-radius: 3 0 0 3;
-}
-#betalning-active
-{
--fx-background-color: #8D99AE;
--fx-background-radius: 0 3 3 0;
--fx-border-radius: 0 3 3 0;
-}
-#leverans-active
-{
--fx-background-color: #8D99AE;
--fx-background-radius: 0 0 0 0;
--fx-border-radius: 0 0 0 0;
-}
-#person-active
-{
--fx-background-color: #8D99AE;
--fx-background-radius: 0 0 0 0;
--fx-border-radius: 0 0 0 0;
-} */
 
 
 
@@ -485,47 +416,16 @@
 }
 
 
-/*
-.scroll-bar:vertical .track{
-    -fx-background-color: #ffffff;
-    -fx-border-color: transperent;
-
+.scroll-morkbla .scroll-bar:vertical {
+  -fx-background-color: #8D99AE;
 }
-
-.scroll-bar:vertical .thumb {
-    -fx-background-color: #E5E5E5;
+.scroll-morkbla .scroll-bar:vertical .thumb {
+    -fx-background-color: #FFFFFF;
     -fx-background-insets: 2.0, 0.0, 0.0;
     -fx-background-radius: 2.0em;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 8, 0.0, 0.0, 1.0);
+}
+.scroll-morkbla .scroll-bar:vertical .thumb:hover {
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 8, 0.0, 0.0, 1.0);
 }
 
-.scroll-bar:vertical .thumb:hover {
-    -fx-background-color: #D5D5D5;
-    -fx-background-insets : 2.0, 0.0, 0.0;
-    -fx-background-radius : 2.0em;
-}
-
-.scroll-bar:vertical .decrement-button {
-    -fx-background-color : pink;
-    -fx-background-radius : 0.0em;
-    -fx-padding :0.0 10.0 0.0 0.0;
-
-}
-
-.scroll-bar:vertical .increment-button {
-    -fx-background-color : pink;
-    -fx-background-radius : 0.0em;
-    -fx-padding :0.0 10.0 0.0 0.0;
-
-}
-
- .scroll-bar .increment-arrow,
- .scroll-bar .decrement-arrow{
-    -fx-shape : " ";
-    -fx-padding :0.15em 0.0;
-}
-
- .scroll-bar:vertical .increment-arrow,
- .scroll-bar:vertical .decrement-arrow{
-    -fx-shape : " ";
-    -fx-padding :0.0 0.15em;
-}

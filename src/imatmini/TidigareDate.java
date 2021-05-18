@@ -58,7 +58,7 @@ public class TidigareDate extends AnchorPane {
 
         double pris = getTotalOrderPrice();
         pris = Math.round(pris * 100.0) / 100.0;
-        priceLabel.setText(pris + " kr");
+        priceLabel.setText(String.format("%.2f",pris) + " kr");
         makeNice();
     }
 
@@ -94,6 +94,8 @@ public class TidigareDate extends AnchorPane {
                 datePane.setStyle("-fx-background-color: #FFFFFF;");
                 dateLabel.setStyle("-fx-font-weight: bold;");
                 priceLabel.setStyle("-fx-font-weight: bold;");
+                dateLabel.setStyle("-fx-font-size: 16px;");
+                priceLabel.setStyle("-fx-font-size: 16px;");
                 }else{
                 datePane.setStyle("-fx-background: #8D99AE;");
             }
