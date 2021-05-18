@@ -186,15 +186,18 @@
             <Button fx:id="backToStoreButton2" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
             <Pane layoutX="150.0" layoutY="170.0" prefHeight="59.0" prefWidth="592.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="165.0">
                <children>
-                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToFront" text="Betala med kort">
+                  <RadioButton fx:id="kortRadioButton" layoutX="20.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToFront" styleClass="radioButton" text="Betala med kort">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
                      <toggleGroup>
                         <ToggleGroup fx:id="g" />
                      </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </RadioButton>
-                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToBack" text="Betala med kontanter vid leverans" toggleGroup="$g">
+                  <RadioButton fx:id="kontantRadioButton" layoutX="260.0" layoutY="18.0" mnemonicParsing="false" onAction="#betalamedkortToBack" styleClass="radioButton" text="Betala med kontanter vid leverans" toggleGroup="$g">
                      <font>
                         <Font name="Avenir Book" size="18.0" />
                      </font>
@@ -432,6 +435,9 @@
                      <image>
                         <Image url="@bilder/kryss.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </children>
             </AnchorPane>

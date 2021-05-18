@@ -43,7 +43,7 @@
                         <Font name="Avenir Book" size="16.0" />
                      </font>
                      <cursor>
-                        <Cursor fx:constant="DEFAULT" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
                </children>
