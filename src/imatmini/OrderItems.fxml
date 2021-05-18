@@ -32,7 +32,7 @@
                </font></Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="29.0" layoutY="14.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.bottomAnchor="14.4" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="14.5">
                <children>
