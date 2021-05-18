@@ -257,7 +257,7 @@
                      </font>
                   </TextField>
                   <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" visibleRowCount="12" />
-                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="38.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
+                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
                   <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
                   <Label layoutY="-39.0" text="Fyll i kortuppgifter">
                      <font>
@@ -1038,7 +1038,7 @@
                               <Image url="@bilder/baseline_shopping_cart_white_48pt_3x.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="9.0" layoutY="2.0" text="Lägg till" textFill="WHITE">
+                        <Label layoutX="10.0" layoutY="4.0" text="Lägg till" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
@@ -1053,7 +1053,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="539.0" layoutY="323.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan">
+                  <Button layoutX="539.0" layoutY="323.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-padding: 0;" styleClass="kassa2" stylesheets="@iMat.css" text="Till kassan">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
