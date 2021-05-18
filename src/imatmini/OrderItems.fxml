@@ -8,20 +8,20 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="647.0" style="-fx-background-color: #FFFFFF;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="647.0" style="-fx-background-color: #FFFFFF;" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="orderItemName" layoutX="85.0" layoutY="7.0" prefHeight="17.0" prefWidth="74.0" text="produkt">
          <font>
-            <Font size="14.0" />
+            <Font name="Arial" size="16.0" />
          </font></Label>
       <ImageView fx:id="orderItemImage" fitHeight="45.0" fitWidth="54.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0" />
       <Label fx:id="orderItemAmount" layoutX="85.0" layoutY="33.0" text="Label">
          <font>
-            <Font size="14.0" />
+            <Font name="Arial Bold" size="16.0" />
          </font></Label>
       <Label fx:id="orderItemTotalPrice" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="327.0" layoutY="18.0" prefHeight="25.0" prefWidth="138.0" text="Label" textAlignment="RIGHT">
          <font>
-            <Font size="16.0" />
+            <Font name="Arial" size="16.0" />
          </font></Label>
       <Line endX="24.0" endY="59.99998474121094" layoutX="456.0" layoutY="-1.0" startX="24.0" startY="-1.0" />
       <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -31,14 +31,14 @@
       </AnchorPane>
       <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="29.0" layoutY="10.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="39.0" prefWidth="109.0" styleClass="lagg-till" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="10.0">
+            <AnchorPane layoutX="29.0" layoutY="14.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.bottomAnchor="14.4" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="14.5">
                <children>
-                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="75.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@bilder/baseline_shopping_cart_white_48pt_3x.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="13.0" layoutY="7.0" text="Lägg till" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="4.0" text="Lägg till" textFill="WHITE">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
