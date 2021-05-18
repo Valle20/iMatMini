@@ -1100,7 +1100,7 @@
                               <String fx:value="scroll-orderItems" />
                            </styleClass>
                         </ScrollPane>
-                        <Button id="addAllButton" fx:id="addAllButton" layoutX="233.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#läggTillAllaVaror" prefHeight="38.0" prefWidth="650.0" styleClass="laggTillAlla" stylesheets="@iMat.css" text="Lägg till allla varor i varukorgen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
+                        <Button id="addAllButton" fx:id="addAllButton" layoutX="233.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#läggTillAllaVaror" prefHeight="38.0" prefWidth="650.0" styleClass="laggTillAlla" stylesheets="@iMat.css" text="Lägg till alla varor i varukorgen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <Label layoutX="44.0" layoutY="18.0" text="Tidigare Köp">

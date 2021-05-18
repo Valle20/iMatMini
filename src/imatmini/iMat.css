@@ -22,6 +22,7 @@
 .laggTillAlla:hover{
     -fx-background-color: #8B0219;
     -fx-font-size: 17px;
+    -fx-cursor: hand;
 }
 
 

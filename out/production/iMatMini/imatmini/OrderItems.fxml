@@ -8,40 +8,37 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="orderItemPane" prefHeight="78.0" prefWidth="646.0" style="-fx-background-color: #FFFFFF;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="647.0" style="-fx-background-color: #FFFFFF;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="orderItemName" layoutX="85.0" layoutY="14.0" prefHeight="17.0" prefWidth="74.0" text="produkt">
+      <Label fx:id="orderItemName" layoutX="85.0" layoutY="7.0" prefHeight="17.0" prefWidth="74.0" text="produkt">
          <font>
-            <Font name="Avenir Book" size="13.0" />
+            <Font size="14.0" />
          </font></Label>
-      <ImageView fx:id="orderItemImage" fitHeight="66.0" fitWidth="74.0" layoutX="11.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-      <Label fx:id="orderItemAmount" layoutX="85.0" layoutY="39.0" text="Label">
+      <ImageView fx:id="orderItemImage" fitHeight="45.0" fitWidth="54.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0" />
+      <Label fx:id="orderItemAmount" layoutX="85.0" layoutY="33.0" text="Label">
          <font>
-            <Font name="Avenir Book" size="13.0" />
+            <Font size="14.0" />
          </font></Label>
-      <Label fx:id="orderItemTotalPrice" alignment="CENTER_RIGHT" layoutX="386.0" layoutY="31.0" prefHeight="17.0" prefWidth="54.0" text="Label">
+      <Label fx:id="orderItemTotalPrice" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="327.0" layoutY="18.0" prefHeight="25.0" prefWidth="138.0" text="Label" textAlignment="RIGHT">
          <font>
-            <Font name="Avenir Book" size="13.0" />
+            <Font size="16.0" />
          </font></Label>
-      <Line endX="23.0" endY="46.99998474121094" layoutX="455.0" layoutY="31.0" startX="23.0" startY="-31.0" />
-      <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="79.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Line endX="24.0" endY="59.99998474121094" layoutX="456.0" layoutY="-1.0" startX="24.0" startY="-1.0" />
+      <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="38.0" layoutY="17.0" prefHeight="45.0" prefWidth="92.0" text="Finns redan i din varukorg" wrapText="true">
-               <font>
-                  <Font name="Avenir Book" size="13.0" />
-               </font></Label>
+            <Label layoutX="15.0" layoutY="21.0" text="Finns redan i din varukorg" textAlignment="CENTER" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="notAddedPane" prefHeight="79.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="33.0" layoutY="24.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till">
+            <AnchorPane layoutX="29.0" layoutY="10.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="39.0" prefWidth="109.0" styleClass="lagg-till" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="10.0">
                <children>
-                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="75.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@bilder/baseline_shopping_cart_white_48pt_3x.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="9.0" layoutY="2.0" text="Lägg till" textFill="WHITE">
+                  <Label layoutX="13.0" layoutY="7.0" text="Lägg till" textFill="WHITE">
                      <font>
                         <Font name="Avenir Book" size="16.0" />
                      </font>
@@ -53,5 +50,6 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <Line endX="394.0" endY="-6.5" layoutX="253.0" layoutY="66.0" startX="-253.0" startY="-6.5" />
    </children>
 </fx:root>
