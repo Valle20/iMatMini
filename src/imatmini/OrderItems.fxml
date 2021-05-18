@@ -8,9 +8,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="647.0" style="-fx-background-color: #FFFFFF;" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="orderItemPane" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="623.0" style="-fx-background-color: #FFFFFF;" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="orderItemName" layoutX="85.0" layoutY="7.0" prefHeight="17.0" prefWidth="74.0" text="produkt">
+      <Label fx:id="orderItemName" layoutX="85.0" layoutY="7.0" prefHeight="20.0" prefWidth="143.0" text="produkt">
          <font>
             <Font name="Arial" size="16.0" />
          </font></Label>
@@ -19,17 +19,20 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="orderItemTotalPrice" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="327.0" layoutY="18.0" prefHeight="25.0" prefWidth="138.0" text="Label" textAlignment="RIGHT">
+      <Label fx:id="orderItemTotalPrice" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="285.0" layoutY="18.0" prefHeight="25.0" prefWidth="138.0" text="Label" textAlignment="RIGHT">
          <font>
             <Font name="Arial" size="16.0" />
          </font></Label>
-      <Line endX="24.0" endY="59.99998474121094" layoutX="456.0" layoutY="-1.0" startX="24.0" startY="-1.0" />
-      <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Line endX="24.0" endY="39.0" layoutX="416.5" layoutY="10.5" startX="24.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="10.0" />
+      <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="15.0" layoutY="21.0" text="Finns redan i din varukorg" textAlignment="CENTER" />
+            <Label layoutX="40.0" layoutY="4.0" prefHeight="50.0" prefWidth="92.0" text="Finns redan i din varukorg" textAlignment="CENTER" textFill="#b00320" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="notAddedPane" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="29.0" layoutY="14.0" onMouseClicked="#addOrderItemVarukorg" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till" AnchorPane.bottomAnchor="14.4" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="14.5">
                <children>
@@ -50,6 +53,6 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Line endX="394.0" endY="-6.5" layoutX="253.0" layoutY="66.0" startX="-253.0" startY="-6.5" />
+      <Line endX="623.0" endY="-6.5" layoutX="253.0" layoutY="66.0" startY="-6.5" AnchorPane.leftAnchor="0.0" />
    </children>
 </fx:root>

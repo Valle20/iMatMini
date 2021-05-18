@@ -5,16 +5,16 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root id="datePane" fx:id="datePane" onMouseClicked="#openOrder" prefHeight="38.0" prefWidth="232.0" style="-fx-background-color: #8D99AE;" styleClass="datePane" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root id="datePane" fx:id="datePane" onMouseClicked="#openOrder" prefHeight="45.0" prefWidth="262.0" style="-fx-background-color: #8D99AE;" styleClass="datePane" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="dateLabel" layoutX="5.0" layoutY="8.0" prefHeight="17.0" prefWidth="159.0" styleClass="scroll-date" stylesheets="@iMat.css" text="Date">
+        <Label fx:id="dateLabel" layoutX="10.0" layoutY="12.0" prefHeight="17.0" prefWidth="159.0" styleClass="scroll-date" stylesheets="@iMat.css" text="Date">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font></Label>
-      <Label fx:id="priceLabel" alignment="CENTER_RIGHT" layoutX="148.0" layoutY="8.0" prefHeight="20.0" prefWidth="74.0" text="Summa" textAlignment="RIGHT">
+      <Label fx:id="priceLabel" alignment="CENTER_RIGHT" layoutX="173.0" layoutY="12.0" prefHeight="20.0" prefWidth="74.0" text="Summa" textAlignment="RIGHT">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font></Label>
-      <Line endX="130.0" layoutX="101.0" layoutY="37.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Line endX="260.0" layoutX="101.0" layoutY="37.0" stroke="WHITE" strokeWidth="2.0" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="0.0" />
     </children>
 </fx:root>

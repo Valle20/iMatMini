@@ -29,11 +29,15 @@
 }
 
 .laggTillAlla:hover{
-    -fx-background-color: #8B0219;
-    -fx-font-size: 17px;
+    -fx-background-color: #EF233C;
+    -fx-font-size: 16px;
     -fx-cursor: hand;
 }
-
+.laggTillAlla:pressed{
+    -fx-background-color: #EA7381;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
 
 .scroll-orderItems
 {
