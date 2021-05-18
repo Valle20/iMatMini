@@ -9,11 +9,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="797.0" style="-fx-background-color: #ffffff;" styleClass="dropshadow-card" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="797.0" style="-fx-background-color: #ffffff;" styleClass="dropshadow-card" stylesheets="@iMat.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="nameLabel" layoutX="108.0" layoutY="10.0" prefHeight="28.0" prefWidth="169.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
+      <Label fx:id="nameLabel" layoutX="108.0" layoutY="8.0" prefHeight="28.0" prefWidth="169.0" text="Blåbär" AnchorPane.leftAnchor="108.0">
          <font>
-            <Font name="Arial" size="19.0" />
+            <Font name="Arial Bold" size="19.0" />
          </font>
       </Label>
       <Label fx:id="prizeLabel" contentDisplay="RIGHT" layoutX="277.0" layoutY="23.0" prefHeight="20.0" prefWidth="98.0" text="3kr/förp" textAlignment="RIGHT" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="23.0">
@@ -55,7 +55,7 @@
       </Button>
       <AnchorPane layoutX="677.0" layoutY="21.5" onMouseClicked="#tabort" prefHeight="27.0" prefWidth="90.0" styleClass="graknapp" AnchorPane.bottomAnchor="21.5" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="21.5">
          <children>
-            <Label layoutX="7.0" layoutY="1.0" text="Ta bort">
+            <Label layoutX="7.0" layoutY="3.0" text="Ta bort">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>

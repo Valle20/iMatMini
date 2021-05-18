@@ -125,20 +125,20 @@
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="17.0" layoutY="21.0" text="1">
+                  <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="16.0" layoutY="22.0" text="1">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="296.0" layoutY="21.0" text="3">
+                  <Label layoutX="296.0" layoutY="22.0" text="3">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
@@ -149,22 +149,22 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -291,51 +291,51 @@
                   <Font name="Arial" size="24.0" />
                </font>
             </Label>
-            <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
                <children>
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
-                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="17.0" layoutY="21.0" text="1">
+                  <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="16.0" layoutY="22.0" text="1">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="#8d99ae" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="296.0" layoutY="21.0" text="3">
+                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="296.0" layoutY="22.0" text="3">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="#8d99ae" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="436.0" layoutY="22.0" text="4">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -586,70 +586,19 @@
                   <Font name="Arial" size="18.0" />
                </font>
             </Label>
-            <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
-               <children>
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="17.0" layoutY="21.0" text="1">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="156.0" layoutY="22.0" text="2">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="296.0" layoutY="21.0" text="3">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="436.0" layoutY="22.0" text="4">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="duharvaltPane" layoutX="255.0" layoutY="509.0" prefHeight="97.0" prefWidth="745.0" visible="false">
                <children>
-                  <Label fx:id="chosenTime" layoutX="580.0" layoutY="28.0" prefHeight="32.0" prefWidth="141.0">
+                  <Label fx:id="chosenTime" layoutX="580.0" layoutY="28.0" prefHeight="13.0" prefWidth="141.0">
                      <font>
                         <Font name="Arial" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="chosenDate" layoutX="350.0" layoutY="28.0" prefHeight="32.0" prefWidth="150.0">
+                  <Label fx:id="chosenDate" layoutX="350.0" layoutY="28.0" prefHeight="1.0" prefWidth="150.0">
                      <font>
                         <Font name="Arial" size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="526.0" layoutY="29.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
+                  <Label layoutX="526.0" layoutY="28.0" prefHeight="26.0" prefWidth="82.0" text="Tid:">
                      <font>
                         <Font name="Arial Bold" size="22.0" />
                      </font>
@@ -662,6 +611,57 @@
                   <Label layoutX="256.0" layoutY="28.0" prefHeight="26.0" prefWidth="82.0" text="Datum:">
                      <font>
                         <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                  <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="16.0" layoutY="22.0" text="1">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="156.0" layoutY="22.0" text="2">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#8d99ae" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="296.0" layoutY="22.0" text="3">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="436.0" layoutY="22.0" text="4">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </children>
@@ -715,7 +715,7 @@
                         <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="104.0" text="Totalt pris" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0">
+                  <Label layoutX="10.0" layoutY="105.0" prefHeight="10.0" prefWidth="117.0" text="Totalt pris" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="10.0">
                      <font>
                         <Font name="Arial Bold" size="24.0" />
                      </font>
@@ -730,7 +730,7 @@
                         <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="104.0" prefHeight="35.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="105.0" prefHeight="15.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="10.0">
                      <font>
                         <Font name="Arial Bold" size="24.0" />
                      </font>
@@ -739,13 +739,13 @@
                   <Line endX="239.5" layoutX="110.5" layoutY="89.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="402.0" layoutY="18.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
+            <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
                <children>
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="17.0" layoutY="21.0" text="1">
+                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="16.0" layoutY="22.0" text="1">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
@@ -757,7 +757,7 @@
                      </font>
                   </Label>
                   <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="296.0" layoutY="21.0" text="3">
+                  <Label layoutX="296.0" layoutY="22.0" text="3">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
@@ -768,22 +768,22 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-7.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="64.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="260.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="410.0" layoutY="64.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
