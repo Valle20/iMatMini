@@ -9,7 +9,7 @@
 }
 
 .datePane:hover{
-    -fx-background-color: #F0F0F0;
+    -fx-background-color: #DFE5EF;
     -fx-cursor: hand;
     -fx-font-size: 16px;
 }
@@ -209,7 +209,7 @@
 -fx-cursor: hand;
 
 /*
--fx-background-color: #F0F0F0;
+-fx-background-color: #DFE5EF;
 */
 }
 
@@ -326,13 +326,14 @@
 }
 .toolbar-btn:hover
 {
--fx-background-color: #F0F0F0;
+-fx-background-color: #DFE5EF;
 -fx-cursor: hand;
 }
+/*
 .toolbar-btn:pressed
 {
 -fx-background-color: #E0E0E0;
-}
+}*/
 
 #tidigare{
 -fx-background-radius: 0px;
@@ -372,16 +373,17 @@
 }
 .btn-kategori:hover
 {
--fx-background-color: #F0F0F0;
+-fx-background-color: #DFE5EF;
 -fx-padding: 0px;
 -fx-cursor: hand;
 }
+/*
 .btn-kategori:pressed
 {
 -fx-background-color: #E0E0E0;
 -fx-padding: 0px;
 }
-
+*/
 
 
 .scroll-vit .scroll-bar:vertical {
