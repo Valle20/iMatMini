@@ -109,6 +109,7 @@ public class KassaVarukorgsItem extends AnchorPane {
         model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         kassa_1_controller.updateTotalpris();
+        kassa_1_controller.updateKassaVarukorg(model.getShoppingCart().getItems());
     }
     @FXML private void plus(){
         updateAmount((int)(shoppingItem.getAmount() + 1));
