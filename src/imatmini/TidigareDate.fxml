@@ -15,6 +15,6 @@
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Line endX="260.0" layoutX="101.0" layoutY="37.0" stroke="WHITE" strokeWidth="2.0" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="0.0" />
+      <Line endX="260.0" layoutX="101.0" layoutY="37.0" stroke="#8d99ae" strokeWidth="2.0" AnchorPane.bottomAnchor="-0.5" AnchorPane.leftAnchor="0.0" />
     </children>
 </fx:root>

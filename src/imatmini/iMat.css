@@ -9,14 +9,14 @@
 }
 
 .datePane:hover{
-    -fx-background-color: #6b7b96;
+    -fx-background-color: #F0F0F0;
     -fx-cursor: hand;
     -fx-font-size: 16px;
 }
 
 .scroll-date
 {
--fx-background: #8D99AE;
+-fx-background: #ffffff;
 }
 
 .laggTillAlla
@@ -417,7 +417,7 @@
 
 
 .scroll-morkbla .scroll-bar:vertical {
-  -fx-background-color: #8D99AE;
+  -fx-background-color: #ffffff;
 }
 .scroll-morkbla .scroll-bar:vertical .thumb {
     -fx-background-color: #FFFFFF;

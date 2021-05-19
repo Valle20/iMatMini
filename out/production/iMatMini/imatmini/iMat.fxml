@@ -1090,10 +1090,10 @@
                      <children>
                         <ScrollPane hbarPolicy="NEVER" prefHeight="554.0" prefWidth="260.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <FlowPane id="dateFlowPane" fx:id="dateFlowPane" prefHeight="555.0" prefWidth="259.0" style="-fx-border-color: 8D99AE;" styleClass="scroll-date" stylesheets="@iMat.css" />
+                              <FlowPane id="dateFlowPane" fx:id="dateFlowPane" prefHeight="555.0" prefWidth="259.0" styleClass="scroll-date" stylesheets="@iMat.css" />
                            </content>
                            <styleClass>
-                              <String fx:value="scroll-morkbla" />
+                              <String fx:value="scroll-vit" />
                               <String fx:value="scroll-date" />
                            </styleClass>
                         </ScrollPane>
@@ -1113,10 +1113,10 @@
                      <font>
                         <Font name="Arial Bold" size="23.0" />
                      </font></Label>
-                  <Line endY="575.0" layoutX="289.0" layoutY="30.0" startY="21.0" stroke="#8d99ae" />
-                  <Line endX="-18.999969482421875" endY="573.0" layoutX="50.0" layoutY="32.0" startX="-19.59002685546875" startY="20.0" stroke="#8d99ae" />
-                  <Line endX="288.0" endY="9.0" layoutY="42.0" startX="31.0" startY="9.5" stroke="#8d99ae" />
-                  <Line endX="287.0" endY="9.0" layoutY="52.0" startX="31.0" startY="9.5" stroke="#8d99ae" AnchorPane.bottomAnchor="50.0" />
+                  <Line endY="575.0" layoutX="289.0" layoutY="30.0" startY="21.0" stroke="#8d99ae" visible="false" />
+                  <Line endX="-18.999969482421875" endY="573.0" layoutX="50.0" layoutY="32.0" startX="-19.59002685546875" startY="20.0" stroke="#8d99ae" visible="false" />
+                  <Line endX="288.0" endY="9.0" layoutY="42.0" startX="31.0" startY="9.5" stroke="#8d99ae" visible="false" />
+                  <Line endX="289.0" endY="9.0" layoutY="52.0" startX="31.0" startY="9.5" stroke="#8d99ae" visible="false" AnchorPane.bottomAnchor="50.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="handlaPane" style="-fx-background-color: #EDF2F4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">

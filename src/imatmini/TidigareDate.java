@@ -91,7 +91,7 @@ public class TidigareDate extends AnchorPane {
             ;
         }else{
             if (order.getOrderNumber() == parentController.currentOrder.getOrderNumber()){
-                datePane.setStyle("-fx-background-color: #FFFFFF;");
+                datePane.setStyle("-fx-background-color: #8D99AE;");
                 dateLabel.setStyle("-fx-font-weight: bold;");
                 priceLabel.setStyle("-fx-font-weight: bold;");
                 dateLabel.setStyle("-fx-font-size: 16px;");
