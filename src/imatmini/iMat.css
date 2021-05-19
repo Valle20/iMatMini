@@ -204,6 +204,7 @@
 -fx-border-radius: 3px;
 }
 .btn-checkout:hover{
+-fx-background-color: #DFE5EF;
 -fx-border-color: #8D99AE;
 -fx-border-radius: 3px;
 -fx-cursor: hand;
