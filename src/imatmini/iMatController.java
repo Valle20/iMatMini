@@ -451,8 +451,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML public void gåTillFavoriter(){
         titelLabel.setText("Favoriter");
+        if (model.getGilladeVaror().isEmpty()){
+            titelLabel.setText("Du har inga favoritmarkerade varor");
+        }
         updateCards(model.getGilladeVaror());
         handlaPane.toFront();
+
         favpriter.getStyleClass().add("toolbar-btn-tryckt");
         favpriter.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
         tidigare.getStyleClass().add("toolbar-btn");
@@ -480,13 +484,24 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public void mouseTrap(Event event){
         event.consume();
     }
+
+    @FXML AnchorPane harköpPane;
+    @FXML Label tidigareTitelLabel;
+
     @FXML
     private void openTidigare(){
         updateOrders();
         System.out.println("tidigare vyn");
         tidigarePane.toFront();
 
-        updateOrdersItems(model.getOrders().get(model.getOrders().size()-1));
+        if (!model.getOrders().isEmpty()){
+            updateOrdersItems(model.getOrders().get(model.getOrders().size()-1));
+            harköpPane.setVisible(true);
+            tidigareTitelLabel.setText("Tidigare köp");
+        } else {
+            harköpPane.setVisible(false);
+            tidigareTitelLabel.setText("Du har inga tidigare köp ännu");
+        }
 
         tidigare.getStyleClass().add("toolbar-btn-tryckt");
         tidigare.getStyleClass().removeIf(style -> style.equals("toolbar-btn"));
