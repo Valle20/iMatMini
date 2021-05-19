@@ -820,7 +820,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
             model.getCreditCard().setHoldersName((newValue));
         });
         cvckodTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+            if (newValue.matches("[0-9]+") && newValue.length() > 2) {
+                model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+            }
         });
         firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setFirstName(newValue);
