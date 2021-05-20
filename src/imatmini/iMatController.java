@@ -38,7 +38,7 @@ import se.chalmers.cse.dat216.project.*;
 public class iMatController implements Initializable, ShoppingCartListener {
 
     public void initialize(URL url, ResourceBundle rb) {
-        model.iMatDataHandler.reset();
+        //model.iMatDataHandler.reset();
         initCardMap();
 
         model.getShoppingCart().addShoppingCartListener(this);
