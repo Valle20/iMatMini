@@ -1093,7 +1093,7 @@
                               <FlowPane id="dateFlowPane" fx:id="dateFlowPane" prefHeight="555.0" prefWidth="259.0" styleClass="scroll-date" stylesheets="@iMat.css" />
                            </content>
                            <styleClass>
-                              <String fx:value="scroll-vit" />
+                              <String fx:value="scroll-bla" />
                               <String fx:value="scroll-date" />
                            </styleClass>
                         </ScrollPane>
@@ -1102,7 +1102,7 @@
                               <FlowPane fx:id="orderItemFlowPane" prefHeight="517.0" prefWidth="622.0" vgap="4.0" />
                            </content>
                            <styleClass>
-                              <String fx:value="scroll-vit" />
+                              <String fx:value="scroll-bla" />
                               <String fx:value="scroll-orderItems" />
                            </styleClass>
                         </ScrollPane>
