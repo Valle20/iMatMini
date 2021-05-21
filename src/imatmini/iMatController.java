@@ -1303,6 +1303,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         List<ShoppingItem> savekart = new ArrayList<>();
         savekart.addAll(model.getShoppingCart().getItems());
 
+
         model.placeOrder();
 
         for (ShoppingItem item : savekart){
