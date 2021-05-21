@@ -1303,6 +1303,15 @@ public class iMatController implements Initializable, ShoppingCartListener {
         List<ShoppingItem> savekart = new ArrayList<>();
         savekart.addAll(model.getShoppingCart().getItems());
 
+        List<ShoppingItem> copyVarukorg = new ArrayList<>();
+
+        for (ShoppingItem i : model.getShoppingCart().getItems()){
+            copyVarukorg.add(new ShoppingItem(i.getProduct(), i.getAmount()));
+        }
+
+        model.getShoppingCart().clear();
+
+        model.getShoppingCart().getItems().addAll(copyVarukorg);
 
         model.placeOrder();
 
