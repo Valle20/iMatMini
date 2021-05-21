@@ -804,7 +804,7 @@
                   <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" prefHeight="46.0" styleClass="btn-kategori" stylesheets="@iMat.css" text="Alla varor" AnchorPane.leftAnchor="38.0" />
                   <Button layoutX="719.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" styleClass="btn-kategori" stylesheets="@iMat.css" text="Sötsaker" AnchorPane.leftAnchor="719.0" />
                   <Button layoutX="719.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" styleClass="btn-kategori" stylesheets="@iMat.css" text="Dryck" AnchorPane.leftAnchor="719.0" />
-                  <ImageView fx:id="kryss1" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#closeDetailView" onMouseEntered="#crossButtonMouseEntered" onMouseExited="#crossButtonMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <ImageView fx:id="kryss1" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#stangKategoriere" onMouseEntered="#crossButtonMouseEntered" onMouseExited="#crossButtonMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                      <image>
                         <Image url="@bilder/kryss.png" />
                      </image>
