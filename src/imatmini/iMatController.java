@@ -585,6 +585,17 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     @FXML
+    private void confirmChoice(ActionEvent event){
+        if (!model.getShoppingCart().getItems().isEmpty())
+        confirmationbox.toFront();
+    }
+
+    @FXML
+    private void doNotEmptyShoppingCart(ActionEvent event){
+        confirmationbox.toBack();
+    }
+
+    @FXML
     private void tömVarukorgen(ActionEvent event) {
         List<ShoppingItem> savekart = new ArrayList<>();
         savekart.addAll(model.getShoppingCart().getItems());
@@ -595,6 +606,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         if (currentOrder != null){
             updateOrdersItems(currentOrder);
         }
+        confirmationbox.toBack();
     }
 
 
@@ -898,6 +910,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private RadioButton kortRadioButton;
     @FXML
     private RadioButton kontantRadioButton;
+    @FXML
+    private AnchorPane confirmationbox;
 
     private boolean radionull = true;
 

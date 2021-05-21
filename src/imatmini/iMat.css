@@ -215,7 +215,41 @@
 -fx-border-color: #8D99AE;
 -fx-border-radius: 3px;
 -fx-cursor: hand;
+}
 
+.btn-confirmationbox1{
+-fx-background-color: white;
+-fx-background-radius: 0 0 0 10;
+
+-fx-border-width: 0.5px;
+-fx-border-color: black;
+-fx-border-radius: 0 0 0 10;
+}
+
+.btn-confirmationbox1:hover{
+-fx-background-color: #EDF2F4;
+-fx-cursor: hand;
+}
+
+.btn-confirmationbox2{
+-fx-background-color: #D90429;
+-fx-background-radius: 0 0 10 0;
+-fx-text-fill: white;
+-fx-border-width: 0.5px;
+-fx-border-color: black;
+-fx-border-radius: 0 0 10 0;
+}
+
+.btn-confirmationbox2:hover{
+-fx-background-color: #EF233C;
+-fx-cursor: hand;
+}
+
+.btn-confirmationbox2:pressed
+{
+-fx-background-color: #EA7381;
+-fx-padding: 0px;
+}
 /*
 -fx-background-color: #DFE5EF;
 */

@@ -363,6 +363,151 @@
             </Pane>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="592.0" prefWidth="901.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="556.0" prefWidth="819.0" style="-fx-background-color: #edf2f4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
+                     <content>
+                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="554.0" prefWidth="817.0" style="-fx-background-color: edf2f4;" vgap="5.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
+            <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
+               <buttons>
+                  <Button id="varukorg-active" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
+                  <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
+               </buttons>
+            </ButtonBar>
+            <Label layoutX="927.0" layoutY="232.0" prefHeight="110.0" prefWidth="293.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="1021.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" stylesheets="@iMat.css" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Label fx:id="e11" alignment="TOP_LEFT" layoutX="546.0" layoutY="635.0" prefHeight="67.0" prefWidth="501.0" text="Din varukorg är tom. Innan du kan gå till nästa steg behöver du lägga till varor. Tryck därför på &quot;fortsätt handla&quot;" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="904.0" layoutY="434.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="10.0" layoutY="9.0" text="Antal varor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="56.0" text="Moms" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="56.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="105.0" prefHeight="10.0" prefWidth="117.0" text="Totalt pris" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="antalVarorLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="9.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="momsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="218.0" layoutY="56.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="56.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="105.0" prefHeight="15.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="239.5" layoutX="110.5" layoutY="45.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="45.0" />
+                  <Line endX="239.5" layoutX="110.5" layoutY="89.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="16.0" layoutY="22.0" text="1">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="156.0" layoutY="22.0" text="2">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="296.0" layoutY="22.0" text="3">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="436.0" layoutY="22.0" text="4">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kategorierPane" onMouseClicked="#stangKategoriere" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.4);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane onMouseClicked="#mouseTrap" prefHeight="140.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Button layoutX="492.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" styleClass="btn-kategori" stylesheets="@iMat.css" text="Mejeri" AnchorPane.leftAnchor="492.0" />
+                  <Button layoutX="492.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" styleClass="btn-kategori" stylesheets="@iMat.css" text="Kött &amp; Fisk" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="492.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="23.0" />
+                  <Button layoutX="265.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" styleClass="btn-kategori" stylesheets="@iMat.css" text="Bröd" AnchorPane.leftAnchor="265.0" />
+                  <Button layoutX="265.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" styleClass="btn-kategori" stylesheets="@iMat.css" text="Skafferi" AnchorPane.leftAnchor="265.0" />
+                  <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" styleClass="btn-kategori" stylesheets="@iMat.css" text="Frukt &amp; grönt" AnchorPane.leftAnchor="38.0" />
+                  <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" prefHeight="46.0" styleClass="btn-kategori" stylesheets="@iMat.css" text="Alla varor" AnchorPane.leftAnchor="38.0" />
+                  <Button layoutX="719.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" styleClass="btn-kategori" stylesheets="@iMat.css" text="Sötsaker" AnchorPane.leftAnchor="719.0" />
+                  <Button layoutX="719.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" styleClass="btn-kategori" stylesheets="@iMat.css" text="Dryck" AnchorPane.leftAnchor="719.0" />
+                  <ImageView fx:id="kryss1" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#stangKategoriere" onMouseEntered="#crossButtonMouseEntered" onMouseExited="#crossButtonMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@bilder/kryss.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="detailPane" onMouseClicked="#closeDetailView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="237.0" layoutY="101.0" onMouseClicked="#mouseTrap" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="110.0">
@@ -668,147 +813,23 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="confirmationbox" layoutY="-6.0" prefHeight="729.0" prefWidth="1283.0" style="-fx-background-color: rgba(0,0,0,0.75);">
          <children>
-            <AnchorPane prefHeight="592.0" prefWidth="901.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0">
+            <AnchorPane layoutX="1030.0" layoutY="107.0" prefHeight="122.0" prefWidth="240.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10px;">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="556.0" prefWidth="819.0" style="-fx-background-color: #edf2f4;" styleClass="scroll-bla" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.0">
-                     <content>
-                        <FlowPane fx:id="checkoutVarukorgFlowPane" prefHeight="554.0" prefWidth="817.0" style="-fx-background-color: edf2f4;" vgap="5.0" />
-                     </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-            <Button fx:id="backToStoreButton" mnemonicParsing="false" onAction="#switchAffaren" prefHeight="36.0" prefWidth="161.0" styleClass="back-button" text="Fortsätt handla" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="22.0" />
-            <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
-               <buttons>
-                  <Button id="varukorg-active" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
-                  <Button id="person-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
-                  <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
-                  <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
-               </buttons>
-            </ButtonBar>
-            <Label layoutX="927.0" layoutY="232.0" prefHeight="110.0" prefWidth="293.0" text="Kontrollera så att din varukorg stämmer" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font name="Arial" size="30.0" />
-               </font>
-            </Label>
-            <Button layoutX="1021.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" stylesheets="@iMat.css" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Button>
-            <Label fx:id="e11" alignment="TOP_LEFT" layoutX="546.0" layoutY="635.0" prefHeight="67.0" prefWidth="501.0" text="Din varukorg är tom. Innan du kan gå till nästa steg behöver du lägga till varor. Tryck därför på &quot;fortsätt handla&quot;" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
-               <font>
-                  <Font name="Arial" size="18.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="904.0" layoutY="434.0" prefHeight="150.0" prefWidth="351.0" style="-fx-background-color: #ffffff;">
-               <children>
-                  <Label layoutX="10.0" layoutY="9.0" text="Antal varor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="9.0">
+                  <Label layoutX="20.0" layoutY="10.0" prefHeight="59.0" prefWidth="200.0" text="Är du säker på att du vill tömma din varukorg?" wrapText="true">
                      <font>
-                        <Font name="Arial" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="56.0" text="Moms" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="56.0">
+                  <Button layoutX="120.0" layoutY="76.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="46.0" prefWidth="120.0" styleClass="btn-confirmationbox2" stylesheets="@iMat.css" text="Töm">
                      <font>
-                        <Font name="Arial" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="105.0" prefHeight="10.0" prefWidth="117.0" text="Totalt pris" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="10.0">
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button layoutY="76.0" mnemonicParsing="false" onAction="#doNotEmptyShoppingCart" prefHeight="46.0" prefWidth="120.0" styleClass="btn-confirmationbox1" stylesheets="@iMat.css" text="Avbryt">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="antalVarorLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="229.0" layoutY="9.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="9.0">
-                     <font>
-                        <Font name="Arial" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="momsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="218.0" layoutY="56.0" prefHeight="26.0" prefWidth="118.0" text="Label" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="56.0">
-                     <font>
-                        <Font name="Arial" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="totalPrizeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="203.0" layoutY="105.0" prefHeight="15.0" prefWidth="172.0" text="Label" textAlignment="RIGHT" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="10.0">
-                     <font>
-                        <Font name="Arial Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Line endX="239.5" layoutX="110.5" layoutY="45.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="45.0" />
-                  <Line endX="239.5" layoutX="110.5" layoutY="89.5" startX="-110.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="30.0" layoutY="30.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
-               <children>
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
-                  <Circle fill="#8d99ae" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="16.0" layoutY="22.0" text="1">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="156.0" layoutY="22.0" text="2">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="296.0" layoutY="22.0" text="3">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Circle fill="WHITE" layoutX="518.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="12.0" />
-                  <Label layoutX="436.0" layoutY="22.0" text="4">
-                     <font>
-                        <Font name="Arial" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="kategorierPane" onMouseClicked="#stangKategoriere" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.4);" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane onMouseClicked="#mouseTrap" prefHeight="140.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@iMat.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">
-               <children>
-                  <Button layoutX="492.0" layoutY="77.0" mnemonicParsing="false" onAction="#mejeri" styleClass="btn-kategori" stylesheets="@iMat.css" text="Mejeri" AnchorPane.leftAnchor="492.0" />
-                  <Button layoutX="492.0" layoutY="23.0" mnemonicParsing="false" onAction="#Kött" styleClass="btn-kategori" stylesheets="@iMat.css" text="Kött &amp; Fisk" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="492.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="23.0" />
-                  <Button layoutX="265.0" layoutY="77.0" mnemonicParsing="false" onAction="#bröd" styleClass="btn-kategori" stylesheets="@iMat.css" text="Bröd" AnchorPane.leftAnchor="265.0" />
-                  <Button layoutX="265.0" layoutY="22.0" mnemonicParsing="false" onAction="#Skafferi" styleClass="btn-kategori" stylesheets="@iMat.css" text="Skafferi" AnchorPane.leftAnchor="265.0" />
-                  <Button layoutX="103.0" layoutY="77.0" mnemonicParsing="false" onAction="#FruktGrönt" styleClass="btn-kategori" stylesheets="@iMat.css" text="Frukt &amp; grönt" AnchorPane.leftAnchor="38.0" />
-                  <Button layoutX="100.0" layoutY="21.0" mnemonicParsing="false" onAction="#allaVaror" prefHeight="46.0" styleClass="btn-kategori" stylesheets="@iMat.css" text="Alla varor" AnchorPane.leftAnchor="38.0" />
-                  <Button layoutX="719.0" layoutY="23.0" mnemonicParsing="false" onAction="#sötsaker" styleClass="btn-kategori" stylesheets="@iMat.css" text="Sötsaker" AnchorPane.leftAnchor="719.0" />
-                  <Button layoutX="719.0" layoutY="77.0" mnemonicParsing="false" onAction="#Dryck" styleClass="btn-kategori" stylesheets="@iMat.css" text="Dryck" AnchorPane.leftAnchor="719.0" />
-                  <ImageView fx:id="kryss1" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#stangKategoriere" onMouseEntered="#crossButtonMouseEntered" onMouseExited="#crossButtonMouseExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
-                     <image>
-                        <Image url="@bilder/kryss.png" />
-                     </image>
-                  </ImageView>
+                        <Font size="18.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
          </children>
@@ -824,7 +845,8 @@
                      <styleClass>
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
-                     </styleClass></Button>
+                     </styleClass>
+                  </Button>
                   <Button layoutX="168.0" layoutY="15.0" mnemonicParsing="false" onAction="#openKategoriere" prefHeight="36.0" prefWidth="141.0" style="-fx-background-radius: 50px;" text="Kategorier" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Arial" size="18.0" />
@@ -832,7 +854,8 @@
                      <styleClass>
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
-                     </styleClass></Button>
+                     </styleClass>
+                  </Button>
                   <Button id="favpriter" fx:id="favpriter" layoutX="822.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#gåTillFavoriter" prefHeight="36.0" prefWidth="144.81" text="Favoritvaror" AnchorPane.leftAnchor="822.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Arial" size="18.0" />
@@ -847,7 +870,8 @@
                      <styleClass>
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
-                     </styleClass></Button>
+                     </styleClass>
+                  </Button>
                   <Button id="tidigare" fx:id="tidigare" layoutX="968.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openTidigare" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Tidigare köp">
                      <font>
                         <Font name="Arial" size="18.0" />
@@ -855,11 +879,13 @@
                      <styleClass>
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
-                     </styleClass></Button>
+                     </styleClass>
+                  </Button>
                   <TextField fx:id="sökruta" layoutX="323.0" layoutY="20.0" onAction="#sök" prefHeight="37.0" prefWidth="376.0" promptText="Sök efter varor här" style="-fx-background-radius: 50 0 0 50;" styleClass="sokbar" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Arial" size="16.0" />
-                     </font></TextField>
+                     </font>
+                  </TextField>
                   <Button layoutX="703.0" layoutY="15.0" mnemonicParsing="false" onAction="#sök" prefHeight="36.0" prefWidth="62.0" style="-fx-background-radius: 0 50 50 0;" text="Sök ">
                      <font>
                         <Font name="Arial" size="18.0" />
@@ -867,7 +893,8 @@
                      <styleClass>
                         <String fx:value="dropshadow" />
                         <String fx:value="toolbar-btn" />
-                     </styleClass></Button>
+                     </styleClass>
+                  </Button>
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="154.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="146.5" />
                   <Line endX="-10.520284652709961" endY="11.900012969970703" layoutX="813.0" layoutY="34.0" startX="-10.52030086517334" startY="-16.10000228881836" stroke="WHITE" AnchorPane.leftAnchor="793.0" />
                   <Button id="hjalp" fx:id="hjälp" layoutX="1114.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#openHelp" prefHeight="36.0" prefWidth="144.81" stylesheets="@iMat.css" text="Hjälp">
@@ -888,23 +915,26 @@
                         <Font name="Arial Bold" size="23.0" />
                      </font>
                   </Label>
-                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#tömVarukorgen" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen">
+                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#confirmChoice" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen">
                      <font>
                         <Font name="Arial" size="16.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <ScrollPane hbarPolicy="NEVER" layoutY="52.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" styleClass="scroll-vit" stylesheets="@iMat.css" AnchorPane.bottomAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                      <content>
                         <FlowPane fx:id="varukorgFlowPane" prefHeight="477.0" prefWidth="336.0" style="-fx-background-color: #ffffff;" vgap="4.0">
                            <padding>
                               <Insets top="3.0" />
-                           </padding></FlowPane>
+                           </padding>
+                        </FlowPane>
                      </content>
                   </ScrollPane>
                   <Line endX="168.0" startX="-169.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE;" AnchorPane.bottomAnchor="126.0" AnchorPane.rightAnchor="0.0" />
                   <Button layoutX="2.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToKassa" prefHeight="80.0" prefWidth="338.0" style="-fx-padding: 0;" styleClass="kassa" stylesheets="@iMat.css" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font name="Arial" size="46.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                   <Label layoutX="7.0" layoutY="540.0" prefHeight="1.0" prefWidth="113.0" text="Totalt pris:">
                      <font>
                         <Font name="Arial" size="24.0" />
@@ -1112,7 +1142,8 @@
                   <Label fx:id="tidigareTitelLabel" layoutX="44.0" layoutY="18.0" text="Tidigare Köp" AnchorPane.leftAnchor="30.0">
                      <font>
                         <Font name="Arial Bold" size="23.0" />
-                     </font></Label>
+                     </font>
+                  </Label>
                   <Line endY="575.0" layoutX="289.0" layoutY="30.0" startY="21.0" stroke="#8d99ae" visible="false" />
                   <Line endX="-18.999969482421875" endY="573.0" layoutX="50.0" layoutY="32.0" startX="-19.59002685546875" startY="20.0" stroke="#8d99ae" visible="false" />
                   <Line endX="288.0" endY="9.0" layoutY="42.0" startX="31.0" startY="9.5" stroke="#8d99ae" visible="false" />
