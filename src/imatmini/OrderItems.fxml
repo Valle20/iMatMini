@@ -26,7 +26,7 @@
       <Line endX="24.0" endY="32.860958099365234" layoutX="416.5" layoutY="13.5" startX="24.0" stroke="#b00320" AnchorPane.bottomAnchor="13.139041900634766" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="13.0" />
       <AnchorPane fx:id="alreadyAddedPane" layoutX="510.0" layoutY="8.0" prefHeight="66.0" prefWidth="167.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="40.0" layoutY="4.0" prefHeight="50.0" prefWidth="92.0" text="Finns redan i din varukorg" textAlignment="CENTER" textFill="#b00320" wrapText="true">
+            <Label layoutX="40.0" layoutY="4.0" prefHeight="50.0" prefWidth="92.0" text="Finns i din varukorg" textAlignment="CENTER" textFill="#b00320" wrapText="true">
                <font>
                   <Font name="Arial" size="15.0" />
                </font></Label>
