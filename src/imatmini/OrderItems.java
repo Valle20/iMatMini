@@ -61,7 +61,7 @@ public class OrderItems extends AnchorPane {
 
         orderItemAmount.setText( (Math.round(shoppingItem.getAmount()) + " x "+shoppingItem.getProduct().getPrice()+ " kr").replaceAll("\\.", "," ));
 
-        orderItemImage.setImage(model.getImage(shoppingItem.getProduct()));
+        orderItemImage.setImage(model.getImage(shoppingItem.getProduct(),54,48));
 
         double pris = shoppingItem.getTotal();
         pris = Math.round(pris * 100.0) / 100.0;

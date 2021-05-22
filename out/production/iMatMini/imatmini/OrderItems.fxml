@@ -14,7 +14,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></Label>
-      <ImageView fx:id="orderItemImage" fitHeight="45.0" fitWidth="54.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0" />
+      <ImageView fx:id="orderItemImage" fitHeight="48.0" fitWidth="54.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="6.0" />
       <Label fx:id="orderItemAmount" layoutX="85.0" layoutY="33.0" text="Label">
          <font>
             <Font name="Arial Bold" size="16.0" />

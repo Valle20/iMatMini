@@ -219,25 +219,42 @@
 
 .btn-confirmationbox1{
 -fx-background-color: white;
--fx-background-radius: 0 0 0 10;
-
+-fx-background-radius: 1;
+-fx-border-color: #D5D5D5;
+-fx-padding: 0;
+-fx-border-radius: 1;
+-fx-border-style: solid centered;
+/*
+-fx-background-color: white;
+-fx-background-radius: 0 0 0 5;
 -fx-border-width: 0.5px;
 -fx-border-color: black;
--fx-border-radius: 0 0 0 10;
+-fx-border-radius: 0 0 0 5;
+*/
 }
 
 .btn-confirmationbox1:hover{
 -fx-background-color: #EDF2F4;
 -fx-cursor: hand;
 }
+.btn-confirmationbox1:pressed{
+-fx-background-color: #DDDDDD;
+-fx-cursor: hand;
+}
+
 
 .btn-confirmationbox2{
+-fx-background-color: #B00320;
+-fx-background-radius: 1;
+-fx-padding: 0;
+/*
 -fx-background-color: #D90429;
--fx-background-radius: 0 0 10 0;
+-fx-background-radius: 0 0 5 0;
 -fx-text-fill: white;
 -fx-border-width: 0.5px;
 -fx-border-color: black;
--fx-border-radius: 0 0 10 0;
+-fx-border-radius: 0 0 5 0;
+*/
 }
 
 .btn-confirmationbox2:hover{
