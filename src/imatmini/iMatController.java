@@ -37,6 +37,8 @@ import se.chalmers.cse.dat216.project.*;
  */
 public class iMatController implements Initializable, ShoppingCartListener {
 
+
+
     public void initialize(URL url, ResourceBundle rb) {
         model.iMatDataHandler.reset();
         initCardMap();
@@ -82,6 +84,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
         weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
         day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+
+        if (model.getShoppingCart().getItems().isEmpty()){
+            tömPane.setVisible(true);
+        } else {
+            tömPane.setVisible(false);
+        }
     }
 
     Order currentOrder;
@@ -99,6 +107,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
             e11.setVisible(false);
         }
     }
+
+    @FXML private AnchorPane tömPane;
 
     @FXML private FlowPane varukorgFlowPane;
     @FXML private FlowPane cardsFlowPane;
@@ -153,9 +163,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         }
         Collections.reverse(list);
         for (ShoppingItem product : list) {
-
             varukorgFlowPane.getChildren().add(new VarukorgsItem(product, this));
-
+        }
+        if (model.getShoppingCart().getItems().isEmpty()){
+            tömPane.setVisible(true);
+        } else {
+            tömPane.setVisible(false);
         }
     }
 
@@ -586,8 +599,9 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void confirmChoice(ActionEvent event){
-        if (!model.getShoppingCart().getItems().isEmpty())
-        confirmationbox.toFront();
+        if (!model.getShoppingCart().getItems().isEmpty()){
+            confirmationbox.toFront();
+        }
     }
 
     @FXML

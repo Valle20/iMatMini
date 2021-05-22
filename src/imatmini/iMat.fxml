@@ -915,7 +915,7 @@
                         <Font name="Arial Bold" size="23.0" />
                      </font>
                   </Label>
-                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#confirmChoice" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen">
+                  <Button layoutX="197.0" layoutY="9.0" mnemonicParsing="false" onAction="#confirmChoice" prefHeight="25.0" prefWidth="125.0" styleClass="graknapp-med-pressed" stylesheets="@iMat.css" text="Töm varukorgen" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="9.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -945,6 +945,7 @@
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
+                  <AnchorPane fx:id="tömPane" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.5;" visible="false" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="7.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="helpPane" style="-fx-background-color: #ffffff;" stylesheets="@iMat.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="65.0">

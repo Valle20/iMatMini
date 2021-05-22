@@ -340,7 +340,7 @@
 
 .graknapp{
 -fx-background-color: #E5E5E5;
--fx-background-radius: 4px;
+-fx-background-radius: 3px;
 -fx-padding: 0px;
 }
 .graknapp:hover
@@ -352,7 +352,7 @@
 
 .graknapp-med-pressed{
 -fx-background-color: #E5E5E5;
--fx-background-radius: 4px;
+-fx-background-radius: 3px;
 -fx-padding: 0px;
 }
 .graknapp-med-pressed:hover
