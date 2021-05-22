@@ -11,6 +11,8 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -90,6 +92,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         } else {
             tömPane.setVisible(false);
         }
+
     }
 
     Order currentOrder;
@@ -884,16 +887,38 @@ public class iMatController implements Initializable, ShoppingCartListener {
         kundnamnTextField.setText(model.getCreditCard().getHoldersName());
     }
 
+    @FXML Label eKortnummer;
+    @FXML Label eCVC;
+    @FXML Label eKundNamn;
+
     private void initPersonUppgifterLyssnare() {
+        Pattern p = Pattern.compile("^[ A-Za-z]+$");
+
         kortnummerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             model.getCreditCard().setCardNumber((newValue));
+            if (newValue.matches("[0-9]+") || newValue.equals("")){
+                eKortnummer.setVisible(false);
+            } else {
+                eKortnummer.setVisible(true);
+            }
         });
         kundnamnTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             model.getCreditCard().setHoldersName((newValue));
+            Matcher mm = p.matcher(newValue);
+            if (mm.matches() || newValue.equals("")){
+                eKundNamn.setVisible(false);
+            } else {
+                eKundNamn.setVisible(true);
+            }
         });
         cvckodTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.matches("[0-9]+") && newValue.length() > 2) {
                 model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+            }
+            if (newValue.matches("[0-9]+") || newValue.equals("")){
+                eCVC.setVisible(false);
+            } else {
+                eCVC.setVisible(true);
             }
         });
         firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -1264,17 +1289,35 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     private boolean is2ok(){
+        make2Red();
         if (
                 customer.getAddress().equals("") ||
-                        customer.getEmail().equals("") ||
-                        customer.getFirstName().equals("") ||
-                        customer.getLastName().equals("") ||
-                        customer.getPostAddress().equals("") ||
-                        customer.getPhoneNumber().equals("") ||
-                        customer.getPostCode().equals("")
+                customer.getEmail().equals("") ||
+                customer.getFirstName().equals("") ||
+                customer.getLastName().equals("") ||
+                customer.getPostAddress().equals("") ||
+                customer.getPhoneNumber().equals("") ||
+                customer.getPostCode().equals("")
         ){
             return false;
         } else return true;
+    }
+
+    private void make2Red(){
+        if (customer.getAddress().equals("") ) adressTextField.getStyleClass().add("textfield-error");
+        else adressTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getEmail().equals("") ) mailTextField.getStyleClass().add("textfield-error");
+        else mailTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getFirstName().equals("") ) firstNameTextField.getStyleClass().add("textfield-error");
+        else firstNameTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getLastName().equals("") ) lastNameTextField.getStyleClass().add("textfield-error");
+        else lastNameTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getPostAddress().equals("") ) cityTextField.getStyleClass().add("textfield-error");
+        else cityTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getPhoneNumber().equals("") ) phoneTextField.getStyleClass().add("textfield-error");
+        else phoneTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(customer.getPostCode().equals("")) postCodeTextField.getStyleClass().add("textfield-error");
+        else postCodeTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
     }
 
     @FXML private Label e2;
@@ -1327,17 +1370,40 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private Label e42;
 
     private boolean isKortOk(){
+        makeKortRed();
         if (!kortbetalning) return true;
         if (
-                model.getCreditCard().getCardNumber().equals("") ||
-                        model.getCreditCard().getCardType().equals("") ||
-                        model.getCreditCard().getHoldersName().equals("") ||
-                        model.getCreditCard().getValidMonth() == 0 ||
-                        model.getCreditCard().getValidYear() == 0 ||
-                        model.getCreditCard().getVerificationCode()  == 0
+                model.getCreditCard().getCardNumber().equals("") || eKortnummer.isVisible() ||
+                model.getCreditCard().getCardType().equals("") ||
+                model.getCreditCard().getHoldersName().equals("") ||
+                model.getCreditCard().getValidMonth() == 0 ||
+                model.getCreditCard().getValidYear() == 0 ||
+                model.getCreditCard().getVerificationCode()  == 0
         ){
             return false;
         } else return true;
+    }
+
+    private void makeKortRed(){
+        if (model.getCreditCard().getCardNumber().equals("") || eKortnummer.isVisible() ) kortnummerTextField.getStyleClass().add("textfield-error");
+        else kortnummerTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(model.getCreditCard().getHoldersName().equals("") ) kundnamnTextField.getStyleClass().add("textfield-error");
+        else kundnamnTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+        if(model.getCreditCard().getVerificationCode() == 0) cvckodTextField.getStyleClass().add("textfield-error");
+        else cvckodTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
+
+        /* alltid ifyllda från backenden så skit i dem.
+        if(model.getCreditCard().getValidMonth() == 0) monthComboBox.getStyleClass().add("combo-box-error");
+        if(model.getCreditCard().getValidYear() == 0) yearComboBox.getStyleClass().add("combo-box-error");
+        */
+
+        if(model.getCreditCard().getCardType().equals("")) {
+            korttypComboBox.getStyleClass().removeIf(style -> style.equals("combo-boxx"));
+            korttypComboBox.getStyleClass().add("combo-box-error");
+        } else {
+            korttypComboBox.getStyleClass().removeIf(style -> style.equals("combo-box-error"));
+            korttypComboBox.getStyleClass().add("combo-boxx");
+        }
     }
 
     @FXML Label bekräftelse;

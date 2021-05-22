@@ -209,7 +209,7 @@
                   <Font name="Arial" size="30.0" />
                </font>
             </Button>
-            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" visible="false" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
+            <Pane fx:id="betalamedkortPane" prefHeight="201.0" prefWidth="1039.0" style="-fx-background-color: #ffffff;" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
                <children>
                   <Label layoutX="31.0" layoutY="20.0" text="Korttyp">
                      <font>
@@ -226,7 +226,7 @@
                         <Font name="Arial" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="840.0" layoutY="110.0" text="CVC/CVV-kod">
+                  <Label layoutX="801.0" layoutY="110.0" text="CVC/CVV-kod">
                      <font>
                         <Font name="Arial" size="18.0" />
                      </font>
@@ -251,14 +251,14 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="cvckodTextField" layoutX="840.0" layoutY="142.0" prefHeight="35.0" prefWidth="170.0" styleClass="textfield">
+                  <TextField fx:id="cvckodTextField" layoutX="801.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" styleClass="textfield">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
-                  <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" visibleRowCount="12" />
-                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
-                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" />
+                  <ComboBox fx:id="yearComboBox" layoutX="672.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" styleClass="combo-boxx" visibleRowCount="12" />
+                  <ComboBox fx:id="monthComboBox" layoutX="550.0" layoutY="142.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" styleClass="combo-boxx" />
+                  <ComboBox fx:id="korttypComboBox" layoutX="31.0" layoutY="53.0" prefHeight="35.0" prefWidth="460.0" style="-fx-font-size: 16px; -fx-font-family: Arial;" styleClass="combo-boxx" />
                   <Label layoutY="-39.0" text="Fyll i kortuppgifter">
                      <font>
                         <Font name="Arial" size="24.0" />
@@ -267,6 +267,21 @@
                   <Label layoutX="647.0" layoutY="143.0" text="/">
                      <font>
                         <Font name="Arial" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eKortnummer" layoutX="672.0" layoutY="20.0" text="Endast siffror tillåts" textFill="#b00320" visible="false">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eKundNamn" layoutX="343.0" layoutY="110.0" text="Endast bokstäver tillåts" textFill="#b00320" visible="false">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eCVC" layoutX="891.0" layoutY="146.0" prefHeight="1.0" prefWidth="141.0" text="Endast siffror tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
                </children>
