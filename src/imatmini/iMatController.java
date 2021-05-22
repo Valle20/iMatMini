@@ -170,6 +170,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         } else {
             tömPane.setVisible(false);
         }
+
+        if (isAllaTillagda()){
+            varuOpPane.setVisible(true);
+        } else {
+            varuOpPane.setVisible(false);
+        }
     }
 
 
@@ -182,7 +188,14 @@ public class iMatController implements Initializable, ShoppingCartListener {
         for (ShoppingItem shoppingItem : order.getItems()) {
             orderItemFlowPane.getChildren().add(new OrderItems(shoppingItem));
         }
+       if (isAllaTillagda()){
+           varuOpPane.setVisible(true);
+       } else {
+           varuOpPane.setVisible(false);
+       }
     }
+
+    @FXML AnchorPane varuOpPane;
 
     public void updateOrders() {
         dateFlowPane.getChildren().clear();
@@ -239,6 +252,24 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         }
         updateOrdersItems(currentOrder);
+    }
+
+    private boolean isAllaTillagda(){
+        if (currentOrder == null){
+            return false;
+        }
+        ArrayList<Product> productListVarukorgen = new ArrayList<>();
+        for (ShoppingItem sIV : model.getShoppingCart().getItems()){
+            productListVarukorgen.add(sIV.getProduct());
+        }
+        for (ShoppingItem sIO : currentOrder.getItems()){
+            if (productListVarukorgen.contains(sIO.getProduct())){
+                ;
+            }else{
+               return false;
+            }
+        }
+        return true;
     }
 
     @FXML public void allaVaror(){
