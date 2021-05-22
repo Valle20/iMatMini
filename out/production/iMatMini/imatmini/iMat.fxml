@@ -115,7 +115,7 @@
             </Pane>
             <Button layoutX="879.0" layoutY="601.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Button layoutX="441.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#varukorgToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
-            <Label fx:id="e2" alignment="TOP_LEFT" layoutX="711.0" layoutY="635.0" prefHeight="72.0" prefWidth="322.0" text="Du måste skriva in alla dina uppgifter innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
+            <Label fx:id="e2" alignment="TOP_LEFT" layoutX="711.0" layoutY="635.0" prefHeight="72.0" prefWidth="322.0" text="Du behöver skriva in alla dina uppgifter innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
@@ -276,12 +276,12 @@
                   <Font name="Arial" size="24.0" />
                </font>
             </Button>
-            <Label fx:id="e41" alignment="TOP_LEFT" layoutX="720.0" layoutY="635.0" prefHeight="65.0" prefWidth="327.0" text="Du måste välja en betalningsmetod innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
+            <Label fx:id="e41" alignment="TOP_LEFT" layoutX="720.0" layoutY="635.0" prefHeight="65.0" prefWidth="327.0" text="Du behöver välja en betalningsmetod innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="e42" alignment="TOP_LEFT" layoutX="735.0" layoutY="635.0" prefHeight="65.0" prefWidth="312.0" text="Du måste fylla i dina kortuppgifter innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
+            <Label fx:id="e42" alignment="TOP_LEFT" layoutX="735.0" layoutY="635.0" prefHeight="65.0" prefWidth="312.0" text="Du behöver fylla i dina kortuppgifter innan du kan slutföra köpet" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
@@ -726,7 +726,7 @@
             </Pane>
             <Button layoutX="814.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
-            <Label fx:id="e3" alignment="TOP_LEFT" layoutX="751.0" layoutY="635.0" prefHeight="65.0" prefWidth="296.0" text="Du måste välja en leveranstid innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
+            <Label fx:id="e3" alignment="TOP_LEFT" layoutX="751.0" layoutY="635.0" prefHeight="65.0" prefWidth="296.0" text="Du behöver välja en leveranstid innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
