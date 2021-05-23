@@ -194,7 +194,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -385,7 +385,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -528,7 +528,7 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -854,7 +854,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgiffter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
