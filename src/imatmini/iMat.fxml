@@ -111,6 +111,46 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="ePostnummer" layoutX="145.0" layoutY="212.0" prefHeight="1.0" prefWidth="141.0" text="Endast siffror tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eFörnamn" layoutX="113.0" layoutY="30.0" prefHeight="20.0" prefWidth="177.0" text="Endast bokstäver tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eTelefon" layoutX="261.0" layoutY="121.0" prefHeight="1.0" prefWidth="141.0" text="Endast siffror tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eOrt" layoutX="69.0" layoutY="303.0" prefHeight="20.0" prefWidth="177.0" text="Endast bokstäver tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eEfternamn" layoutX="637.0" layoutY="30.0" prefHeight="20.0" prefWidth="177.0" text="Endast bokstäver tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="e5" layoutX="306.0" layoutY="212.0" prefHeight="1.0" prefWidth="141.0" text="5 siffror behövs" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="e9" layoutX="261.0" layoutY="137.0" prefHeight="20.0" prefWidth="162.0" text="Minst 7 siffror behövs" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eMail" layoutX="609.0" layoutY="121.0" prefHeight="20.0" prefWidth="211.0" text="Ange en giltig mailadress" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
             <Button layoutX="879.0" layoutY="601.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
@@ -279,7 +319,12 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="eCVC" layoutX="891.0" layoutY="146.0" prefHeight="1.0" prefWidth="141.0" text="Endast siffror tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                  <Label fx:id="eCVC" layoutX="891.0" layoutY="139.0" prefHeight="1.0" prefWidth="141.0" text="Endast siffror tillåts" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eCVC3" layoutX="891.0" layoutY="161.0" prefHeight="1.0" prefWidth="141.0" text="3 siffror behövs" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>

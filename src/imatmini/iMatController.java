@@ -27,8 +27,6 @@ import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
@@ -57,11 +55,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
         // updateBottomPanel();
         //setupAccountPane();
 
-        updatePersonuppgifter();
         initPersonUppgifterLyssnare();
+        updatePersonuppgifter();
         initComboboxes();
 
         setTextLimit(cvckodTextField, 3);
+        setTextLimit(postCodeTextField, 5);
 
         chosenDate.setText("");
         if (customer.getMobilePhoneNumber().equals("kort")){
@@ -890,9 +889,24 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML Label eKortnummer;
     @FXML Label eCVC;
     @FXML Label eKundNamn;
+    @FXML Label eEfternamn;
+    @FXML Label eFörnamn;
+    @FXML Label eOrt;
+    @FXML Label ePostnummer;
+    @FXML Label eTelefon;
+    @FXML Label eMail;
+    @FXML Label e5;
+    @FXML Label eCVC3;
+    @FXML Label e9;
+
+    boolean isLessThan3 = false;
+    boolean isLessThan5 = false;
+    boolean isLessThan7 = false;
+    boolean isValidemail = true;
 
     private void initPersonUppgifterLyssnare() {
-        Pattern p = Pattern.compile("^[ A-Za-z]+$");
+        Pattern p = Pattern.compile("^[ A-Öa-ö]+$");
+        Pattern e = Pattern.compile(".+@.+\\.[a-z]+"); //email
 
         kortnummerTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             model.getCreditCard().setCardNumber((newValue));
@@ -912,35 +926,105 @@ public class iMatController implements Initializable, ShoppingCartListener {
             }
         });
         cvckodTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue.matches("[0-9]+") && newValue.length() > 2) {
+            if (newValue.matches("[0-9]+")) { // this is the worst code i've ever written, I know
                 model.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+
+                isLessThan3 = newValue.length() < 3;
             }
             if (newValue.matches("[0-9]+") || newValue.equals("")){
                 eCVC.setVisible(false);
             } else {
                 eCVC.setVisible(true);
+                isLessThan3 = false;
             }
+
+            if (newValue.equals("")){
+                isLessThan3 = false;
+                model.getCreditCard().setVerificationCode(0);
+            }
+            if (newValue.length() > 2){
+                isLessThan3 = false;
+            }
+
         });
         firstNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setFirstName(newValue);
+            Matcher mm = p.matcher(newValue);
+            if (mm.matches() || newValue.equals("")){
+                eFörnamn.setVisible(false);
+            } else {
+                eFörnamn.setVisible(true);
+            }
         });
         lastNameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setLastName(newValue);
+            Matcher mm = p.matcher(newValue);
+            if (mm.matches() || newValue.equals("")){
+                eEfternamn.setVisible(false);
+            } else {
+                eEfternamn.setVisible(true);
+            }
         });
         phoneTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setPhoneNumber(newValue);
+            if (newValue.matches("[0-9]+")) {
+                isLessThan7 = newValue.length() < 7;
+            }
+            if (newValue.matches("[0-9]+") || newValue.equals("")){
+                eTelefon.setVisible(false);
+            } else {
+                eTelefon.setVisible(true);
+                isLessThan7 = false;
+            }
+            if (newValue.equals("")){
+                isLessThan7 = false;
+            }
+            if (newValue.length() > 7){
+                isLessThan7 = false;
+            }
         });
         mailTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setEmail(newValue);
+            Matcher m = e.matcher(newValue);
+            isValidemail = m.matches();
+            if (newValue.equals("")) isValidemail = true;
         });
         adressTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setAddress(newValue);
         });
         postCodeTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+           /* customer.setPostCode(newValue);
+            if (newValue.matches("[0-9]+") || newValue.equals("")){
+                ePostnummer.setVisible(false);
+            } else {
+                ePostnummer.setVisible(true);
+            }
+            */
             customer.setPostCode(newValue);
+            if (newValue.matches("[0-9]+")) { // this is the worst code i've ever written, I know
+                isLessThan5 = newValue.length() < 5;
+            }
+            if (newValue.matches("[0-9]+") || newValue.equals("")){
+                ePostnummer.setVisible(false);
+            } else {
+                ePostnummer.setVisible(true);
+                isLessThan5 = false;
+            }
+            if (newValue.equals("")){
+                isLessThan5 = false;
+            }
+            if (newValue.length() > 5){
+                isLessThan5 = false;
+            }
         });
         cityTextField.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setPostAddress(newValue);
+            Matcher mm = p.matcher(newValue);
+            if (mm.matches() || newValue.equals("")){
+                eOrt.setVisible(false);
+            } else {
+                eOrt.setVisible(true);
+            }
         });
 
     }
@@ -1292,31 +1376,35 @@ public class iMatController implements Initializable, ShoppingCartListener {
         make2Red();
         if (
                 customer.getAddress().equals("") ||
-                customer.getEmail().equals("") ||
-                customer.getFirstName().equals("") ||
-                customer.getLastName().equals("") ||
-                customer.getPostAddress().equals("") ||
-                customer.getPhoneNumber().equals("") ||
-                customer.getPostCode().equals("")
+                customer.getEmail().equals("") || eMail.isVisible() ||
+                customer.getFirstName().equals("") || eFörnamn.isVisible() ||
+                customer.getLastName().equals("") || eEfternamn.isVisible() ||
+                customer.getPostAddress().equals("") || eOrt.isVisible() || e5.isVisible() ||
+                customer.getPhoneNumber().equals("") || eTelefon.isVisible() || e9.isVisible() ||
+                customer.getPostCode().equals("") || ePostnummer.isVisible()
         ){
             return false;
         } else return true;
     }
 
     private void make2Red(){
+        e5.setVisible(isLessThan5);
+        e9.setVisible(isLessThan7);
+        eMail.setVisible(!isValidemail);
+
         if (customer.getAddress().equals("") ) adressTextField.getStyleClass().add("textfield-error");
         else adressTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getEmail().equals("") ) mailTextField.getStyleClass().add("textfield-error");
+        if(customer.getEmail().equals("") || eMail.isVisible()) mailTextField.getStyleClass().add("textfield-error");
         else mailTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getFirstName().equals("") ) firstNameTextField.getStyleClass().add("textfield-error");
+        if(customer.getFirstName().equals("") || eFörnamn.isVisible()) firstNameTextField.getStyleClass().add("textfield-error");
         else firstNameTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getLastName().equals("") ) lastNameTextField.getStyleClass().add("textfield-error");
+        if(customer.getLastName().equals("") || eEfternamn.isVisible()) lastNameTextField.getStyleClass().add("textfield-error");
         else lastNameTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getPostAddress().equals("") ) cityTextField.getStyleClass().add("textfield-error");
+        if(customer.getPostAddress().equals("") || eOrt.isVisible()) cityTextField.getStyleClass().add("textfield-error");
         else cityTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getPhoneNumber().equals("") ) phoneTextField.getStyleClass().add("textfield-error");
+        if(customer.getPhoneNumber().equals("") || eTelefon.isVisible() || e9.isVisible()) phoneTextField.getStyleClass().add("textfield-error");
         else phoneTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(customer.getPostCode().equals("")) postCodeTextField.getStyleClass().add("textfield-error");
+        if(customer.getPostCode().equals("") || ePostnummer.isVisible() || e5.isVisible()) postCodeTextField.getStyleClass().add("textfield-error");
         else postCodeTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
     }
 
@@ -1375,21 +1463,27 @@ public class iMatController implements Initializable, ShoppingCartListener {
         if (
                 model.getCreditCard().getCardNumber().equals("") || eKortnummer.isVisible() ||
                 model.getCreditCard().getCardType().equals("") ||
-                model.getCreditCard().getHoldersName().equals("") ||
+                model.getCreditCard().getHoldersName().equals("") || eKundNamn.isVisible() ||
                 model.getCreditCard().getValidMonth() == 0 ||
                 model.getCreditCard().getValidYear() == 0 ||
-                model.getCreditCard().getVerificationCode()  == 0
+                model.getCreditCard().getVerificationCode()  == 0 || eCVC.isVisible() || eCVC3.isVisible()
         ){
             return false;
         } else return true;
     }
 
     private void makeKortRed(){
+        if (isLessThan3){
+            eCVC3.setVisible(true);
+        } else {
+            eCVC3.setVisible(false);
+        }
+
         if (model.getCreditCard().getCardNumber().equals("") || eKortnummer.isVisible() ) kortnummerTextField.getStyleClass().add("textfield-error");
         else kortnummerTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(model.getCreditCard().getHoldersName().equals("") ) kundnamnTextField.getStyleClass().add("textfield-error");
+        if(model.getCreditCard().getHoldersName().equals("") || eKundNamn.isVisible()) kundnamnTextField.getStyleClass().add("textfield-error");
         else kundnamnTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
-        if(model.getCreditCard().getVerificationCode() == 0) cvckodTextField.getStyleClass().add("textfield-error");
+        if(model.getCreditCard().getVerificationCode() == 0 || eCVC.isVisible() || eCVC3.isVisible()) cvckodTextField.getStyleClass().add("textfield-error");
         else cvckodTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
 
         /* alltid ifyllda från backenden så skit i dem.
@@ -1404,6 +1498,10 @@ public class iMatController implements Initializable, ShoppingCartListener {
             korttypComboBox.getStyleClass().removeIf(style -> style.equals("combo-box-error"));
             korttypComboBox.getStyleClass().add("combo-boxx");
         }
+
+
+
+
     }
 
     @FXML Label bekräftelse;
