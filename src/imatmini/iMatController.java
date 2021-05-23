@@ -198,15 +198,37 @@ public class iMatController implements Initializable, ShoppingCartListener {
     }
 
     @FXML AnchorPane varuOpPane;
+    private Map<Date, Order> orderMap = new HashMap();
 
     public void updateOrders() {
         dateFlowPane.getChildren().clear();
+/*
         ArrayList<Order> orderList = new ArrayList<>();
-        for (Order order : model.getOrders()){
-            orderList.add(order);
-        }
+        orderList.addAll(model.getOrders());
         Collections.reverse(orderList);
-        for (Order sortedOrder : orderList) {
+ */
+
+        for (Order o : model.getOrders()){
+            orderMap.put(o.getDate(), o);
+        }
+
+        List<Date> datesorted = new ArrayList<>();
+        for (Order o : model.getOrders()){
+            datesorted.add(o.getDate());
+        }
+        Collections.sort(datesorted);
+
+        List<Order> sortedOrders = new ArrayList<>();
+        for (int i = 0; i < datesorted.size(); i++){
+            sortedOrders.add(orderMap.get(datesorted.get(i)));
+        }
+
+        Collections.reverse(sortedOrders);
+
+        model.getOrders().clear();
+        model.getOrders().addAll(sortedOrders);
+
+        for (Order sortedOrder : sortedOrders) {
             dateFlowPane.getChildren().add(new TidigareDate(sortedOrder,this));
         }
 
@@ -541,7 +563,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         tidigarePane.toFront();
 
         if (!model.getOrders().isEmpty()){
-            updateOrdersItems(model.getOrders().get(model.getOrders().size()-1));
+            updateOrdersItems(model.getOrders().get(0));
             harköpPane.setVisible(true);
             tidigareTitelLabel.setText("Tidigare köp");
         } else {
