@@ -1473,6 +1473,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         kortbetalning = false;
         radionull = false;
         e41.setVisible(false);
+        e42.setVisible(false);
         customer.setMobilePhoneNumber("kontanter"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
     }
 
