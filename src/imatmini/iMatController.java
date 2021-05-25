@@ -1387,13 +1387,12 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void personligaUppgifterToFront() {
         if (!model.getShoppingCart().getItems().isEmpty()){
             System.out.println("personliga uppgifter vyn");
-            personligaUppgifterAnchorPane.toFront();
+            leveransAnchorPane.toFront();
             e11.setVisible(false);
         } else {
             e11.setVisible(true);
         }
     }
-
     private boolean is2ok(){
         make2Red();
         if (
@@ -1408,7 +1407,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
             return false;
         } else return true;
     }
-
     private void make2Red(){
         e5.setVisible(isLessThan5);
         e9.setVisible(isLessThan7);
@@ -1429,15 +1427,13 @@ public class iMatController implements Initializable, ShoppingCartListener {
         if(customer.getPostCode().equals("") || ePostnummer.isVisible() || e5.isVisible()) postCodeTextField.getStyleClass().add("textfield-error");
         else postCodeTextField.getStyleClass().removeIf(style -> style.equals("textfield-error"));
     }
-
     @FXML private Label e2;
-
 
     @FXML
     private void leveransToFront() {
         if (is2ok()){
             System.out.println("Leveransvyn");
-            leveransAnchorPane.toFront();
+            betalningAnchorPane.toFront();
             e2.setVisible(false);
         } else {
             e2.setVisible(true);
@@ -1450,7 +1446,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void betalningToFront() {
         if (!chosenDate.getText().equals("")){
             System.out.println("betalningsvy");
-            betalningAnchorPane.toFront();
+            personligaUppgifterAnchorPane.toFront();
             e3.setVisible(false);
         } else {
             e3.setVisible(true);

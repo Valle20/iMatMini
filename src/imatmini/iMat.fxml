@@ -28,7 +28,7 @@
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
-                  <Button id="person-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="person-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Leveranstid" />
                   <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
                   <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4. Betalning" />
                </buttons>
@@ -154,7 +154,7 @@
                </children>
             </Pane>
             <Button layoutX="879.0" layoutY="601.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
-            <Button layoutX="441.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#varukorgToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <Button layoutX="441.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e2" alignment="TOP_LEFT" layoutX="711.0" layoutY="635.0" prefHeight="72.0" prefWidth="322.0" text="Du behöver skriva in alla dina uppgifter innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
@@ -163,7 +163,7 @@
             <AnchorPane prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
                <children>
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="16.0" layoutY="22.0" text="1">
@@ -171,13 +171,13 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="#8d99ae" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="22.0" text="3">
                      <font>
                         <Font name="Arial" size="20.0" />
@@ -194,14 +194,14 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="121.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="252.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
                   <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
@@ -218,7 +218,7 @@
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
-                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Leveranstid" />
                   <Button id="leverans-navigation-button" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
                   <Button id="betalning-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
                </buttons>
@@ -331,7 +331,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button layoutX="299.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#leveransToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
+            <Button layoutX="299.0" layoutY="489.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0">
                <font>
                   <Font name="Arial" size="24.0" />
                </font>
@@ -380,22 +380,22 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="-10.0" layoutY="63.0" prefHeight="10.0" prefWidth="65.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="121.0" layoutY="64.0" prefHeight="11.0" prefWidth="83.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="252.0" layoutY="64.0" prefHeight="2.0" prefWidth="100.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="410.0" layoutY="63.0" prefHeight="11.0" prefWidth="73.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -438,7 +438,7 @@
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button id="varukorg-active" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
-                  <Button id="person-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="2. Leveranstid" />
                   <Button id="leverans-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
                   <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4.Betalning" />
                </buttons>
@@ -528,12 +528,12 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="121.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="252.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -653,7 +653,7 @@
             <ButtonBar prefHeight="36.0" prefWidth="811.0" visible="false" AnchorPane.leftAnchor="337.0" AnchorPane.topAnchor="34.0">
                <buttons>
                   <Button id="varukorg-navigation-button" mnemonicParsing="false" onMouseClicked="#varukorgToFront" prefHeight="26.0" prefWidth="200.0" styleClass="toolbar-navigation-button" text="1. Varukorg" />
-                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Kunduppgifter" />
+                  <Button id="person-navigation-button" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="toolbar-navigation-button" text="2. Leveranstid" />
                   <Button id="leverans-active" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="3. Leveranstid" />
                   <Button id="betalning-navigation-button" mnemonicParsing="false" styleClass="toolbar-navigation-button" text="4. Betalning" />
                </buttons>
@@ -785,7 +785,7 @@
                </children>
             </Pane>
             <Button layoutX="814.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
-            <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#personligaUppgifterToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
+            <Button layoutX="411.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#varukorgToFront" styleClass="navigation-button" text="Föregående steg" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="633.0" />
             <Label fx:id="e3" alignment="TOP_LEFT" layoutX="751.0" layoutY="635.0" prefHeight="65.0" prefWidth="296.0" text="Du behöver välja en leveranstid innan du kan gå vidare till nästa steg" textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.rightAnchor="233.0">
                <font>
                   <Font name="Arial" size="18.0" />
@@ -823,7 +823,7 @@
             <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="87.0" prefWidth="491.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="10.0">
                <children>
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="44.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
-                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="#2b2d42" strokeWidth="2.0" />
+                  <Line endX="96.0" endY="-3.814697265625E-6" layoutX="184.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Line endX="96.0" endY="-3.814697265625E-6" layoutX="324.0" layoutY="35.0" startY="-3.814697265625E-6" stroke="WHITE" strokeWidth="2.0" />
                   <Circle fill="WHITE" layoutX="84.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="16.0" layoutY="22.0" text="1">
@@ -831,13 +831,13 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="WHITE" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="#8d99ae" layoutX="248.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="156.0" layoutY="22.0" text="2">
                      <font>
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Circle fill="#8d99ae" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="#2b2d42" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
+                  <Circle fill="WHITE" layoutX="388.0" layoutY="34.0" radius="22.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="12.0" />
                   <Label layoutX="296.0" layoutY="22.0" text="3">
                      <font>
                         <Font name="Arial" size="20.0" />
@@ -849,22 +849,22 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-10.0" layoutY="63.0" text="Varukorg" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="-10.0" layoutY="63.0" prefHeight="2.0" prefWidth="65.0" text="Varukorg" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="111.0" layoutY="63.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
-                     <font>
-                        <Font name="Arial" size="16.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="262.0" layoutY="63.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="121.0" layoutY="63.0" prefHeight="11.0" prefWidth="90.0" text="Leveranstid" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="410.0" layoutY="63.0" text="Betalning" AnchorPane.topAnchor="64.0">
+                  <Label layoutX="252.0" layoutY="63.0" prefHeight="10.0" prefWidth="100.0" text="Kunduppgifter" AnchorPane.topAnchor="64.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="63.0" prefHeight="2.0" prefWidth="67.0" text="Betalning" AnchorPane.topAnchor="64.0">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
