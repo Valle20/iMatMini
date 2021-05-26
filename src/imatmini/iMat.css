@@ -505,6 +505,7 @@
     -fx-background-color: #D5D5D5;
     -fx-background-insets : 2.0, 0.0, 0.0;
     -fx-background-radius : 2.0em;
+    -fx-cursor: hand;
 }
 
 
@@ -519,6 +520,7 @@
 }
 .scroll-bla .scroll-bar:vertical .thumb:hover {
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 8, 0.0, 0.0, 1.0);
+    -fx-cursor: hand;
 }
 
 
@@ -533,5 +535,6 @@
 }
 .scroll-morkbla .scroll-bar:vertical .thumb:hover {
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.4), 8, 0.0, 0.0, 1.0);
+    -fx-cursor: hand;
 }
 

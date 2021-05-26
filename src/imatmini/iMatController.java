@@ -314,10 +314,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
     public List<Product> getMejeri(){
         List<Product> list = new ArrayList<>();
         for (Product product : model.getProducts()){
-            if (product.getCategory() == ProductCategory.DAIRIES){
+            if (product.getCategory() == ProductCategory.DAIRIES && !product.getName().equals("hh")){
                 list.add(product);
             }
         }
+
         return list;
     }
 
@@ -728,45 +729,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private Button backToStoreButton;
 
-    /*
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        updateKassaVarukorg(model.getShoppingCart().getItems());
-
-        updateTotalprisKassa();
-        updatePersonuppgifter();
-        initPersonUppgifterLyssnare();
-        initComboboxes();
-
-        setTextLimit(cvckodTextField, 3);
-
-        chosenDate.setText("");
-        if (customer.getMobilePhoneNumber().equals("kort")){
-            kortRadioButton.fire();
-        }
-        if (customer.getMobilePhoneNumber().equals("kontanter")){
-            kontantRadioButton.fire();
-        }
-
-        //för att få korrekt datum till leveranstidvyn
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM");
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(dtf.format(now));
-
-        String weekday;
-
-        day1.setText("Idag " + dtf.format(now));
-        day2.setText("Imorgon " + dtf.format(now.plusDays(1)));
-        weekday = translateWeekday(now.plusDays(2).getDayOfWeek().getValue());
-        day3.setText(weekday + " " + dtf.format(now.plusDays(2)));
-        weekday = translateWeekday(now.plusDays(3).getDayOfWeek().getValue());
-        day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
-        weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
-        day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
-    }
-
-     */
-
     private void setTextLimit(TextField textField, int length) {
         textField.setOnKeyTyped(event -> {
             String string = textField.getText();
@@ -802,7 +764,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
                 return "Måndag";
         }
     }
-
 
     /**
      * varukorg sidan
@@ -858,7 +819,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         dBild.setImage(model.getImage(product, 147, 102));
         eko.setVisible(product.isEcological());
     }
-
 
     @FXML
     private AnchorPane varukorgAnchorPane;
@@ -921,7 +881,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML Label eCVC3;
     @FXML Label e9;
 
-    boolean isLessThan3 = false;
+    boolean isLessThan3 = false; // för felmeddelanden
     boolean isLessThan5 = false;
     boolean isLessThan7 = false;
     boolean isValidemail = true;
@@ -1091,7 +1051,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     private boolean radionull = true;
 
-
     @FXML
     private Button slutförköpButton;
     @FXML
@@ -1100,9 +1059,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private ImageView previousBetalningImageView;
 
     /** fylla i saker **/
-
-
-
     private void initComboboxes(){
         monthComboBox.setVisibleRowCount(12);
 
@@ -1136,9 +1092,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
         });
     }
 
-    Image nextStepImage = new Image(getClass().getClassLoader().getResourceAsStream("iMatMini/bilder/Nästaknapp.png"));
-
-
     @FXML
     private void switchAffaren(ActionEvent event) throws IOException {
         mainPane.toFront();
@@ -1155,7 +1108,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private Button d;
     @FXML private Button e;
     @FXML private Button f;
-    @FXML private Button gg;
+    @FXML private Button gg;    // g redan använt :)
     @FXML private Button h;
     @FXML private Button i;
     @FXML private Button j;
