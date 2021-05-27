@@ -25,18 +25,18 @@
 -fx-text-fill: white;
 -fx-background-radius: 3px;
 -fx-background-radius: 0;
--fx-font-size: 16px;
+-fx-font-size: 18px;
 
 }
 
 .laggTillAlla:hover{
     -fx-background-color: #EF233C;
-    -fx-font-size: 16px;
+    -fx-font-size: 18px;
     -fx-cursor: hand;
 }
 .laggTillAlla:pressed{
     -fx-background-color: #EA7381;
-    -fx-font-size: 16px;
+    -fx-font-size: 18px;
     -fx-cursor: hand;
 }
 
@@ -195,12 +195,12 @@
 {
 -fx-background-color: #2B2D42;
 -fx-text-fill: white;
--fx-background-radius: 3 3 0 0;
+-fx-background-radius: 0 0 0 0;
 }
 .kassa:hover
 {
 -fx-background-color: #4B4D63;
--fx-background-radius: 3 3 0 0;
+-fx-background-radius: 0 0 0 0;
 -fx-cursor: hand;
 }
 .kassa2
@@ -365,6 +365,33 @@
 {
 -fx-background-color: #EF233C;
 -fx-cursor: hand;
+}
+
+/*Unika för help*/
+.lagg-till-help{
+-fx-background-color: #B00320;
+-fx-background-radius: 36px;
+
+}
+
+.plusminus-help
+{
+-fx-background-color: #B00320;
+-fx-background-radius: 50px;
+-fx-padding: 0px;
+}
+
+.graknapp-help{
+-fx-background-color: #E5E5E5;
+-fx-background-radius: 3px;
+-fx-padding: 0px;
+}
+
+.kassa2-help
+{
+-fx-background-color: #2B2D42;
+-fx-text-fill: white;
+-fx-background-radius: 3;
 }
 
 

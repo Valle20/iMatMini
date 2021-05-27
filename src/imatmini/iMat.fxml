@@ -1012,12 +1012,12 @@
                <children>
                   <AnchorPane fx:id="plusMinusPane" layoutX="737.0" layoutY="239.0" prefHeight="36.0" prefWidth="164.0" style="-fx-background-color: #ffffff; -fx-background-radius: 4px;">
                      <children>
-                        <TextField fx:id="amountTextField" alignment="CENTER" layoutX="56.0" layoutY="9.0" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" text="2 st">
+                        <TextField fx:id="amountTextField" alignment="CENTER" editable="false" layoutX="56.0" layoutY="9.0" prefHeight="27.0" prefWidth="57.0" style="-fx-padding: 0; -fx-text-fill: #B00320;" text="2 st">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.rightAnchor="14.0">
+                        <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus-help" AnchorPane.rightAnchor="14.0">
                            <graphic>
                               <ImageView fitHeight="14.0" fitWidth="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -1026,7 +1026,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button layoutX="15.0" layoutY="10.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus" AnchorPane.leftAnchor="15.0">
+                        <Button layoutX="15.0" layoutY="10.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="23.0" styleClass="plusminus-help" AnchorPane.leftAnchor="15.0">
                            <graphic>
                               <ImageView fitHeight="14.0" fitWidth="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -1122,7 +1122,7 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Text>
-                  <AnchorPane layoutX="165.0" layoutY="214.0" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till">
+                  <AnchorPane layoutX="165.0" layoutY="214.0" prefHeight="30.0" prefWidth="101.0" styleClass="lagg-till-help">
                      <children>
                         <ImageView fitHeight="21.0" fitWidth="28.0" layoutX="70.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -1139,17 +1139,17 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="371.0" layoutY="434.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp" text="Mer info">
+                  <Button layoutX="371.0" layoutY="434.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" styleClass="graknapp-help" text="Mer info">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="539.0" layoutY="323.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-padding: 0;" styleClass="kassa2" stylesheets="@iMat.css" text="Till kassan">
+                  <Button layoutX="539.0" layoutY="323.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-padding: 0;" styleClass="kassa2-help" stylesheets="@iMat.css" text="Till kassan">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="324.0" layoutY="469.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="27.0" styleClass="graknapp">
+                  <Button layoutX="324.0" layoutY="469.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="27.0" styleClass="graknapp-help">
                      <graphic>
                         <ImageView fx:id="favourite" fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
