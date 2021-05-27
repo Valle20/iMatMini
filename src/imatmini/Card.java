@@ -75,6 +75,8 @@ public class Card extends AnchorPane {
         unit.append(product.getUnit());
         unit.delete(0,3);
 
+        iMatController.setTextLimit(amountTextField, 7);
+
     }
 
     @FXML private void typeAmount(){

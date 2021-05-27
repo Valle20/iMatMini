@@ -62,14 +62,7 @@ public class KassaVarukorgsItem extends AnchorPane {
         imageView.setImage(model.getImage(shoppingItem.getProduct(), 95, 58));
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
 
-        /*
-        amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            newValue = newValue.replaceAll("[^0-9]","");
-            if (!newValue.equals("")){
-                updateAmount(Integer.parseInt(newValue));
-            }
-        });
-         */
+        kassa_1_controller.setTextLimit(amountTextField, 7);
     }
 
     @FXML

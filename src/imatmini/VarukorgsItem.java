@@ -62,14 +62,7 @@ public class VarukorgsItem extends AnchorPane {
         imageView.setImage(model.getImage(shoppingItem.getProduct(), 58, 54));
         amountTextField.setText( (int)shoppingItem.getAmount() + " " + unit);
 
-        /*
-        amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            newValue = newValue.replaceAll("[^0-9]","");
-            if (!newValue.equals("")){
-                updateAmount(Integer.parseInt(newValue));
-            }
-        });
-         */
+        iMatController.setTextLimit(amountTextField, 7);
     }
 
     @FXML private void typeAmount(){
@@ -96,6 +89,8 @@ public class VarukorgsItem extends AnchorPane {
 
         model.getCardMap().get(shoppingItem.getProduct().getName()).getAmountTextField().setText((int)shoppingItem.getAmount() + " " + unit);
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+
+
     }
     @FXML private void plus(){
         updateAmount((int)(shoppingItem.getAmount() + 1));
