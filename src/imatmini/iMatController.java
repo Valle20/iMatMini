@@ -52,9 +52,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
         sökruta.setOnMouseClicked(e -> sökruta.selectAll());
 
-        // updateBottomPanel();
-        //setupAccountPane();
-
         initPersonUppgifterLyssnare();
         updatePersonuppgifter();
         initComboboxes();
@@ -729,7 +726,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private Button backToStoreButton;
 
-    private void setTextLimit(TextField textField, int length) {
+    public void setTextLimit(TextField textField, int length) {
         textField.setOnKeyTyped(event -> {
             String string = textField.getText();
 
