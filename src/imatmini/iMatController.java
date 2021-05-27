@@ -1029,6 +1029,8 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML
     private Pane betalamedkortPane;
     @FXML
+    private Pane betalaMedKontantPane;
+    @FXML
     private AnchorPane slutförtköpAnchorPane;
     @FXML
     private ComboBox korttypComboBox;
@@ -1415,6 +1417,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         radionull = false;
         e41.setVisible(false);
         customer.setMobilePhoneNumber("kort"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
+        betalaMedKontantPane.setVisible(false);
     }
     @FXML private void betalamedkortToBack() {
         System.out.println("Betala med kort vy, bort");
@@ -1424,6 +1427,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         e41.setVisible(false);
         e42.setVisible(false);
         customer.setMobilePhoneNumber("kontanter"); // används för att valt betalningssätt från tidigare köp ska vara förvalt vid nästa köp
+        betalaMedKontantPane.setVisible(true);
     }
 
     @FXML private Label e41;
