@@ -1482,7 +1482,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
     private void slutförtköpToFront() {
         if (!radionull && isKortOk()){
             System.out.println("slutfört köp");
-            bekräftelse.setText("Ett bekräftelsemail är skickat till din Email: " + customer.getEmail());
+            bekräftelse.setText("Ditt kvitto har skickats till din Email: " + customer.getEmail());
             slutförtköpAnchorPane.toFront();
             commitPurchase();
             e42.setVisible(false);
