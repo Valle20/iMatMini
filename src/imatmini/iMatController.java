@@ -811,10 +811,13 @@ public class iMatController implements Initializable, ShoppingCartListener {
 
     @FXML private Text eko;
 
+    @FXML private Label detaljPris;
+
     public void populateDetalvy(Product product) {
         dNamn.setText(product.getName());
-        dBild.setImage(model.getImage(product, 147, 102));
+        dBild.setImage(model.getImage(product, 178, 150));
         eko.setVisible(product.isEcological());
+        detaljPris.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
     }
 
     @FXML

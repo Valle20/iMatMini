@@ -595,7 +595,7 @@
                               <Font name="Arial Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Text layoutX="19.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In pellentesque molestie lectus quis malesuada. In elementum mauris a dolor aliquam vulputate. Aliquam ac nunc quis arcu vulputate blandit." wrappingWidth="297.233089766449">
+                        <Text layoutX="19.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In pellentesque molestie lectus quis malesuada. In elementum mauris a dolor aliquam vulputate." wrappingWidth="297.233089766449">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
@@ -610,6 +610,11 @@
                               <Font name="Arial" size="16.0" />
                            </font>
                         </Text>
+                        <Label fx:id="detaljPris" layoutX="19.0" layoutY="110.0" text="Prislabel">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                   <Pane layoutX="48.0" layoutY="247.0" prefHeight="200.0" prefWidth="729.0" style="-fx-background-color: EDF2F4; -fx-background-radius: 10px;" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
