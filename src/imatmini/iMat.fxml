@@ -1245,7 +1245,7 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <Line endX="960.0" endY="65.0" startX="960.0" startY="720.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="65.0" />
+            <Line endX="960.0" endY="65.0" startX="960.0" startY="721.0" strokeWidth="2.0" style="-fx-stroke: #8D99AE#8D99AE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="338.0" />
             <Label fx:id="e1" alignment="TOP_LEFT" layoutX="900.0" layoutY="301.0" prefHeight="69.0" prefWidth="319.0" text="Din varukorg är tom. Innan du kan gå till kassan behöver du lägga till varor." textAlignment="CENTER" textFill="#b00320" visible="false" wrapText="true" AnchorPane.bottomAnchor="186.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="Arial" size="18.0" />

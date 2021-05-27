@@ -1471,9 +1471,6 @@ public class iMatController implements Initializable, ShoppingCartListener {
             korttypComboBox.getStyleClass().add("combo-boxx");
         }
 
-
-
-
     }
 
     @FXML Label bekräftelse;
