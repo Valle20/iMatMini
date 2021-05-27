@@ -83,9 +83,12 @@ public class KassaVarukorgsItem extends AnchorPane {
     @FXML private void typeAmount(){
         String newValue = amountTextField.getText();
         newValue = newValue.replaceAll("[^0-9]","");
+        if (Integer.parseInt(newValue) > 99){
+            newValue = Integer.toString(99);
+        }
         if (!newValue.equals("")){
             updateAmount(Integer.parseInt(newValue));
-        }
+        } else updateAmount((int)shoppingItem.getAmount());
     }
 
     @FXML private void tabort(){

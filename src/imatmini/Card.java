@@ -75,24 +75,17 @@ public class Card extends AnchorPane {
         unit.append(product.getUnit());
         unit.delete(0,3);
 
-/*
-        amountTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            newValue = newValue.replaceAll("[^0-9]","");
-            if (!newValue.equals("")){
-                updateAmount(Integer.parseInt(newValue));
-            }
-        });
-
- */
-
     }
 
     @FXML private void typeAmount(){
         String newValue = amountTextField.getText();
         newValue = newValue.replaceAll("[^0-9]","");
+        if (Integer.parseInt(newValue) > 99){
+            newValue = Integer.toString(99);
+        }
         if (!newValue.equals("")){
             updateAmount(Integer.parseInt(newValue));
-        }
+        } else updateAmount((int)shoppingItem.getAmount());
     }
 
     @FXML private AnchorPane hjärtknapp;
