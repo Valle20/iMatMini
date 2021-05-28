@@ -270,7 +270,7 @@
             </Button>
             <Pane fx:id="betalaMedKontantPane" layoutX="155.0" layoutY="298.0" prefHeight="200.0" prefWidth="518.0" styleClass="pane-with-content" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="320.0">
                <children>
-                  <Label alignment="CENTER" layoutX="33.0" layoutY="57.0" prefHeight="87.0" prefWidth="452.0" styleClass="betalaMessage" stylesheets="@iMat.css" text="Betala när leveransen anländer hos dig" textAlignment="CENTER">
+                  <Label alignment="CENTER" layoutX="33.0" layoutY="57.0" prefHeight="87.0" prefWidth="452.0" styleClass="betalaMessage" stylesheets="@iMat.css" text="Betala när leveransen anländer hos dig." textAlignment="CENTER">
                      <font>
                         <Font name="Arial" size="24.0" />
                      </font>
