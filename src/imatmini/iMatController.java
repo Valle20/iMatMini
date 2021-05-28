@@ -82,6 +82,7 @@ public class iMatController implements Initializable, ShoppingCartListener {
         day4.setText(weekday + " " + dtf.format(now.plusDays(3)));
         weekday = translateWeekday(now.plusDays(4).getDayOfWeek().getValue());
         day5.setText(weekday + " " + dtf.format(now.plusDays(4)));
+        whichTimes();
 
         if (model.getShoppingCart().getItems().isEmpty()){
             tömPane.setVisible(true);
@@ -89,6 +90,40 @@ public class iMatController implements Initializable, ShoppingCartListener {
             tömPane.setVisible(false);
         }
 
+    }
+
+    @FXML
+    private void whichTimes(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+
+        String tmp;
+        int h;
+        tmp = dtf.format(now);
+        h = Integer.parseInt(tmp);
+
+
+        if(h >= 16){
+            firstTimeHidePane.setVisible(true);
+            secondTimeHidePane.setVisible(true);
+            thirdTimeHidePane.setVisible(true);
+        }
+        else if(h >= 12){
+            firstTimeHidePane.setVisible(true);
+            secondTimeHidePane.setVisible(true);
+            thirdTimeHidePane.setVisible(false);
+        }
+        else if(h >= 8){
+            firstTimeHidePane.setVisible(true);
+            secondTimeHidePane.setVisible(false);
+            thirdTimeHidePane.setVisible(false);
+        }
+        else{
+            firstTimeHidePane.setVisible(false);
+            secondTimeHidePane.setVisible(false);
+            thirdTimeHidePane.setVisible(false);
+        }
     }
 
     Order currentOrder;
@@ -123,6 +158,11 @@ public class iMatController implements Initializable, ShoppingCartListener {
     @FXML private FlowPane orderItemFlowPane;
     @FXML private Button addAllButton;
     // Other variables
+
+    @FXML private AnchorPane firstTimeHidePane;
+    @FXML private AnchorPane secondTimeHidePane;
+    @FXML private AnchorPane thirdTimeHidePane;
+    //anchorpanes för att gömma försena tider
 
     private final Model model = Model.getInstance();
 

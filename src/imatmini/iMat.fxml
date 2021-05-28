@@ -796,6 +796,9 @@
                         <Font name="Arial" size="20.0" />
                      </font>
                   </Label>
+                  <AnchorPane fx:id="firstTimeHidePane" layoutX="16.0" layoutY="84.0" prefHeight="59.0" prefWidth="162.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.5;" />
+                  <AnchorPane fx:id="secondTimeHidePane" layoutX="13.0" layoutY="157.0" prefHeight="55.0" prefWidth="158.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.5;" />
+                  <AnchorPane fx:id="thirdTimeHidePane" layoutX="13.0" layoutY="217.0" prefHeight="65.0" prefWidth="162.0" style="-fx-background-color: #ffffff; -fx-opacity: 0.5;" />
                </children>
             </Pane>
             <Button layoutX="814.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#betalningToFront" styleClass="navigation-button" text="Nästa steg" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="633.0" />
